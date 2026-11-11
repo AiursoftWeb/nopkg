@@ -1,0 +1,36 @@
+@model Aiursoft.Nopkg.Models.DashboardViewModels.IndexViewModel
+<div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h3 mb-0">@Localizer["Packages"]</h1>
+    <span class="badge bg-secondary">@(Model.CacheOnly ? Localizer["Cache only"] : Localizer["On demand"])</span>
+</div>
+<p class="text-muted">@(Model.AdmissionEnabled ? Localizer["Only admitted versions are listed. Tarballs are stored when requested."] : Localizer["Metadata lists known versions. Tarballs are stored when requested."])</p>
+@if (Model.AdmissionUnavailable)
+{
+    <div class="card"><div class="card-body text-center py-5">
+        <h2 class="h5">@Localizer["Package admission is unavailable"]</h2>
+        <p class="text-muted mb-0">@Localizer["Package access is paused. Please try again later."]</p>
+    </div></div>
+}
+else if (Model.Packages.Count == 0)
+{
+    <div class="card"><div class="card-body text-center py-5">
+        <h2 class="h5">@Localizer["No packages cached yet"]</h2>
+        <p class="text-muted">@Localizer["Connect an npm client to start the cache."]</p>
+        <code>npm config set registry @($"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/")</code>
+    </div></div>
+}
+else
+{
+    <div class="card"><div class="table-responsive">
+        <table class="table mb-0">
+            <thead><tr><th>@Localizer["Package"]</th><th>@Localizer["Known versions"]</th><th>@Localizer["Stored versions"]</th></tr></thead>
+            <tbody>
+            @foreach (var package in Model.Packages)
+            {
+                <tr><td>@package.Name</td><td>@package.KnownVersions</td><td>@package.StoredVersions</td></tr>
+            }
+            </tbody>
+        </table>
+    </div></div>
+}
+<p class="small text-muted mt-3">@(Model.AdmissionEnabled ? Localizer["S360 admission enabled. Publishing is not available yet."] : Localizer["Protocol preview. S360 admission is disabled; publishing is not available yet."])</p>

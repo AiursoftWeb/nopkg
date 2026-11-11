@@ -1,93 +1,76 @@
 # Nopkg
 
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![Pipeline stat](https://badge-proxy.aiursoft.com/aiursoft/nopkg/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/nopkg/-/pipelines)
+[![Test Coverage](https://badge-proxy.aiursoft.com/aiursoft/nopkg/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/nopkg/-/pipelines)
+[![S360 compliance](https://s360.aiursoft.com/badge.svg?project=aiursoft%2Fnopkg)](https://s360.aiursoft.com/SupplyChain?tab=projects&project=aiursoft%2Fnopkg&scope=baseline&ecosystem=all)
+[![Docker](https://img.shields.io/docker/pulls/aiursoft/nopkg.svg)](https://hub.docker.com/r/aiursoft/nopkg)
 
+Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nupkg](https://gitlab.aiursoft.com/aiursoft/nupkg). Browse cached packages, fetch upstream tarballs on demand, and optionally serve only versions admitted by S360.
 
-## Getting started
+![screenshot](./screenshot.png)
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## What is Nopkg?
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+- Standard npm metadata, scoped packages, exact versions and dist-tags under `/npm/`.
+- On-demand caching of original tarballs, with integrity and package identity checks.
+- Optional S360 admission for metadata and every download, including cached archives.
+- Cache-only operation when the upstream is unavailable.
+- Shared Aiursoft accounts, OIDC, roles, themes and localization.
 
-## Add your files
+**Development preview:** read-only registry access is available. Package publishing and npm audit are not implemented. There is no hosted Nopkg instance yet.
 
-* [Create](https://docs.gitlab.com/user/project/repository/web_editor/#create-a-file) or [upload](https://docs.gitlab.com/user/project/repository/web_editor/#upload-a-file) files
-* [Add files using the command line](https://docs.gitlab.com/topics/git/add_files/#add-files-to-a-git-repository) or push an existing Git repository with the following command:
+## Use the registry
 
+Point npm at your own deployment:
+
+```sh
+npm config set registry https://nopkg.example.com/npm/
+npm install your-package
 ```
-cd existing_repo
-git remote add origin https://gitlab.aiursoft.com/aiursoft/nopkg.git
-git branch -M master
-git push -uf origin master
+
+For an existing lockfile, configure its resolved archive URLs for your deployment as well. Changing the registry setting alone does not rewrite existing lockfile URLs.
+
+## Run manually
+
+Requires [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) and [Node.js](https://nodejs.org/).
+
+```sh
+cd src/Aiursoft.Nopkg/wwwroot
+npm ci
+npm run build
+cd ..
+dotnet run
 ```
 
-## Integrate with your tools
+Open `http://localhost:5000`. The default local administrator is `admin@default.com` with password `Admin@123456!`. Configure authentication before exposing a deployment.
 
-* [Set up project integrations](https://gitlab.aiursoft.com/aiursoft/nopkg/-/settings/integrations)
+## Run in Microsoft Visual Studio
 
-## Collaborate with your team
+Open `Aiursoft.Nopkg.sln` and press **F5**.
 
-* [Invite team members and collaborators](https://docs.gitlab.com/user/project/members/)
-* [Create a new merge request](https://docs.gitlab.com/user/project/merge_requests/creating_merge_requests/)
-* [Automatically close issues from merge requests](https://docs.gitlab.com/user/project/issues/managing_issues/#closing-issues-automatically)
-* [Enable merge request approvals](https://docs.gitlab.com/user/project/merge_requests/approvals/)
-* [Set auto-merge](https://docs.gitlab.com/user/project/merge_requests/auto_merge/)
+## Run in Docker
 
-## Test and Deploy
+The shared CI builds Linux amd64 and arm64 images. Successful master pipelines publish `aiursoft/nopkg:latest` and `hub.aiursoft.com/aiursoft/nopkg:latest`.
 
-Use the built-in continuous integration in GitLab.
+After the first master release:
 
-* [Get started with GitLab CI/CD](https://docs.gitlab.com/ci/quick_start/)
-* [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/user/application_security/sast/)
-* [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/topics/autodevops/requirements/)
-* [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/user/clusters/agent/)
-* [Set up protected environments](https://docs.gitlab.com/ci/environments/protected_environments/)
+```sh
+docker run -d --name nopkg -p 8080:5000 -v nopkg-data:/data aiursoft/nopkg:latest
+```
 
-***
+Persist `/data` for the default SQLite database, package cache and application files. The registry is `/npm/`; health checks use `/health`. The repository's `install.sh` provides the standard port-selecting installer.
 
-# Editing this README
+## Configuration
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Set `Registry:Upstream` and `Registry:StoragePath` for the source and persistent cache. Set `Registry:CacheOnly=true` to prevent upstream requests. Use one application instance per cache directory.
 
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
+S360 admission is disabled in the development default. To enable it, configure `Registry:S360:Enabled`, `Registry:S360:Server` and a dedicated `Registry__S360__CheckKey` environment secret. See [registry configuration](docs/registry.md) for admission, offline use and protocol limits. Shared account, database and theme settings follow [Aiursoft Template](https://template-docs.aiursoft.com/).
 
 ## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
 
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
+Use the existing build, tests and `lint.sh`. NugetNinja maintains the shared Template files and dependency conventions through `ninja.yaml`. Normal `nuget.config` uses public NuGet for external contributors; company CI uses the separate internal build configuration.
 
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
+## Credits
 
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Built on [Aiursoft Template](https://gitlab.aiursoft.com/aiursoft/template). Licensed under the [MIT License](./LICENSE).
