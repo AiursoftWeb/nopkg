@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Çift Dilli Eğitimler</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Paketleri Gözat</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bir kez derle, her yerde çalıştır. Tamamen konteynerli mimari.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Geliştirici Deneyimi</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Geliştirme önizlemesi. Üretim kayıt defterinizin yerini almak için hazır değil.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps Uyumlu</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Gezinme çubuğu, kullanıcı rollerine ve izinlerine göre otomatik olarak ayarlanır.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Felsefe</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Şablon, kolay dağıtım için oluşturulmuştur. Tam Docker desteği içerir, böylece uygulamanızı konteynerleştirip her yerde çalıştırabilirsiniz. Ayrıca doğrudan IIS, Azure App Service veya ASP.NET Core destekleyen herhangi bir sunucuya dağıtabilirsiniz.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Felsefe</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Bu bir şablon projedir</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Şirketinizin kullanıcıları tekrar tekrar kayıt olmak zorunda kalmaz.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>npm kayıt defteriniz, ihtiyacınız olduğunda hazır.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tutorial Berbahasa Ganda</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Jelajahi paket</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bangun sekali, jalankan di mana saja. Arsitektur yang sepenuhnya terkontainerisasi.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Pengalaman Pengembang</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Pratinjau pengembangan. Belum siap untuk menggantikan registri produksi Anda.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>Native DevOps</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Bilah navigasi secara otomatis menyesuaikan berdasarkan peran dan izin pengguna.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Filsafat</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Nopkg ini dibangun untuk kemudahan penerapan. Nopkg ini mencakup dukungan Docker penuh, sehingga Anda dapat meng-container-kan aplikasi Anda dan menjalankannya di mana saja. Anda juga dapat menerapkannya langsung ke IIS, Azure App Service, atau server apa pun yang mendukung ASP.NET Core.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Filsafat</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Ini adalah proyek templat</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Pengguna perusahaan Anda tidak perlu mendaftar berulang kali.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Registrasi npm Anda, siap kapan pun Anda membutuhkannya.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

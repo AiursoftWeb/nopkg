@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Tài liệu Toàn diện</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Kết nối một client npm để bắt đầu bộ nhớ đệm.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Quản lý Tập tin Tích hợp</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Phiên bản đã biết</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía client và phía server dựa trên các chú thích dữ liệu.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Hỗ trợ Đa Cơ sở Dữ liệu</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Chưa có gói nào được lưu trữ</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Gói</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Truy cập gói đang tạm dừng. Vui lòng thử lại sau.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Việc tiếp nhận gói không khả dụng</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Gói</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Ủy quyền RBAC</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Phiên bản đã lưu</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Hỗ trợ cả biến môi trường và cài đặt dựa trên cơ sở dữ liệu, với ưu tiên tự động dành cho biến môi trường để ghi đè một cách liền mạch.</value>

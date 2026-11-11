@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Kaksikieliset oppaat</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Selaa paketteja</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Rakenna kerran, suorita missä tahansa. Täysin säiliöön paketoidu arkkitehtuuri.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Kehittäjäkokemus</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Kehityselintarkistus. Ei valmis korvaamaan tuotantorekisteriäsi.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps-ystävällinen</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Navigointipalkki sopeutuu automaattisesti käyttäjän roolien ja käyttöoikeuksien perusteella.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Filosofia</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Malli on suunniteltu helppokäyttöiseksi käyttöönottoa varten. Se sisältää täyden Docker-tuen, joten voit konttipohjata sovelluksesi ja ajaa sitä missä tahansa. Voit myös ottaa sen käyttöön suoraan IIS:ään, Azure App Serviceen tai mihin tahansa palvelimeen, joka tukee ASP.NET Corea.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Filosofia</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Tämä on malliprojekti</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Yrityksen käyttäjien ei tarvitse rekisteröityä uudelleen.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Oma npm-rekisterisi, valmis kun tarvitset.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

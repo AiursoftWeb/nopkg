@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Білінгвальні навчальні матеріали</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Переглянути пакети</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Зібрати один раз, запустити де завгодно. Повністю контейнеризована архітектура.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Досвід розробника</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Перегляд для розробки. Не готово замінити ваш продуктивний реєстр.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps-орієнтований</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Панель навігації автоматично адаптується відповідно до ролей та дозволів користувача.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Філософія</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Цей шаблон створено для простоти розгортання. Він включає повну підтримку Docker, тому ви можете контейнеризувати ваш додаток і запускати його де завгодно. Ви також можете розгорнути його безпосередньо в IIS, Azure App Service або на будь-якому сервері, що підтримує ASP.NET Core.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Філософія</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Це шаблонний проєкт</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Ваші користувачі підприємства не мають повторно реєструватися.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Ваш реєстр npm, готовий, коли вам потрібен.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

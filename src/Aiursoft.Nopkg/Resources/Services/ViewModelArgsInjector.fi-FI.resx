@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Hallinnoi</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Malli</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Ei löytynyt</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketit</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Oikeuksien tiedot</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>Rekisteröidy</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Rekisteri</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Roolin tiedot</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Järjestelmän tiedot</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Malli</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Luvaton</value>

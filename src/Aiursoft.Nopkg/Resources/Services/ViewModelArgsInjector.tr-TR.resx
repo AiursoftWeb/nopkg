@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Şablon</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Bulunamadı</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketler</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>İzin Detayları</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>Kayıt Ol</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Kayıt Defteri</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Rol Detayları</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Sistem Bilgisi</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Şablon</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Yetkisiz</value>

@@ -114,8 +114,14 @@
   <data name="Manage" xml:space="preserve">
     <value>관리</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>템플릿</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>찾을 수 없음</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>패키지</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>권한 세부 정보</value>
@@ -135,6 +141,9 @@
   <data name="Register" xml:space="preserve">
     <value>회원가입</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>레지스트리</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>역할 상세 정보</value>
   </data>
@@ -152,9 +161,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>시스템 정보</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>템플릿</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>권한 없음</value>

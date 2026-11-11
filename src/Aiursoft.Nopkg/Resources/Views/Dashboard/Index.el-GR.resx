@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Πληρέστερη Τεκμηρίωση</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Συνδέστε έναν πελάτη npm για να ξεκινήσει η κACHE.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Έλεγχος Συνοχής</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Ενσωματωμένη Διαχείριση Αρχείων</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Γνωστές εκδόσεις</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Τα μοντέλα ελέγχονται σε επίπεδο πελάτη και εξυπηρετητή βάσει σημειώσεων δεδομένων.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Υποστήριξη Πολλαπλών Βάσεων Δεδομένων</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Δεν έχουν αποθηκευτεί ακόμα πακέτα</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Ενσωμάτωση OpenID Connect</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Πακέτο</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Η πρόσβαση στο πακέτο έχει ανασταλεί. Παρακαλώ δοκιμάστε ξανά αργότερα.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Η είσοδος πακέτων δεν είναι διαθέσιμη</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Πακέτα</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Εξουσιοδότηση RBAC</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Ξεκινήστε ένα νέο έργο</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Αποθηκευμένες εκδόσεις</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Υποστηρίζει και τις δύο μεταβλητές περιβάλλοντος και ρυθμίσεις που βασίζονται σε βάση δεδομένων, με αυτόματη προτεραιότητα προς τις μεταβλητές περιβάλλοντος για ομαλή αντικατάσταση.</value>

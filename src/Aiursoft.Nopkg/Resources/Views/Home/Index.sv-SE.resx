@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tvåspråkiga handledningar</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Bläddra bland paket</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Bygg en gång, kör överallt. Fullt containeriserad arkitektur.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Utvecklarupplevelse</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Utvecklingsförhandsvisning. Inte redo att ersätta din produktionsregistry.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps-vänlig</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Navigeringsfältet anpassas automatiskt baserat på användarroller och behörigheter.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Filosofin</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Mallen är byggd för enkel distribution. Den inkluderar fullt Docker-stöd, så du kan containerisera din app och köra den var som helst. Du kan också distribuera den direkt till IIS, Azure App Service eller vilken server som helst som stöder ASP.NET Core.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Filosofin</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Det här är ett mallprojekt</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Dina företagsanvändare behöver inte registrera sig upprepade gånger.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Din npm-registrering, redo när du behöver den.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

@@ -114,8 +114,14 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>テンプレート</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Not Found</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>パッケージ</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>権限の詳細</value>
@@ -135,6 +141,9 @@
   <data name="Register" xml:space="preserve">
     <value>登録</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>レジストリ</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>ロール詳細</value>
   </data>
@@ -152,9 +161,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>システム情報</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>テンプレート</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>権限がありません</value>

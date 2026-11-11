@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Управление</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Шаблон</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Не найдено</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Пакеты</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Сведения о разрешениях</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>Зарегистрироваться</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Реестр</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Детали роли</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Системная информация</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Шаблон</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Неавторизованный</value>

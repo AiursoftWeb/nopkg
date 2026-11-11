@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tutoriais Bilingues</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Explorar pacotes</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Construa uma vez, execute em qualquer lugar. Arquitetura totalmente containerizada.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Experiência do Desenvolvedor</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Pré-visualização de desenvolvimento. Não está pronto para substituir seu registro de produção.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>Nativo DevOps</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>A barra de navegação ajusta-se automaticamente com base nas funções e permissões do usuário.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>A Filosofia</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>O nopkg foi desenvolvido para facilitar a implantação. Ele inclui suporte completo ao Docker, permitindo que você containerize seu aplicativo e execute em qualquer lugar. Você também pode implantá-lo diretamente no IIS, Azure App Service ou em qualquer servidor que suporte ASP.NET Core.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>A Filosofia</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Este é um projeto modelo</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Seus usuários corporativos não precisam se registrar repetidamente.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Seu registro npm, pronto quando você precisar.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Διγλωσσικά Μαθήματα</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Περιήγηση σε πακέτα</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Κατασκευάστε μία φορά, εκτελέστε παντού. Πλήρως ενσωματωμένη αρχιτεκτονική με δοχεία.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>Εμπειρία Ανάπτυξης</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>Προεπισκόπηση ανάπτυξης. Δεν είναι έτοιμο να αντικαταστήσει το μητρώο παραγωγής σας.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps Φυσικός</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>Η γραμμή πλοήγησης προσαρμόζεται αυτόματα με βάση τους ρόλους και τα δικαιώματα των χρηστών.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Η Φιλοσοφία</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Το πρότυπο είναι κατασκευασμένο για εύκολη ανάπτυξη. Περιλαμβάνει πλήρη υποστήριξη Docker, ώστε να μπορείτε να συσκευάσετε την εφαρμογή σας σε containers και να την εκτελέσετε οπουδήποτε. Μπορείτε επίσης να την αναπτύξετε απευθείας στο IIS, στο Azure App Service ή σε οποιονδήποτε διακομιστή που υποστηρίζει ASP.NET Core.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Η Φιλοσοφία</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>Οι χρήστες της επιχείρησής σας δεν χρειάζεται να εγγραφούν εκ νέου.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>Το μητρώο npm σας, έτοιμο όποτε το χρειάζεστε.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
