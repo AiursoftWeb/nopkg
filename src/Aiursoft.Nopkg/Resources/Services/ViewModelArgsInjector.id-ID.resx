@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Kelola</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Nopkg</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Tidak Ditemukan</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paket</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Detail Izin</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>Daftar</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Registrasi</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detail Peran</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Informasi Sistem</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Nopkg</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Tidak Diizinkan</value>

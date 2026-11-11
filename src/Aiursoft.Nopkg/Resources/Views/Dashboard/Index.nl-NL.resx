@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Uitgebreide documentatie</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Koppel een npm-client aan om de cache te starten.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Consistentievalidatie</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Geïntegreerd Bestandsbeheer</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Bekende versies</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modellen worden gevalideerd aan zowel de client- als de serverside op basis van dataannotaties.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Ondersteuning voor meerdere databases</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Nog geen pakketten in de cache</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integratie</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Pakket</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Pakkettoegang is gepauzeerd. Probeer het later opnieuw.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Pakkettoelating is niet beschikbaar</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Pakketten</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-autorisatie</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start een nieuw project</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Opgeslagen versies</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Ondersteunt zowel omgevingsvariabelen als database-gebaseerde instellingen, met automatische prioriteit voor omgevingsvariabelen voor naadloze overschrijvingen.</value>

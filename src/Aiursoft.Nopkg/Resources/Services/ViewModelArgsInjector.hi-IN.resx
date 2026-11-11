@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>प्रबंधित करें</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>टेम्पलेट</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>नहीं मिला</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>पैकेज</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>अनुमति विवरण</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>पंजीकरण करें</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>रिजिस्ट्री</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>भूमिका विवरण</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>सिस्टम जानकारी</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>टेम्पलेट</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>अनधिकृत</value>

@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>이중 언어 튜토리얼</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>패키지 탐색</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>한 번 빌드하면 어디서나 실행 가능. 완전히 컨테이너화된 아키텍처.</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>개발자 경험</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>개발 프리뷰. 프로덕션 레지스트리를 대체할 준비가 되지 않았습니다.</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps 네이티브</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>네비게이션 바는 사용자 역할과 권한에 따라 자동으로 조정됩니다.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>철학</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>이 템플릿은 손쉬운 배포를 위해 구축되었습니다. 완전한 Docker 지원을 포함하고 있어 앱을 컨테이너화하여 어디서나 실행할 수 있습니다. 또한 IIS, Azure App Service 또는 ASP.NET Core를 지원하는 모든 서버에 직접 배포할 수도 있습니다.</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>철학</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>이것은 템플릿 프로젝트입니다.</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>기업 사용자는 반복적으로 등록할 필요가 없습니다.</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>필요할 때 즉시 사용할 수 있는 나만의 npm 레지스트리</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

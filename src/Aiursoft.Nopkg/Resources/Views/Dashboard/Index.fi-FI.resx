@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Laaja dokumentaatio</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Yhdistä npm-asiakas käynnistääksesi välimuistin.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistenssitarkistus</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Integroitu tiedostonhallinta</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Tunnetut versiot</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Mallit tarkistetaan molemmilla puolilla, asiakas- ja palvelinpuolella, tietojen annotaatioiden perusteella.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Usean tietokannan tuki</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Ei vielä paketteita välimuistissa</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect -integraatio</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Paketti</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Pakettien käyttö on keskeytetty. Yritä myöhemmin uudelleen.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Pakettisalliutus ei ole käytettävissä</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketit</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Aloita uusi projekti</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Tallennetut versiot</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Tukee sekä ympäristömuuttujia että tietokantaperustaisia asetuksia, ja annetaan ympäristömuuttujille automaattisesti etusija, jotta ylikirjoitukset sujuvat ilman hankaluuksia.</value>

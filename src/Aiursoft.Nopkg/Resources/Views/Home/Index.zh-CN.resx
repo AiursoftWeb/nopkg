@@ -123,6 +123,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>双语教程</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>浏览软件包</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>一次构建，随处运行。完全容器化架构。</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>开发者体验</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>开发预览版。尚不能用于替代您的生产环境注册表。</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>DevOps 原生</value>
@@ -738,11 +744,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>导航栏会根据用户角色和权限自动调整显示内容。</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>哲学</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>该模板专为简化部署而设计，内置完整的Docker支持，您可以将应用容器化后随处运行。也可直接部署到IIS、Azure应用服务或任何支持ASP.NET Core的服务器。</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>哲学</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>这是一个模板项目</value>
@@ -806,6 +812,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>您的企业用户无需重复注册。</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>您的 npm 注册表，随取随用。</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

@@ -114,8 +114,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Gestionar</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Plantilla</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>No encontrado</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paquetes</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Detalles de permisos</value>
@@ -135,6 +141,9 @@
   <data name="Register" xml:space="preserve">
     <value>Registrarse</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Registro</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detalles del Rol</value>
   </data>
@@ -152,9 +161,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Información del sistema</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Plantilla</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>No autorizado</value>

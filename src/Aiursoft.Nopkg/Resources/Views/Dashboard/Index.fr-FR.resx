@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Documentation complète</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Connectez un client npm pour démarrer le cache.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validation de cohérence</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Gestion intégrée des fichiers</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Versions connues</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Les modèles sont validés des deux côtés, client et serveur, en fonction des annotations de données.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Prise en charge de plusieurs bases de données</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Aucun package mis en cache pour le moment</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Intégration OpenID Connect</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Paquet</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>L&apos;accès aux packages est en pause. Veuillez réessayer plus tard.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>L&apos;admission des packages est indisponible</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paquets</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorisation RBAC</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Démarrer un nouveau projet</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Versions stockées</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Prise en charge des variables d&apos;environnement et des paramètres stockés dans la base de données, avec une priorité automatique accordée aux variables d&apos;environnement pour des substitutions transparentes.</value>

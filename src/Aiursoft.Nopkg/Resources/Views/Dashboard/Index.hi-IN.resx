@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>विस्तृत दस्तावेज़ीकरण</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>कैश शुरू करने के लिए एक npm क्लाइंट को कनेक्ट करें।</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>सुसंगतता प्रमाणीकरण</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>एकीकृत फ़ाइल प्रबंधन</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>जाने गए संस्करण</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>मॉडल्स को डेटा एनोटेशन्स के आधार पर क्लाइंट और सर्वर दोनों तरफ वैधता के लिए जांचा जाता है।</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>एकाधिक डेटाबेस समर्थन</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>अभी तक कोई पैकेज कैश नहीं किया गया है</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>पैकेज</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>पैकेज एक्सेस विराम पर है। कृपया बाद में पुनः प्रयास करें।</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>पैकेज प्रवेश अउपलब्ध है</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>पैकेज</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>आरबीएसी प्राधिकरण</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>नया प्रोजेक्ट शुरू करें</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>संग्रहीत संस्करण</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>पर्यावरण चर के साथ-साथ डेटाबेस-आधारित सेटिंग्स का समर्थन करता है, जहां पर्यावरण चर को बिना किसी दिक्कत के ओवरराइड करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>

@@ -120,6 +120,9 @@
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>द्विभाषी पाठ्यचर्या</value>
   </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>पैकेज ब्राउज़ करें</value>
+  </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>एक बार बनाएं, कहीं भी चलाएं। पूरी तरह से कंटेनरीकृत आर्किटेक्चर।</value>
   </data>
@@ -251,6 +254,9 @@
   </data>
   <data name="Developer Experience" xml:space="preserve">
     <value>विकासकर्मी अनुभव</value>
+  </data>
+  <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
+    <value>विकास पूर्वावलोकन। यह आपकी उत्पादन रजिस्ट्री को प्रतिस्थापित करने के लिए तैयार नहीं है।</value>
   </data>
   <data name="DevOps Native" xml:space="preserve">
     <value>डेवोप्स नेटिव</value>
@@ -735,11 +741,11 @@
   <data name="The navigation bar automatically adjusts based on user roles and permissions." xml:space="preserve">
     <value>नेविगेशन बार स्वचालित रूप से उपयोगकर्ता की भूमिकाओं और अनुमतियों के आधार पर समायोजित होता है।</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>द फिलॉसफी</value>
-  </data>
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>यह टेम्पलेट आसान डेप्लॉयमेंट के लिए बनाया गया है। इसमें पूर्ण Docker सपोर्ट शामिल है, जिससे आप अपने ऐप को कंटेनराइज़ करके कहीं भी चला सकते हैं। आप इसे सीधे IIS, Azure App Service, या किसी भी सर्वर पर डेप्लॉय कर सकते हैं जो ASP.NET Core को सपोर्ट करता है।</value>
+  </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>द फिलॉसफी</value>
   </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है</value>
@@ -803,6 +809,9 @@
   </data>
   <data name="Your enterprise users don&apos;t need to register repeatedly." xml:space="preserve">
     <value>आपके एंटरप्राइज उपयोगकर्ता को बार-बार पंजीकरण की आवश्यकता नहीं है।</value>
+  </data>
+  <data name="Your npm registry, ready when you need it." xml:space="preserve">
+    <value>आपका npm रजिस्ट्री, जब भी आपको चाहिए तैयार है।</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

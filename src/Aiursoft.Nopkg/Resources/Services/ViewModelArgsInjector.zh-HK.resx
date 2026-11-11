@@ -114,8 +114,14 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>範本</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>找不到</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>套件</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>權限詳情</value>
@@ -135,6 +141,9 @@
   <data name="Register" xml:space="preserve">
     <value>註冊</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>註冊表</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>角色詳情</value>
   </data>
@@ -152,9 +161,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>系統資訊</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>範本</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>未獲授權</value>

@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Omfattende Dokumentation</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Forbind en npm-klient for at starte cachen.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistensvalidering</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Integreret Filhåndtering</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Kendte versioner</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller valideres på både klient- og serversiden baseret på dataanmærkninger.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Understøttelse af flere databaser</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Ingen pakker er cached endnu</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Pakke</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Adgang til pakker er pauset. Prøv venligst igen senere.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Pakkeadmission er utilgængelig</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Pakker</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-godkendelse</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start et nyt projekt</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Lagrede versioner</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Støtter både miljøvariable og databasebaserede indstillinger, med automatisk prioritet til miljøvariable for smidige genoverwriter.</value>

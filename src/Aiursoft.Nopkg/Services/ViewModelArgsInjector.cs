@@ -81,6 +81,9 @@ public class ViewModelArgsInjector(
         _ = localizer["Register"];
     
         _ = localizer["Delete Account"];
+    
+        _ = localizer["Packages"];
+        _ = localizer["Registry"];
     }
 
     public void InjectSimple(

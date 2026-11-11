@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>包括的なドキュメント</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>npm クライアントを接続して、キャッシュを開始してください。</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>整合性検証</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>統合ファイル管理</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>既知のバージョン</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>モデルはデータ注釈に基づいて、クライアントおよびサーバーの両方で検証されます。</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>複数データベースサポート</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>まだパッケージがキャッシュされていません</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect連携</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>パッケージ</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>パッケージへのアクセスが一時停止されています。しばらくしてからもう一度お試しください。</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>パッケージの許可が利用できません</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>パッケージ</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC認可</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>保存済みバージョン</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>環境変数とデータベースバックエンド設定の両方をサポートしており、環境変数に自動的に優先順位が与えられ、スムーズな上書きが可能になります。</value>

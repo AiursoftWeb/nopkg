@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>Gestionează</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>Șablon</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Nu a fost găsit</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Pachete</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>Detalii permisiuni</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>Înregistrare</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Registrat</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detalii Rol</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>Informații despre Sistem</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>Șablon</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Neautorizat</value>

@@ -72,6 +72,9 @@
   <data name="Comprehensive Documentation" xml:space="preserve">
     <value>Kompleksowa Dokumentacja</value>
   </data>
+  <data name="Connect an npm client to start the cache." xml:space="preserve">
+    <value>Połącz klienta npm, aby rozpocząć buforowanie.</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Weryfikacja spójności</value>
   </data>
@@ -114,6 +117,9 @@
   <data name="Integrated File Management" xml:space="preserve">
     <value>Zintegrowany System Zarządzania Plikami</value>
   </data>
+  <data name="Known versions" xml:space="preserve">
+    <value>Znane wersje</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modele są weryfikowane po stronie klienta i serwera na podstawie adnotacji danych.</value>
   </data>
@@ -123,8 +129,23 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Obsługa wielu baz danych</value>
   </data>
+  <data name="No packages cached yet" xml:space="preserve">
+    <value>Brak jeszcze zbuforowanych pakietów</value>
+  </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integracja OpenID Connect</value>
+  </data>
+  <data name="Package" xml:space="preserve">
+    <value>Pakiet</value>
+  </data>
+  <data name="Package access is paused. Please try again later." xml:space="preserve">
+    <value>Dostęp do pakietów jest wstrzymany. Spróbuj ponownie później.</value>
+  </data>
+  <data name="Package admission is unavailable" xml:space="preserve">
+    <value>Admisja pakietów jest niedostępna</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Pakiety</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autoryzacja RBAC</value>
@@ -155,6 +176,9 @@
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Rozpocznij nowy projekt</value>
+  </data>
+  <data name="Stored versions" xml:space="preserve">
+    <value>Zapisane wersje</value>
   </data>
   <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
     <value>Obsługuje zarówno zmienne środowiskowe, jak i ustawienia oparte na bazie danych, przy automatycznym priorytetowaniu zmiennych środowiskowych w celu bezproblemowego przesłaniania.</value>

@@ -111,8 +111,14 @@
   <data name="Manage" xml:space="preserve">
     <value>إدارة</value>
   </data>
+  <data name="Nopkg" xml:space="preserve">
+    <value>قالب</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>غير موجود</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>الحزم</value>
   </data>
   <data name="Permission Details" xml:space="preserve">
     <value>تفاصيل الصلاحيات</value>
@@ -132,6 +138,9 @@
   <data name="Register" xml:space="preserve">
     <value>تسجيل</value>
   </data>
+  <data name="Registry" xml:space="preserve">
+    <value>السجل</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>تفاصيل الدور</value>
   </data>
@@ -149,9 +158,6 @@
   </data>
   <data name="System Info" xml:space="preserve">
     <value>معلومات النظام</value>
-  </data>
-  <data name="Nopkg" xml:space="preserve">
-    <value>قالب</value>
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>غير مصرح</value>
