@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Tunnetut versiot</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Peilikirjoitus ei ole käytettävissä. Sisäiset julkaisut ovat edelleen käytettävissä.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Mallit tarkistetaan molemmilla puolilla, asiakas- ja palvelinpuolella, tietojen annotaatioiden perusteella.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Älykäs tumma tila, joka mukautuu automaattisesti käyttäjän järjestelmäasetuksiin.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Lähde</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Aloita uusi projekti</value>

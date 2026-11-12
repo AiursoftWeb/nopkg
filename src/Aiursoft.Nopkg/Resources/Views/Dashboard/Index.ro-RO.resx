@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Versiuni cunoscute</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Admiterea oglinzii nu este disponibilă. Eliberările interne rămân disponibile.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modelele sunt validate pe ambele părți, client și server, pe baza anotărilor de date.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Mod întunecat inteligent care se adaptează automat la setările de sistem ale utilizatorului.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Sursă</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Începeți un proiect nou</value>
