@@ -8,7 +8,7 @@ using System.Text.RegularExpressions;
 
 namespace Aiursoft.Nopkg.Registry;
 
-public partial class NpmRegistry(HttpClient client, RegistryOptions options, S360AdmissionClient? admission = null)
+public partial class NpmRegistry(HttpClient client, RegistryOptions options, S360AdmissionClient? admission = null, ILocalPackageStore? localPackages = null)
 {
     private readonly SemaphoreSlim[] _archiveGates = Enumerable.Range(0, 64).Select(_ => new SemaphoreSlim(1)).ToArray();
     private readonly SemaphoreSlim[] _metadataGates = Enumerable.Range(0, 64).Select(_ => new SemaphoreSlim(1)).ToArray();
@@ -60,6 +60,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
     public async Task<JsonObject> MetadataAsync(string name, CancellationToken token = default)
     {
         PackageName(name);
+        if (localPackages != null && await localPackages.FindAsync(name, token) is { } local) return local.Metadata;
         var approved = _admission == null ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
         if (approved is { Count: 0 }) throw new FileNotFoundException("No admitted package versions found.");
         var gate = Gate(_metadataGates, name);
@@ -85,6 +86,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
             if (metadata["name"]?.GetValue<string>() != name || metadata["versions"] is not JsonObject)
                 throw new InvalidDataException("Upstream metadata does not describe the requested package.");
             ValidateVersions((JsonObject)metadata["versions"]!);
+            if (localPackages != null && !await localPackages.RecordMirrorAsync(name, token))
+                return (await localPackages.FindAsync(name, token) ?? throw new FileNotFoundException("Package ownership changed. Retry the request.")).Metadata;
             if (!options.CacheOnly)
             {
                 // A version already cached locally is immutable, even when upstream metadata changes.
@@ -157,6 +160,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
     {
         PackageName(name);
         if (version.Length > 128 || !VersionPattern().IsMatch(version)) throw new ArgumentException("An exact npm version is required.");
+        if (localPackages != null && await localPackages.FindAsync(name, token) is { } local)
+            return await LocalArchiveAsync(local, version, token);
         var gate = Gate(_archiveGates, name + "@" + version);
         await gate.WaitAsync(token);
         try
@@ -171,6 +176,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                     ?? throw new InvalidDataException("Invalid cached artifact metadata.");
                 await VerifyAsync(path, saved, token);
                 await AdmitArchiveAsync(path, name, version, saved, manifestFile, token);
+                if (localPackages != null && await localPackages.FindAsync(name, token) is { } owned)
+                    return await LocalArchiveAsync(owned, version, token);
                 return path;
             }
             if (options.CacheOnly) throw new FileNotFoundException("Package version is not cached.");
@@ -200,6 +207,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 // A request still requires a complete sidecar and repeats admission on every read.
                 File.Move(temporary, path, overwrite: true);
                 await AtomicWriteAsync(manifestFile, Encoding.UTF8.GetBytes(dist.ToJsonString()), CancellationToken.None);
+                if (localPackages != null && await localPackages.FindAsync(name, token) is { } owned)
+                    return await LocalArchiveAsync(owned, version, token);
                 return path;
             }
             finally { if (File.Exists(temporary)) File.Delete(temporary); }
@@ -207,9 +216,68 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         finally { gate.Release(); }
     }
 
+    public async Task<IReadOnlyList<string>> CachedMirrorNamesAsync(CancellationToken token)
+    {
+        var names = new List<string>();
+        if (!Directory.Exists(_root)) return names;
+        foreach (var directory in Directory.EnumerateDirectories(_root))
+        {
+            var path = Path.Combine(directory, "metadata.json");
+            if (!File.Exists(path)) continue;
+            var metadata = JsonNode.Parse(await File.ReadAllBytesAsync(path, token)) as JsonObject;
+            var name = PackageName(metadata?["name"]?.GetValue<string>() ?? throw new InvalidDataException("Invalid cached package name."));
+            if (PackageDirectory(name) != directory) throw new InvalidDataException("Cached package directory does not match its identity.");
+            names.Add(name);
+        }
+        return names;
+    }
+
+    public Task<bool> HasCachedMirrorAsync(string name) => Task.FromResult(File.Exists(Path.Combine(PackageDirectory(name), "metadata.json")));
+
+    public string PublishedArchivePath(string hash)
+    {
+        if (hash.Length != 64 || !hash.All(Uri.IsHexDigit)) throw new InvalidDataException("Invalid published archive identity.");
+        return Path.Combine(_root, "published", hash.ToLowerInvariant() + ".tgz");
+    }
+
+    private async Task<string> LocalArchiveAsync(LocalPackage local, string version, CancellationToken token)
+    {
+        if (!local.ArchiveHashes.TryGetValue(version, out var expected)) throw new FileNotFoundException("Published package version not found.");
+        var path = PublishedArchivePath(expected);
+        await using var input = File.OpenRead(path);
+        if (!Convert.ToHexStringLower(await SHA256.HashDataAsync(input, token)).Equals(expected, StringComparison.Ordinal))
+            throw new InvalidDataException("Published archive integrity verification failed.");
+        return path;
+    }
+
+    public async Task<JsonObject> ValidatePublishedArchiveAsync(string path, string name, string version, CancellationToken token)
+    {
+        PackageName(name);
+        if (version.Length > 128 || !VersionPattern().IsMatch(version)) throw new ArgumentException("An exact npm version is required.");
+        await VerifyIdentityAsync(path, name, version, token, Math.Min(options.MaxArchiveBytes, options.MaxPublishArchiveBytes) * 8);
+        await using var file = File.OpenRead(path);
+        await using var gzip = new GZipStream(file, CompressionMode.Decompress);
+        await using var reader = new TarReader(gzip);
+        JsonObject? result = null;
+        while (await reader.GetNextEntryAsync(cancellationToken: token) is { } entry)
+        {
+            var segments = entry.Name.TrimEnd('/').Split('/');
+            if (entry.Name.StartsWith('/') || entry.Name.Contains('\\') || segments.Any(x => x is "" or "." or ".." || x.Contains(':')) ||
+                entry.EntryType is TarEntryType.SymbolicLink or TarEntryType.HardLink)
+                throw new InvalidDataException("Published archive contains an unsafe path or link.");
+            if (entry.Name.Split('/') is [_, "package.json"] && entry.DataStream != null)
+            {
+                using var manifest = new MemoryStream();
+                await CopyLimitedAsync(entry.DataStream, manifest, 1024 * 1024, token);
+                result = JsonNode.Parse(manifest.ToArray()) as JsonObject ?? throw new InvalidDataException("Invalid package manifest.");
+            }
+        }
+        return result ?? throw new InvalidDataException("Missing package manifest.");
+    }
+
     private static bool VersionsMatch(string? manifest, string version) => manifest == version || manifest == "v" + version;
 
-    private async Task VerifyIdentityAsync(string path, string name, string version, CancellationToken token)
+    private async Task VerifyIdentityAsync(string path, string name, string version, CancellationToken token, long? maxExpandedBytes = null)
     {
         await using var file = File.OpenRead(path);
         await using var gzip = new GZipStream(file, CompressionMode.Decompress);
@@ -220,7 +288,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         while (await reader.GetNextEntryAsync(cancellationToken: token) is { } entry)
         {
             total = checked(total + entry.Length);
-            if (++count > 100000 || total > options.MaxArchiveBytes * 8)
+            if (++count > 100000 || total > (maxExpandedBytes ?? options.MaxArchiveBytes * 8))
                 throw new InvalidDataException("Unpacked package exceeds the configured size limit.");
             // npm strips one directory layer. DefinitelyTyped uses the package name
             // instead of "package"; accept that layout without weakening identity checks.
@@ -232,7 +300,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
             using var data = new MemoryStream();
             await CopyLimitedAsync(entry.DataStream, data, 1024 * 1024, token);
             var manifest = JsonNode.Parse(data.ToArray()) as JsonObject;
-            if (manifest?["name"]?.GetValue<string>() != name || !VersionsMatch(manifest["version"]?.GetValue<string>(), version))
+            if (manifest?["name"] is not JsonValue nameValue || !nameValue.TryGetValue<string>(out var actualName) || actualName != name ||
+                manifest["version"] is not JsonValue versionValue || !versionValue.TryGetValue<string>(out var actualVersion) || !VersionsMatch(actualVersion, version))
                 throw new InvalidDataException("Tarball package identity does not match the requested version.");
             found = true;
         }
@@ -267,7 +336,8 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
     public async Task<IReadOnlyList<CachedPackage>> CachedPackagesAsync(CancellationToken token = default)
     {
         var result = new List<CachedPackage>();
-        if (!Directory.Exists(_root)) return result;
+        var local = localPackages == null ? [] : await localPackages.ListAsync(token);
+        if (!Directory.Exists(_root)) return local;
         foreach (var directory in Directory.EnumerateDirectories(_root))
         {
             var file = Path.Combine(directory, "metadata.json");
@@ -275,6 +345,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
             var metadata = JsonNode.Parse(await File.ReadAllBytesAsync(file, token)) as JsonObject
                 ?? throw new InvalidDataException("Invalid cached metadata.");
             var name = PackageName(metadata["name"]!.GetValue<string>());
+            if (local.Any(x => x.Name == name)) continue;
             var approved = _admission == null ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
             var filtered = await FilterMetadataAsync(metadata, approved, token);
             var versions = (JsonObject)filtered["versions"]!;
@@ -284,7 +355,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 File.Exists(Path.Combine(directory, v.Key + ".tgz.json")));
             result.Add(new CachedPackage(name, versions.Count, stored));
         }
-        return result.OrderBy(p => p.Name, StringComparer.Ordinal).ToList();
+        return result.Concat(local).OrderBy(p => p.Name, StringComparer.Ordinal).ToList();
     }
 
     private static async Task AtomicWriteAsync(string path, byte[] data, CancellationToken token)

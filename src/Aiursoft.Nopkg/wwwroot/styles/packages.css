@@ -1,0 +1,17 @@
+.package-command pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+.package-command code { white-space: inherit; overflow-wrap: anywhere; }
+.package-command .copy-status { min-height: 1.5em; }
+.package-readme img { max-width: 100%; height: auto; }
+.package-readme pre { overflow-x: auto; }
+.package-readme table { display: block; max-width: 100%; overflow-x: auto; }
+.package-readme { overflow-wrap: anywhere; }
+
+.package-icon { display: inline-block; width: 3rem; height: 3rem; }
+.package-icon-image { object-fit: contain; max-width: 100%; }
+.package-icon-fallback:not([hidden]) { display: grid; place-items: center; width: 100%; height: 100%; color: var(--bs-secondary-color); background: var(--bs-tertiary-bg); border-radius: .5rem; }
+.package-icon-fallback svg { width: 1.75rem; height: 1.75rem; }
+.min-width-0 { min-width: 0; }
+.package-tabs { flex-wrap: nowrap; overflow-x: auto; white-space: nowrap; }
+@media (max-width: 575.98px) {
+    .package-tabs .nav-link { padding: .65rem .25rem; font-size: .75rem; }
+}

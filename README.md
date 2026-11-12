@@ -6,7 +6,7 @@
 [![S360 compliance](https://s360.aiursoft.com/badge.svg?project=aiursoft%2Fnopkg)](https://s360.aiursoft.com/SupplyChain?tab=projects&project=aiursoft%2Fnopkg&scope=baseline&ecosystem=all)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/nopkg.svg)](https://hub.docker.com/r/aiursoft/nopkg)
 
-Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nupkg](https://gitlab.aiursoft.com/aiursoft/nupkg). Browse cached packages, fetch upstream tarballs on demand, and optionally serve only versions admitted by S360.
+Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nupkg](https://gitlab.aiursoft.com/aiursoft/nupkg). Publish packages you own, cache upstream tarballs on demand, and optionally restrict mirrored packages to versions admitted by S360.
 
 ![screenshot](./screenshot.png)
 
@@ -15,10 +15,11 @@ Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nup
 - Standard npm metadata, scoped packages, exact versions and dist-tags under `/npm/`.
 - On-demand caching of original tarballs, with integrity and package identity checks.
 - Optional S360 admission for metadata and every download, including cached archives.
+- Personal API keys, package ownership, immutable publishing and distribution-tag management.
 - Cache-only operation when the upstream is unavailable.
 - Shared Aiursoft accounts, OIDC, roles, themes and localization.
 
-**Development preview:** read-only registry access is available. Package publishing and npm audit are not implemented. There is no hosted Nopkg instance yet.
+See [publishing packages](./docs/publishing.md) for personal keys, ownership and publishing the same artifact to internal and public registries. The npm audit API is not implemented; requests return 501 rather than a clean security report.
 
 ## Use the registry
 

@@ -6,5 +6,6 @@ public class RegistryOptions
     public string StoragePath { get; set; } = Path.Combine(Path.GetTempPath(), "aiursoft-nopkg", "npm");
     public bool CacheOnly { get; set; }
     public S360AdmissionOptions S360 { get; set; } = new();
+    public long MaxPublishArchiveBytes { get; set; } = 64 * 1024 * 1024;
     public long MaxArchiveBytes { get; set; } = 512 * 1024 * 1024;
 }

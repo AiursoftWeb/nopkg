@@ -3,8 +3,12 @@
     <h1 class="h3 mb-0">@Localizer["Packages"]</h1>
     <span class="badge bg-secondary">@(Model.CacheOnly ? Localizer["Cache only"] : Localizer["On demand"])</span>
 </div>
-<p class="text-muted">@(Model.AdmissionEnabled ? Localizer["Only admitted versions are listed. Tarballs are stored when requested."] : Localizer["Metadata lists known versions. Tarballs are stored when requested."])</p>
-@if (Model.AdmissionUnavailable)
+<p class="text-muted">@(Model.AdmissionEnabled ? Localizer["Internal releases and admitted upstream packages."] : Localizer["Internal releases and cached upstream packages."])</p>
+@if (Model.AdmissionUnavailable && Model.Packages.Count > 0)
+{
+    <div class="alert alert-warning"><div class="alert-message">@Localizer["Mirror admission is unavailable. Internal releases remain available."]</div></div>
+}
+@if (Model.AdmissionUnavailable && Model.Packages.Count == 0)
 {
     <div class="card"><div class="card-body text-center py-5">
         <h2 class="h5">@Localizer["Package admission is unavailable"]</h2>
@@ -23,14 +27,14 @@ else
 {
     <div class="card"><div class="table-responsive">
         <table class="table mb-0">
-            <thead><tr><th>@Localizer["Package"]</th><th>@Localizer["Known versions"]</th><th>@Localizer["Stored versions"]</th></tr></thead>
+            <thead><tr><th>@Localizer["Package"]</th><th>@Localizer["Source"]</th><th>@Localizer["Known versions"]</th><th>@Localizer["Stored versions"]</th></tr></thead>
             <tbody>
             @foreach (var package in Model.Packages)
             {
-                <tr><td>@package.Name</td><td>@package.KnownVersions</td><td>@package.StoredVersions</td></tr>
+                <tr><td class="text-break">@package.Name</td><td>@(package.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</td><td>@package.KnownVersions</td><td>@package.StoredVersions</td></tr>
             }
             </tbody>
         </table>
     </div></div>
 }
-<p class="small text-muted mt-3">@(Model.AdmissionEnabled ? Localizer["S360 admission enabled. Publishing is not available yet."] : Localizer["Protocol preview. S360 admission is disabled; publishing is not available yet."])</p>
+<p class="small text-muted mt-3">@(Model.AdmissionEnabled ? Localizer["S360 admission applies to mirrored packages. Internal releases use publisher permissions."] : Localizer["S360 admission is disabled. Internal releases use publisher permissions."])</p>

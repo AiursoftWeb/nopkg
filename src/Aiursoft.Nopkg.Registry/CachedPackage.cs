@@ -1,3 +1,3 @@
 namespace Aiursoft.Nopkg.Registry;
 
-public record CachedPackage(string Name, int KnownVersions, int StoredVersions);
+public record CachedPackage(string Name, int KnownVersions, int StoredVersions, bool IsLocallyPublished = false);

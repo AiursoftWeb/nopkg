@@ -5,6 +5,8 @@ namespace Aiursoft.Nopkg.Authorization;
 /// </summary>
 public static class AppPermissionNames
 {
+    public const string CanPublishPackages = nameof(CanPublishPackages);
+    public const string CanManagePackages = nameof(CanManagePackages);
     // User Management
     public const string CanReadUsers = nameof(CanReadUsers);
     public const string CanDeleteUsers = nameof(CanDeleteUsers);
