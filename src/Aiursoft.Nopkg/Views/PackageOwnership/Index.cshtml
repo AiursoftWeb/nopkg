@@ -7,7 +7,7 @@
 @foreach (var item in Model.Items)
 {
     <div class="list-group-item d-flex flex-wrap align-items-center justify-content-between gap-3">
-        <div class="text-break"><strong>@item.PackageId</strong> <span class="badge bg-secondary">@(item.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</span><div class="small text-muted mt-1">@Localizer["Owner"]: @(item.OwnerName ?? Localizer["Unassigned"].Value) <span class="ms-2">@Localizer["Versions"]: @item.VersionCount</span></div></div>
+        <div class="text-break"><strong>@item.PackageId</strong> <span class="badge bg-secondary">@(item.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</span><div class="small text-muted mt-1">@Localizer["Owner"]: @(item.OwnerName ?? Localizer["Unassigned"].Value) @if (item.IsLocallyPublished) { <span class="ms-2">@Localizer["Internal versions"]: @item.VersionCount</span> }</div></div>
         <a asp-action="Assign" asp-route-id="@item.Id" asp-route-q="@Model.Query" asp-route-page="@Model.Page" asp-route-unassignedOnly="@Model.UnassignedOnly" class="btn btn-sm btn-outline-primary">@Localizer["Assign owner"]</a>
     </div>
 }

@@ -4,7 +4,11 @@
     <span class="badge bg-secondary">@(Model.CacheOnly ? Localizer["Cache only"] : Localizer["On demand"])</span>
 </div>
 <p class="text-muted">@(Model.AdmissionEnabled ? Localizer["Internal releases and admitted upstream packages."] : Localizer["Internal releases and cached upstream packages."])</p>
-@if (Model.AdmissionUnavailable)
+@if (Model.AdmissionUnavailable && Model.Packages.Count > 0)
+{
+    <div class="alert alert-warning"><div class="alert-message">@Localizer["Mirror admission is unavailable. Internal releases remain available."]</div></div>
+}
+@if (Model.AdmissionUnavailable && Model.Packages.Count == 0)
 {
     <div class="card"><div class="card-body text-center py-5">
         <h2 class="h5">@Localizer["Package admission is unavailable"]</h2>

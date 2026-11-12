@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Aiursoft.Nopkg.Controllers;
 
 [LimitPerMin]
-public class DashboardController(NpmRegistry registry, RegistryOptions options) : Controller
+public class DashboardController(NpmRegistry registry, RegistryOptions options, ILocalPackageStore localPackages) : Controller
 {
     [RenderInNavBar(
         NavGroupName = "Features",
@@ -31,9 +31,11 @@ public class DashboardController(NpmRegistry registry, RegistryOptions options) 
         }
         catch (AdmissionUnavailableException)
         {
-            Response.StatusCode = StatusCodes.Status503ServiceUnavailable;
+            var internalPackages = await localPackages.ListAsync(cancellationToken);
+            Response.StatusCode = internalPackages.Count > 0 ? StatusCodes.Status200OK : StatusCodes.Status503ServiceUnavailable;
             return this.StackView(new IndexViewModel
             {
+                Packages = internalPackages,
                 CacheOnly = options.CacheOnly, AdmissionEnabled = options.S360.Enabled, AdmissionUnavailable = true
             });
         }

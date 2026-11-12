@@ -166,4 +166,22 @@ public class PublishingTests : TestBase
         Assert.AreEqual(HttpStatusCode.RequestEntityTooLarge,(await Http.SendAsync(request)).StatusCode);
     }
 
+    [TestMethod]
+    public async Task InternalPackagesRemainVisibleWhenMirrorAdmissionIsDown()
+    {
+        var options=Server!.Services.GetRequiredService<RegistryOptions>();
+        options.S360=new S360AdmissionOptions {Enabled=true,Server="http://127.0.0.1:9/",CheckKey="test-only"};
+        var (_,key)=await PublisherAsync();
+        Assert.AreEqual(HttpStatusCode.Created,(await PublishAsync("still-available",key)).StatusCode);
+        var name="unavailable-mirror";
+        var directory=Path.Combine(_registryPath,Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(name))));
+        Directory.CreateDirectory(directory);
+        await File.WriteAllTextAsync(Path.Combine(directory,"metadata.json"),new JsonObject { ["name"]=name,["versions"]=new JsonObject() }.ToJsonString());
+        using var response=await Http.GetAsync("/Dashboard");
+        Assert.AreEqual(HttpStatusCode.OK,response.StatusCode);
+        var html=await response.Content.ReadAsStringAsync();
+        Assert.Contains("still-available",html);
+        Assert.Contains("Mirror admission is unavailable",html);
+    }
+
 }
