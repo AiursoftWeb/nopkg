@@ -184,4 +184,38 @@ public class PublishingTests : TestBase
         Assert.Contains("Mirror admission is unavailable",html);
     }
 
+    [TestMethod]
+    [DataRow("standard-package")]
+    [DataRow("@test/standard-package")]
+    public async Task StandardTarballPathsUseTheSameImmutableArchive(string name)
+    {
+        var (_, key) = await PublisherAsync();
+        var publication = Publication(name);
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync(name, key, publication)).StatusCode);
+        var leaf = name.Split('/')[^1];
+        var url = "/npm/" + name + "/-/" + leaf + "-1.0.0.tgz";
+        var bytes = await Http.GetByteArrayAsync(url);
+        CollectionAssert.AreEqual(Convert.FromBase64String(publication["_attachments"]!["package.tgz"]!["data"]!.GetValue<string>()), bytes);
+        using var head = await Http.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
+        Assert.AreEqual(HttpStatusCode.OK, head.StatusCode);
+        Assert.AreEqual(bytes.Length, head.Content.Headers.ContentLength);
+        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync("/npm/" + name + "/-/" + leaf + "-9.9.9.tgz")).StatusCode);
+        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync("/npm/" + name + "/-/wrong-1.0.0.tgz")).StatusCode);
+    }
+
+    [TestMethod]
+    [DataRow("GET")]
+    [DataRow("HEAD")]
+    public async Task StandardTarballPathRequiresAdmissionEvenWithConditionalHeaders(string method)
+    {
+        var options = Server!.Services.GetRequiredService<RegistryOptions>();
+        options.CacheOnly = false;
+        options.S360 = new S360AdmissionOptions { Enabled = true, Server = "http://127.0.0.1:9/", CheckKey = "test-only" };
+        using var request = new HttpRequestMessage(new HttpMethod(method), "/npm/@test/mirror/-/mirror-1.0.0.tgz");
+        request.Headers.Range = new RangeHeaderValue(0, 10);
+        request.Headers.TryAddWithoutValidation("If-None-Match", "*");
+        using var response = await Http.SendAsync(request);
+        Assert.AreEqual(HttpStatusCode.ServiceUnavailable, response.StatusCode);
+    }
+
 }

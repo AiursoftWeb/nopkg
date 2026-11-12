@@ -91,6 +91,20 @@ public static class RegistryEndpoint
             var components = path.TrimStart('/').Split('/');
             var scoped = components[0].StartsWith('@');
             var packageSegments = scoped ? 2 : 1;
+            // npm lockfiles retain the standard registry tarball layout when the registry host changes.
+            if (components.Length == packageSegments + 2 && components[packageSegments] == "-")
+            {
+                var package = string.Join('/', components.Take(packageSegments));
+                var prefix = components[packageSegments - 1] + "-";
+                var filename = components[^1];
+                if (!filename.StartsWith(prefix, StringComparison.Ordinal) || !filename.EndsWith(".tgz", StringComparison.Ordinal) || filename.Length <= prefix.Length + 4)
+                    throw new FileNotFoundException("Tarball not found.");
+                var version = filename[prefix.Length..^4];
+                // Use the same admission, ownership and integrity checks as canonical download URLs.
+                var file = await registry.ArchiveAsync(package, version, context.RequestAborted);
+                await Results.File(file, "application/octet-stream", enableRangeProcessing: true).ExecuteAsync(context);
+                return;
+            }
             if (components.Length < packageSegments || components.Length > packageSegments + 1)
                 throw new FileNotFoundException("Registry endpoint not found.");
             var packageName = string.Join('/', components.Take(packageSegments));
