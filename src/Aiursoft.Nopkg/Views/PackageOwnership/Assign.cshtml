@@ -1,0 +1,15 @@
+@model Aiursoft.Nopkg.Models.PackageOwnershipViewModels.AssignViewModel
+<h1 class="h3">@Localizer["Assign package owner"]</h1>
+<div class="row"><div class="col-lg-7"><div class="card"><div class="card-body">
+<h2 class="h5 text-break">@Model.PackageId</h2><p class="text-muted">@Localizer["Ownership applies to every version of this package."]</p>
+<form asp-action="Assign" asp-route-id="@Model.Id" method="post">
+    <input asp-for="Revision" type="hidden" />
+    @if (Model.IsMirrored)
+    {
+        <div class="form-check my-3"><input class="form-check-input" asp-for="ConfirmConversion" /><label class="form-check-label" asp-for="ConfirmConversion">@Localizer["Stop mirroring and use internally published versions. Existing mirror files will not become internal releases."]</label><span asp-validation-for="ConfirmConversion" class="text-danger"></span></div>
+    }
+    <input asp-for="PreviousOwnerUserId" type="hidden" /><input asp-for="Query" type="hidden" /><input asp-for="Page" type="hidden" /><input asp-for="UnassignedOnly" type="hidden" />
+    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+    <div class="mb-3"><label asp-for="OwnerUserId" class="form-label">@Localizer["Owner"]</label><select asp-for="OwnerUserId" asp-items="Model.Users" class="form-select"><option value="">@Localizer["Unassigned — administrators only"]</option></select><span asp-validation-for="OwnerUserId" class="text-danger"></span></div>
+    <div class="d-flex gap-2"><button type="submit" class="btn btn-primary">@Localizer["Assign owner"]</button><a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" asp-route-unassignedOnly="@Model.UnassignedOnly" class="btn btn-outline-secondary">@Localizer["Cancel"]</a></div>
+</form></div></div></div></div>

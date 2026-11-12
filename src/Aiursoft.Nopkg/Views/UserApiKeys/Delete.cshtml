@@ -1,0 +1,3 @@
+@model Aiursoft.Nopkg.Models.UserApiKeysViewModels.DeleteViewModel
+<h1 class="h3">@Localizer["Revoke API key"]</h1>
+<div class="card"><div class="card-body"><p class="text-break"><strong>@Model.Key.Name</strong> <code>@(Model.Key.KeyPrefix)...</code></p><p>@Localizer["Clients using this key will lose access."]</p><form asp-action="Delete" asp-route-id="@Model.Key.Id" method="post" class="d-flex gap-2"><button type="submit" class="btn btn-danger">@Localizer["Revoke key"]</button><a asp-action="Index" class="btn btn-outline-secondary">@Localizer["Cancel"]</a></form></div></div>

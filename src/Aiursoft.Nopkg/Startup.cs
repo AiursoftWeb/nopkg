@@ -7,6 +7,7 @@ using Aiursoft.Scanner;
 using Aiursoft.Nopkg.Configuration;
 using Aiursoft.Nopkg.Registry;
 using Aiursoft.Nopkg.Services.Registry;
+using Aiursoft.Nopkg.Services.Publishing;
 using System.Net;
 using Aiursoft.WebTools.Abstractions.Models;
 using Aiursoft.Nopkg.InMemory;
@@ -77,6 +78,9 @@ public class Startup : IWebStartup
         var registryOptions = new RegistryOptions();
         configuration.GetSection("Registry").Bind(registryOptions);
         services.AddSingleton(registryOptions);
+        services.AddScoped<PackagePublisherAuthenticationService>();
+        services.AddScoped<PackagePublishingService>();
+        services.AddSingleton<ILocalPackageStore, LocalPackageStore>();
         services.AddHttpClient("npm-upstream", http => http.Timeout = TimeSpan.FromSeconds(60))
             .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler
             {
@@ -88,7 +92,8 @@ public class Startup : IWebStartup
         services.AddSingleton(provider => new NpmRegistry(
             provider.GetRequiredService<IHttpClientFactory>().CreateClient("npm-upstream"), registryOptions,
             registryOptions.S360.Enabled ? new S360AdmissionClient(
-                provider.GetRequiredService<IHttpClientFactory>().CreateClient("S360Admission"), registryOptions.S360) : null));
+                provider.GetRequiredService<IHttpClientFactory>().CreateClient("S360Admission"), registryOptions.S360) : null,
+            provider.GetRequiredService<ILocalPackageStore>()));
 
         // Controllers and localization
         services.AddControllersWithViews()

@@ -25,6 +25,10 @@ public class AppPermissions
         var localizer = new FakeLocalizer();
         List<PermissionDescriptor> allPermission =
         [
+            new(AppPermissionNames.CanPublishPackages,
+                localizer["Publish Packages"], localizer["Publish and manage versions of packages you own."]),
+            new(AppPermissionNames.CanManagePackages,
+                localizer["Manage All Packages"], localizer["Assign package ownership and manage any package."]),
             new(AppPermissionNames.CanReadUsers,
                 localizer["Read Users"],
                 localizer["Allows viewing the list of all users."]),

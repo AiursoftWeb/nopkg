@@ -1,0 +1,27 @@
+@using Aiursoft.WebTools
+@model Aiursoft.Nopkg.Models.UserApiKeysViewModels.IndexViewModel
+<div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
+    <div><h1 class="h3 mb-1">@Localizer["API Keys"]</h1><p class="text-muted mb-0">@Localizer["Keys use your current account permissions."]</p></div>
+    <a asp-action="Create" class="btn btn-primary"><i data-lucide="plus" class="me-1" aria-hidden="true"></i>@Localizer["New key"]</a>
+</div>
+@if (TempData["SuccessMessage"] != null) { <div class="alert alert-success"><div class="alert-message">@Localizer["API key revoked."]</div></div> }
+<div class="card"><div class="list-group list-group-flush">
+@if (Model.Keys.Count == 0)
+{
+    <div class="p-4 text-center text-muted">@Localizer["No API keys yet."]</div>
+}
+@foreach (var key in Model.Keys)
+{
+    <div class="list-group-item d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="text-break"><strong>@key.Name</strong> <code>@(key.KeyPrefix)...</code>
+            <div class="small text-muted mt-1">
+                @if (key.IsExpired) { <span class="badge bg-danger">@Localizer["Expired"]</span> }
+                else if (key.ExpiresAt.HasValue) { <span>@Localizer["Expires"] <label data-utc-time="@key.ExpiresAt.Value.ToHtmlDateTime()"></label></span> }
+                else { <span>@Localizer["No expiration"]</span> }
+                @if (key.LastUsedAt.HasValue) { <span class="ms-2">@Localizer["Last used"] <label data-utc-time="@key.LastUsedAt.Value.ToHtmlDateTime()"></label></span> }
+            </div>
+        </div>
+        <div class="d-flex gap-2"><a asp-action="Usage" asp-route-id="@key.Id" class="btn btn-sm btn-outline-primary">@Localizer["Use"]</a><a asp-action="Delete" asp-route-id="@key.Id" class="btn btn-sm btn-outline-danger">@Localizer["Revoke"]</a></div>
+    </div>
+}
+</div></div>

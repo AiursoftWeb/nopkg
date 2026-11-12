@@ -1,0 +1,18 @@
+@model Aiursoft.Nopkg.Models.PackageOwnershipViewModels.IndexViewModel
+<div class="d-flex flex-wrap justify-content-between gap-2 mb-3"><h1 class="h3 mb-0">@Localizer["Package ownership"]</h1><form asp-action="Refresh" method="post"><button type="submit" class="btn btn-outline-secondary">@Localizer["Refresh cached packages"]</button></form></div>
+<p class="text-muted">@Localizer["Owners control publishing. Package downloads remain public."]</p>
+<form method="get" class="card"><div class="card-body d-flex flex-wrap align-items-center gap-3"><input type="search" name="q" value="@Model.Query" class="form-control w-auto flex-grow-1" aria-label="@Localizer["Search packages"]" placeholder="@Localizer["Search packages"]" /><div class="form-check"><input type="checkbox" name="unassignedOnly" value="true" checked="@Model.UnassignedOnly" class="form-check-input" id="unassigned-only" /><label for="unassigned-only" class="form-check-label">@Localizer["Unassigned only"]</label></div><button type="submit" class="btn btn-primary">@Localizer["Search"]</button></div></form>
+<div class="card"><div class="list-group list-group-flush">
+@if (Model.Items.Count == 0) { <div class="p-4 text-center text-muted">@Localizer["No packages found."]</div> }
+@foreach (var item in Model.Items)
+{
+    <div class="list-group-item d-flex flex-wrap align-items-center justify-content-between gap-3">
+        <div class="text-break"><strong>@item.PackageId</strong> <span class="badge bg-secondary">@(item.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</span><div class="small text-muted mt-1">@Localizer["Owner"]: @(item.OwnerName ?? Localizer["Unassigned"].Value) <span class="ms-2">@Localizer["Versions"]: @item.VersionCount</span></div></div>
+        <a asp-action="Assign" asp-route-id="@item.Id" asp-route-q="@Model.Query" asp-route-page="@Model.Page" asp-route-unassignedOnly="@Model.UnassignedOnly" class="btn btn-sm btn-outline-primary">@Localizer["Assign owner"]</a>
+    </div>
+}
+</div></div>
+<nav aria-label="@Localizer["Pagination"]"><ul class="pagination justify-content-center">
+@if (Model.Page > 1) { <li class="page-item"><a class="page-link" asp-route-q="@Model.Query" asp-route-page="@(Model.Page - 1)" asp-route-unassignedOnly="@Model.UnassignedOnly">@Localizer["Previous"]</a></li> }
+@if (Model.Page * 20 < Model.Total) { <li class="page-item"><a class="page-link" asp-route-q="@Model.Query" asp-route-page="@(Model.Page + 1)" asp-route-unassignedOnly="@Model.UnassignedOnly">@Localizer["Next"]</a></li> }
+</ul></nav>
