@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API-nøgler</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Tildel pakkeejerskab</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Baggrundstasks</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Administrer</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Ny API-nøgle</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Skabelon</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Ikke fundet</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Pakkeejeerskab</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Pakker</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Registry</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>Inddrag API-nøgle</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Roledetaljer</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Uautoriseret</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>Brug API-nøgle</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Brugerdetaljer</value>

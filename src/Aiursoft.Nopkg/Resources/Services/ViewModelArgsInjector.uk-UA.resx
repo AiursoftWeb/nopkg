@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Анонімний</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>Ключі API</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Призначити власника пакета</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Фонові завдання</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Керування</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Новий API-ключ</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Шаблон</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Не знайдено</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Власність пакета</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Пакети</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Реєстр</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>Відкликати ключ API</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Деталі ролі</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Неавторизовано</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>Використати API-ключ</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Деталі користувача</value>

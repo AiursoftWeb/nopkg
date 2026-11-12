@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>अनाम</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API कुंजियाँ</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>पैकेज मालिक असाइन करें</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>बैकग्राउंड जॉब्स</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>प्रबंधित करें</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>नया API की</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>टेम्पलेट</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>नहीं मिला</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>पैकेज स्वामित्व</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>पैकेज</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>रिजिस्ट्री</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>API कुंजी रद्द करें</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>भूमिका विवरण</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>अनधिकृत</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>API कुंजी का उपयोग करें</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>उपयोगकर्ता विवरण</value>

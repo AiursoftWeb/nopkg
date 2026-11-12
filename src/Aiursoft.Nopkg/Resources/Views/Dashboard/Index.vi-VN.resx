@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Phiên bản đã biết</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Việc cấp quyền cho bản mirror không khả dụng. Các bản phát hành nội bộ vẫn khả dụng.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía client và phía server dựa trên các chú thích dữ liệu.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Chế độ tối thông minh tự động điều chỉnh theo cài đặt hệ thống của người dùng.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Nguồn</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Bắt đầu một dự án mới</value>

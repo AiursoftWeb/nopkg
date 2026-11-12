@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="1 year" xml:space="preserve">
+    <value>1 year</value>
+  </data>
+  <data name="10 years" xml:space="preserve">
+    <value>10 years</value>
+  </data>
+  <data name="30 days" xml:space="preserve">
+    <value>30 days</value>
+  </data>
+  <data name="7 days" xml:space="preserve">
+    <value>7 days</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>e.g. CI pipeline</value>
+  </data>
+  <data name="Generate key" xml:space="preserve">
+    <value>Generate key</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="New API key" xml:space="preserve">
+    <value>New API key</value>
+  </data>
+
+</root>

@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Giver mulighed for at se listen over roller og deres tildelte tilladelser.</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Tildel ejerskab af pakker og administrer enhver pakke.</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Tildel roller til brugere</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Giver tilladelse til at genstarte applikationsinstansen. Kan forårsage afbrydelser i tilgængeligheden, men alle indstillinger og cache vil blive genindlæst.</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>Administrer alle pakker</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Håndtér globale indstillinger</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Udgiv og administrér versioner af pakker, du ejer.</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>Udgiv pakker</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Læs tilladelser</value>

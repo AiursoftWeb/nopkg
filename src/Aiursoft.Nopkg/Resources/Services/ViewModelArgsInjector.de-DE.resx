@@ -36,6 +36,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API-Schlüssel</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Paketbesitzer zuweisen</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Hintergrundaufgaben</value>
   </data>
@@ -114,11 +120,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Verwalten</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Neuer API-Schlüssel</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Vorlage</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Nicht gefunden</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Paketbesitz</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Pakete</value>
@@ -144,6 +156,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Registry</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>API-Schlüssel widerrufen</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Rollendetails</value>
   </data>
@@ -164,6 +179,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Nicht autorisiert</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>API-Schlüssel verwenden</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Benutzerdetails</value>

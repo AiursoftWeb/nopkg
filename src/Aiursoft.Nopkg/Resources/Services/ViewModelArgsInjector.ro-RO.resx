@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonim</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>Chei API</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Atribuire proprietar pachet</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Joburi în fundal</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Gestionează</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Cheie API nouă</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Șablon</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Nu a fost găsit</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Deținerea pachetului</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Pachete</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Registrat</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>Revocă cheia API</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Detalii Rol</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Neautorizat</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>Folosiți cheia API</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Detalii Utilizator</value>

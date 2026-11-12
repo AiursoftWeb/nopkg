@@ -36,6 +36,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>匿名</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>APIキー</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>パッケージの所有者を割り当てる</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>バックグラウンドジョブ</value>
   </data>
@@ -114,11 +120,17 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>新しいAPIキー</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>テンプレート</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Not Found</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>パッケージの所有権</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>パッケージ</value>
@@ -144,6 +156,9 @@
   <data name="Registry" xml:space="preserve">
     <value>レジストリ</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>APIキーの失効</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>ロール詳細</value>
   </data>
@@ -164,6 +179,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>権限がありません</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>APIキーの使用</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>ユーザー詳細</value>

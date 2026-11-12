@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>الإصدارات المعروفة</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>خدمة قبول المرآة غير متاحة. الإصدارات الداخلية لا تزال متاحة.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>تتم مصادقة النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>وضع الظلام الذكي الذي يتكيف تلقائيًا مع إعدادات نظام المستخدم.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>المصدر</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>بدء مشروع جديد</value>

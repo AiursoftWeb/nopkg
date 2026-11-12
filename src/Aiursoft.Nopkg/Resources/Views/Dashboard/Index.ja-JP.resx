@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>既知のバージョン</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>ミラーの承認機能を利用できません。内部リリースは引き続き利用可能です。</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>モデルはデータ注釈に基づいて、クライアントおよびサーバーの両方で検証されます。</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>ユーザーのシステム設定に自動的に適応するスマートダークモード。</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>ソース</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>新規プロジェクトを開始</value>

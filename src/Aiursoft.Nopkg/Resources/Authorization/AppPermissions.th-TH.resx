@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>อนุญาตให้ดูรายการบทบาทและสิทธิ์ที่กำหนดให้</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>กำหนดความเป็นเจ้าของแพ็กเกจและจัดการแพ็กเกจใดๆ</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>กำหนดบทบาทให้ผู้ใช้</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>ให้สิทธิ์ในการรีสตาร์ทอินสแตนซ์แอปพลิเคชัน อาจทำให้เกิดการขัดจังหวะในการให้บริการ แต่การตั้งค่าและแคชทั้งหมดจะถูกโหลดใหม่</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>จัดการแพ็กเกจทั้งหมด</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>จัดการการตั้งค่าทั่วโลก</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>เผยแพร่และจัดการเวอร์ชันของแพ็กเกจที่คุณเป็นเจ้าของ</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>เผยแพร่แพ็กเกจ</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>อ่านสิทธิ์</value>

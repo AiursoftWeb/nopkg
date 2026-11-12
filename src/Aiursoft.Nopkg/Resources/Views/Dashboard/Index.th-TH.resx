@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>เวอร์ชันที่รู้จัก</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>การรับเข้ามิร์rors ไม่พร้อมใช้งาน การเปิดตัวภายในยังคงพร้อมใช้งาน</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>โมเดลจะได้รับการตรวจสอบความถูกต้องทั้งในด้านไคลเอนต์และเซิร์ฟเวอร์ตามการตั้งค่าข้อมูล</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>โหมดมืดอัจฉริยะที่ปรับเปลี่ยนให้เข้ากับการตั้งค่าระบบของผู้ใช้โดยอัตโนมัติ</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>แหล่งที่มา</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>เริ่มต้นโปรเจกต์ใหม่</value>

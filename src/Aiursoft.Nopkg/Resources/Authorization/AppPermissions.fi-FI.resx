@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Mahdollistaa rooliluettelon ja niihin liitettyjen käyttöoikeuksien tarkastelemisen.</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Määritä paketin omistajuus ja hallitse mitä tahansa pakettia.</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Anna roolit käyttäjille</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Antaa luvan sovelluksen uudelleenkäynnistämiseen. Saattaa aiheuttaa käyttökatkoksia, mutta kaikki asetukset ja välimuisti ladataan uudelleen.</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>Hallitse kaikkia paketteja</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Hallinnoi yleisiä asetuksia</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Julkaise ja hallitse versioita paketeista, joita omistat.</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>Julkaise paketteja</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Lue käyttöoikeudet</value>

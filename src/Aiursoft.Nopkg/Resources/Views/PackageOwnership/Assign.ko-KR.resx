@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Assign owner" xml:space="preserve">
+    <value>소유자 지정</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>패키지 소유자 지정</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>취소</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>소유자</value>
+  </data>
+  <data name="Ownership applies to every version of this package." xml:space="preserve">
+    <value>소유권은 이 패키지의 모든 버전에 적용됩니다.</value>
+  </data>
+  <data name="Stop mirroring and use internally published versions. Existing mirror files will not become internal releases." xml:space="preserve">
+    <value>미러링을 중지하고 내부 공개 버전을 사용하십시오. 기존 미러 파일은 내부 릴리스가 되지 않습니다.</value>
+  </data>
+  <data name="Unassigned — administrators only" xml:space="preserve">
+    <value>미지정 — 관리자 전용</value>
+  </data>
+
+</root>

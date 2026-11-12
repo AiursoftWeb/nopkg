@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonyymi</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API-avaimet</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Määritä pakkausten omistaja</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Taustatehtävät</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Hallinnoi</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Uusi API-avain</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Malli</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Ei löytynyt</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Pakkausomistus</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paketit</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Rekisteri</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>Kumoa API-avain</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Roolin tiedot</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Luvaton</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>Käytä API-avainta</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Käyttäjän tiedot</value>
