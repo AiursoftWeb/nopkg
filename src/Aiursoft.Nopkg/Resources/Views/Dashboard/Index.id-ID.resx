@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Versi yang diketahui</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Admisi cermin tidak tersedia. Rilis internal tetap tersedia.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Model divalidasi di sisi klien dan server berdasarkan anotasi data.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Mode gelap yang cerdas yang secara otomatis menyesuaikan dengan pengaturan sistem pengguna.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Sumber</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Mulai proyek baru</value>

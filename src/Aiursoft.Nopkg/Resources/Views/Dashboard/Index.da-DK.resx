@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Kendte versioner</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Spejlingstilladelse er utilgængelig. Interne udgivelser er fortsat tilgængelige.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller valideres på både klient- og serversiden baseret på dataanmærkninger.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Smart mørk tilstand, der automatisk tilpasser sig brugerens systemindstillinger.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Kilde</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Start et nyt projekt</value>
