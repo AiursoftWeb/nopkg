@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Assign owner" xml:space="preserve">
+    <value>Gán chủ sở hữu</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Gán chủ sở hữu gói</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Owner" xml:space="preserve">
+    <value>Chủ sở hữu</value>
+  </data>
+  <data name="Ownership applies to every version of this package." xml:space="preserve">
+    <value>Quyền sở hữu áp dụng cho mọi phiên bản của gói này.</value>
+  </data>
+  <data name="Stop mirroring and use internally published versions. Existing mirror files will not become internal releases." xml:space="preserve">
+    <value>Dừng sao chép và sử dụng các phiên bản được phát hành nội bộ. Các tệp sao chép hiện có sẽ không trở thành các bản phát hành nội bộ.</value>
+  </data>
+  <data name="Unassigned — administrators only" xml:space="preserve">
+    <value>Chưa gán — chỉ dành cho quản trị viên</value>
+  </data>
+
+</root>

@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonym</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API-nycklar</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Tilldela paketägare</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Bakgrundsjobb</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Hantera</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Ny API-nyckel</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Mall</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Inte hittat</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Paketäganderätt</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paket</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Register</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>Återkalla API-nyckel</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Rollinformation</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Obehörig</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>Använd API-nyckel</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Användardetaljer</value>

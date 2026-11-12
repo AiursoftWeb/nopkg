@@ -33,6 +33,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>Anonim</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API Anahtarları</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>Paket sahibini ata</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>Arka Plan Görevleri</value>
   </data>
@@ -111,11 +117,17 @@
   <data name="Manage" xml:space="preserve">
     <value>Yönet</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>Yeni API anahtarı</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>Şablon</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>Bulunamadı</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>Paket sahipliği</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paketler</value>
@@ -141,6 +153,9 @@
   <data name="Registry" xml:space="preserve">
     <value>Kayıt Defteri</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>API anahtarını iptal et</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>Rol Detayları</value>
   </data>
@@ -161,6 +176,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>Yetkisiz</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>API anahtarını kullan</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>Kullanıcı Detayları</value>

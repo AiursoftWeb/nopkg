@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Bilinen sürümler</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Ayna kabulü kullanılamıyor. Dahili sürümler hâlâ kullanılabilir.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Modeller, veri eklemelerine dayalı olarak hem istemci hem de sunucu tarafında doğrulanır.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Kullanıcının sistem ayarlarına otomatik olarak uyum sağlayan akıllı karanlık mod.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Kaynak</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Yeni bir proje başlat</value>

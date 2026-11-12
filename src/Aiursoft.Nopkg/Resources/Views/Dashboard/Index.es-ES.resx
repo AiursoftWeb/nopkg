@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Versiones conocidas</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>La admisión del espejo no está disponible. Las versiones internas siguen estando disponibles.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Los modelos se validan en ambos lados, cliente y servidor, basándose en las anotaciones de datos.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Modo oscuro inteligente que se adapta automáticamente a la configuración del sistema del usuario.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Origen</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Comenzar un nuevo proyecto</value>

@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>Известные версии</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>Доступ к зеркалу недоступен. Внутренние релизы остаются доступными.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Модели проверяются на стороне клиента и сервера на основе аннотаций данных.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Умный тёмный режим, который автоматически подстраивается под системные настройки пользователя.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Источник</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>Начать новый проект</value>

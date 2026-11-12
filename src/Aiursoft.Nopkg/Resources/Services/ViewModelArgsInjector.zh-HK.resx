@@ -36,6 +36,12 @@
   <data name="Anonymous" xml:space="preserve">
     <value>匿名</value>
   </data>
+  <data name="API Keys" xml:space="preserve">
+    <value>API 金鑰</value>
+  </data>
+  <data name="Assign package owner" xml:space="preserve">
+    <value>指定套件擁有者</value>
+  </data>
   <data name="Background Jobs" xml:space="preserve">
     <value>背景工作</value>
   </data>
@@ -114,11 +120,17 @@
   <data name="Manage" xml:space="preserve">
     <value>管理</value>
   </data>
+  <data name="New API key" xml:space="preserve">
+    <value>新增 API 金鑰</value>
+  </data>
   <data name="Nopkg" xml:space="preserve">
     <value>範本</value>
   </data>
   <data name="Not Found" xml:space="preserve">
     <value>找不到</value>
+  </data>
+  <data name="Package ownership" xml:space="preserve">
+    <value>套件擁有權</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>套件</value>
@@ -144,6 +156,9 @@
   <data name="Registry" xml:space="preserve">
     <value>註冊表</value>
   </data>
+  <data name="Revoke API key" xml:space="preserve">
+    <value>撤銷 API 金鑰</value>
+  </data>
   <data name="Role Details" xml:space="preserve">
     <value>角色詳情</value>
   </data>
@@ -164,6 +179,9 @@
   </data>
   <data name="Unauthorized" xml:space="preserve">
     <value>未獲授權</value>
+  </data>
+  <data name="Use API key" xml:space="preserve">
+    <value>使用 API 金鑰</value>
   </data>
   <data name="User Details" xml:space="preserve">
     <value>用戶詳情</value>

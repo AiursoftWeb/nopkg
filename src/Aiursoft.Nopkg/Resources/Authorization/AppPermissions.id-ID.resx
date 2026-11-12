@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Memungkinkan melihat daftar peran dan izin yang ditetapkan.</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Tetapkan kepemilikan paket dan kelola paket mana pun.</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Tetapkan Peran ke Pengguna</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Memberikan izin untuk memulai ulang instance aplikasi. Dapat menyebabkan gangguan ketersediaan, tetapi semua pengaturan dan cache akan dimuat ulang.</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>Kelola Semua Paket</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Kelola Pengaturan Global</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Terbitkan dan kelola versi paket yang Anda miliki.</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>Publikasikan Paket</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Izin Membaca</value>

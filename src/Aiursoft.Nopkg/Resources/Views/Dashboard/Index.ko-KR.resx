@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>알려진 버전</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>미러 승인 사용이 불가능합니다. 내부 릴리스는 계속 사용할 수 있습니다.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>모델은 데이터 주석에 기반하여 클라이언트 및 서버 양쪽에서 검증됩니다.</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>사용자의 시스템 설정에 자동으로 적응하는 스마트 다크 모드.</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>출처</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>새 프로젝트 시작하기</value>

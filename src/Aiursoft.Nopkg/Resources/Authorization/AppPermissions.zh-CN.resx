@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>允许查看角色列表及其分配的权限。</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>分配包所有权并管理任何包。</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>为用户分配角色</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>授予重启应用程序实例的权限。可能导致服务中断，但所有设置和缓存都将重新加载。</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>管理所有软件包</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>管理全局设置</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>发布并管理您拥有的包的版本。</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>发布软件包</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>读取权限</value>

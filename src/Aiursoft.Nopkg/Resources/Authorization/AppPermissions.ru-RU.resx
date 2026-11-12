@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Позволяет просматривать список ролей и назначенные им разрешения.</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Назначайте владение пакетами и управляйте любыми пакетами.</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Назначение ролей пользователям</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Предоставляет разрешение на перезапуск экземпляра приложения. Может привести к перерывам в доступности, но все настройки и кэш будут перезагружены.</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>Управление всеми пакетами</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Управление глобальными настройками</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Публикуйте и управляйте версиями пакетов, которыми вы владеете.</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>Публикация пакетов</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Чтение разрешений</value>

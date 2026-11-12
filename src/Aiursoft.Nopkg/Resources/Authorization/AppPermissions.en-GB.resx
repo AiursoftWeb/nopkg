@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Allows viewing the list of roles and their assigned permissions.</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Assign package ownership and manage any package.</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Assign Roles to Users</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>Grants permission to restart the application instance. May cause service interruptions, but all settings and cache will be reloaded.</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>Manage All Packages</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Manage Global Settings</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Publish and manage versions of packages you own.</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>Publish Packages</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Read Permissions</value>

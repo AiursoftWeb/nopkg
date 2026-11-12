@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>已知版本</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>镜像准入不可用。内部发布仍然可用。</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>模型会根据数据注解在客户端和服务器端进行验证。</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智能深色模式，可自动适应用户系统设置。</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>来源</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>开始新项目</value>

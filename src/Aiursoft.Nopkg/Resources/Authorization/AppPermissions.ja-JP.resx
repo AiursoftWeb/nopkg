@@ -57,6 +57,9 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>ロールの一覧とそれに割り当てられた権限を表示できます。</value>
   </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>パッケージの所有権を割り当て、任意のパッケージを管理します。</value>
+  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>ユーザーへのロール割り当て</value>
   </data>
@@ -81,8 +84,17 @@
   <data name="Grants permission to restart the application instance. May cause availability interruptions but all settings and cache will be reloaded." xml:space="preserve">
     <value>アプリケーションインスタンスの再起動を許可します。可用性の中断を引き起こす可能性がありますが、すべての設定とキャッシュは再読み込みされます。</value>
   </data>
+  <data name="Manage All Packages" xml:space="preserve">
+    <value>すべてのパッケージを管理</value>
+  </data>
   <data name="Manage Global Settings" xml:space="preserve">
     <value>グローバル設定の管理</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>所有しているパッケージのバージョンを公開し、管理します。</value>
+  </data>
+  <data name="Publish Packages" xml:space="preserve">
+    <value>パッケージの公開</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>権限の閲覧</value>

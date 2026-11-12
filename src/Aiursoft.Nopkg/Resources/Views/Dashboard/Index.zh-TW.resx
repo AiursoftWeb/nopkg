@@ -120,6 +120,9 @@
   <data name="Known versions" xml:space="preserve">
     <value>已知版本</value>
   </data>
+  <data name="Mirror admission is unavailable. Internal releases remain available." xml:space="preserve">
+    <value>鏡像准入服務無法使用。內部發布版本仍可正常存取。</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>模型會根據資料註解，在客戶端與伺服器端同時進行驗證。</value>
   </data>
@@ -173,6 +176,9 @@
   </data>
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>智慧深色模式，可自動適應使用者的系統設定。</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>來源</value>
   </data>
   <data name="Start a new project" xml:space="preserve">
     <value>開始新專案</value>
