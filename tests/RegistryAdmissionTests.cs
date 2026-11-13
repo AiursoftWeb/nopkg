@@ -105,6 +105,41 @@ public partial class RegistryTests
         await Assert.ThrowsExactlyAsync<AdmissionUnavailableException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
     }
 
+    [TestMethod]
+    public async Task InternalPolicyReverifiesHistoricalCacheWithoutRewritingItsProvenance()
+    {
+        var bytes = Archive();
+        using var upstream = new HttpClient(new RegistryHandler(r => r.RequestUri!.AbsolutePath.EndsWith(".tgz", StringComparison.Ordinal)
+            ? Response(bytes) : Response(Metadata(bytes))));
+        using var oldPolicy = new HttpClient(new AdmissionHandler(bytes));
+        var path = await Controlled(upstream, oldPolicy).ArchiveAsync("@example/library", "1.0.0");
+        var sidecar = await File.ReadAllBytesAsync(path + ".json");
+        var handler = new SinglePolicyHandler(bytes) { DenyVerification = true };
+        using var policy = new HttpClient(handler);
+        using var disconnected = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Historical cache must not fetch the old upstream.")));
+        var options = Options(offline: true);
+        options.Upstream = "https://registry.npmjs.org/";
+        options.S360 = new S360AdmissionOptions { Enabled = true, Server = "https://s360.example/", CheckKey = "fixture", PolicySource = "https://nopkg.fixture/npm" };
+        var registry = new NpmRegistry(disconnected, options, new S360AdmissionClient(policy, options.S360));
+        await Assert.ThrowsExactlyAsync<ArtifactDeniedException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+        Assert.AreEqual(1, handler.Verifications);
+        handler.DenyVerification = false;
+        Assert.AreEqual(path, await registry.ArchiveAsync("@example/library", "1.0.0"));
+        Assert.AreEqual(2, handler.Verifications);
+        CollectionAssert.AreEqual(sidecar, await File.ReadAllBytesAsync(path + ".json"));
+        CollectionAssert.AreEqual(bytes, await File.ReadAllBytesAsync(path));
+        handler.Allowed = false;
+        await Assert.ThrowsExactlyAsync<ArtifactDeniedException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+        handler.Unavailable = true;
+        await Assert.ThrowsExactlyAsync<AdmissionUnavailableException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+        handler.Unavailable = false;
+        handler.Allowed = true;
+        var tampered = JsonNode.Parse(sidecar)!;
+        tampered["_nopkg"]!["Sha256"] = new string('a', 64);
+        await File.WriteAllTextAsync(path + ".json", tampered.ToJsonString());
+        await Assert.ThrowsExactlyAsync<ArtifactDeniedException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+    }
+
     private NpmRegistry Controlled(HttpClient upstream, HttpClient policy, bool offline = false, string? source = null)
     {
         var options = Options(offline);

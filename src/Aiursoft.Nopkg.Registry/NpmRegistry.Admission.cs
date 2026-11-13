@@ -92,9 +92,13 @@ public partial class NpmRegistry
             ArtifactIdentity? recorded;
             try { recorded = provenance.Deserialize<ArtifactIdentity>(); }
             catch (JsonException) { throw new InvalidDataException("Invalid cached artifact provenance."); }
-            // Never silently reclassify bytes from another source or a modified cache file.
-            if (recorded != actual) throw new ArtifactDeniedException();
-            await _admission.RequireAsync(actual, token);
+            // A fixed internal policy can independently verify historical bytes against its
+            // configured upstream. Keep the original provenance; never reclassify the cache.
+            var expected = _admission.UsesRegistryPolicy && recorded != null
+                ? actual with { Source = recorded.Source }
+                : actual;
+            if (recorded != expected) throw new ArtifactDeniedException();
+            await _admission.RequireAsync(expected, token);
         }
         else
         {
