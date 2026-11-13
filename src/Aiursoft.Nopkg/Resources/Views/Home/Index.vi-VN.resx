@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Quy trình đã cấu hình sẵn cho môi trường phát triển/sản xuất</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Công bố gói của bạn và lưu trữ bản phát hành thượng nguồn với quyền tiếp cận S360 tùy chọn.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Cổng chất lượng</value>
   </data>

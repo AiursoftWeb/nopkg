@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Προκαθορισμένες αλυσίδες για dev/prod</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Δημοσιεύστε τα πακέτα σας και κάντε προσωρινή αποθήκευση εκδόσεων από ανώτερες πηγές με προαιρετική εισαγωγή S360.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Ποιότητα Πύλης</value>
   </data>

@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Pipelines preconfigurate pentru dev/prod</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Publica-ți pachetele și cache-ază eliberările upstream cu admitere opțională S360.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Portocală de Calitate</value>
   </data>

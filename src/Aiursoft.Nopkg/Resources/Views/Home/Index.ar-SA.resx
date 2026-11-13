@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>خطوط أنابيب مُعدّة مسبقًا للتطوير والإنتاج</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>انشر الحزم الخاصة بك واخزّن الإصدارات من المنبع مع خيار القبول من S360.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>بوابة الجودة</value>
   </data>

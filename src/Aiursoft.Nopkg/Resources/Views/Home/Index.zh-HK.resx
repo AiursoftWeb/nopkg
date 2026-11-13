@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>預設的開發/生產環境管線</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>發布你的套件，並快取上游發布版本，可選啟用 S360 准入。</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>品質門檻</value>
   </data>

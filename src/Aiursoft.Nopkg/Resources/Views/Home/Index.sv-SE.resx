@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Förkonfigurerade pipelines för utveckling/produktion</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Publicera dina paket och cacha upstream-release med valfri S360-tillträdeskontroll.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Kvalitetsport</value>
   </data>
