@@ -116,6 +116,42 @@ public class PublishingTests : TestBase
         Assert.AreEqual(HttpStatusCode.Forbidden,(await PublishAsync("third-party",key)).StatusCode);
     }
     [TestMethod]
+    public async Task AdministratorPublicationConvertsMirrorAndNeverFallsBackAfterOwnerDeletion()
+    {
+        const string name = "converted-mirror";
+        var (user, key) = await PublisherAsync();
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<NopkgDbContext>();
+            db.PackageFamilies.Add(new PackageFamily { Name = name });
+            db.UserClaims.Add(new IdentityUserClaim<string> { UserId = user, ClaimType = AppPermissions.Type,
+                ClaimValue = AppPermissionNames.CanManagePackages });
+            await db.SaveChangesAsync();
+        }
+        var publication = Publication(name, "2.0.0");
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync(name, key, publication)).StatusCode);
+        using (var scope = Server!.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<NopkgDbContext>();
+            var family = await db.PackageFamilies.SingleAsync(f => f.Name == name);
+            Assert.IsTrue(family.IsLocallyPublished);
+            Assert.AreEqual(user, family.OwnerUserId);
+            db.Users.Remove(await db.Users.SingleAsync(u => u.Id == user));
+            await db.SaveChangesAsync();
+        }
+        var metadata = JsonNode.Parse(await Http.GetStringAsync("/npm/" + name))!;
+        Assert.AreEqual(1, metadata["versions"]!.AsObject().Count);
+        Assert.AreEqual("2.0.0", metadata["dist-tags"]!["latest"]!.GetValue<string>());
+        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync($"/npm/{name}/-/{name}-9.9.9.tgz")).StatusCode);
+        CollectionAssert.AreEqual(Convert.FromBase64String(publication["_attachments"]!["package.tgz"]!["data"]!.GetValue<string>()),
+            await Http.GetByteArrayAsync($"/npm/{name}/-/{name}-2.0.0.tgz"));
+        using var verification = Server!.Services.CreateScope();
+        var familyAfter = await verification.ServiceProvider.GetRequiredService<NopkgDbContext>().PackageFamilies.SingleAsync(f => f.Name == name);
+        Assert.IsTrue(familyAfter.IsLocallyPublished);
+        Assert.IsNull(familyAfter.OwnerUserId);
+    }
+
+    [TestMethod]
     public async Task WrongArchiveIdentityIsRejectedWithoutReservingName()
     {
         var (_,key)=await PublisherAsync();Assert.AreEqual(HttpStatusCode.BadRequest,(await PublishAsync("claimed",key,Publication("claimed",archiveName:"different"))).StatusCode);

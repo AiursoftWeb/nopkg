@@ -52,13 +52,21 @@ public sealed class PackagePublishingService(NopkgDbContext db, NpmRegistry regi
             if (family == null)
             {
                 // Existing preview caches predate relational ownership. They cannot be claimed by uploading.
-                if (await registry.HasCachedMirrorAsync(name))
+                if (!publisher.CanManagePackages && await registry.HasCachedMirrorAsync(name))
                     throw new PublishingException(403, "A mirrored package requires an administrator to assign ownership first.");
                 family = new PackageFamily { Name = name, IsLocallyPublished = true, OwnerUserId = publisher.UserId };
                 db.PackageFamilies.Add(family);
             }
-            else if (!family.IsLocallyPublished || (!publisher.CanManagePackages && family.OwnerUserId != publisher.UserId))
-                throw new PublishingException(403, "You do not own this internally published package.");
+            else
+            {
+                if (!publisher.CanManagePackages && (!family.IsLocallyPublished || family.OwnerUserId != publisher.UserId))
+                    throw new PublishingException(403, "You do not own this internally published package.");
+                if (!family.IsLocallyPublished)
+                {
+                    family.IsLocallyPublished = true;
+                    family.OwnerUserId = publisher.UserId;
+                }
+            }
             if (family.Id != 0 && await db.PublishedPackages.NotCacheable().AnyAsync(x => x.FamilyId == family.Id && x.Version == version, token))
                 throw new PublishingException(409, "This version is already published and cannot be overwritten.");
             var tags = JsonNode.Parse(family.TagsJson) as JsonObject ?? new JsonObject();
