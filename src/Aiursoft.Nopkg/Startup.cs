@@ -87,7 +87,7 @@ public class Startup : IWebStartup
                 AllowAutoRedirect = false,
                 AutomaticDecompression = DecompressionMethods.All
             });
-        services.AddHttpClient("S360Admission", http => http.Timeout = TimeSpan.FromSeconds(30))
+        services.AddHttpClient("S360Admission", http => http.Timeout = TimeSpan.FromMinutes(6))
             .ConfigurePrimaryHttpMessageHandler(() => new HttpClientHandler { AllowAutoRedirect = false });
         services.AddSingleton(provider => new NpmRegistry(
             provider.GetRequiredService<IHttpClientFactory>().CreateClient("npm-upstream"), registryOptions,

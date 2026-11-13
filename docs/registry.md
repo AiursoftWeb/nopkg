@@ -1,6 +1,6 @@
 # Registry configuration
 
-Nopkg serves the npm protocol under `/npm/`. This preview supports read-only metadata and archive requests; publishing returns 405 and npm audit returns 501. An unsupported audit endpoint is never reported as a successful empty vulnerability scan.
+Nopkg serves the npm protocol under `/npm/`. It supports metadata, archive downloads and authenticated publishing; npm audit returns 501. An unsupported audit endpoint is never reported as a successful empty vulnerability scan.
 
 ## Storage and upstream
 
@@ -30,7 +30,7 @@ Revoked versions are removed from metadata, and cached archive requests return 4
 
 The first protocol preview had no provenance sidecar. Adoption of those cached files requires checking original distribution origin, integrity, package identity and current independent admission. Already recorded provenance is never silently reassigned to a different upstream.
 
-Global artifact admission does not approve a project's dependency graph or declare production use. Keep the project's existing S360 checks. Nopkg does not create approval rules or submit observations while handling registry reads.
+Global artifact admission does not approve a project's dependency graph or declare production use. Keep the project's existing S360 checks. Nopkg never creates approval rules. Origin-based admission is read-only; single-policy mirroring can ask S360 to independently verify and record a cold candidate before it is served.
 
 ## Offline operation
 
@@ -41,3 +41,9 @@ Set `Registry__CacheOnly=true` to prevent all upstream requests. Cached metadata
 Use a lockfile whose resolved archive URLs point to this Nopkg deployment. Preserve package versions and integrity values when migrating URLs. Verify with an empty npm client cache, normal install scripts and the application's real build commands. Native tools, SDKs and packages that fetch additional assets need their own internal supply before a complete build can work without the internet.
 
 Disabling `Registry__S360__Enabled` disables admission enforcement. Do not use that switch as a workaround for rejected dependencies or a policy outage.
+
+### One policy for the internal registry
+
+Set `Registry:S360:PolicySource` to this registry's HTTPS URL, for example `https://nopkg.aiursoft.com/npm`. In S360, allow it in `SupplyChain:NpmSources` and add a `SupplyChain:Mirrors` entry with `Ecosystem=npm`, `Source` equal to the internal URL, and `Upstream=https://registry.npmjs.org`. Set `Registry:Upstream` to the same upstream. Approve each package name and version range only for Nopkg; no duplicate npmjs.org approval is required.
+
+Metadata advertises policy-eligible versions without downloading tarballs. A cold tarball remains private until S360 independently downloads the configured upstream archive, checks its identity and SHA256, and completes its vulnerability check. Cached downloads still require current admission. Locally published names take precedence over mirrors. Leaving `PolicySource` empty preserves origin-based admission.

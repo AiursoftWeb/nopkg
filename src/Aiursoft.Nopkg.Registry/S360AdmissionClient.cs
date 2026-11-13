@@ -6,11 +6,15 @@ namespace Aiursoft.Nopkg.Registry;
 public class S360AdmissionOptions
 {
     public bool Enabled { get; set; }
+    public string PolicySource { get; set; } = "";
     public string Server { get; set; } = "";
     public string CheckKey { get; set; } = "";
 }
 
 public record ArtifactIdentity(string Ecosystem, string Name, string Version, string Source, string Sha256);
+public record MirrorCandidate(string Ecosystem, string Name, string Version, string Source);
+public record MirrorCandidateDecision(MirrorCandidate Candidate, bool CanFetch);
+public record MirrorCandidateResponse(List<MirrorCandidateDecision>? Decisions);
 public record ArtifactDecision(ArtifactIdentity Dependency, bool Trusted, bool? PendingVerification);
 public record ArtifactAssessmentResponse(List<ArtifactDecision?>? Decisions);
 public record ApprovedArtifactPage(List<ArtifactIdentity?>? Artifacts, int? NextAfterId, int UpperId);
@@ -18,9 +22,11 @@ public record ApprovedArtifactPage(List<ArtifactIdentity?>? Artifacts, int? Next
 public class AdmissionUnavailableException() : Exception("Package admission is unavailable. Please try again later.");
 public class ArtifactDeniedException() : Exception("This package version is not admitted by S360.");
 
-/// <summary>Read-only admission. Registry requests never approve or submit dependencies.</summary>
+/// <summary>Uses existing policy; mirror checks record verification evidence, never approvals.</summary>
 public class S360AdmissionClient
 {
+    public bool UsesRegistryPolicy { get; }
+    public string PolicySource { get; }
     private readonly HttpClient _client;
     private readonly Uri _server;
     private readonly string _checkKey;
@@ -29,6 +35,12 @@ public class S360AdmissionClient
     public S360AdmissionClient(HttpClient client, S360AdmissionOptions options)
     {
         _client = client;
+        UsesRegistryPolicy = !string.IsNullOrEmpty(options.PolicySource);
+        if (UsesRegistryPolicy && (!Uri.TryCreate(options.PolicySource, UriKind.Absolute, out var policy) ||
+            policy.Scheme != "https" || !string.IsNullOrEmpty(policy.UserInfo) ||
+            !string.IsNullOrEmpty(policy.Query) || !string.IsNullOrEmpty(policy.Fragment)))
+            throw new ArgumentException("S360 PolicySource must be the internal HTTPS npm registry URL.");
+        PolicySource = options.PolicySource.TrimEnd('/');
         if (!Uri.TryCreate(options.Server.TrimEnd('/') + "/", UriKind.Absolute, out var server) ||
             (server.Scheme != "https" && !(server.Scheme == "http" && server.IsLoopback)) ||
             !string.IsNullOrEmpty(server.UserInfo) || !string.IsNullOrEmpty(server.Query) ||
@@ -105,8 +117,39 @@ public class S360AdmissionClient
             .Where(g => g.Count() == 1).ToDictionary(g => g.Key, g => g.Single(), StringComparer.Ordinal);
     }
 
+    public async Task<HashSet<string>> CandidatesAsync(string name, IEnumerable<string> versions, CancellationToken token)
+    {
+        var allowed = new HashSet<string>(StringComparer.Ordinal);
+        foreach (var batch in versions.Distinct(StringComparer.Ordinal).Chunk(500))
+        {
+            var candidates = batch.Select(v => new MirrorCandidate("npm", name, v, PolicySource)).ToArray();
+            var result = await SendAsync<MirrorCandidateResponse>(HttpMethod.Post, "api/artifacts/mirror/candidates", new { candidates }, token);
+            if (result.Decisions == null || result.Decisions.Count != batch.Length ||
+                result.Decisions.Where((d, i) => d.Candidate != candidates[i]).Any())
+                throw new AdmissionUnavailableException();
+            allowed.UnionWith(result.Decisions.Where(d => d.CanFetch).Select(d => d.Candidate.Version));
+        }
+        return allowed;
+    }
+
+    public async Task VerifyMirrorAsync(ArtifactIdentity artifact, CancellationToken token)
+    {
+        var requested = artifact with { Source = PolicySource };
+        var decision = await SendAsync<ArtifactDecision>(HttpMethod.Post, "api/artifacts/mirror/verify", requested, token);
+        if (decision.Dependency != requested || decision.PendingVerification == null) throw new AdmissionUnavailableException();
+        if (!decision.Trusted || decision.PendingVerification != false) throw new ArtifactDeniedException();
+    }
+
     public async Task RequireAsync(ArtifactIdentity artifact, CancellationToken token)
     {
+        if (UsesRegistryPolicy)
+        {
+            var requested = artifact with { Source = PolicySource };
+            var assessed = (await AssessAsync([requested], token))[0];
+            if (assessed.Trusted && assessed.PendingVerification == false) return;
+            if (assessed.PendingVerification == true) { await VerifyMirrorAsync(artifact, token); return; }
+            throw new ArtifactDeniedException();
+        }
         var decisions = await AssessAsync([artifact], token);
         if (!decisions[0].Trusted || decisions[0].PendingVerification != false) throw new ArtifactDeniedException();
     }

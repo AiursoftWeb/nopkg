@@ -11,10 +11,21 @@ public partial class NpmRegistry
         IReadOnlyDictionary<string, ArtifactIdentity>? approved, CancellationToken token)
     {
         if (_admission == null) return metadata;
+        if (_admission.UsesRegistryPolicy)
+        {
+            var candidateVersions = ((JsonObject)metadata["versions"]!).Select(v => v.Key);
+            var eligible = await _admission.CandidatesAsync(metadata["name"]!.GetValue<string>(), candidateVersions, token);
+            return FilterVersions(metadata, eligible);
+        }
         if (approved == null) throw new AdmissionUnavailableException();
         var decisions = await _admission.AssessAsync(approved.Values.ToList(), token);
         var allowed = decisions.Where(d => d.Trusted && d.PendingVerification == false)
             .Select(d => d.Dependency.Version).ToHashSet(StringComparer.Ordinal);
+        return FilterVersions(metadata, allowed);
+    }
+
+    private static JsonObject FilterVersions(JsonObject metadata, HashSet<string> allowed)
+    {
         var result = (JsonObject)metadata.DeepClone();
         var versions = (JsonObject)result["versions"]!;
         foreach (var version in versions.Select(v => v.Key).Where(v => !allowed.Contains(v)).ToList())
@@ -29,13 +40,18 @@ public partial class NpmRegistry
         return result;
     }
 
-    private async Task<ArtifactIdentity?> ExpectedArtifactAsync(string name, string version, CancellationToken token)
+    private async Task<string?> ExpectedHashAsync(string name, string version, CancellationToken token)
     {
         if (_admission == null) return null;
+        if (_admission.UsesRegistryPolicy)
+        {
+            if (!(await _admission.CandidatesAsync(name, [version], token)).Contains(version)) throw new ArtifactDeniedException();
+            return null;
+        }
         var approved = await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
         if (!approved.TryGetValue(version, out var artifact)) throw new ArtifactDeniedException();
         await _admission.RequireAsync(artifact, token);
-        return artifact;
+        return artifact.Sha256;
     }
 
     private void ValidateTarballOrigin(JsonObject dist)
@@ -47,14 +63,15 @@ public partial class NpmRegistry
     }
 
     private async Task VerifyAdmissionAsync(string path, string name, string version, JsonObject dist,
-        ArtifactIdentity? expected, CancellationToken token)
+        string? expectedHash, CancellationToken token)
     {
         if (_admission == null) return;
-        if (expected == null) throw new ArtifactDeniedException();
+        if (expectedHash == null && !_admission.UsesRegistryPolicy) throw new ArtifactDeniedException();
         var artifact = await ActualArtifactAsync(path, name, version, token);
-        if (artifact != expected) throw new ArtifactDeniedException();
+        if (expectedHash != null && artifact.Sha256 != expectedHash) throw new ArtifactDeniedException();
         // Re-evaluate after download and integrity checks, immediately before committing bytes.
-        await _admission.RequireAsync(artifact, token);
+        if (_admission.UsesRegistryPolicy) await _admission.VerifyMirrorAsync(artifact, token);
+        else await _admission.RequireAsync(artifact, token);
         dist["_nopkg"] = JsonSerializer.SerializeToNode(artifact);
     }
 
