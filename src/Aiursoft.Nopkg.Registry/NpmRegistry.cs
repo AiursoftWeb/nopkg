@@ -181,7 +181,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 return path;
             }
             if (options.CacheOnly) throw new FileNotFoundException("Package version is not cached.");
-            var expected = await ExpectedArtifactAsync(name, version, token);
+            var expected = await ExpectedHashAsync(name, version, token);
             var metadata = await MetadataAsync(name, token);
             if (metadata["versions"]?[version] is not JsonObject manifest || manifest["dist"] is not JsonObject dist)
                 throw new FileNotFoundException("Package version not found.");

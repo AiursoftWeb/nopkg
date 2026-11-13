@@ -40,18 +40,18 @@ public partial class NpmRegistry
         return result;
     }
 
-    private async Task<ArtifactIdentity?> ExpectedArtifactAsync(string name, string version, CancellationToken token)
+    private async Task<string?> ExpectedHashAsync(string name, string version, CancellationToken token)
     {
         if (_admission == null) return null;
         if (_admission.UsesRegistryPolicy)
         {
             if (!(await _admission.CandidatesAsync(name, [version], token)).Contains(version)) throw new ArtifactDeniedException();
-            return new ArtifactIdentity("npm", name, version, _origin.AbsoluteUri.TrimEnd('/'), "");
+            return null;
         }
         var approved = await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
         if (!approved.TryGetValue(version, out var artifact)) throw new ArtifactDeniedException();
         await _admission.RequireAsync(artifact, token);
-        return artifact;
+        return artifact.Sha256;
     }
 
     private void ValidateTarballOrigin(JsonObject dist)
@@ -63,12 +63,12 @@ public partial class NpmRegistry
     }
 
     private async Task VerifyAdmissionAsync(string path, string name, string version, JsonObject dist,
-        ArtifactIdentity? expected, CancellationToken token)
+        string? expectedHash, CancellationToken token)
     {
         if (_admission == null) return;
-        if (expected == null) throw new ArtifactDeniedException();
+        if (expectedHash == null && !_admission.UsesRegistryPolicy) throw new ArtifactDeniedException();
         var artifact = await ActualArtifactAsync(path, name, version, token);
-        if (expected.Sha256.Length != 0 && artifact != expected) throw new ArtifactDeniedException();
+        if (expectedHash != null && artifact.Sha256 != expectedHash) throw new ArtifactDeniedException();
         // Re-evaluate after download and integrity checks, immediately before committing bytes.
         if (_admission.UsesRegistryPolicy) await _admission.VerifyMirrorAsync(artifact, token);
         else await _admission.RequireAsync(artifact, token);
