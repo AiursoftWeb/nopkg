@@ -10,7 +10,19 @@ namespace Aiursoft.Nopkg.Services.Registry;
 
 public static class RegistryEndpoint
 {
-    public static void MapNpmRegistry(this WebApplication app) => app.Map("/npm", branch => branch.Run(HandleAsync));
+    public static void MapNpmRegistry(this WebApplication app)
+    {
+        // Root tarball URLs remain portable when npm switches registry hosts in lockfiles.
+        app.MapWhen(context =>
+        {
+            if (!HttpMethods.IsGet(context.Request.Method) && !HttpMethods.IsHead(context.Request.Method)) return false;
+            var parts = Uri.UnescapeDataString(context.Request.Path.Value ?? "").Trim('/').Split('/');
+            var packageSegments = parts[0].StartsWith('@') ? 2 : 1;
+            return parts.Length == packageSegments + 2 && parts[packageSegments] == "-" &&
+                parts[^1].EndsWith(".tgz", StringComparison.Ordinal);
+        }, branch => branch.Run(HandleAsync));
+        app.Map("/npm", branch => branch.Run(HandleAsync));
+    }
 
     private static async Task HandleAsync(HttpContext context)
     {
@@ -109,7 +121,9 @@ public static class RegistryEndpoint
                 throw new FileNotFoundException("Registry endpoint not found.");
             var packageName = string.Join('/', components.Take(packageSegments));
             var metadata = await registry.MetadataAsync(packageName, context.RequestAborted);
-            var url = $"{context.Request.Scheme}://{context.Request.Host}{context.Request.PathBase}";
+            var pathBase = context.Request.PathBase.Value ?? "";
+            if (pathBase.EndsWith("/npm", StringComparison.OrdinalIgnoreCase)) pathBase = pathBase[..^4];
+            var url = $"{context.Request.Scheme}://{context.Request.Host}{pathBase}";
             var rewritten = NpmRegistry.RewriteMetadata(metadata, url);
             JsonNode result = rewritten;
             if (components.Length == packageSegments + 1)
