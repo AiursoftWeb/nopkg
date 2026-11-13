@@ -185,33 +185,41 @@ public class PublishingTests : TestBase
     }
 
     [TestMethod]
-    [DataRow("standard-package")]
-    [DataRow("@test/standard-package")]
-    public async Task StandardTarballPathsUseTheSameImmutableArchive(string name)
+    [DataRow("standard-package", "")]
+    [DataRow("@test/standard-package", "")]
+    [DataRow("npm", "")]
+    [DataRow("prefixed-standard-package", "/npm")]
+    [DataRow("@test/prefixed-standard-package", "/npm")]
+    public async Task StandardTarballPathsUseTheSameImmutableArchive(string name, string registryPrefix)
     {
         var (_, key) = await PublisherAsync();
         var publication = Publication(name);
         Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync(name, key, publication)).StatusCode);
         var leaf = name.Split('/')[^1];
-        var url = "/npm/" + name + "/-/" + leaf + "-1.0.0.tgz";
+        var url = registryPrefix + "/" + name + "/-/" + leaf + "-1.0.0.tgz";
+        var metadata = JsonNode.Parse(await Http.GetStringAsync("/npm/" + name))!;
+        var archiveUrl = new Uri(metadata["versions"]!["1.0.0"]!["dist"]!["tarball"]!.GetValue<string>());
+        Assert.AreEqual("/" + name + "/-/" + leaf + "-1.0.0.tgz", archiveUrl.AbsolutePath);
         var bytes = await Http.GetByteArrayAsync(url);
         CollectionAssert.AreEqual(Convert.FromBase64String(publication["_attachments"]!["package.tgz"]!["data"]!.GetValue<string>()), bytes);
         using var head = await Http.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
         Assert.AreEqual(HttpStatusCode.OK, head.StatusCode);
         Assert.AreEqual(bytes.Length, head.Content.Headers.ContentLength);
-        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync("/npm/" + name + "/-/" + leaf + "-9.9.9.tgz")).StatusCode);
+        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync(registryPrefix + "/" + name + "/-/" + leaf + "-9.9.9.tgz")).StatusCode);
         Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync("/npm/" + name + "/-/wrong-1.0.0.tgz")).StatusCode);
     }
 
     [TestMethod]
-    [DataRow("GET")]
-    [DataRow("HEAD")]
-    public async Task StandardTarballPathRequiresAdmissionEvenWithConditionalHeaders(string method)
+    [DataRow("GET", "")]
+    [DataRow("HEAD", "")]
+    [DataRow("GET", "/npm")]
+    [DataRow("HEAD", "/npm")]
+    public async Task StandardTarballPathRequiresAdmissionEvenWithConditionalHeaders(string method, string registryPrefix)
     {
         var options = Server!.Services.GetRequiredService<RegistryOptions>();
         options.CacheOnly = false;
         options.S360 = new S360AdmissionOptions { Enabled = true, Server = "http://127.0.0.1:9/", CheckKey = "test-only" };
-        using var request = new HttpRequestMessage(new HttpMethod(method), "/npm/@test/mirror/-/mirror-1.0.0.tgz");
+        using var request = new HttpRequestMessage(new HttpMethod(method), registryPrefix + "/@test/mirror/-/mirror-1.0.0.tgz");
         request.Headers.Range = new RangeHeaderValue(0, 10);
         request.Headers.TryAddWithoutValidation("If-None-Match", "*");
         using var response = await Http.SendAsync(request);

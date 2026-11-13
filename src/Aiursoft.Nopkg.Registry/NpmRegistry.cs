@@ -128,7 +128,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 if (version.Length > 128 || !VersionPattern().IsMatch(version)) throw new InvalidDataException("Invalid package version in metadata.");
                 if (node is not JsonObject manifest || manifest["dist"] is not JsonObject dist)
                     throw new InvalidDataException("Missing package distribution metadata.");
-                dist["tarball"] = registryUrl.TrimEnd('/') + "/-/tarballs/" + Uri.EscapeDataString(name) + "/" + Uri.EscapeDataString(version) + ".tgz";
+                dist["tarball"] = registryUrl.TrimEnd('/') + "/" + name + "/-/" + Uri.EscapeDataString(name.Split('/')[^1] + "-" + version + ".tgz");
             }
         return result;
     }
