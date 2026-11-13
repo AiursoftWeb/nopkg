@@ -1,14 +1,20 @@
 # Nopkg
 
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/aiursoftweb/nopkg/blob/master/LICENSE)
 [![Pipeline stat](https://badge-proxy.aiursoft.com/aiursoft/nopkg/badges/master/pipeline.svg)](https://gitlab.aiursoft.com/aiursoft/nopkg/-/pipelines)
 [![Test Coverage](https://badge-proxy.aiursoft.com/aiursoft/nopkg/badges/master/coverage.svg)](https://gitlab.aiursoft.com/aiursoft/nopkg/-/pipelines)
 [![S360 compliance](https://s360.aiursoft.com/badge.svg?project=aiursoft%2Fnopkg)](https://s360.aiursoft.com/SupplyChain?tab=projects&project=aiursoft%2Fnopkg&scope=baseline&ecosystem=all)
+[![Man hours](https://manhours.aiursoft.com/r/github.com/aiursoftweb/nopkg.svg)](https://manhours.aiursoft.com/r/github.com/aiursoftweb/nopkg.html)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fnopkg.aiursoft.com)](https://nopkg.aiursoft.com)
 [![Docker](https://img.shields.io/docker/pulls/aiursoft/nopkg.svg)](https://hub.docker.com/r/aiursoft/nopkg)
 
-Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nupkg](https://gitlab.aiursoft.com/aiursoft/nupkg). Publish packages you own, cache upstream tarballs on demand, and optionally restrict mirrored packages to versions admitted by S360.
+Nopkg is an npm registry built on Aiursoft Template, and the npm sibling of [Nupkg](https://github.com/aiursoftweb/nupkg). Publish packages you own, cache upstream tarballs on demand, and optionally restrict mirrored packages to versions admitted by S360.
 
 ![screenshot](./screenshot.png)
+
+## Try
+
+Browse the running [Nopkg instance](https://nopkg.aiursoft.com).
 
 ## What is Nopkg?
 
@@ -30,7 +36,7 @@ npm config set registry https://nopkg.example.com/npm/
 npm install your-package
 ```
 
-For an existing lockfile, configure its resolved archive URLs for your deployment as well. Changing the registry setting alone does not rewrite existing lockfile URLs.
+For a public npm lockfile, use npm's `--replace-registry-host=always` option with your registry to download the locked versions through Nopkg without changing their integrity values.
 
 ## Run manually
 
@@ -54,13 +60,15 @@ Open `Aiursoft.Nopkg.sln` and press **F5**.
 
 The shared CI builds Linux amd64 and arm64 images. Successful master pipelines publish `aiursoft/nopkg:latest` and `hub.aiursoft.com/aiursoft/nopkg:latest`.
 
-After the first master release:
-
 ```sh
 docker run -d --name nopkg -p 8080:5000 -v nopkg-data:/data aiursoft/nopkg:latest
 ```
 
-Persist `/data` for the default SQLite database, package cache and application files. The registry is `/npm/`; health checks use `/health`. The repository's `install.sh` provides the standard port-selecting installer.
+Persist `/data` for the default SQLite database, package cache and application files. The registry is `/npm/`; health checks use `/health`. Use the standard port-selecting installer:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/aiursoftweb/nopkg/master/install.sh | sudo bash -s -- 8080
+```
 
 ## Configuration
 
@@ -74,4 +82,4 @@ Use the existing build, tests and `lint.sh`. NugetNinja maintains the shared Tem
 
 ## Credits
 
-Built on [Aiursoft Template](https://gitlab.aiursoft.com/aiursoft/template). Licensed under the [MIT License](./LICENSE).
+Built on [Aiursoft Template](https://github.com/aiursoftweb/template). Licensed under the [MIT License](./LICENSE).
