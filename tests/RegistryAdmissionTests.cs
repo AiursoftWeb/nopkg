@@ -46,7 +46,7 @@ public partial class RegistryTests
         {
             if (Unavailable) return new HttpResponseMessage(HttpStatusCode.ServiceUnavailable);
             var json = JsonNode.Parse(await request.Content!.ReadAsStringAsync(token))!;
-            var source = "https://nopkg.fixture";
+            var source = "https://nopkg.fixture/npm";
             object result;
             if (request.RequestUri!.AbsolutePath.EndsWith("/candidates", StringComparison.Ordinal))
             {
@@ -85,7 +85,7 @@ public partial class RegistryTests
         var handler = new SinglePolicyHandler(bytes);
         using var policy = new HttpClient(handler);
         var options = Options();
-        options.S360 = new S360AdmissionOptions { Enabled = true, Server = "https://s360.example/", CheckKey = "fixture", PolicySource = "https://nopkg.fixture" };
+        options.S360 = new S360AdmissionOptions { Enabled = true, Server = "https://s360.example/", CheckKey = "fixture", PolicySource = "https://nopkg.fixture/npm" };
         var registry = new NpmRegistry(upstream, options, new S360AdmissionClient(policy, options.S360));
         var metadata = await registry.MetadataAsync("@example/library");
         Assert.AreEqual(1, metadata["versions"]!.AsObject().Count);
