@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>開発/本番環境用の事前設定済みパイプライン</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>パッケージを公開し、任意のS360承認を伴って上流リリースをキャッシュします。</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>品質ゲート</value>
   </data>

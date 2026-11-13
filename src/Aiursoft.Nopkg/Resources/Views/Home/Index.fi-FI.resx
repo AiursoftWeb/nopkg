@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Ennalta määritellyt putket kehitys- ja tuotantoympäristöihin</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Julkaise paketteesi ja välimuistissa ylävirtausjulkaisut valinnaisen S360-lupauksen kanssa.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Laatuportti</value>
   </data>

@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Geliştirme/üretim için önceden yapılandırılmış boru hatları</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Paketlerinizi yayınlayın ve isteğe bağlı S360 kabulü ile upstream sürümlerini önbelleğe alın.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Kalite Kapısı</value>
   </data>

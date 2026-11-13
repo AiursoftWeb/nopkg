@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>개발/운영을 위한 사전 설정된 파이프라인</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>패키지를 게시하고 S360 승인 선택 기능을 사용하여 업스트림 릴리스를 캐시하세요.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>품질 게이트</value>
   </data>

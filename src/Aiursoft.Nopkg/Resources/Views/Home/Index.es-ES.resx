@@ -618,6 +618,9 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Pipelines preconfigurados para dev/prod</value>
   </data>
+  <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
+    <value>Publica tus paquetes y almacena en caché las versiones de origen con admisión S360 opcional.</value>
+  </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Puerta de calidad</value>
   </data>
