@@ -61,7 +61,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
     {
         PackageName(name);
         if (localPackages != null && await localPackages.FindAsync(name, token) is { } local) return local.Metadata;
-        var approved = _admission == null ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
+        var approved = _admission == null || _admission.UsesRegistryPolicy ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
         if (approved is { Count: 0 }) throw new FileNotFoundException("No admitted package versions found.");
         var gate = Gate(_metadataGates, name);
         await gate.WaitAsync(token);
@@ -346,7 +346,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 ?? throw new InvalidDataException("Invalid cached metadata.");
             var name = PackageName(metadata["name"]!.GetValue<string>());
             if (local.Any(x => x.Name == name)) continue;
-            var approved = _admission == null ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
+            var approved = _admission == null || _admission.UsesRegistryPolicy ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
             var filtered = await FilterMetadataAsync(metadata, approved, token);
             var versions = (JsonObject)filtered["versions"]!;
             ValidateVersions(versions);

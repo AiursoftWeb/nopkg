@@ -35,6 +35,76 @@ public partial class RegistryTests
         }
     }
 
+    private sealed class SinglePolicyHandler(byte[] archive) : HttpMessageHandler
+    {
+        public bool Allowed { get; set; } = true;
+        public bool Verified { get; set; }
+        public bool DenyVerification { get; set; }
+        public bool Unavailable { get; set; }
+        public int Verifications { get; private set; }
+        protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken token)
+        {
+            if (Unavailable) return new HttpResponseMessage(HttpStatusCode.ServiceUnavailable);
+            var json = JsonNode.Parse(await request.Content!.ReadAsStringAsync(token))!;
+            var source = "https://nopkg.fixture";
+            object result;
+            if (request.RequestUri!.AbsolutePath.EndsWith("/candidates", StringComparison.Ordinal))
+            {
+                var candidates = json["candidates"]!.Deserialize<List<MirrorCandidate>>(new JsonSerializerOptions(JsonSerializerDefaults.Web))!;
+                Assert.IsTrue(candidates.All(c => c.Source == source));
+                result = new MirrorCandidateResponse(candidates.Select(c => new MirrorCandidateDecision(c, Allowed && c.Version == "1.0.0")).ToList());
+            }
+            else if (request.RequestUri.AbsolutePath.EndsWith("/verify", StringComparison.Ordinal))
+            {
+                var artifact = json.Deserialize<ArtifactIdentity>(new JsonSerializerOptions(JsonSerializerDefaults.Web))!;
+                Assert.AreEqual(source, artifact.Source);
+                Verifications++;
+                Verified = Allowed && !DenyVerification && artifact.Sha256 == Convert.ToHexStringLower(SHA256.HashData(archive));
+                result = new ArtifactDecision(artifact, Verified, false);
+            }
+            else
+            {
+                var identities = json["dependencies"]!.Deserialize<List<ArtifactIdentity>>(new JsonSerializerOptions(JsonSerializerDefaults.Web))!;
+                Assert.IsTrue(identities.All(a => a.Source == source));
+                result = new ArtifactAssessmentResponse(identities.Select(a => (ArtifactDecision?)new ArtifactDecision(a, Allowed && Verified, Allowed && !Verified)).ToList());
+            }
+            return Response(JsonSerializer.SerializeToNode(result)!.AsObject());
+        }
+    }
+
+    [TestMethod]
+    public async Task SingleInternalPolicySupportsColdMirroringAndStillBlocksUnverifiedBytesAndRevokedCache()
+    {
+        var bytes = Archive();
+        var downloaded = 0;
+        using var upstream = new HttpClient(new RegistryHandler(r =>
+        {
+            if (r.RequestUri!.AbsolutePath.EndsWith(".tgz", StringComparison.Ordinal)) { downloaded++; return Response(bytes); }
+            return Response(Metadata(bytes));
+        }));
+        var handler = new SinglePolicyHandler(bytes);
+        using var policy = new HttpClient(handler);
+        var options = Options();
+        options.S360 = new S360AdmissionOptions { Enabled = true, Server = "https://s360.example/", CheckKey = "fixture", PolicySource = "https://nopkg.fixture" };
+        var registry = new NpmRegistry(upstream, options, new S360AdmissionClient(policy, options.S360));
+        var metadata = await registry.MetadataAsync("@example/library");
+        Assert.AreEqual(1, metadata["versions"]!.AsObject().Count);
+        Assert.AreEqual(0, downloaded);
+        handler.DenyVerification = true;
+        await Assert.ThrowsExactlyAsync<ArtifactDeniedException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+        Assert.AreEqual(0, Directory.EnumerateFiles(_directory, "*.tgz", SearchOption.AllDirectories).Count());
+        handler.DenyVerification = false;
+        var path = await registry.ArchiveAsync("@example/library", "1.0.0");
+        CollectionAssert.AreEqual(bytes, await File.ReadAllBytesAsync(path));
+        Assert.AreEqual(2, handler.Verifications);
+        await registry.ArchiveAsync("@example/library", "1.0.0");
+        Assert.AreEqual(2, downloaded);
+        handler.Allowed = false;
+        await Assert.ThrowsExactlyAsync<ArtifactDeniedException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+        handler.Unavailable = true;
+        await Assert.ThrowsExactlyAsync<AdmissionUnavailableException>(() => registry.ArchiveAsync("@example/library", "1.0.0"));
+    }
+
     private NpmRegistry Controlled(HttpClient upstream, HttpClient policy, bool offline = false, string? source = null)
     {
         var options = Options(offline);

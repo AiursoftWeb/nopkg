@@ -41,3 +41,9 @@ Set `Registry__CacheOnly=true` to prevent all upstream requests. Cached metadata
 Use a lockfile whose resolved archive URLs point to this Nopkg deployment. Preserve package versions and integrity values when migrating URLs. Verify with an empty npm client cache, normal install scripts and the application's real build commands. Native tools, SDKs and packages that fetch additional assets need their own internal supply before a complete build can work without the internet.
 
 Disabling `Registry__S360__Enabled` disables admission enforcement. Do not use that switch as a workaround for rejected dependencies or a policy outage.
+
+### One policy for the internal registry
+
+Set `Registry:S360:PolicySource` to this registry's HTTPS URL, for example `https://nopkg.aiursoft.com`. In S360, allow it in `SupplyChain:NpmSources` and add a `SupplyChain:Mirrors` entry with `Ecosystem=npm`, `Source` equal to the internal URL, and `Upstream=https://registry.npmjs.org`. Set `Registry:Upstream` to the same upstream. Approve each package name and version range only for Nopkg; no duplicate npmjs.org approval is required.
+
+Metadata advertises policy-eligible versions without downloading tarballs. A cold tarball remains private until S360 independently downloads the configured upstream archive, checks its identity and SHA256, and completes its vulnerability check. Cached downloads still require current admission. Locally published names take precedence over mirrors. Leaving `PolicySource` empty preserves origin-based admission.
