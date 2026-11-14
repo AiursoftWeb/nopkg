@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Bakgrundsjobbshantering</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Bläddra bland alla paket</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Inbyggd användarhantering</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Anslut en npm-klient för att starta cachen.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Anslut din klient</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsekvensvalidering</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Stöd för flera databaser</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Nästa</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Inga paket har cachelagrats än</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Inga paket hittades</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Paketgodkännande är inte tillgängligt</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Paketnamn eller scope</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Paketets sidor</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Paket</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Föregående</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-auktorisering</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrera sömlöst med valfri OpenID Connect-leverantör, med automatisk rollsynkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Sök</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Sök paket</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smart Configuration Overrides</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Det här är ett mallprojekt, där vi börjar resan...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Prova ett annat paketnamn eller rensa din sökning.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Välkommen</value>

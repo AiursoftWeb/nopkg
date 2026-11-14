@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>बैकग्राउंड जॉब प्रोसेसिंग</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>सभी पैकेज ब्राउज़ करें</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>कैश शुरू करने के लिए एक npm क्लाइंट को कनेक्ट करें।</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>अपना क्लाइंट कनेक्ट करें</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>सुसंगतता प्रमाणीकरण</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>एकाधिक डेटाबेस समर्थन</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>अगला</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>अभी तक कोई पैकेज कैश नहीं किया गया है</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>कोई पैकेज नहीं मिला</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>पैकेज प्रवेश अउपलब्ध है</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>पैकेज का नाम या दायरा</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>पैकेज पृष्ठ</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>पैकेज</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>आरबीएसी प्राधिकरण</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>किसी भी OpenID Connect प्रदाता के साथ सहज एकीकरण, स्वचालित भूमिका सिंक्रनाइज़ेशन के साथ।</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>खोजें</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>पैकेज खोजें</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>स्मार्ट कॉन्फ़िगरेशन ओवरराइड्स</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है, जहाँ से हम अपनी यात्रा शुरू करते हैं...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>कोई अन्य पैकेज नाम आज़माएँ या अपनी खोज साफ़ करें।</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>स्वागत है</value>

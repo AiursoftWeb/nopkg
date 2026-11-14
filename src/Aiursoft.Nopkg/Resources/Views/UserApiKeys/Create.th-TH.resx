@@ -33,9 +33,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>ยกเลิก</value>
   </data>
-  <data name="e.g. CI pipeline" xml:space="preserve">
-    <value>เช่น CI pipeline</value>
-  </data>
   <data name="Generate key" xml:space="preserve">
     <value>สร้างคีย์</value>
   </data>
@@ -44,6 +41,9 @@
   </data>
   <data name="New API key" xml:space="preserve">
     <value>คีย์ API ใหม่</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>เช่น CI pipeline</value>
   </data>
 
 </root>

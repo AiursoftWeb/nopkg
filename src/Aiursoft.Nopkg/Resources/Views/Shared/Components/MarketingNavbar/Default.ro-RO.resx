@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>Documentație</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Începeți acum</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>Navigația principală</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Pachete</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>Codul Sursă</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>Comută tema de culori</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>Încearcă panoul de control</value>

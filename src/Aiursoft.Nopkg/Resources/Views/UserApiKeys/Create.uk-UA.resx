@@ -33,9 +33,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Скасувати</value>
   </data>
-  <data name="e.g. CI pipeline" xml:space="preserve">
-    <value>напр., CI-конвеєр</value>
-  </data>
   <data name="Generate key" xml:space="preserve">
     <value>Згенерувати ключ</value>
   </data>
@@ -44,6 +41,9 @@
   </data>
   <data name="New API key" xml:space="preserve">
     <value>Новий API-ключ</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>напр., CI-конвеєр</value>
   </data>
 
 </root>

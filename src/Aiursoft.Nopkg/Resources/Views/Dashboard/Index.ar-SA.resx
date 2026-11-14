@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>معالجة المهام الخلفية</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>تصفح جميع الحزم</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>إدارة المستخدمين المدمجة</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>قم بتوصيل عميل npm لبدء التخزين المؤقت.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>اتصل بعميلك</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>التحقق من الاتساق</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>دعم قواعد بيانات متعددة</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>التالي</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>لا توجد حزم مخزنة مؤقتًا بعد</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>لم يتم العثور على حزم</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>دمج OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>خدمة قبول الحزم غير متاحة</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>اسم الحزمة أو النطاق</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>صفحات الحزم</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>الحزم</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>السابق</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>الترخيص القائم على الأدوار (RBAC)</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>التكامل السلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>البحث عن الحزم</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>الإعادة تعيين الإعدادات الذكية</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>جرّب اسم حزمة أخرى أو امسح البحث.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>مرحباً</value>

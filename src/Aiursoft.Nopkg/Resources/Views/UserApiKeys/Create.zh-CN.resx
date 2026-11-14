@@ -33,9 +33,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>取消</value>
   </data>
-  <data name="e.g. CI pipeline" xml:space="preserve">
-    <value>例如：CI 流水线</value>
-  </data>
   <data name="Generate key" xml:space="preserve">
     <value>生成密钥</value>
   </data>
@@ -44,6 +41,9 @@
   </data>
   <data name="New API key" xml:space="preserve">
     <value>新建 API 密钥</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>例如：CI 流水线</value>
   </data>
 
 </root>

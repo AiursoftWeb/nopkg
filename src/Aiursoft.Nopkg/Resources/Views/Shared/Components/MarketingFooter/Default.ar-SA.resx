@@ -24,6 +24,12 @@
   <data name="Aiursoft Nopkg - A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>قالب Aiursoft - أساس حديث، غني بالميزات، وقابل للتوسعة بشكل كبير لتطبيق الويب القادم الخاص بك.</value>
   </data>
+  <data name="An open-source npm registry for your packages, your team, and your infrastructure." xml:space="preserve">
+    <value>سجل npm مفتوح المصدر لحزمك، وفريقك، وبنيتك التحتية.</value>
+  </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>تصفح الحزم</value>
+  </data>
   <data name="Community" xml:space="preserve">
     <value>المجتمع</value>
   </data>
@@ -39,11 +45,17 @@
   <data name="Github" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
   <data name="Legal" xml:space="preserve">
     <value>القانونية</value>
   </data>
   <data name="Licence" xml:space="preserve">
     <value>الترخيص</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>رخصة MIT</value>
   </data>
   <data name="Project" xml:space="preserve">
     <value>المشروع</value>

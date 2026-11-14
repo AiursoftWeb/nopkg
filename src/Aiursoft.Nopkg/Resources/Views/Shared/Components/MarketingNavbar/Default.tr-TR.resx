@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>Dokümantasyon</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Başlayın</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>Ana gezinme</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paketler</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>Kaynak Kodu</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>Renk temasını değiştir</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>Panoyu Deneyin</value>

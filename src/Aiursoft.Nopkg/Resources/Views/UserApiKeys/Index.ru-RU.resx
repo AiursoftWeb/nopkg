@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
-    <value>Ключ API отозван.</value>
-  </data>
-  <data name="API Keys" xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
     <value>Ключи API</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
+    <value>Ключ API отозван.</value>
   </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Создайте персональный ключ для публикации пакетов с правами вашей учётной записи.</value>

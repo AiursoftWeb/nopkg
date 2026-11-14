@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
+    <value>Ключі API</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
     <value>API-ключ відкликано.</value>
   </data>
-  <data name="API Keys" xml:space="preserve">
-    <value>Ключі API</value>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>Створіть особистий ключ для публікації пакетів з правами вашого облікового запису.</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>Створіть свій перший ключ</value>
   </data>
   <data name="Expired" xml:space="preserve">
     <value>Прострочено</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>Використати</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>Ваше перше реліз починається тут</value>
   </data>
 
 </root>

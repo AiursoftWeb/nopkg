@@ -33,9 +33,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Hủy</value>
   </data>
-  <data name="e.g. CI pipeline" xml:space="preserve">
-    <value>vd. CI pipeline</value>
-  </data>
   <data name="Generate key" xml:space="preserve">
     <value>Tạo khóa</value>
   </data>
@@ -44,6 +41,9 @@
   </data>
   <data name="New API key" xml:space="preserve">
     <value>Khóa API mới</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>vd. CI pipeline</value>
   </data>
 
 </root>

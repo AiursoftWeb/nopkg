@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Baggrundsjobbebehandling</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Gennemse alle pakker</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Indbygget brugeradministration</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Forbind en npm-klient for at starte cachen.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Forbind din klient</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistensvalidering</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Understøttelse af flere databaser</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Næste</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Ingen pakker er cached endnu</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Ingen pakker fundet</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect-integration</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Pakkeadmission er utilgængelig</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Pakkenavn eller omfang</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Pakkesider</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Pakker</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Forrige</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-godkendelse</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrer problemfrit med enhver OpenID Connect-udbyder, med automatisk rolle-synkronisering.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Søg</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Søg i pakker</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Smarte konfigurations-overskrivninger</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Dette er et skabelonprojekt, hvor vi begynder rejsen...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Prøv et andet pakkenavn eller ryd din søgning.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Velkommen</value>

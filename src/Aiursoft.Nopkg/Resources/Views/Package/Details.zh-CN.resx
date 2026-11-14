@@ -36,9 +36,6 @@
   <data name="License" xml:space="preserve">
     <value>许可证</value>
   </data>
-  <data name="npm package" xml:space="preserve">
-    <value>npm 包</value>
-  </data>
   <data name="Registry" xml:space="preserve">
     <value>注册表</value>
   </data>
@@ -56,6 +53,9 @@
   </data>
   <data name="View version" xml:space="preserve">
     <value>查看版本</value>
+  </data>
+  <data name="npm package" xml:space="preserve">
+    <value>npm 包</value>
   </data>
 
 </root>

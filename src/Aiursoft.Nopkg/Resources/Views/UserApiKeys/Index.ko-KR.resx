@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
-    <value>API 키가 폐기되었습니다.</value>
-  </data>
-  <data name="API Keys" xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
     <value>API 키</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
+    <value>API 키가 폐기되었습니다.</value>
   </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>계정 권한으로 패키지를 게시할 수 있는 개인 키를 생성하세요.</value>

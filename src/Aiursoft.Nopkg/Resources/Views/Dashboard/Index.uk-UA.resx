@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Обробка фонових завдань</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Переглянути всі пакети</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Вбудоване управління користувачами</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Підключіть npm-клієнт, щоб розпочати кешування.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Підключіть ваш клієнт</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Перевірка сумісності</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Підтримка кількох баз даних</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Далі</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Ще немає пакетів у кеші</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Не знайдено пакетів</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Інтеграція OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Допуск пакетів недоступний</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Назва пакета або сфера</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Сторінки пакетів</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Пакетів</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Попередня</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Авторизація на основі ролей (RBAC)</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Безперешкодна інтеграція з будь-яким постачальником OpenID Connect із автоматичною синхронізацією ролей.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Пошук пакетів</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Розумні перевизначення конфігурації</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Це шаблонний проект, з якого ми розпочинаємо нашу подорож...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Спробуйте іншу назву пакета або очистіть пошуковий запит.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Ласкаво просимо</value>

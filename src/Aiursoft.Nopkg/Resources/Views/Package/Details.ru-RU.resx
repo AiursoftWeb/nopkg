@@ -36,9 +36,6 @@
   <data name="License" xml:space="preserve">
     <value>Лицензия</value>
   </data>
-  <data name="npm package" xml:space="preserve">
-    <value>npm-пакет</value>
-  </data>
   <data name="Registry" xml:space="preserve">
     <value>Реестр</value>
   </data>
@@ -56,6 +53,9 @@
   </data>
   <data name="View version" xml:space="preserve">
     <value>Просмотр версии</value>
+  </data>
+  <data name="npm package" xml:space="preserve">
+    <value>npm-пакет</value>
   </data>
 
 </root>

@@ -18,11 +18,11 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
-    <value>Đã thu hồi khóa API.</value>
-  </data>
-  <data name="API Keys" xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
     <value>Chìa khóa API</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
+    <value>Đã thu hồi khóa API.</value>
   </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Tạo một khóa cá nhân để phát hành các gói với quyền tài khoản của bạn.</value>

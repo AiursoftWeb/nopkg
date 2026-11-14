@@ -57,11 +57,11 @@
   <data name="Allows viewing the list of roles and their assigned permissions." xml:space="preserve">
     <value>Дозволяє переглядати список ролей та призначені для них дозволи.</value>
   </data>
-  <data name="Assign package ownership and manage any package." xml:space="preserve">
-    <value>Назначати власників пакетів та керувати будь-яким пакетом.</value>
-  </data>
   <data name="Assign Roles to Users" xml:space="preserve">
     <value>Призначити ролі користувачам</value>
+  </data>
+  <data name="Assign package ownership and manage any package." xml:space="preserve">
+    <value>Назначати власників пакетів та керувати будь-яким пакетом.</value>
   </data>
   <data name="Delete Roles" xml:space="preserve">
     <value>Видалити ролі</value>
@@ -90,11 +90,11 @@
   <data name="Manage Global Settings" xml:space="preserve">
     <value>Керування загальними параметрами</value>
   </data>
-  <data name="Publish and manage versions of packages you own." xml:space="preserve">
-    <value>Публікуйте та керуйте версіями пакетів, якими ви володієте.</value>
-  </data>
   <data name="Publish Packages" xml:space="preserve">
     <value>Опублікувати пакети</value>
+  </data>
+  <data name="Publish and manage versions of packages you own." xml:space="preserve">
+    <value>Публікуйте та керуйте версіями пакетів, якими ви володієте.</value>
   </data>
   <data name="Read Permissions" xml:space="preserve">
     <value>Читати дозволи</value>

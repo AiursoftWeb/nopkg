@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesare sarcini în fundal</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Răsfoiește toate pachetele</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestionare Utilizatori Integrată</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Conectați un client npm pentru a începe cache-ul.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Conectează clientul</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validare de consistență</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Suport pentru Multiple Baze de Date</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Următorul</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Nicio pachet nu a fost încă stocat în memoria cache</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Niciun pachet găsit</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrare OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Admiterea pachetelor nu este disponibilă</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Numele pachetului sau domeniul</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Pagini de pachete</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Pachete</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorizare RBAC</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrați-vă fără probleme cu orice furnizor OpenID Connect, cu sincronizare automată a rolurilor.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cautare</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Caută pachete</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Supravățuiri inteligente de configurare</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Acesta este un proiect tip, de unde începem călătoria...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Încercați alt nume de pachet sau ștergeți căutarea.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bun venit</value>
