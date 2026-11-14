@@ -4,8 +4,5 @@ namespace Aiursoft.Nopkg.Models.HomeViewModels;
 
 public class IndexViewModel : UiStackLayoutViewModel
 {
-    public IndexViewModel()
-    {
-        PageTitle = "Home";
-    }
+    public IndexViewModel() => PageTitle = "Nopkg — Your npm package registry";
 }

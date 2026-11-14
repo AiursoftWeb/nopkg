@@ -1,21 +1,24 @@
 @model Aiursoft.Nopkg.Models.DashboardViewModels.IndexViewModel
-<div class="d-flex align-items-center justify-content-between mb-3">
-    <h1 class="h3 mb-0">@Localizer["Packages"]</h1>
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles { <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" /> }
+<div class="d-flex flex-wrap gap-3 align-items-center justify-content-between mb-3">
+    <h1 class="h2 mb-0">@Localizer["Packages"]</h1>
     <span class="badge bg-secondary">@(Model.CacheOnly ? Localizer["Cache only"] : Localizer["On demand"])</span>
 </div>
 <p class="text-muted">@(Model.AdmissionEnabled ? Localizer["Internal releases and admitted upstream packages."] : Localizer["Internal releases and cached upstream packages."])</p>
+<div class="card"><div class="card-body p-4"><form method="get" asp-action="Index" role="search" class="d-flex flex-wrap gap-2 align-items-end"><div class="flex-grow-1"><label for="package-query" class="form-label">@Localizer["Search packages"]</label><input id="package-query" type="search" name="q" value="@Model.Query" class="form-control" placeholder="@Localizer["Package name or scope"]" /></div><button type="submit" class="btn btn-primary">@Localizer["Search"]</button><a asp-controller="Home" asp-action="Index" asp-fragment="quick-start" class="btn btn-outline-secondary">@Localizer["Connect your client"]</a></form></div></div>
 @if (Model.AdmissionUnavailable && Model.Packages.Count > 0)
 {
     <div class="alert alert-warning"><div class="alert-message">@Localizer["Mirror admission is unavailable. Internal releases remain available."]</div></div>
 }
-@if (Model.AdmissionUnavailable && Model.Packages.Count == 0)
+@if (Model.AdmissionUnavailable && Model.Packages.Count == 0 && Model.TotalPackages == 0)
 {
     <div class="card"><div class="card-body text-center py-5">
         <h2 class="h5">@Localizer["Package admission is unavailable"]</h2>
         <p class="text-muted mb-0">@Localizer["Package access is paused. Please try again later."]</p>
     </div></div>
 }
-else if (Model.Packages.Count == 0)
+else if (Model.Packages.Count == 0 && Model.TotalPackages == 0)
 {
     <div class="card"><div class="card-body text-center py-5">
         <h2 class="h5">@Localizer["No packages cached yet"]</h2>
@@ -23,18 +26,32 @@ else if (Model.Packages.Count == 0)
         <code>npm config set registry @($"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/")</code>
     </div></div>
 }
+else if (Model.Packages.Count == 0)
+{
+    <div class="card"><div class="card-body text-center py-5"><i data-lucide="search" class="mb-3 text-muted" aria-hidden="true"></i><h2 class="h5">@Localizer["No packages found"]</h2><p class="text-muted">@Localizer["Try another package name or clear your search."]</p><a asp-action="Index" class="btn btn-outline-primary">@Localizer["Browse all packages"]</a></div></div>
+}
 else
 {
+    <p class="small text-muted">@Localizer["{0} packages", Model.TotalHits]</p>
     <div class="card"><div class="table-responsive">
         <table class="table mb-0">
             <thead><tr><th>@Localizer["Package"]</th><th>@Localizer["Source"]</th><th>@Localizer["Known versions"]</th><th>@Localizer["Stored versions"]</th></tr></thead>
             <tbody>
             @foreach (var package in Model.Packages)
             {
-                <tr><td class="text-break">@package.Name</td><td>@(package.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</td><td>@package.KnownVersions</td><td>@package.StoredVersions</td></tr>
+                <tr><td class="text-break"><a asp-controller="Package" asp-action="Details" asp-route-id="@package.Name" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="fw-semibold">@package.Name</a></td><td><span class="badge @(package.IsLocallyPublished ? "bg-primary-subtle text-primary" : "bg-secondary-subtle text-secondary")">@(package.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</span></td><td>@package.KnownVersions</td><td>@package.StoredVersions</td></tr>
             }
             </tbody>
         </table>
     </div></div>
 }
 <p class="small text-muted mt-3">@(Model.AdmissionEnabled ? Localizer["S360 admission applies to mirrored packages. Internal releases use publisher permissions."] : Localizer["S360 admission is disabled. Internal releases use publisher permissions."])</p>
+
+@if (Model.TotalPages > 1 || Model.Page > 1)
+{
+    <nav class="d-flex align-items-center justify-content-center gap-3 mb-3" aria-label="@Localizer["Package pages"]">
+        @if (Model.Page > 1) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page - 1)" class="btn btn-outline-secondary">@Localizer["Previous"]</a> }
+        <span>@Localizer["Page {0} of {1}", Model.Page, Math.Max(1, Model.TotalPages)]</span>
+        @if (Model.Page < Model.TotalPages) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page + 1)" class="btn btn-outline-secondary">@Localizer["Next"]</a> }
+    </nav>
+}
