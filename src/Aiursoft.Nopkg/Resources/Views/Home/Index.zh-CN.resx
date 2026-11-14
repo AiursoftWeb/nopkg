@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>支持“即发即弃”的长运行任务（如邮件发送或 AI 推理），内置队列管理、并行处理及任务取消的可视化面板。</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / 连接您的客户端</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / 保持您的工作流程</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>内置基于角色的访问控制（RBAC）系统，用于细粒度权限管理。</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>在浏览器中即可清晰查看您的注册表。</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>开箱即用的完整用户认证与个人资料管理解决方案。</value>
@@ -30,11 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>用户身份验证和资料管理的完整解决方案。</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>熟悉的工作场所</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>完全响应式布局，在桌面和移动设备上均呈现出色视觉效果。</value>
   </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>您的依赖之家</value>
+  </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>一个现代化、功能丰富且高度可扩展的基础框架，为您的下一个Web应用程序提供强大支持。</value>
+  </data>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>包注册表应融入你的工作流，从首次安装到下一次发布。</value>
   </data>
   <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
     <value>借助 Aiursoft Nopkg 成就更多可能</value>
@@ -42,8 +60,14 @@
   <data name="Actuator health endpoints built-in" xml:space="preserve">
     <value>内置执行器健康端点</value>
   </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>将此注册表添加到您的客户端配置中。</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>包含管理站点</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>按需准入</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>AI 驱动的翻译</value>
@@ -120,11 +144,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>新手友好</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>携手更优</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>双语教程</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>浏览软件包</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>浏览目录，找到您的项目所需的软件包。</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>一次构建，随处运行。完全容器化架构。</value>
@@ -198,17 +228,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>简洁文档</value>
   </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>即刻连接</value>
+  </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>连接 S360，通过包策略和独立制品验证来控制镜像依赖。</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>连接您的客户端</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>前后端一致性验证</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>无缝协同 / 统一管理</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>复制</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>复制命令</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>复制您的注册表地址，并继续使用现有的客户端。</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>核心路由与依赖注入</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>覆盖率报告</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>创建一个密钥，按照其配置说明操作，并发布您的存档。</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>创建个人密钥，并使用您的账户权限进行发布。</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>跨平台</value>
@@ -312,6 +366,15 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>包含 Entity Framework Core</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>探索 Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>探索软件包</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>探索您的软件包</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>常见问题解答</value>
   </data>
@@ -330,8 +393,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>内置文件管理系统，支持自动头像压缩。</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>获取一次，反复构建。</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>文件管理与优化</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>找到它。</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>找到您的下一个依赖项…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>细粒度 RBAC</value>
@@ -353,6 +425,9 @@
   </data>
   <data name="Free" xml:space="preserve">
     <value>免费</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>免费开源</value>
   </data>
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>商业用途免费</value>
@@ -384,6 +459,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>仅提供通用 Dockerfile</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>快速入门</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -398,6 +476,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>前往仪表盘</value>
+  </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>优质软件包。</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>使用全面的GUI来监控执行历史和日志，处理像清理和同步这样的重复任务。</value>
@@ -459,6 +540,9 @@
   <data name="Includes Tutorials" xml:space="preserve">
     <value>包含教程</value>
   </data>
+  <data name="Install packages" xml:space="preserve">
+    <value>安装软件包</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>集成文件管理</value>
   </data>
@@ -495,17 +579,29 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm 就绪</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>减少摩擦。</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Lint 检查</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>保持高代码质量</value>
   </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>发布你的下一个版本</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>管理 API 密钥</value>
+  </data>
   <data name="Management Dashboard" xml:space="preserve">
     <value>管理仪表盘</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown 转 HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>认识 Aiursoft Nupkg，我们采用与发布和缓存相同方式的 NuGet 注册表。</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>MIT 许可证</value>
@@ -515,6 +611,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>基于数据注解 (Data Annotations)，自动实现客户端与服务端的双重逻辑验证。</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>更多构建。</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>多时区处理</value>
@@ -530,6 +629,9 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>音乐工具</value>
+  </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>原生 npm 客户端</value>
   </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>需要 CASL 或类似库</value>
@@ -579,17 +681,29 @@
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>无需依赖任何云服务提供商。随时随地运行。</value>
   </data>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>浏览器中的 Nopkg 软件包目录</value>
+  </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>离线可用</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>按需镜像</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>一键启动</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>一个注册表。您日常使用的工具。</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>开源</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>开源。自托管。基于 npm 协议构建。</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 集成</value>
@@ -606,6 +720,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>权限发现与同步</value>
   </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>个人 API 密钥</value>
+  </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>需要 Pint 或类似工具</value>
   </data>
@@ -621,8 +738,20 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>预配置的 Dev/Prod 流水线</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>本地发布。按需镜像。</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>发布你构建的内容，缓存你依赖的组件。将你的 npm 包集中在一处，并使用你已有的工具。</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>使用个人 API 密钥发布并管理包的所有权。一旦包在本地发布，其后续走向便由您掌控。</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>发布您的软件包，并使用可选的 S360 准入机制缓存上游版本。</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>发布您的作品</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>质量门禁 - 强制合规</value>
@@ -651,6 +780,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>用户评价</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>近在咫尺。</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>强大的集成测试</value>
   </data>
@@ -663,6 +795,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>无缝集成任何 OpenID Connect 提供商，并支持自动角色同步。</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜索</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>搜索软件包</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>无忧迁移 - 发布即交付</value>
   </data>
@@ -671,6 +809,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>单容器</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>跳转到内容</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智能配置优先级</value>
@@ -768,17 +909,29 @@
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>深受生产级应用信赖，包括 AnduinOS、StatHub 和 Warp。我们不仅分享代码，我们的核心业务也完全构建于此。</value>
   </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>两大生态系统，一种熟悉的体验。</value>
+  </data>
   <data name="Unified Env" xml:space="preserve">
     <value>统一环境</value>
   </data>
   <data name="Unified Identity" xml:space="preserve">
     <value>统一身份</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>上游包会在需要时获取并存储在本地。缓存的工件会靠近您的构建环境。</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>使用</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>无论是作为SaaS应用的基础、移动应用的后端、企业官网还是个人博客，它都能胜任。无限可能，任您探索。</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>用起来。发出去。</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>使用以下命令连接到此实例。发布需要个人密钥和发布权限。</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>在 GitHub 上查看</value>
@@ -818,6 +971,18 @@
   </data>
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>您的 npm 注册表，随取随用。</value>
+  </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>您的 npm 注册表。您的基础设施。</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>您的注册表，一目了然。</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>你的发布，你的规则</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>你熟悉的客户端。你自己的包源。</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

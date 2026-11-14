@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>背景工作處理</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>瀏覽所有套件</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>內建使用者管理</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>連接 npm 用戶端以開始快取。</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>連接您的用戶端</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>一致性驗證</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>多種資料庫支援</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>下一頁</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>尚未快取任何套件</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>找不到套件</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect 整合</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>套件准入功能無法使用</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>套件名稱或範圍</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>套件頁面</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>套件</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>上一頁</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC 授權</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>無縫整合任何 OpenID Connect 提供者，並自動同步角色權限。</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>搜尋套件</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>智慧型設定覆寫</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>這是一個模板專案，我們將在此開啟探索之旅...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>請嘗試其他套件名稱或清除搜尋條件。</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>歡迎</value>

@@ -126,8 +126,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Modèle</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — Votre registre de paquets npm</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Non trouvé</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Détails du package</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Propriété du package</value>

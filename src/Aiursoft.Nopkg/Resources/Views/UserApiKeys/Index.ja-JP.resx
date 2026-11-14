@@ -24,6 +24,12 @@
   <data name="API Keys" xml:space="preserve">
     <value>APIキー</value>
   </data>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>アカウントの権限を使用してパッケージを公開するための個人用キーを作成してください。</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>最初のキーを作成</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>期限切れ</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>使用</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>最初の公開はここから始まります</value>
   </data>
 
 </root>

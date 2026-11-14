@@ -24,6 +24,12 @@
   <data name="API Keys" xml:space="preserve">
     <value>Ключи API</value>
   </data>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>Создайте персональный ключ для публикации пакетов с правами вашей учётной записи.</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>Создайте свой первый ключ</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Истёк</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>Использовать</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>Здесь начинается ваш первый релиз</value>
   </data>
 
 </root>

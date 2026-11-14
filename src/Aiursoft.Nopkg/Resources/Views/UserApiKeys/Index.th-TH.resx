@@ -24,6 +24,12 @@
   <data name="API Keys" xml:space="preserve">
     <value>คีย์ API</value>
   </data>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>สร้างคีย์ส่วนตัวเพื่อเผยแพร่แพ็กเกจด้วยสิทธิ์บัญชีของคุณ</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>สร้างคีย์แรกของคุณ</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>หมดอายุ</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>ใช้</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>การออกเวอร์ชันแรกของคุณเริ่มต้นที่นี่</value>
   </data>
 
 </root>

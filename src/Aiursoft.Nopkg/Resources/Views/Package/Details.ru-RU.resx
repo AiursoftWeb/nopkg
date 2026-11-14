@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Back to packages" xml:space="preserve">
+    <value>Назад к пакетам</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Копировать команду</value>
+  </data>
+  <data name="Copy the command into your project directory." xml:space="preserve">
+    <value>Скопируйте команду в каталог вашего проекта.</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Зависимости</value>
+  </data>
+  <data name="Install this version" xml:space="preserve">
+    <value>Установить эту версию</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Лицензия</value>
+  </data>
+  <data name="npm package" xml:space="preserve">
+    <value>npm-пакет</value>
+  </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Реестр</value>
+  </data>
+  <data name="Select version" xml:space="preserve">
+    <value>Выбрать версию</value>
+  </data>
+  <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
+    <value>Эта команда использует данный реестр явно. Доступ к пакетам осуществляется в соответствии с текущей политикой реестра.</value>
+  </data>
+  <data name="This version declares no runtime dependencies." xml:space="preserve">
+    <value>Эта версия не содержит ни одной зависимости времени выполнения.</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Версия</value>
+  </data>
+  <data name="View version" xml:space="preserve">
+    <value>Просмотр версии</value>
+  </data>
+
+</root>

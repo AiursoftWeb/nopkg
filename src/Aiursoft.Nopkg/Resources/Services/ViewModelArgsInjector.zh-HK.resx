@@ -126,8 +126,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>範本</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — 您的 npm 套件註冊中心</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>找不到</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>套件詳情</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>套件擁有權</value>

@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesamiento de tareas en segundo plano</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Ver todos los paquetes</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Gestión de Usuarios Integrada</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Conecte un cliente de npm para iniciar la caché.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Conecta tu cliente</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Validación de consistencia</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Compatibilidad con Múltiples Bases de Datos</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Aún no hay paquetes en caché</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>No se han encontrado paquetes</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integración de OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>La admisión de paquetes no está disponible</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Nombre o alcance del paquete</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Páginas de paquetes</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Paquetes</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Autorización RBAC</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integración perfecta con cualquier proveedor de OpenID Connect, con sincronización automática de roles.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Buscar paquetes</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Sobrescrituras inteligentes de configuración</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Este es un proyecto plantilla, donde comenzamos el viaje...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Prueba con otro nombre de paquete o borra tu búsqueda.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Bienvenido</value>

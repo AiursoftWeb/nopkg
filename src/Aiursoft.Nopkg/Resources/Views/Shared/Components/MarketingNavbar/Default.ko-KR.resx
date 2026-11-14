@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>문서</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>시작하기</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>주요 내비게이션</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>패키지</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>소스 코드</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>색상 테마 전환</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>대시보드 사용해보기</value>

@@ -123,8 +123,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Șablon</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — Registru dvs. de pachete npm</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Nu a fost găsit</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Detalii pachet</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Deținerea pachetului</value>

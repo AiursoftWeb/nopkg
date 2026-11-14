@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>การประมวลผลงานหลังบ้าน</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>ดูแพ็กเกจทั้งหมด</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>การจัดการผู้ใช้ในตัว</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>เชื่อมต่อไคลเอนต์ npm เพื่อเริ่มแคช</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>เชื่อมต่อไคลเอ็นต์ของคุณ</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>การตรวจสอบความสอดคล้อง</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>รองรับหลายฐานข้อมูล</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>ถัดไป</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>ยังไม่มีแพ็กเกจที่แคชไว้</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>ไม่พบแพ็กเกจ</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>การผสานรวม OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>การยอมรับแพ็กเกจไม่สามารถใช้งานได้</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>ชื่อแพ็กเกจหรือขอบเขต</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>หน้าแพ็กเกจ</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>แพ็กเกจ</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>ก่อนหน้า</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>การอนุญาตตามบทบาท RBAC</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>ผสานรวมได้อย่างราบรื่นกับผู้ให้บริการ OpenID Connect ใดก็ได้ พร้อมการซิงโครไนซ์บทบาทอัตโนมัติ</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ค้นหา</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>ค้นหาแพ็กเกจ</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>การแทนที่การตั้งค่าอัจฉริยะ</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>นี่คือโปรเจกต์เทมเพลต ซึ่งเป็นจุดเริ่มต้นของการเดินทางของเรา...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>ลองใช้ชื่อแพ็กเกจอื่นหรือล้างการค้นหาของคุณ</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>ยินดีต้อนรับ</value>

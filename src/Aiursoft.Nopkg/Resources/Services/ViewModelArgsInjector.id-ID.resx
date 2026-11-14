@@ -123,8 +123,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Nopkg</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — Registry paket npm Anda</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Tidak Ditemukan</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Detail Paket</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Kepemilikan Paket</value>

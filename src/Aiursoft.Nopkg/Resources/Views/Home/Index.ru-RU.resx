@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Поддержка &quot;Fire-and-forget&quot; для длительных задач (например, электронные письма или ИИ), с графическим интерфейсом для управления очередями, параллельной обработкой и отменой.</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / Подключите ваш клиент</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / Сохраните свой рабочий процесс</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Встроенная система управления доступом на основе ролей (RBAC) для детализированного управления разрешениями.</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>Ясная картина вашего реестра, не выходя из браузера.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>Полное решение для аутентификации пользователей и управления профилями, готовое к использованию сразу после установки.</value>
@@ -30,11 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Полное решение для аутентификации пользователей и управления профилями.</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>Знакомое рабочее пространство</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Адаптивный макет, который отлично выглядит как на настольных компьютерах, так и на мобильных устройствах.</value>
   </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>Дом для ваших зависимостей</value>
+  </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Современная, многофункциональная и легко расширяемая основа для вашего следующего веб-приложения.</value>
+  </data>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>Реестр пакетов должен встраиваться в ваш рабочий процесс — от первой установки до следующего выпуска.</value>
   </data>
   <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
     <value>Достигайте большего с Aiursoft Nopkg</value>
@@ -42,8 +60,14 @@
   <data name="Actuator health endpoints built-in" xml:space="preserve">
     <value>Встроенные конечные точки здоровья Actuator</value>
   </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>Добавьте этот реестр в конфигурацию вашего клиента.</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Сайт администратора включен</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>Контроль доступа, когда он нужен</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>Перевод на основе ИИ</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>Для начинающих</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>Вместе лучше</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Двухязычные руководства</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>Просмотреть пакеты</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>Просмотрите каталог и найдите пакеты, необходимые для вашего проекта.</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Соберите один раз, запускайте где угодно. Полностью контейнерная архитектура.</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>Краткая документация</value>
   </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>Подключитесь за мгновение</value>
+  </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>Подключите S360 для управления зеркальными зависимостями с помощью политик пакетов и независимой проверки артефактов.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Подключите ваш клиент</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Проверка согласованности</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Координируйте удобно</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копировать</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Скопировать команду</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>Скопируйте адрес вашего реестра и продолжайте использовать существующий клиент.</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>Основная маршрутизация и DI</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Отчет о покрытии</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>Создайте ключ, следуйте инструкциям по его настройке и опубликуйте свой архив.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>Создайте личный ключ и публикуйте пакеты с правами вашего аккаунта.</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Кроссплатформенность</value>
@@ -309,6 +363,15 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Включен Entity Framework Core</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Изучить Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>Обзор пакетов</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>Изучите свои пакеты</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>ЧАВО</value>
   </data>
@@ -327,8 +390,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Оснащена встроенной системой управления файлами с автоматическим сжатием аватаров.</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>Загружаем один раз. Собираем снова.</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>Управление файлами и оптимизация</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>Найдите.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>Найдите свою следующую зависимость…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Детализированный RBAC</value>
@@ -350,6 +422,9 @@
   </data>
   <data name="Free" xml:space="preserve">
     <value>Бесплатно</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>Бесплатный и открытый исходный код</value>
   </data>
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Бесплатно для коммерческого использования</value>
@@ -381,6 +456,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Только общий Dockerfile</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Начните работу</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -395,6 +473,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Перейти в панель управления</value>
+  </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>Отличные пакеты.</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Обрабатывайте повторяющиеся задачи, такие как очистка и синхронизация, с помощью комплексного графического интерфейса для мониторинга истории выполнения и журналов.</value>
@@ -456,6 +537,9 @@
   <data name="Includes Tutorials" xml:space="preserve">
     <value>Содержит руководства</value>
   </data>
+  <data name="Install packages" xml:space="preserve">
+    <value>Установка пакетов</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>Интегрированное управление файлами</value>
   </data>
@@ -492,17 +576,29 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Готово для K8s / Swarm</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>Меньше трений.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Проверка линт-кода</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Поддерживайте высокое качество кода</value>
   </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>Осуществите свой следующий релиз</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>Управление API-ключами</value>
+  </data>
   <data name="Management Dashboard" xml:space="preserve">
     <value>Панель управления</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown в HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Встречайте Aiursoft Nupkg — наш реестр NuGet с тем же подходом к публикации и кэшированию.</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Лицензия MIT</value>
@@ -512,6 +608,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Модели проверяются на стороне клиента и сервера на основе аннотаций данных.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>Больше творчества.</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Работа с несколькими часовыми поясами</value>
@@ -527,6 +626,9 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Музыкальные инструменты</value>
+  </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>Нативные клиенты npm</value>
   </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>Требуется CASL или аналог</value>
@@ -576,17 +678,29 @@
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Нет зависимости от любого поставщика облачных услуг. Запускайте где угодно, когда угодно.</value>
   </data>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Каталог пакетов Nopkg в браузере</value>
+  </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Работа в автономном режиме</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>Зеркалирование по запросу</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Одно нажатие для запуска</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>Один реестр. Ваши повседневные инструменты.</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Открытое ПО</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>Открытый исходный код. Самостоятельный хостинг. Построено на протоколе npm.</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Интеграция OpenID Connect</value>
@@ -603,6 +717,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Обнаружение и синхронизация разрешений</value>
   </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>Личные API-ключи</value>
+  </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>Требуется Pint или аналогичный инструмент</value>
   </data>
@@ -618,8 +735,20 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Готовые конвейеры для dev/prod</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>Публикуйте локально. Зеркалируйте по требованию.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>Публикуйте то, что вы создаёте. Кэшируйте то, от чего вы зависите. Соберите свои npm-пакеты в одном месте, используя инструменты, которые вы уже применяете.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>Публикуйте пакеты с помощью личного API-ключа и управляйте правами владения. Как только пакет опубликован локально, его дальнейшая судьба остаётся в ваших руках.</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>Публикуйте свои пакеты и кэшируйте выпуски из внешних реестров с необязательным допуском S360.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>Опубликуйте свою работу</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Контроль качества</value>
@@ -648,6 +777,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Отзывы</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>Как дома.</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Надежное интеграционное тестирование</value>
   </data>
@@ -660,6 +792,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Беспрепятственно интегрируйтесь с любым провайдером OpenID Connect с автоматической синхронизацией ролей.</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Поиск пакетов</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Смените с уверенностью</value>
   </data>
@@ -668,6 +806,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>Одиночный контейнер</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>Перейти к содержимому</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Умные параметры переопределения конфигурации</value>
@@ -765,17 +906,29 @@
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надёжно проверено приложениями промышленного уровня, включая AnduinOS, StatHub и Warp. Мы не просто делимся этим кодом; мы используем его для ведения всей своей бизнес-деятельности.</value>
   </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>Две экосистемы. Один знакомый опыт.</value>
+  </data>
   <data name="Unified Env" xml:space="preserve">
     <value>Единая среда</value>
   </data>
   <data name="Unified Identity" xml:space="preserve">
     <value>Единая идентичность</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>Внешние пакеты загружаются по мере необходимости и хранятся локально. Кэшированные артефакты остаются рядом с вашими сборками.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Использование</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Используйте его как основу для вашего SaaS, бэкенд для мобильного приложения, корпоративный сайт или личный блог. Возможности безграничны.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>Используйте. Публикуйте.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>Используйте команды ниже для подключения к этому экземпляру. Для публикации требуется личный ключ и разрешение на публикацию.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Просмотреть на GitHub</value>
@@ -815,6 +968,18 @@
   </data>
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>Ваш npm-реестр, готовый к работе в любой момент.</value>
+  </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>Ваш реестр npm. Ваша инфраструктура.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>Ваш реестр — одним взглядом.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>Ваши релизы, ваши правила</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>Ваш обычный клиент. Ваш собственный источник пакетов.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

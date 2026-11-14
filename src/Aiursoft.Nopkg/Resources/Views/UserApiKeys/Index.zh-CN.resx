@@ -24,6 +24,12 @@
   <data name="API Keys" xml:space="preserve">
     <value>API 密钥</value>
   </data>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>创建个人密钥，以使用您的账户权限发布软件包。</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>创建您的第一个密钥</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>已过期</value>
   </data>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>使用</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>您的首次发布从这里开始</value>
   </data>
 
 </root>

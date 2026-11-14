@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Supporto &quot;Fire-and-forget&quot; per attività di lunga durata (come email o AI), con interfaccia grafica per la gestione della coda, elaborazione parallela e annullamento.</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / Connetti il tuo client</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / Mantieni il tuo flusso di lavoro</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Un sistema integrato di controllo degli accessi basato sui ruoli (RBAC) per una gestione granulare delle autorizzazioni.</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>Una visione chiara del tuo registro, senza lasciare il browser.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>Una soluzione completa per l&apos;autenticazione utente e la gestione del profilo, immediatamente utilizzabile.</value>
@@ -30,11 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Una soluzione completa per l&apos;autenticazione degli utenti e la gestione del profilo.</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>Un ambiente di lavoro familiare</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Un layout completamente reattivo che appare eccellente sia su dispositivi desktop che mobili.</value>
   </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>Una casa per le tue dipendenze</value>
+  </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Una base moderna, ricca di funzionalità e altamente estensibile per la tua prossima applicazione web.</value>
+  </data>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>Un registro di pacchetti dovrebbe integrarsi nel tuo lavoro, dalla prima installazione alla prossima release.</value>
   </data>
   <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
     <value>Ottieni di più con Aiursoft Nopkg</value>
@@ -42,8 +60,14 @@
   <data name="Actuator health endpoints built-in" xml:space="preserve">
     <value>Endpoint di salute di Actuator integrati</value>
   </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>Aggiungi questo registro alla configurazione del client.</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Sito di amministrazione incluso</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>Controllo di ammissione, quando ne hai bisogno</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>Traduzione guidata dall&apos;IA</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>Adatto ai principianti</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>Insieme è meglio</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Tutorial bilingui</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>Esplora pacchetti</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>Esplora il catalogo e trova i pacchetti di cui il tuo progetto ha bisogno.</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Costruisci una volta, esegui ovunque. Architettura completamente containerizzata.</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>Documenti Concisi</value>
   </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>Connettiti in un attimo</value>
+  </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>Collega S360 per controllare le dipendenze specchiate con politiche di pacchetto e verifica indipendente degli artefatti.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Connetti il tuo client</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Convalida della coerenza</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Coordinare comodamente</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copia</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Copia comando</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>Copia l&apos;indirizzo del tuo registro e continua a utilizzare il tuo client esistente.</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>Routing e DI di base</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Rapporto copertura</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>Crea una chiave, segui le istruzioni di configurazione e pubblica il tuo archivio.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>Crea una chiave personale e pubblica con i permessi del tuo account.</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Multi-piattaforma</value>
@@ -309,6 +363,15 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core incluso</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Esplora Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>Esplora i pacchetti</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>Esplora i tuoi pacchetti</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>FAQ</value>
   </data>
@@ -327,8 +390,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Dispone di un sistema integrato di gestione dei file con compressione automatica degli avatar.</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>Scarica una volta. Compila di nuovo.</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>Gestione e ottimizzazione file</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>Trovalo.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>Trova la tua prossima dipendenza…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC a grana fine</value>
@@ -350,6 +422,9 @@
   </data>
   <data name="Free" xml:space="preserve">
     <value>Gratuito</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>Gratuito e open source</value>
   </data>
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Gratis per uso commerciale</value>
@@ -381,6 +456,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Solo Dockerfile generico</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Inizia</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -395,6 +473,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Vai alla dashboard</value>
+  </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>Ottimi pacchetti.</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Gestisci i compiti ricorrenti come pulizia e sincronizzazione con un&apos;interfaccia grafica completa per monitorare la cronologia di esecuzione e i log.</value>
@@ -456,6 +537,9 @@
   <data name="Includes Tutorials" xml:space="preserve">
     <value>Include tutorial</value>
   </data>
+  <data name="Install packages" xml:space="preserve">
+    <value>Installa pacchetti</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>Gestione File Integrata</value>
   </data>
@@ -492,17 +576,29 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Pronto per K8s / Swarm</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>Meno attrito.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Controllo Lint</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Mantieni un&apos;elevata qualità del codice</value>
   </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>Pubblica la tua prossima release</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>Gestisci chiavi API</value>
+  </data>
   <data name="Management Dashboard" xml:space="preserve">
     <value>Pannello di gestione</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Markdown in HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Scopri Aiursoft Nupkg, il nostro registro NuGet con lo stesso approccio alla pubblicazione e alla cache.</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Licenza MIT</value>
@@ -512,6 +608,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>I modelli vengono convalidati sia sul lato client che sul lato server in base alle annotazioni dei dati.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>Più sviluppo.</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Gestione multi-fuso orario</value>
@@ -527,6 +626,9 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Strumenti Musicali</value>
+  </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>Clienti npm nativi</value>
   </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>Richiede CASL o simili</value>
@@ -576,17 +678,29 @@
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Nessuna dipendenza da fornitori di cloud. Esegui ovunque, in qualsiasi momento.</value>
   </data>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Catalogo pacchetti Nopkg nel browser</value>
+  </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Capace di funzionare in modalità offline</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>Riproduzione su richiesta</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Avvio con un clic</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>Un unico registro. I tuoi strumenti di tutti i giorni.</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Open Source</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>Open source. Self-hosted. Basato sul protocollo npm.</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Integrazione OpenID Connect</value>
@@ -603,6 +717,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Scoperta e sincronizzazione delle autorizzazioni</value>
   </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>Chiavi API personali</value>
+  </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>Pint o simile necessario</value>
   </data>
@@ -618,8 +735,20 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Pipeline preconfigurate per dev/prod</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>Pubblica localmente. Specchia su richiesta.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>Pubblica ciò che costruisci. Metti in cache ciò da cui dipendi. Raccogli i tuoi pacchetti npm in un unico posto, con gli strumenti che già usi.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>Pubblica con una chiave API personale e gestisci la proprietà dei pacchetti. Una volta pubblicato un pacchetto in locale, il suo futuro è nelle tue mani.</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>Pubblica i tuoi pacchetti e metti in cache le release upstream con ammissione S360 facoltativa.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>Pubblica il tuo lavoro</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Gate di Qualità</value>
@@ -648,6 +777,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Recensioni</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>Proprio a casa.</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Test di integrazione robusti</value>
   </data>
@@ -660,6 +792,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Integrati in modo fluido con qualsiasi provider OpenID Connect, con sincronizzazione automatica dei ruoli.</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Cerca</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Cerca pacchetti</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Sposta con sicurezza</value>
   </data>
@@ -668,6 +806,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>Container singolo</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>Vai al contenuto</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Override delle configurazioni intelligenti</value>
@@ -765,17 +906,29 @@
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Utilizzato da applicazioni di produzione come AnduinOS, StatHub e Warp. Non condividiamo semplicemente questo codice; lo utilizziamo per gestire tutta la nostra attività aziendale.</value>
   </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>Due ecosistemi. Un&apos;esperienza familiare.</value>
+  </data>
   <data name="Unified Env" xml:space="preserve">
     <value>Ambiente Unificato</value>
   </data>
   <data name="Unified Identity" xml:space="preserve">
     <value>Identità Unificata</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>I pacchetti upstream vengono recuperati quando necessari e archiviati localmente. Gli artefatti in cache restano a portata di mano per le tue build.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Utilizzo</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Usalo come base per il tuo SaaS, un backend per la tua app mobile, un sito aziendale o un blog personale. Le possibilità sono infinite.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>Usalo. Pubblicalo.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>Usa i comandi seguenti per connetterti a questa istanza. La pubblicazione richiede una chiave personale e l&apos;autorizzazione alla pubblicazione.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Visualizza su GitHub</value>
@@ -815,6 +968,18 @@
   </data>
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>Il tuo registro npm, pronto quando ne hai bisogno.</value>
+  </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>Il tuo registro npm. La tua infrastruttura.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>La tua registry, a colpo d&apos;occhio.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>I tuoi rilasci, le tue regole</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>Il tuo client abituale. La tua fonte di pacchetti.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
