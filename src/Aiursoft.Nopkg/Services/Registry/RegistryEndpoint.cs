@@ -1,6 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 using System.Text.Json.Nodes;
+using System.IO.Compression;
 using Aiursoft.Nopkg.Registry;
 using Aiursoft.Nopkg.Services.Authentication;
 using Aiursoft.Nopkg.Services.Publishing;
@@ -28,14 +29,21 @@ public static class RegistryEndpoint
     {
         context.Response.Headers.CacheControl = "no-store";
         var path = Uri.UnescapeDataString(context.Request.Path.Value ?? "/").TrimEnd('/');
-        if (path.StartsWith("/-/npm/v1/security/", StringComparison.Ordinal))
-        {
-            context.Response.StatusCode = StatusCodes.Status501NotImplemented;
-            await context.Response.WriteAsJsonAsync(new { error = "Npm audit is not implemented in this protocol preview." });
-            return;
-        }
         try
         {
+            if (path == "/-/npm/v1/security/advisories/bulk")
+            {
+                if (!HttpMethods.IsPost(context.Request.Method))
+                    throw new PublishingException(405, "Use POST for bulk security advisories.");
+                var packages = await ReadJsonAsync(context, 4 * 1024 * 1024, allowGzip: true) as JsonObject
+                    ?? throw new PublishingException(400, "Audit packages must be a JSON object.");
+                var advisories = await context.RequestServices.GetRequiredService<NpmRegistry>()
+                    .AuditAsync(packages, context.RequestAborted);
+                await WriteJsonAsync(context, advisories);
+                return;
+            }
+            if (path.StartsWith("/-/npm/v1/security/", StringComparison.Ordinal))
+                throw new PublishingException(404, "This security endpoint is not supported. Use bulk security advisories.");
             var authentication = context.RequestServices.GetRequiredService<PackagePublisherAuthenticationService>();
             var key = context.Request.Headers.Authorization.ToString();
             key = key.StartsWith("Bearer ", StringComparison.OrdinalIgnoreCase) ? key[7..].Trim() : "";
@@ -160,17 +168,28 @@ public static class RegistryEndpoint
         if (!publisher.CanPublish && !publisher.CanManagePackages) throw new PublishingException(403, "Publishing permission is required.");
     }
 
-    private static async Task<JsonNode?> ReadJsonAsync(HttpContext context, long maximum)
+    private static async Task<JsonNode?> ReadJsonAsync(HttpContext context, long maximum, bool allowGzip = false)
     {
         SetBodyLimit(context, maximum);
+        var encoding = context.Request.Headers.ContentEncoding.ToString();
+        if (allowGzip && encoding.Length > 0 && !string.Equals(encoding, "gzip", StringComparison.OrdinalIgnoreCase))
+            throw new PublishingException(415, "Only gzip request compression is supported.");
+        using var decompressed = allowGzip && encoding.Length > 0
+            ? new GZipStream(context.Request.Body, CompressionMode.Decompress, leaveOpen: true) : null;
+        var body = (Stream?)decompressed ?? context.Request.Body;
         using var input = new MemoryStream();
         var buffer = new byte[81920];
         int count;
-        while ((count = await context.Request.Body.ReadAsync(buffer, context.RequestAborted)) != 0)
+        try
         {
-            if (input.Length + count > maximum) throw new PublishingException(413, "The request exceeds the configured size limit.");
-            await input.WriteAsync(buffer.AsMemory(0, count), context.RequestAborted);
+            while ((count = await body.ReadAsync(buffer, context.RequestAborted)) != 0)
+            {
+                if (input.Length + count > maximum) throw new PublishingException(413, "The request exceeds the configured size limit.");
+                await input.WriteAsync(buffer.AsMemory(0, count), context.RequestAborted);
+            }
         }
+        catch (InvalidDataException) when (decompressed != null)
+        { throw new PublishingException(400, "Invalid gzip request."); }
         try { return JsonNode.Parse(input.GetBuffer().AsSpan(0, checked((int)input.Length))); }
         catch (System.Text.Json.JsonException) { throw new PublishingException(400, "Invalid JSON request."); }
     }
