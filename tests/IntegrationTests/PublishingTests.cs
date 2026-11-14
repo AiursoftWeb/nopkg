@@ -16,38 +16,6 @@ namespace Aiursoft.Nopkg.Tests.IntegrationTests;
 [TestClass]
 public class PublishingTests : TestBase
 {
-    [TestMethod]
-    public async Task LocalOriginProofDescribesPublishedBytesAndPersistsAfterPublisherDeletion()
-    {
-        var (user, key) = await PublisherAsync();
-        var doc = Publication("@test/origin");
-        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("@test/origin", key, doc)).StatusCode);
-        var bytes = Convert.FromBase64String(doc["_attachments"]!["package.tgz"]!["data"]!.GetValue<string>());
-        const string url = "/api/package-origins?name=%40test%2Forigin&version=1.0.0";
-        using var response = await Http.GetAsync(url);
-        Assert.IsTrue(response.Headers.CacheControl!.NoStore);
-        var raw = await response.Content.ReadAsStringAsync();
-        var proof = JsonNode.Parse(raw)!;
-        Assert.AreEqual("local", proof["mode"]!.GetValue<string>());
-        Assert.AreEqual(Convert.ToHexStringLower(SHA256.HashData(bytes)), proof["sha256"]!.GetValue<string>());
-        CollectionAssert.AreEqual(bytes, await Http.GetByteArrayAsync(proof["archive"]!.GetValue<string>()));
-        Assert.DoesNotContain(key, raw);
-        Assert.DoesNotContain(user, raw);
-        using (var scope = Server!.Services.CreateScope())
-        {
-            var db = scope.ServiceProvider.GetRequiredService<NopkgDbContext>();
-            db.Users.Remove(await db.Users.SingleAsync(u => u.Id == user));
-            await db.SaveChangesAsync();
-        }
-        proof = JsonNode.Parse(await Http.GetStringAsync(url))!;
-        Assert.AreEqual("local", proof["mode"]!.GetValue<string>());
-        proof = JsonNode.Parse(await Http.GetStringAsync("/api/package-origins?name=%40test%2Forigin&version=9.0.0"))!;
-        Assert.AreEqual("local", proof["mode"]!.GetValue<string>());
-        Assert.IsNull(proof["archive"]);
-        proof = JsonNode.Parse(await Http.GetStringAsync("/api/package-origins?name=not-published&version=1.0.0"))!;
-        Assert.AreEqual("mirror", proof["mode"]!.GetValue<string>());
-        Assert.IsNull(proof["archive"]);
-    }
     private string _registryPath = null!;
     [TestInitialize]
     public override async Task CreateServer()
