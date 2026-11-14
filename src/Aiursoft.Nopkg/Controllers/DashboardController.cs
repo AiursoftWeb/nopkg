@@ -25,7 +25,7 @@ public class DashboardController(NpmRegistry registry, RegistryOptions options, 
         page = Math.Clamp(page, 1, int.MaxValue / 20);
         try
         {
-            var packages = await registry.CachedPackagesAsync(cancellationToken);
+            var packages = await registry.CachedPackagesAsync(cancellationToken, q);
             var filtered = Filter(packages, q);
             return this.StackView(new IndexViewModel
             {

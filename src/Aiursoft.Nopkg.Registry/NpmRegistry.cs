@@ -333,11 +333,13 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         }
     }
 
-    public async Task<IReadOnlyList<CachedPackage>> CachedPackagesAsync(CancellationToken token = default)
+    public async Task<IReadOnlyList<CachedPackage>> CachedPackagesAsync(CancellationToken token = default, string query = "")
     {
-        var result = new List<CachedPackage>();
         var local = localPackages == null ? [] : await localPackages.ListAsync(token);
-        if (!Directory.Exists(_root)) return local;
+        var localNames = local.Select(p => p.Name).ToHashSet(StringComparer.Ordinal);
+        var matchingLocal = local.Where(p => p.Name.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+        if (!Directory.Exists(_root)) return matchingLocal;
+        var cached = new List<(string Name, string Directory, List<string> Versions)>();
         foreach (var directory in Directory.EnumerateDirectories(_root))
         {
             var file = Path.Combine(directory, "metadata.json");
@@ -345,17 +347,45 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
             var metadata = JsonNode.Parse(await File.ReadAllBytesAsync(file, token)) as JsonObject
                 ?? throw new InvalidDataException("Invalid cached metadata.");
             var name = PackageName(metadata["name"]!.GetValue<string>());
-            if (local.Any(x => x.Name == name)) continue;
-            var approved = _admission == null || _admission.UsesRegistryPolicy ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
-            var filtered = await FilterMetadataAsync(metadata, approved, token);
-            var versions = (JsonObject)filtered["versions"]!;
+            if (localNames.Contains(name) || !name.Contains(query, StringComparison.OrdinalIgnoreCase)) continue;
+            var versions = metadata["versions"] as JsonObject ?? throw new InvalidDataException("Invalid cached versions.");
             ValidateVersions(versions);
-            if (versions.Count == 0) continue;
-            var stored = versions.Count(v => File.Exists(Path.Combine(directory, v.Key + ".tgz")) &&
-                File.Exists(Path.Combine(directory, v.Key + ".tgz.json")));
-            result.Add(new CachedPackage(name, versions.Count, stored));
+            cached.Add((name, directory, versions.Select(v => v.Key).ToList()));
         }
-        return result.Concat(local).OrderBy(p => p.Name, StringComparer.Ordinal).ToList();
+
+        // Read one current policy snapshot for the matching catalog. Never retain admission
+        // decisions across requests: revocations and pending verification must remain visible.
+        HashSet<(string Name, string Version)>? allowed = null;
+        if (_admission != null && cached.Count > 0)
+        {
+            if (_admission.UsesRegistryPolicy)
+            {
+                var candidates = cached.SelectMany(p => p.Versions.Select(v =>
+                    new MirrorCandidate("npm", p.Name, v, _admission.PolicySource))).ToList();
+                allowed = (await _admission.CandidatesAsync(candidates, token))
+                    .Select(c => (c.Name, c.Version)).ToHashSet();
+            }
+            else
+            {
+                var approved = cached.Count == 1
+                    ? (await _admission.ApprovedAsync(cached[0].Name, _origin.AbsoluteUri.TrimEnd('/'), token)).Values.ToList()
+                    : await _admission.ApprovedCatalogAsync(_origin.AbsoluteUri.TrimEnd('/'), token);
+                var identities = cached.SelectMany(p => p.Versions.Select(v => (p.Name, Version: v))).ToHashSet();
+                var decisions = await _admission.AssessAsync(approved.Where(a => identities.Contains((a.Name, a.Version))).ToList(), token);
+                allowed = decisions.Where(d => d.Trusted && d.PendingVerification == false)
+                    .Select(d => (d.Dependency.Name, d.Dependency.Version)).ToHashSet();
+            }
+        }
+        var result = new List<CachedPackage>();
+        foreach (var package in cached)
+        {
+            var versions = package.Versions.Where(v => allowed == null || allowed.Contains((package.Name, v))).ToList();
+            if (versions.Count == 0) continue;
+            var stored = versions.Count(v => File.Exists(Path.Combine(package.Directory, v + ".tgz")) &&
+                File.Exists(Path.Combine(package.Directory, v + ".tgz.json")));
+            result.Add(new CachedPackage(package.Name, versions.Count, stored));
+        }
+        return result.Concat(matchingLocal).OrderBy(p => p.Name, StringComparer.Ordinal).ToList();
     }
 
     private static async Task AtomicWriteAsync(string path, byte[] data, CancellationToken token)
