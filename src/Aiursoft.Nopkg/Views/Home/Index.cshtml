@@ -1,15 +1,189 @@
 @model Aiursoft.Nopkg.Models.HomeViewModels.IndexViewModel
+@{
+    var registryUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/";
+}
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles {
-    <link rel="stylesheet" href="~/styles/site.css" />
-    <link rel="stylesheet" href="~/styles/marketing.css" />
+    <link rel="stylesheet" href="~/styles/registry-landing.css" asp-append-version="true" />
 }
-<vc:marketing-navbar></vc:marketing-navbar>
-<div class="container py-5 text-center">
-    <h1>Aiursoft Nopkg</h1>
-    <p class="lead">@Localizer["Your npm registry, ready when you need it."]</p>
-    <a class="btn btn-primary" asp-controller="Dashboard" asp-action="Index">@Localizer["Browse packages"]</a>
-    <p class="small text-muted mt-4">@Localizer["Publish your packages and cache upstream releases with optional S360 admission."]</p>
+<div class="registry-landing registry-npm">
+    <a href="#main-content" class="visually-hidden-focusable">@Localizer["Skip to content"]</a>
+    <vc:marketing-navbar></vc:marketing-navbar>
+    <main id="main-content">
+        <section class="registry-hero">
+            <div class="container registry-hero-grid">
+                <div>
+                    <span class="registry-eyebrow">@Localizer["Your npm registry. Your infrastructure."]</span>
+                    <h1>@Localizer["Great packages."]<br />
+                        <span>@Localizer["Right at home."]</span>
+                    </h1>
+                    <p class="registry-lead">@Localizer["Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use."]</p>
+                    <div class="registry-actions">
+                        <a asp-controller="Dashboard" asp-action="Index" class="registry-button">@Localizer["Explore packages"]<i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                        </a>
+                        <a href="#quick-start" class="registry-button registry-button-secondary">@Localizer["Connect your client"]</a>
+                    </div>
+                    <form asp-controller="Dashboard" asp-action="Index" method="get" class="registry-search" role="search">
+                        <label class="visually-hidden" for="home-search">@Localizer["Search packages"]</label>
+                        <input id="home-search" name="q" type="search" placeholder="@Localizer["Find your next dependency…"]" maxlength="200" />
+                        <button class="registry-button" type="submit">@Localizer["Search"]</button>
+                    </form>
+                    <p class="registry-note">@Localizer["Open source. Self-hosted. Built on the npm protocol."]</p>
+                </div>
+                <div class="registry-terminal">
+                    <div class="registry-terminal-bar">
+                        <span class="registry-terminal-dot"></span>
+                        <span class="registry-terminal-dot"></span>
+                        <span class="registry-terminal-dot"></span>
+                        <span>nopkg / getting started</span>
+                    </div>
+                    <div class="registry-terminal-body">
+                        <p class="registry-terminal-label">@Localizer["01 / Connect your client"]</p>
+                        <div class="package-command">
+                            <pre><code tabindex="-1">npm config set registry @registryUrl</code></pre>
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <p class="copy-status" role="status"></p>
+                                <button type="button" class="copy-command">@Localizer["Copy"]</button>
+                            </div>
+                        </div>
+                        <p class="registry-terminal-label">@Localizer["02 / Keep your workflow"]</p>
+                        <p class="mb-4">@Localizer["Your usual client. Your own package source."]</p>
+                        <div class="registry-terminal-foot">
+                            <i data-lucide="package-check" aria-hidden="true"></i>
+                            <span>@Localizer["Publish locally. Mirror on demand."]</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="registry-strip">
+            <div class="container">
+                <span>
+                    <i data-lucide="terminal" aria-hidden="true"></i>@Localizer["Native npm clients"]</span>
+                <span>
+                    <i data-lucide="download-cloud" aria-hidden="true"></i>@Localizer["On-demand mirroring"]</span>
+                <span>
+                    <i data-lucide="key-round" aria-hidden="true"></i>@Localizer["Personal API keys"]</span>
+                <span>
+                    <i data-lucide="code-2" aria-hidden="true"></i>@Localizer["Free and open source"]</span>
+            </div>
+        </div>
+        <section class="registry-section">
+            <div class="container">
+                <div class="registry-section-head">
+                    <span class="registry-eyebrow">@Localizer["A home for your dependencies"]</span>
+                    <h2>@Localizer["Less friction."]<br />@Localizer["More building."]</h2>
+                    <p>@Localizer["A package registry should fit into your work, from the first install to your next release."]</p>
+                </div>
+                <div class="registry-features">
+                    <article class="registry-feature">
+                        <span class="registry-feature-icon">
+                            <i data-lucide="upload" aria-hidden="true"></i>
+                        </span>
+                        <h3>@Localizer["Your releases, your rules"]</h3>
+                        <p>@Localizer["Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands."]</p>
+                    </article>
+                    <article class="registry-feature">
+                        <span class="registry-feature-icon">
+                            <i data-lucide="hard-drive-download" aria-hidden="true"></i>
+                        </span>
+                        <h3>@Localizer["Fetch once. Build again."]</h3>
+                        <p>@Localizer["Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds."]</p>
+                    </article>
+                    <article class="registry-feature">
+                        <span class="registry-feature-icon">
+                            <i data-lucide="shield-check" aria-hidden="true"></i>
+                        </span>
+                        <h3>@Localizer["Admission, when you need it"]</h3>
+                        <p>@Localizer["Connect S360 to control mirrored dependencies with package policies and independent artifact verification."]</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="registry-section registry-workspace">
+            <div class="container registry-split">
+                <div>
+                    <span class="registry-eyebrow">@Localizer["A familiar place to work"]</span>
+                    <h2>@Localizer["Find it."]<br />@Localizer["Use it. Ship it."]</h2>
+                    <p class="registry-lead">@Localizer["A clear view of your registry, without leaving your browser."]</p>
+                    <div class="registry-step">
+                        <span>01</span>
+                        <div>
+                            <h3>@Localizer["Explore your packages"]</h3>
+                            <p>@Localizer["Browse the catalog and find the packages your project needs."]</p>
+                        </div>
+                    </div>
+                    <div class="registry-step">
+                        <span>02</span>
+                        <div>
+                            <h3>@Localizer["Connect in a moment"]</h3>
+                            <p>@Localizer["Copy your registry address and keep using your existing client."]</p>
+                        </div>
+                    </div>
+                    <div class="registry-step">
+                        <span>03</span>
+                        <div>
+                            <h3>@Localizer["Make your next release"]</h3>
+                            <p>@Localizer["Create a personal key and publish with your account permissions."]</p>
+                        </div>
+                    </div>
+                </div>
+                <figure class="registry-preview mb-0">
+                    <img src="~/images/screenshot.png" asp-append-version="true" alt="@Localizer["Nopkg package catalog in the browser"]" loading="lazy" />
+                    <figcaption class="text-center small p-2">@Localizer["Your registry, at a glance."]</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="registry-section" id="quick-start">
+            <div class="container">
+                <div class="registry-section-head">
+                    <span class="registry-eyebrow">@Localizer["Get started"]</span>
+                    <h2>@Localizer["One registry. Your everyday tools."]</h2>
+                    <p>@Localizer["Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish."]</p>
+                </div>
+                <div class="registry-quickstart">
+                    <article class="registry-guide">
+                        <h3>@Localizer["Install packages"]</h3>
+                        <p>@Localizer["Add this registry to your client configuration."]</p>
+                        <div class="package-command">
+                            <pre><code tabindex="-1">npm config set registry @registryUrl</code></pre>
+                            <button class="btn btn-sm btn-outline-secondary copy-command" type="button">@Localizer["Copy command"]</button>
+                            <p class="copy-status" role="status"></p>
+                        </div>
+                        <a asp-controller="Dashboard" asp-action="Index">@Localizer["Browse packages"] →</a>
+                    </article>
+                    <article class="registry-guide">
+                        <h3>@Localizer["Publish your work"]</h3>
+                        <p>@Localizer["Create a key, follow its configuration instructions, and publish your archive."]</p>
+                        <div class="package-command">
+                            <pre><code tabindex="-1">npm publish package.tgz --registry @registryUrl</code></pre>
+                            <button class="btn btn-sm btn-outline-secondary copy-command" type="button">@Localizer["Copy command"]</button>
+                            <p class="copy-status" role="status"></p>
+                        </div>
+                        <a asp-controller="UserApiKeys" asp-action="Index">@Localizer["Manage API keys"] →</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="pb-5">
+            <div class="container">
+                <div class="registry-cta">
+                    <div>
+                        <span class="registry-eyebrow">@Localizer["Better together"]</span>
+                        <h2>@Localizer["Two ecosystems. One familiar experience."]</h2>
+                        <p>@Localizer["Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching."]</p>
+                    </div>
+                    <a href="https://nupkg.aiursoft.com" class="registry-button registry-button-secondary">@Localizer["Explore Nupkg"]<i data-lucide="arrow-up-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <vc:marketing-footer></vc:marketing-footer>
 </div>
-
-<vc:marketing-footer></vc:marketing-footer>
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <partial name="_PackageCopy" />
+    <script src="~/scripts/registry-landing.js" asp-append-version="true">
+</script>
+}

@@ -48,6 +48,25 @@ public class PublishingTests : TestBase
         Assert.AreEqual("mirror", proof["mode"]!.GetValue<string>());
         Assert.IsNull(proof["archive"]);
     }
+    [TestMethod]
+    public async Task CatalogSearchAndDetailsKeepTheSelectedPackageAndRegistry()
+    {
+        var (_, key) = await PublisherAsync();
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("@test/design", key, Publication("@test/design"))).StatusCode);
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("@test/other", key, Publication("@test/other"))).StatusCode);
+        var catalog = await Http.GetStringAsync("/Dashboard/Index?q=DESIGN");
+        Assert.Contains("@test/design", catalog);
+        Assert.DoesNotContain("@test/other", catalog);
+        var details = await Http.GetStringAsync("/Package/Details?id=%40test%2Fdesign&version=1.0.0&q=design");
+        Assert.Contains("npm install @test/design@1.0.0 --registry", details);
+        Assert.Contains($"{Http.BaseAddress}npm/", details);
+        Assert.Contains("q=design", details);
+        Assert.AreEqual(HttpStatusCode.NotFound, (await Http.GetAsync("/Package/Details?id=%40test%2Fdesign&version=9.0.0")).StatusCode);
+        var empty = await Http.GetStringAsync("/Dashboard/Index?q=not-found");
+        Assert.Contains("No packages found", empty);
+        Assert.DoesNotContain("No packages cached yet", empty);
+    }
+
     private string _registryPath = null!;
     [TestInitialize]
     public override async Task CreateServer()

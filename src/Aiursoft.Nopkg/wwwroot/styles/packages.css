@@ -15,3 +15,10 @@
 @media (max-width: 575.98px) {
     .package-tabs .nav-link { padding: .65rem .25rem; font-size: .75rem; }
 }
+
+/* Registry workspace: keep long names and commands readable at every width. */
+.registry-page-heading { display: flex; gap: 1.25rem; align-items: flex-start; margin-bottom: 2rem; }
+.registry-page-icon { display: inline-flex; padding: 1rem; border: 1px solid var(--bs-border-color); border-radius: 1rem; background: var(--bs-tertiary-bg); color: var(--bs-primary); }
+.registry-page-icon svg { width: 2rem; height: 2rem; }
+.min-width-0 { min-width: 0; }
+.table td, .table th { padding: 1rem 1.25rem; vertical-align: middle; }

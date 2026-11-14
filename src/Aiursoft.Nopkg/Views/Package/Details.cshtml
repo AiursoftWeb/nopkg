@@ -1,0 +1,106 @@
+@model Aiursoft.Nopkg.Models.DashboardViewModels.DetailsViewModel
+@{
+    var registryUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/";
+}
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section styles {
+    <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" />
+}
+<a asp-controller="Dashboard" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="d-inline-flex align-items-center gap-2 mb-4">
+    <i data-lucide="arrow-left" aria-hidden="true"></i>@Localizer["Back to packages"]
+</a>
+<div class="registry-page-heading">
+    <span class="registry-page-icon"><i data-lucide="package" aria-hidden="true"></i></span>
+    <div class="min-width-0">
+        <p class="text-muted small mb-1">@Localizer["npm package"]</p>
+        <h1 class="h2 text-break mb-1">@Model.Name</h1>
+        <p class="text-muted text-break mb-2">@Model.Description</p>
+        @if (!Model.ErrorStatus.HasValue)
+        {
+            <span class="badge bg-primary-subtle text-primary">@(Model.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</span>
+        }
+    </div>
+</div>
+@if (Model.ErrorStatus.HasValue)
+{
+    <div class="card">
+        <div class="card-body p-4">
+            <h2 class="h5">@(Model.ErrorStatus == 403 ? Localizer["Package access is not approved"] : Model.ErrorStatus == 404 ? Localizer["Package not found"] : Localizer["Package information is unavailable"])</h2>
+            <p class="text-muted mb-0">@(Model.ErrorStatus == 403 ? Localizer["This package is restricted by the registry policy."] : Localizer["Try again later or return to the package catalog."])</p>
+        </div>
+    </div>
+}
+else
+{
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-body p-4">
+                    <h2 class="h5">@Localizer["Install this version"]</h2>
+                    <p class="text-muted">@Localizer["Copy the command into your project directory."]</p>
+                    <div class="package-command">
+                        <pre class="bg-body-tertiary border rounded p-3"><code tabindex="-1">npm install @(Model.Name)@@@(Model.Version) --registry @registryUrl</code></pre>
+                        <button type="button" class="btn btn-outline-primary btn-sm copy-command">@Localizer["Copy command"]</button>
+                        <p class="copy-status small mt-2 mb-0" role="status"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body p-4">
+                    <h2 class="h5">@Localizer["Dependencies"]</h2>
+                    @if (Model.Dependencies.Count == 0)
+                    {
+                        <p class="text-muted mb-0">@Localizer["This version declares no runtime dependencies."]</p>
+                    }
+                    else
+                    {
+                        <dl class="mb-0">
+                            @foreach (var dependency in Model.Dependencies)
+                            {
+                                <dt class="text-break mt-2"><a asp-action="Details" asp-route-id="@dependency.Key">@dependency.Key</a></dt>
+                                <dd class="text-muted text-break">@dependency.Value</dd>
+                            }
+                        </dl>
+                    }
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body p-4">
+                    <h2 class="h5">@Localizer["Registry"]</h2>
+                    <p class="text-muted">@Localizer["This command uses this registry explicitly. Package access follows the current registry policy."]</p>
+                    <code class="text-break">@registryUrl</code>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body p-4">
+                    <h2 class="h5">@Localizer["Version"]</h2>
+                    <form method="get" asp-action="Details">
+                        <input type="hidden" name="id" value="@Model.Name" />
+                        <input type="hidden" name="q" value="@Model.Query" />
+                        <input type="hidden" name="page" value="@Model.Page" />
+                        <label for="package-version" class="visually-hidden">@Localizer["Select version"]</label>
+                        <select id="package-version" name="version" class="form-select mb-3">
+                            @foreach (var version in Model.Versions)
+                            {
+                                <option value="@version" selected="@(version == Model.Version)">@version</option>
+                            }
+                        </select>
+                        <button class="btn btn-outline-primary w-100" type="submit">@Localizer["View version"]</button>
+                    </form>
+                    @if (!string.IsNullOrWhiteSpace(Model.License))
+                    {
+                        <hr />
+                        <h3 class="h6">@Localizer["License"]</h3>
+                        <p class="text-muted mb-0">@Model.License</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@* ReSharper disable once Razor.SectionNotResolved *@
+@section scripts {
+    <partial name="_PackageCopy" />
+}
