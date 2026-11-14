@@ -123,8 +123,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Malli</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — npm-pakettirekisterisi</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Ei löytynyt</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Paketin tiedot</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Pakkausomistus</value>

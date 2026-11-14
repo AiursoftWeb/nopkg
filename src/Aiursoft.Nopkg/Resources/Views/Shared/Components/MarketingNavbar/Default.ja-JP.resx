@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>ドキュメント</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>はじめる</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>メインナビゲーション</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>パッケージ</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>ソースコード</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>カラーテーマを切り替え</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>ダッシュボードを試す</value>

@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>文档</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>快速开始</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>主导航</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>软件包</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>源代码</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>切换颜色主题</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>前往仪表板</value>

@@ -126,8 +126,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>แม่แบบ</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — ฐานข้อมูลแพ็กเกจ npm ของคุณ</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>ไม่พบ</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>รายละเอียดแพ็กเกจ</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>ความเป็นเจ้าของแพ็กเกจ</value>

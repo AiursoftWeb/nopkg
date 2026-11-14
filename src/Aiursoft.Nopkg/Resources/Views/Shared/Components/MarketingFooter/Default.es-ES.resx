@@ -24,6 +24,12 @@
   <data name="Aiursoft Nopkg - A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Aiursoft Nopkg - Una base moderna, con múltiples funciones y altamente extensible para tu próxima aplicación web.</value>
   </data>
+  <data name="An open-source npm registry for your packages, your team, and your infrastructure." xml:space="preserve">
+    <value>Un registro npm de código abierto para tus paquetes, tu equipo y tu infraestructura.</value>
+  </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Explorar paquetes</value>
+  </data>
   <data name="Community" xml:space="preserve">
     <value>Comunidad</value>
   </data>
@@ -39,11 +45,17 @@
   <data name="Github" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
   <data name="Legal" xml:space="preserve">
     <value>Legal</value>
   </data>
   <data name="Licence" xml:space="preserve">
     <value>Licencia</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>Licencia MIT</value>
   </data>
   <data name="Project" xml:space="preserve">
     <value>Proyecto</value>

@@ -123,8 +123,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Πρότυπο</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — Το μητρώο πακέτων npm σας</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Δεν βρέθηκε</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Λεπτομέρειες πακέτου</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Ιδιοκτησία πακέτου</value>

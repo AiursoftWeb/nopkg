@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Xem tất cả các gói</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Quản lý Người dùng Tích hợp sẵn</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Kết nối một client npm để bắt đầu bộ nhớ đệm.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Kết nối client của bạn</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Hỗ trợ Đa Cơ sở Dữ liệu</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Tiếp theo</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Chưa có gói nào được lưu trữ</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Không tìm thấy gói nào</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Việc tiếp nhận gói không khả dụng</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Tên gói hoặc phạm vi</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Trang gói</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Gói</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Trước</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Ủy quyền RBAC</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với mọi nhà cung cấp OpenID Connect, kèm theo đồng bộ hóa vai trò tự động.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Tìm kiếm gói</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Đây là một dự án mẫu, nơi chúng ta bắt đầu hành trình khám phá...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Thử một tên gói khác hoặc xóa tìm kiếm của bạn.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Chào mừng</value>

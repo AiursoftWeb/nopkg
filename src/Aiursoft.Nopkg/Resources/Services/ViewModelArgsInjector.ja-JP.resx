@@ -126,8 +126,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>テンプレート</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — あなたの npm パッケージレジストリ</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Not Found</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>パッケージの詳細</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>パッケージの所有権</value>

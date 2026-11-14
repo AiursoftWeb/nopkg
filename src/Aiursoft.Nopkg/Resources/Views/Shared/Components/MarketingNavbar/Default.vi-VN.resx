@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>Tài liệu</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>Điều hướng chính</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Gói</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>Mã Nguồn</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>Chuyển đổi giao diện màu</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>Dùng thử bảng điều khiển</value>

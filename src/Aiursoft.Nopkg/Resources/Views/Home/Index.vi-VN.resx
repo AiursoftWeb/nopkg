@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Hỗ trợ kiểu &quot;Fire-and-forget&quot; cho các tác vụ dài hạn (như email hoặc AI), đi kèm giao diện người dùng đồ họa (GUI) để quản lý hàng đợi, xử lý song song và hủy bỏ.</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / Kết nối client của bạn</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / Duy trì quy trình làm việc</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Hệ thống Kiểm soát Truy cập Dựa trên Vai trò (RBAC) được tích hợp sẵn để quản lý quyền chi tiết.</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>Góc nhìn rõ ràng về registry của bạn, mà không cần rời khỏi trình duyệt.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>Một giải pháp hoàn chỉnh cho xác thực người dùng và quản lý hồ sơ ngay lập tức, không cần cấu hình thêm.</value>
@@ -30,11 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Một giải pháp toàn diện cho xác thực người dùng và quản lý hồ sơ.</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>Một nơi làm việc quen thuộc</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Bố cục hoàn toàn thích ứng, hiển thị đẹp mắt trên cả thiết bị máy tính để bàn và thiết bị di động.</value>
   </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>Nhà chung cho các phụ thuộc của bạn</value>
+  </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Một nền tảng hiện đại, giàu tính năng và có khả năng mở rộng cao cho ứng dụng web tiếp theo của bạn.</value>
+  </data>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>Một kho lưu trữ gói nên phù hợp với quy trình làm việc của bạn, từ lần cài đặt đầu tiên cho đến lần phát hành tiếp theo.</value>
   </data>
   <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
     <value>Đạt được nhiều hơn với Aiursoft Nopkg</value>
@@ -42,8 +60,14 @@
   <data name="Actuator health endpoints built-in" xml:space="preserve">
     <value>Các điểm cuối sức khỏe của Actuator được tích hợp sẵn</value>
   </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>Thêm registry này vào cấu hình client của bạn.</value>
+  </data>
   <data name="Admin site included" xml:space="preserve">
     <value>Bao gồm trang quản trị</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>Kiểm soát truy cập, khi bạn cần</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>Dịch thuật do AI dẫn dắt</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>Thân thiện với người mới</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>Cùng nhau tốt hơn</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Hướng dẫn song ngữ</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>Duyệt các gói</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>Duyệt danh mục và tìm các gói mà dự án của bạn cần.</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Xây dựng một lần, chạy ở bất kỳ đâu. Kiến trúc được đóng gói hoàn toàn trong container.</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>Tài liệu ngắn gọn</value>
   </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>Kết nối trong tích tắc</value>
+  </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>Kết nối S360 để kiểm soát các phụ thuộc được nhân bản bằng chính sách gói và xác minh sản phẩm độc lập.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Kết nối client của bạn</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Xác thực tính nhất quán</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Hợp tác một cách thoải mái</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Sao chép</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Sao chép lệnh</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>Sao chép địa chỉ registry và tiếp tục sử dụng client hiện có của bạn.</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>Định tuyến cốt lõi &amp; DI</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Báo cáo độ bao phủ</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>Tạo một khóa, làm theo các hướng dẫn cấu hình của nó và phát hành gói của bạn.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>Tạo một khóa cá nhân và xuất bản với quyền tài khoản của bạn.</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Đa nền tảng</value>
@@ -309,6 +363,15 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Đã bao gồm Entity Framework Core</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Khám phá Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>Khám phá các gói</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>Khám phá các gói của bạn</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>Câu hỏi thường gặp</value>
   </data>
@@ -327,8 +390,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Tích hợp hệ thống quản lý tập tin với tính năng nén ảnh đại diện tự động.</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>Tải về một lần. Xây dựng lại.</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>Quản lý &amp; Tối ưu hóa tệp</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>Tìm thấy nó.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>Tìm gói phụ thuộc tiếp theo của bạn…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>RBAC chi tiết</value>
@@ -350,6 +422,9 @@
   </data>
   <data name="Free" xml:space="preserve">
     <value>Miễn phí</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>Miễn phí và mã nguồn mở</value>
   </data>
   <data name="Free for Commercial Use" xml:space="preserve">
     <value>Miễn phí sử dụng cho mục đích thương mại</value>
@@ -381,6 +456,9 @@
   <data name="Generic Dockerfile only" xml:space="preserve">
     <value>Chỉ có Dockerfile chung chung</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Bắt đầu</value>
+  </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
   </data>
@@ -395,6 +473,9 @@
   </data>
   <data name="Go to dashboard" xml:space="preserve">
     <value>Truy cập bảng điều khiển</value>
+  </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>Gói tuyệt vời.</value>
   </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Xử lý các công việc lặp lại như dọn dẹp và đồng bộ hóa với một giao diện người dùng toàn diện để theo dõi lịch sử thực thi và nhật ký.</value>
@@ -456,6 +537,9 @@
   <data name="Includes Tutorials" xml:space="preserve">
     <value>Bao gồm Hướng dẫn</value>
   </data>
+  <data name="Install packages" xml:space="preserve">
+    <value>Cài đặt gói</value>
+  </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>Quản lý Tập tin Tích hợp</value>
   </data>
@@ -492,17 +576,29 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Sẵn sàng cho K8s / Swarm</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>Ít ma sát hơn.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Kiểm tra Lint</value>
   </data>
   <data name="Maintain High Code Quality" xml:space="preserve">
     <value>Duy trì chất lượng mã nguồn cao</value>
   </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>Thực hiện bản phát hành tiếp theo</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>Quản lý khóa API</value>
+  </data>
   <data name="Management Dashboard" xml:space="preserve">
     <value>Bảng Điều Khiển Quản Lý</value>
   </data>
   <data name="Markdown To HTML" xml:space="preserve">
     <value>Chuyển Đổi Markdown Sang HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Gặp gỡ Aiursoft Nupkg, sổ đăng ký NuGet của chúng tôi với cách tiếp cận tương tự về việc xuất bản và bộ nhớ đệm.</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Giấy phép MIT</value>
@@ -512,6 +608,9 @@
   </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Các mô hình được xác thực ở cả phía khách và phía máy chủ dựa trên các chú thích dữ liệu.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>Xây dựng nhiều hơn.</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Xử lý đa múi giờ</value>
@@ -527,6 +626,9 @@
   </data>
   <data name="Music Tools" xml:space="preserve">
     <value>Công cụ Âm nhạc</value>
+  </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>Các client npm bản địa</value>
   </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>Cần CASL hoặc tương tự</value>
@@ -576,17 +678,29 @@
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Không phụ thuộc vào nhà cung cấp dịch vụ đám mây nào. Chạy ở bất kỳ đâu, bất kỳ lúc nào.</value>
   </data>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Danh mục gói Nopkg trong trình duyệt</value>
+  </data>
   <data name="Offline Capable" xml:space="preserve">
     <value>Khả năng hoạt động ngoại tuyến</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>Ghi hình theo yêu cầu</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Một Click Bắt Đầu</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>Một kho đăng ký. Công cụ hàng ngày của bạn.</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Mã nguồn mở</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>Mã nguồn mở. Tự lưu trữ. Được xây dựng trên giao thức npm.</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Tích hợp OpenID Connect</value>
@@ -603,6 +717,9 @@
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Phát hiện và đồng bộ quyền</value>
   </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>Khóa API cá nhân</value>
+  </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>Cần Pint hoặc tương tự</value>
   </data>
@@ -618,8 +735,20 @@
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Quy trình đã cấu hình sẵn cho môi trường phát triển/sản xuất</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>Phát hành cục bộ. Đồng bộ theo yêu cầu.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>Phát hành những gì bạn xây dựng. Lưu cache những gì bạn phụ thuộc. Gom các gói npm của bạn lại một nơi, với các công cụ bạn đã sử dụng.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>Công bố bằng khóa API cá nhân và quản lý quyền sở hữu gói. Một khi gói được công bố cục bộ, tương lai của nó nằm trong tay bạn.</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>Công bố gói của bạn và lưu trữ bản phát hành thượng nguồn với quyền tiếp cận S360 tùy chọn.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>Phát hành tác phẩm của bạn</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Cổng chất lượng</value>
@@ -648,6 +777,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Đánh giá</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>Ngay tại nhà.</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Kiểm thử tích hợp mạnh mẽ</value>
   </data>
@@ -660,6 +792,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Tích hợp liền mạch với bất kỳ nhà cung cấp OpenID Connect nào, đồng thời tự động đồng bộ hóa vai trò.</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Tìm kiếm</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Tìm kiếm gói</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Chuyển đổi với sự tự tin</value>
   </data>
@@ -668,6 +806,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>Một Container</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>Bỏ qua đến nội dung</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Ghi đè cấu hình thông minh</value>
@@ -765,17 +906,29 @@
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Được tin tưởng bởi các ứng dụng sản xuất cấp độ cao, bao gồm AnduinOS, StatHub, và Warp. Chúng tôi không chỉ chia sẻ mã nguồn này; chúng tôi vận hành toàn bộ doanh nghiệp của mình dựa trên nó.</value>
   </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>Hai hệ sinh thái. Một trải nghiệm quen thuộc.</value>
+  </data>
   <data name="Unified Env" xml:space="preserve">
     <value>Môi trường thống nhất</value>
   </data>
   <data name="Unified Identity" xml:space="preserve">
     <value>Đăng nhập thống nhất</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>Các gói upstream được tải về khi cần và lưu trữ cục bộ. Các bản dựng đã được lưu trữ trong bộ nhớ đệm luôn ở gần quy trình xây dựng của bạn.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Cách sử dụng</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Hãy sử dụng nó làm nền tảng cho SaaS của bạn, backend cho ứng dụng di động, trang web doanh nghiệp, hoặc blog cá nhân. Các khả năng là vô tận.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>Sử dụng ngay. Phát hành ngay.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>Sử dụng các lệnh bên dưới để kết nối với bản đồ này. Việc phát hành yêu cầu một khóa cá nhân và quyền phát hành.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Xem trên GitHub</value>
@@ -815,6 +968,18 @@
   </data>
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>Registry npm của bạn, sẵn sàng khi bạn cần.</value>
+  </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>Registry npm của bạn. Hạ tầng của bạn.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>Bảng đăng ký của bạn, trong một cái nhìn.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>Bản phát hành của bạn, quy tắc của bạn</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>Công cụ quen thuộc của bạn. Nguồn gói thuộc về bạn.</value>
   </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>

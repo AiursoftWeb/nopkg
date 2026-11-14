@@ -123,8 +123,14 @@
   <data name="Nopkg" xml:space="preserve">
     <value>Шаблон</value>
   </data>
+  <data name="Nopkg — Your npm package registry" xml:space="preserve">
+    <value>Nopkg — Ваш реестр пакетов npm</value>
+  </data>
   <data name="Not Found" xml:space="preserve">
     <value>Не найдено</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Детали пакета</value>
   </data>
   <data name="Package ownership" xml:space="preserve">
     <value>Владение пакетом</value>

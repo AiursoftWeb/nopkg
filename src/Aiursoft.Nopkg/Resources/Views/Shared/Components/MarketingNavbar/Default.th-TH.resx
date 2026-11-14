@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>เอกสารประกอบ</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>เริ่มต้นใช้งาน</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>การนำทางหลัก</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>แพ็กเกจ</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>ซอร์สโค้ด</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>สลับธีมสี</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>ลองใช้แดชบอร์ด</value>
