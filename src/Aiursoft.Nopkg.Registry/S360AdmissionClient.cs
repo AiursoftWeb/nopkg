@@ -87,47 +87,69 @@ public class S360AdmissionClient
 
     public async Task<IReadOnlyDictionary<string, ArtifactIdentity>> ApprovedAsync(string name, string source, CancellationToken token)
     {
+        var artifacts = await ApprovedArtifactsAsync(name, source, token);
+        return WithoutConflicts(artifacts).ToDictionary(a => a.Version, StringComparer.Ordinal);
+    }
+
+    public async Task<IReadOnlyList<ArtifactIdentity>> ApprovedCatalogAsync(string source, CancellationToken token) =>
+        WithoutConflicts(await ApprovedArtifactsAsync(null, source, token)).ToList();
+
+    private static IEnumerable<ArtifactIdentity> WithoutConflicts(IEnumerable<ArtifactIdentity> artifacts) =>
+        artifacts.Distinct().GroupBy(a => (a.Name, a.Version))
+            .Where(group => group.Count() == 1).Select(group => group.Single());
+
+    private async Task<List<ArtifactIdentity>> ApprovedArtifactsAsync(string? name, string source, CancellationToken token)
+    {
         var artifacts = new List<ArtifactIdentity>();
         var after = 0;
         int? upper = null;
+        var take = name == null ? 500 : 100;
         do
         {
-            var path = $"api/artifacts/approved?ecosystem=npm&name={Uri.EscapeDataString(name)}&source={Uri.EscapeDataString(source)}&afterId={after}&take=100";
+            var path = $"api/artifacts/approved?ecosystem=npm&source={Uri.EscapeDataString(source)}&afterId={after}&take={take}";
+            if (name != null) path += $"&name={Uri.EscapeDataString(name)}";
             if (upper.HasValue) path += $"&upperId={upper.Value}";
             var page = await SendAsync<ApprovedArtifactPage>(HttpMethod.Get, path, null, token);
-            if (page.Artifacts == null || page.Artifacts.Count > 100 || page.UpperId < after ||
+            if (page.Artifacts == null || page.Artifacts.Count > take || page.UpperId < after ||
                 (upper.HasValue && page.UpperId != upper.Value) ||
                 (page.NextAfterId.HasValue && (page.NextAfterId <= after || page.NextAfterId > page.UpperId)))
                 throw new AdmissionUnavailableException();
             upper = page.UpperId;
             foreach (var artifact in page.Artifacts)
             {
-                if (artifact == null || artifact.Ecosystem != "npm" || artifact.Name != name || artifact.Source != source ||
+                if (artifact == null || artifact.Ecosystem != "npm" || string.IsNullOrEmpty(artifact.Name) ||
+                    (name != null && artifact.Name != name) || artifact.Source != source ||
                     string.IsNullOrWhiteSpace(artifact.Version) || artifact.Version.Length > 128 ||
                     artifact.Sha256 is not { Length: 64 } || !artifact.Sha256.All(Uri.IsHexDigit))
                     throw new AdmissionUnavailableException();
+                try { NpmRegistry.PackageName(artifact.Name); }
+                catch (ArgumentException) { throw new AdmissionUnavailableException(); }
                 artifacts.Add(artifact with { Sha256 = artifact.Sha256.ToLowerInvariant() });
             }
             if (!page.NextAfterId.HasValue) break;
             after = page.NextAfterId.Value;
         } while (true);
 
-        // Conflicting raw artifacts for one version cannot be represented by one npm version.
-        return artifacts.Distinct().GroupBy(a => a.Version, StringComparer.Ordinal)
-            .Where(g => g.Count() == 1).ToDictionary(g => g.Key, g => g.Single(), StringComparer.Ordinal);
+        return artifacts;
     }
 
     public async Task<HashSet<string>> CandidatesAsync(string name, IEnumerable<string> versions, CancellationToken token)
     {
-        var allowed = new HashSet<string>(StringComparer.Ordinal);
-        foreach (var batch in versions.Distinct(StringComparer.Ordinal).Chunk(500))
+        var candidates = versions.Distinct(StringComparer.Ordinal)
+            .Select(v => new MirrorCandidate("npm", name, v, PolicySource)).ToArray();
+        return (await CandidatesAsync(candidates, token)).Select(c => c.Version).ToHashSet(StringComparer.Ordinal);
+    }
+
+    public async Task<IReadOnlyList<MirrorCandidate>> CandidatesAsync(IReadOnlyList<MirrorCandidate> candidates, CancellationToken token)
+    {
+        var allowed = new List<MirrorCandidate>();
+        foreach (var batch in candidates.Distinct().Chunk(500))
         {
-            var candidates = batch.Select(v => new MirrorCandidate("npm", name, v, PolicySource)).ToArray();
-            var result = await SendAsync<MirrorCandidateResponse>(HttpMethod.Post, "api/artifacts/mirror/candidates", new { candidates }, token);
+            var result = await SendAsync<MirrorCandidateResponse>(HttpMethod.Post, "api/artifacts/mirror/candidates", new { candidates = batch }, token);
             if (result.Decisions == null || result.Decisions.Count != batch.Length ||
-                result.Decisions.Where((d, i) => d.Candidate != candidates[i]).Any())
+                result.Decisions.Where((d, i) => d.Candidate != batch[i]).Any())
                 throw new AdmissionUnavailableException();
-            allowed.UnionWith(result.Decisions.Where(d => d.CanFetch).Select(d => d.Candidate.Version));
+            allowed.AddRange(result.Decisions.Where(d => d.CanFetch).Select(d => d.Candidate));
         }
         return allowed;
     }
