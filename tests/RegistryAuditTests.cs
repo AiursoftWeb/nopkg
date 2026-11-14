@@ -18,6 +18,7 @@ public partial class RegistryTests
             Assert.AreEqual("https://registry.example/-/npm/v1/security/advisories/bulk", request.RequestUri!.ToString());
             Assert.IsNull(request.Headers.Authorization);
             Assert.AreEqual("application/json", request.Content!.Headers.ContentType!.MediaType);
+            Assert.AreEqual(System.Text.Encoding.UTF8.GetByteCount(payload.ToJsonString()), request.Content.Headers.ContentLength);
             var submitted = JsonNode.Parse(request.Content.ReadAsStringAsync().GetAwaiter().GetResult());
             Assert.IsTrue(JsonNode.DeepEquals(payload, submitted));
             return Response(advisories);
