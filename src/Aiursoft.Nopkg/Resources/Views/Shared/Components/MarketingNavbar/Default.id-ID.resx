@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>Dokumentasi</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Mulai</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>Navigasi utama</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Paket</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>Kode Sumber</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>Ganti tema warna</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>Coba dasbor</value>

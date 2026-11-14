@@ -36,9 +36,6 @@
   <data name="License" xml:space="preserve">
     <value>라이선스</value>
   </data>
-  <data name="npm package" xml:space="preserve">
-    <value>npm 패키지</value>
-  </data>
   <data name="Registry" xml:space="preserve">
     <value>레지스트리</value>
   </data>
@@ -56,6 +53,9 @@
   </data>
   <data name="View version" xml:space="preserve">
     <value>버전 보기</value>
+  </data>
+  <data name="npm package" xml:space="preserve">
+    <value>npm 패키지</value>
   </data>
 
 </root>

@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
+    <value>Chaves de API</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
     <value>Chave de API revogada.</value>
   </data>
-  <data name="API Keys" xml:space="preserve">
-    <value>Chaves de API</value>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>Crie uma chave pessoal para publicar pacotes com as permissões da sua conta.</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>Crie a sua primeira chave</value>
   </data>
   <data name="Expired" xml:space="preserve">
     <value>Expirado</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>Usar</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>A sua primeira publicação começa aqui</value>
   </data>
 
 </root>

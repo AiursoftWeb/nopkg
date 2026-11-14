@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
+    <value>API-sleutels</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
     <value>API-sleutel ingetrokken.</value>
   </data>
-  <data name="API Keys" xml:space="preserve">
-    <value>API-sleutels</value>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>Maak een persoonlijke sleutel om pakketten te publiceren met de rechten van je account.</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>Maak je eerste sleutel</value>
   </data>
   <data name="Expired" xml:space="preserve">
     <value>Verlopen</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>Gebruiken</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>Hier begint uw eerste release</value>
   </data>
 
 </root>

@@ -33,9 +33,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Annuleren</value>
   </data>
-  <data name="e.g. CI pipeline" xml:space="preserve">
-    <value>bijv. CI-pipeline</value>
-  </data>
   <data name="Generate key" xml:space="preserve">
     <value>Sleutel genereren</value>
   </data>
@@ -44,6 +41,9 @@
   </data>
   <data name="New API key" xml:space="preserve">
     <value>Nieuwe API-sleutel</value>
+  </data>
+  <data name="e.g. CI pipeline" xml:space="preserve">
+    <value>bijv. CI-pipeline</value>
   </data>
 
 </root>

@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Taustatehtävien käsittely</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Selaa kaikki paketit</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Sisäänrakennettu käyttäjienhallinta</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Yhdistä npm-asiakas käynnistääksesi välimuistin.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Yhdistä asiakasohjelmasi</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Konsistenssitarkistus</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Usean tietokannan tuki</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seuraava</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Ei vielä paketteita välimuistissa</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Paketteja ei löytynyt</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>OpenID Connect -integraatio</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Pakettisalliutus ei ole käytettävissä</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Pakettinimi tai alue</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Pakkaus-sivut</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Paketit</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Edellinen</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>RBAC-valtuutus</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Saatonta integrointi minkä tahansa OpenID Connect -palveluntarjoajan kanssa, automaattisella roolisynkronoinnilla.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Hae</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Hae paketteja</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Älykäs asetusten ohittaminen</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Tämä on malliprojekti, josta aloitamme matkamme...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Kokeile toista pakettinimeä tai tyhjennä haku.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Tervetuloa</value>

@@ -36,9 +36,6 @@
   <data name="License" xml:space="preserve">
     <value>ライセンス</value>
   </data>
-  <data name="npm package" xml:space="preserve">
-    <value>npm パッケージ</value>
-  </data>
   <data name="Registry" xml:space="preserve">
     <value>レジストリ</value>
   </data>
@@ -56,6 +53,9 @@
   </data>
   <data name="View version" xml:space="preserve">
     <value>バージョンを表示</value>
+  </data>
+  <data name="npm package" xml:space="preserve">
+    <value>npm パッケージ</value>
   </data>
 
 </root>

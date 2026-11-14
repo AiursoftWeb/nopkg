@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>लंबे समय तक चलने वाले कार्यों (जैसे ईमेल या AI) के लिए &quot;Fire-and-forget&quot; समर्थन, जिसमें कतार प्रबंधन, समानांतर प्रसंस्करण और रद्द करने के लिए GUI शामिल है।</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / अपना क्लाइंट कनेक्ट करें</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / अपना वर्कफ़्लो बनाए रखें</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>अनुमति प्रबंधन के लिए एक अंतर्निहित रोल-आधारित एक्सेस कंट्रोल (RBAC) प्रणाली।</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>अपने ब्राउज़र में ही रहते हुए आपके रजिस्ट्री का स्पष्ट दृश्य।</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>बॉक्स से बाहर निकलते ही उपयोगकर्ता प्रमाणीकरण और प्रोफ़ाइल प्रबंधन के लिए एक संपूर्ण समाधान।</value>
@@ -30,20 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>उपयोगकर्ता प्रमाणीकरण और प्रोफ़ाइल प्रबंधन के लिए एक पूर्ण समाधान।</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>एक परिचित कार्य स्थान</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>एक पूरी तरह से उत्तरदायी लेआउट जो डेस्कटॉप और मोबाइल डिवाइस दोनों पर शानदार दिखता है।</value>
+  </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>आपकी निर्भरताओं का घर</value>
   </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>आपके अगले वेब एप्लिकेशन के लिए एक आधुनिक, सुविधा-संपन्न, और अत्यधिक विस्तार योग्य आधारशिला।</value>
   </data>
-  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
-    <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
-  </data>
-  <data name="Actuator health endpoints built-in" xml:space="preserve">
-    <value>एक्टुएटर स्वास्थ्य एंडपॉइंट्स इनबिल्ट</value>
-  </data>
-  <data name="Admin site included" xml:space="preserve">
-    <value>प्रशासनिक साइट शामिल है</value>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>पैकेज रजिस्ट्री आपके काम में आसानी से समाहित होनी चाहिए, पहले इंस्टॉल से लेकर आपकी अगली रिलीज़ तक।</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>AI संचालित अनुवाद</value>
@@ -53,6 +62,21 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>AI-संचालित अनुवाद</value>
+  </data>
+  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
+    <value>Aiursoft टेम्पलेट के साथ और अधिक हासिल करें</value>
+  </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>एक्टुएटर स्वास्थ्य एंडपॉइंट्स इनबिल्ट</value>
+  </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>अपनी क्लाइंट कॉन्फ़िगरेशन में यह रजिस्ट्री जोड़ें।</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>प्रशासनिक साइट शामिल है</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>आवश्यकता होने पर प्रवेश</value>
   </data>
   <data name="Aiursoft Nopkg" xml:space="preserve">
     <value>Aiursoft Nopkg</value>
@@ -75,11 +99,11 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
-  <data name="Auto compression and privacy" xml:space="preserve">
-    <value>स्वचालित संपीड़न और गोपनीयता</value>
-  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>स्वचालित डेप्लॉयमेंट</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>स्वचालित संपीड़न और गोपनीयता</value>
   </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>28 भाषाओं में स्वचालित AI अनुवाद।</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>शुरुआती उपयोगकर्ता के लिए उपयुक्त</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>साथ में बेहतर</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>द्विभाषी पाठ्यचर्या</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>पैकेज ब्राउज़ करें</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>कैटलोग ब्राउज़ करें और अपने प्रोजेक्ट की आवश्यकता के पैकेज खोजें।</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>एक बार बनाएं, कहीं भी चलाएं। पूरी तरह से कंटेनरीकृत आर्किटेक्चर।</value>
@@ -141,17 +171,11 @@
   <data name="Built-in" xml:space="preserve">
     <value>निर्मित-अंदर</value>
   </data>
-  <data name="Built-in administration panel" xml:space="preserve">
-    <value>निर्मित प्रशासनिक पैनल</value>
-  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>एम्बेडेड प्रमाणीकरण</value>
   </data>
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>निर्मित नौकरी कतार GUI</value>
-  </data>
-  <data name="Built-in method-level security" xml:space="preserve">
-    <value>बिल्ट-इन विधि-स्तर सुरक्षा</value>
   </data>
   <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
     <value>बिल्ट-इन OAuth2/OIDC क्लाइंट समर्थन</value>
@@ -165,14 +189,20 @@
   <data name="Built-in Roslyn Analyzers" xml:space="preserve">
     <value>बिल्ट-इन रोस्लिन विश्लेषक</value>
   </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>निर्मित प्रशासनिक पैनल</value>
+  </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>बिल्ट-इन विधि-स्तर सुरक्षा</value>
+  </data>
   <data name="Built-in timezone configuration" xml:space="preserve">
     <value>बिल्ट-इन टाइमज़ोन कॉन्फ़िगरेशन</value>
   </data>
   <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
     <value>USE_TZ के साथ अंतर्निहित टाइमज़ोन समर्थन</value>
-  </data>
-  <data name="Built-in User Management" xml:space="preserve">
-    <value>अंतर्निहित उपयोगकर्ता प्रबंधन</value>
   </data>
   <data name="Checkstyle or similar needed" xml:space="preserve">
     <value>Checkstyle या इसी तरह का उपकरण आवश्यक है</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>संक्षिप्त दस्तावेज़</value>
   </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>S360 को जोड़ें ताकि पैकेज नीतियों और स्वतंत्र आर्टिफैक्ट सत्यापन के साथ मिरrored निर्भरताओं को नियंत्रित किया जा सके।</value>
+  </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>एक पल में कनेक्ट करें</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>अपना क्लाइंट जोड़ें</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>सांतत्य जाँच</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>आराम से नियंत्रित करें</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>कॉपी</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>कमांड कॉपी करें</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>अपना रजिस्ट्री पता कॉपी करें और अपने मौजूदा क्लाइंट का उपयोग जारी रखें।</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>कोर राउटिंग और DI</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>कवरेज रिपोर्ट</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>एक कुंजी बनाएं, इसके कॉन्फ़िगरेशन निर्देशों का पालन करें, और अपना आर्काइव प्रकाशित करें।</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>एक व्यक्तिगत कुंजी बनाएं और अपने खाते की अनुमतियों के साथ प्रकाशित करें।</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>क्रॉस प्लेटफॉर्म</value>
@@ -216,14 +270,14 @@
   <data name="Custom development required" xml:space="preserve">
     <value>कस्टम विकास आवश्यक है</value>
   </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>डैशबोर्ड वेबसाइट</value>
+  </data>
   <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
     <value>पृष्ठभूमि और नियोजित कार्यों के लिए डैशबोर्ड</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>पृष्ठभूमि कार्यों के लिए डैशबोर्ड</value>
-  </data>
-  <data name="Dashboard Website" xml:space="preserve">
-    <value>डैशबोर्ड वेबसाइट</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
     <value>दिन 1 सुरक्षा एवं सुसंगतता।</value>
@@ -249,6 +303,9 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>डेव एंड प्रॉड</value>
   </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>डेवोप्स नेटिव</value>
+  </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>UTC में विकास केवल करें, जबकि सिस्टम स्वचालित रूप से तारीखों को उपयोगकर्ता के स्थानीय समय क्षेत्र में परिवर्तित और प्रदर्शित करता है।</value>
   </data>
@@ -257,9 +314,6 @@
   </data>
   <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
     <value>विकास पूर्वावलोकन। यह आपकी उत्पादन रजिस्ट्री को प्रतिस्थापित करने के लिए तैयार नहीं है।</value>
-  </data>
-  <data name="DevOps Native" xml:space="preserve">
-    <value>डेवोप्स नेटिव</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>चर्चा पृष्ठ</value>
@@ -309,11 +363,17 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core शामिल है</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Nupkg का पता करें</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>पैकेज एक्सप्लोर करें</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>अपने पैकेज खोजें</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>अक्सर पूछे जाने वाले प्रश्न</value>
-  </data>
-  <data name="faster" xml:space="preserve">
-    <value>तेज़</value>
   </data>
   <data name="Feature tests available" xml:space="preserve">
     <value>फीचर टेस्ट उपलब्ध हैं</value>
@@ -327,8 +387,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>स्वचालित अवतार संपीड़न के साथ एक अंतर्निहित फ़ाइल प्रबंधन प्रणाली की सुविधा।</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>एक बार लें। फिर से बनाएं।</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>फ़ाइल प्रबंधन और अनुकूलन</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>इसे खोजें।</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>अपनी अगली निर्भरता खोजें…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>सूक्ष्म-स्तरीय RBAC</value>
@@ -339,9 +408,6 @@
   <data name="Flexible API" xml:space="preserve">
     <value>लचीला API</value>
   </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>किसी भी जानकारी के लिए या समस्याओं की रिपोर्ट करने के लिए।</value>
-  </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>संस्थापक और वास्तुकार, Aiursoft में</value>
   </data>
@@ -351,11 +417,14 @@
   <data name="Free" xml:space="preserve">
     <value>मुफ़्त</value>
   </data>
-  <data name="Free for Commercial Use" xml:space="preserve">
-    <value>वाणिज्यिक उपयोग के लिए मुफ्त</value>
-  </data>
   <data name="Free Software" xml:space="preserve">
     <value>मुक्त सॉफ्टवेयर</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>मुफ़्त और ओपन सोर्स</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>वाणिज्यिक उपयोग के लिए मुफ्त</value>
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>अक्सर पूछे जाने वाले प्रश्न</value>
@@ -375,11 +444,14 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>पूरी तरह से ऑफलाइन</value>
   </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>केवल सामान्य Dockerfile</value>
+  </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>सामान्य कॉन्फ़िगरेशन</value>
   </data>
-  <data name="Generic Dockerfile only" xml:space="preserve">
-    <value>केवल सामान्य Dockerfile</value>
+  <data name="Get started" xml:space="preserve">
+    <value>शुरू करें</value>
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
@@ -396,6 +468,9 @@
   <data name="Go to dashboard" xml:space="preserve">
     <value>डैशबोर्ड पर जाएं</value>
   </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>शानदार पैकेज।</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>नियमित जॉब्स जैसे साफ़ करना और सिंक्रनाइज़ेशन को नियंत्रित करें और निष्पादन इतिहास और लॉग्स के लिए एक व्यापक GUI के साथ निगरानी करें।</value>
   </data>
@@ -405,14 +480,14 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>नीतियों के आधार पर हस्तलिखित</value>
   </data>
-  <data name="Health check package available" xml:space="preserve">
-    <value>हेल्थ चेक पैकेज उपलब्ध है</value>
-  </data>
   <data name="Health Checks &amp; Probes" xml:space="preserve">
     <value>स्वास्थ्य जाँच और प्रोब</value>
   </data>
   <data name="Health Checks middleware available" xml:space="preserve">
     <value>Health Checks middleware उपलब्ध है</value>
+  </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>हेल्थ चेक पैकेज उपलब्ध है</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>नमस्ते दुनिया!</value>
@@ -450,11 +525,14 @@
   <data name="Included" xml:space="preserve">
     <value>शामिल</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>ट्यूटोरियल्स शामिल हैं</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>विस्तृत दस्तावेज़ीकरण और व्यावहारिक उदाहरण शामिल हैं ताकि आप जल्दी शुरुआत कर सकें।</value>
   </data>
-  <data name="Includes Tutorials" xml:space="preserve">
-    <value>ट्यूटोरियल्स शामिल हैं</value>
+  <data name="Install packages" xml:space="preserve">
+    <value>पैकेज इंस्टॉल करें</value>
   </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>एकीकृत फ़ाइल प्रबंधन</value>
@@ -468,14 +546,8 @@
   <data name="Interoperability" xml:space="preserve">
     <value>अंतरक्रियाशीलता</value>
   </data>
-  <data name="is Free Software" xml:space="preserve">
-    <value>मुक्त सॉफ्टवेयर है</value>
-  </data>
   <data name="Is it free to use Aiursoft Nopkg?" xml:space="preserve">
     <value>क्या Aiursoft Nopkg का उपयोग करना मुफ़्त है?</value>
-  </data>
-  <data name="java.time API available" xml:space="preserve">
-    <value>java.time API उपलब्ध है</value>
   </data>
   <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
     <value>जॉब क्यू और शेड्यूलिंग GUI</value>
@@ -492,17 +564,11 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>K8s / Swarm के लिए तैयार</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>कम रुकावट।</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>लिंट चेक</value>
-  </data>
-  <data name="Maintain High Code Quality" xml:space="preserve">
-    <value>उच्च कोड गुणवत्ता बनाए रखें</value>
-  </data>
-  <data name="Management Dashboard" xml:space="preserve">
-    <value>प्रबंधन डैशबोर्ड</value>
-  </data>
-  <data name="Markdown To HTML" xml:space="preserve">
-    <value>मार्कडाउन से एचटीएमएल</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>एमआईटी लाइसेंस</value>
@@ -510,8 +576,29 @@
   <data name="MIT License" xml:space="preserve">
     <value>MIT लाइसेंस</value>
   </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>उच्च कोड गुणवत्ता बनाए रखें</value>
+  </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>अपनी अगली रिलीज़ करें</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>API कुंजियों का प्रबंधन करें</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>प्रबंधन डैशबोर्ड</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>मार्कडाउन से एचटीएमएल</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Aiursoft Nupkg से मिलें, हमारा NuGet रजिस्ट्री जिसमें पब्लिशिंग और कैशिंग के लिए वही दृष्टिकोण है।</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>मॉडल्स को डेटा एनोटेशन्स के आधार पर क्लाइंट और सर्वर दोनों तरफ मान्यता दी जाती है।</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>और अधिक निर्माण।</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>बहु-समय क्षेत्र संभाल</value>
@@ -528,20 +615,14 @@
   <data name="Music Tools" xml:space="preserve">
     <value>संगीत उपकरण</value>
   </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>नेटिव npm क्लाइंट</value>
+  </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>CASL या समान की आवश्यकता है</value>
   </data>
   <data name="Needs Celery + Flower" xml:space="preserve">
     <value>सेलरी + फ्लॉवर की आवश्यकता है</value>
-  </data>
-  <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>जटिल प्रमाणीकरण तर्क की आवश्यकता है</value>
-  </data>
-  <data name="Needs config/plugins" xml:space="preserve">
-    <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
-  </data>
-  <data name="Needs django-health-check package" xml:space="preserve">
-    <value>django-health-check पैकेज की आवश्यकता है</value>
   </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>ESLint/Prettier सेटअप की आवश्यकता है</value>
@@ -551,9 +632,6 @@
   </data>
   <data name="Needs Laravel Sail" xml:space="preserve">
     <value>लारवेल सेल की आवश्यकता है</value>
-  </data>
-  <data name="Needs manual configuration" xml:space="preserve">
-    <value>मैनुअल कॉन्फ़िगरेशन की आवश्यकता है</value>
   </data>
   <data name="Needs Medialibrary" xml:space="preserve">
     <value>मीडिया लाइब्रेरी की आवश्यकता है</value>
@@ -567,26 +645,53 @@
   <data name="Needs Spring Security config" xml:space="preserve">
     <value>Spring Security कॉन्फ़िगरेशन की आवश्यकता है</value>
   </data>
-  <data name="Needs third-party plugins" xml:space="preserve">
-    <value>तीसरे पक्ष के प्लग-इन की आवश्यकता है</value>
-  </data>
   <data name="Needs TypeORM or similar" xml:space="preserve">
     <value>टाइपओआरएम या समान की आवश्यकता है</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>जटिल प्रमाणीकरण तर्क की आवश्यकता है</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>कॉन्फ़िग/प्लगइन्स की आवश्यकता है</value>
+  </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>django-health-check पैकेज की आवश्यकता है</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>मैनुअल कॉन्फ़िगरेशन की आवश्यकता है</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>तीसरे पक्ष के प्लग-इन की आवश्यकता है</value>
   </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>किसी भी क्लाउड वेंडर पर निर्भरता नहीं। कहीं भी, कभी भी चलाएं।</value>
   </data>
-  <data name="Offline Capable" xml:space="preserve">
-    <value>ऑफलाइन कैपेबल</value>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Nopkg पैकेज कैटालॉग ब्राउज़र में</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM और माइग्रेशन</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>ऑफलाइन कैपेबल</value>
+  </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>आवेदन पर मिररिंग</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>एक क्लिक से शुरू करें</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>एक रजिस्ट्री। आपके रोज़मर्रा के उपकरण।</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>ओपन सोर्स</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>ओपन सोर्स। सेल्फ-होस्टेड। npm प्रोटोकॉल पर आधारित।</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>ओपनआईडी कनेक्ट एकीकरण</value>
@@ -594,14 +699,14 @@
   <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
     <value>कृषित Docker &amp; K8s कॉन्फ़िगरेशन</value>
   </data>
-  <data name="ORM &amp; Migrations" xml:space="preserve">
-    <value>ORM और माइग्रेशन</value>
-  </data>
   <data name="Out-of-the-box" xml:space="preserve">
     <value>बिना किसी सेटअप के तैयार</value>
   </data>
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>अनुमति खोज और समन्वय</value>
+  </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>व्यक्तिगत API कुंजियाँ</value>
   </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>Pint या समान आवश्यक है</value>
@@ -609,17 +714,29 @@
   <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
     <value>प्री-कॉन्फ़िगर /healthz और रेडिनेस प्रोब्स</value>
   </data>
-  <data name="Pre-configured and tested" xml:space="preserve">
-    <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
-  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>गिटलैब के लिए विशेष रूप से पूर्व-संरचित CI/CD पाइपलाइन</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>पूर्व-कॉन्फ़िगर और परीक्षण किया गया</value>
   </data>
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>dev/prod के लिए पूर्व-विन्यस्त पाइपलाइन्स</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>स्थानीय रूप से प्रकाशित करें। आवश्यकतानुसार मिरर करें।</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>जो बनाते हैं उसे प्रकाशित करें। जिन पर निर्भर करते हैं उन्हें कैश करें। अपने npm पैकेज एक ही जगह, उन टूल्स के साथ जो आप पहले से उपयोग कर रहे हैं, एक साथ लाएं।</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>पर्सनल API की के साथ प्रकाशित करें और पैकेज स्वामित्व का प्रबंधन करें। एक बार पैकेज स्थानीय रूप से प्रकाशित हो जाने के बाद, उसका भविष्य आपके हाथ में रहता है।</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>अपने पैकेज प्रकाशित करें और वैकल्पिक S360 प्रवेश के साथ अपस्ट्रीम रिलीज़ को कैश करें।</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>अपनी रचना प्रकाशित करें</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>गुणवत्ता गेट</value>
@@ -648,6 +765,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>समीक्षाएँ</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>बिल्कुल अपने घर जैसा।</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>रॉबस्ट इंटीग्रेशन टेस्टिंग</value>
   </data>
@@ -660,6 +780,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>किसी भी OpenID Connect प्रदाता के साथ सहज एकीकरण, स्वचालित भूमिका सिंक्रनाइज़ेशन के साथ।</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>खोजें</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>पैकेज खोजें</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>आत्मविश्वास के साथ शिफ्ट करें</value>
   </data>
@@ -668,6 +794,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>एकल कंटेनर</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>विषय-वस्तु पर जाएँ</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>स्मार्ट कॉन्फ़िगरेशन ओवरराइड्स</value>
@@ -678,17 +807,17 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>स्मार्ट डार्क मोड जो स्वचालित रूप से उपयोगकर्ता की सिस्टम सेटिंग्स के अनुकूल हो जाता है।</value>
   </data>
-  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
-    <value>मानक कार्यान्वयन। संकलन के बिना प्रदाताओं को स्विच करें।</value>
-  </data>
   <data name="Standard OpenID" xml:space="preserve">
     <value>मानक OpenID</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>एक नया प्रोजेक्ट शुरू करें</value>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>मानक कार्यान्वयन। संकलन के बिना प्रदाताओं को स्विच करें।</value>
   </data>
   <data name="Start Shipping Value." xml:space="preserve">
     <value>मूल्य शिपिंग शुरू करें।</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>एक नया प्रोजेक्ट शुरू करें</value>
   </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>एकल &apos;docker run&apos; कमांड के साथ शुरुआत करें।</value>
@@ -702,23 +831,23 @@
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>कठोर लिंट नियम</value>
   </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>कठोर यूनिट परीक्षण</value>
+  </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
     <value>डिफ़ॉल्ट रूप से सख्त लिंटिंग नियम और शून्य चेतावनियाँ</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>डिफ़ॉल्ट प्रोजेक्ट में 0 चेतावनियाँ के साथ सख्त लिंटिंग नियम।</value>
   </data>
-  <data name="Strict Unit Testing" xml:space="preserve">
-    <value>कठोर यूनिट परीक्षण</value>
-  </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
     <value>तीव्र और सुसंगत लिंटिंग</value>
   </data>
-  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>पर्यावरण चर और डेटाबेस-आधारित सेटिंग्स दोनों का समर्थन करता है, जिसमें पर्यावरण चरों को बिना किसी दिक्कत के अपडेट करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>
-  </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>जेटब्रेन्स राइडर का समर्थन करता है आसान कोड स्टाइल फिक्स के लिए।</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>पर्यावरण चर और डेटाबेस-आधारित सेटिंग्स दोनों का समर्थन करता है, जिसमें पर्यावरण चरों को बिना किसी दिक्कत के अपडेट करने के लिए स्वचालित प्राथमिकता दी जाती है।</value>
   </data>
   <data name="Task Runner" xml:space="preserve">
     <value>टास्क रनर</value>
@@ -738,6 +867,9 @@
   <data name="Testing module available" xml:space="preserve">
     <value>परीक्षण मॉड्यूल उपलब्ध है</value>
   </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>द फिलॉसफी</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>निर्णायक, युद्ध-परीक्षित .NET उद्यम स्थापना। प्राथमिकता से एआई तक, हमने कठिन हिस्सों को हल कर दिया है ताकि आपको इसकी आवश्यकता न हो।</value>
   </data>
@@ -747,23 +879,23 @@
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>यह टेम्पलेट आसान डेप्लॉयमेंट के लिए बनाया गया है। इसमें पूर्ण Docker सपोर्ट शामिल है, जिससे आप अपने ऐप को कंटेनराइज़ करके कहीं भी चला सकते हैं। आप इसे सीधे IIS, Azure App Service, या किसी भी सर्वर पर डेप्लॉय कर सकते हैं जो ASP.NET Core को सपोर्ट करता है।</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>द फिलॉसफी</value>
-  </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है</value>
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>यह एक टेम्पलेट प्रोजेक्ट है, जहाँ से हम वॉयजर की शुरुआत करते हैं...</value>
   </data>
-  <data name="Timezone-aware fields" xml:space="preserve">
-    <value>समय क्षेत्र-जागरूक क्षेत्र</value>
-  </data>
   <data name="TimeZoneInfo API available" xml:space="preserve">
     <value>TimeZoneInfo API उपलब्ध है</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>समय क्षेत्र-जागरूक क्षेत्र</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>उत्पादन-ग्रेड एप्लिकेशन जैसे AnduinOS, StatHub, और Warp द्वारा विश्वास किया गया। हम सिर्फ इस कोड को साझा नहीं करते; हम अपने पूरे व्यवसाय को इस पर चलाते हैं।</value>
+  </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>दो पारिस्थितिक तंत्र। एक परिचित अनुभव।</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>एकीकृत वातावरण</value>
@@ -771,11 +903,20 @@
   <data name="Unified Identity" xml:space="preserve">
     <value>एकीकृत पहचान</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>अपस्ट्रीम पैकेज तब प्राप्त किए जाते हैं जब आवश्यकता होती है और स्थानीय रूप से संग्रहीत किए जाते हैं। कैश्ड आर्टिफैक्ट आपके बिल्ड के करीब रहते हैं।</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>प्रयोग</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>इसे अपने SaaS की नींव के रूप में, अपने मोबाइल ऐप के लिए बैकएंड के रूप में, एक कॉर्पोरेट वेबसाइट के रूप में, या एक व्यक्तिगत ब्लॉग के रूप में उपयोग करें। संभावनाएं अनंत हैं।</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>इसे उपयोग करें। इसे जारी करें।</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>इस इंस्टेंस से कनेक्ट करने के लिए नीचे दिए गए कमांड्स का उपयोग करें। पब्लिशिंग के लिए एक व्यक्तिगत की और पब्लिश करने की अनुमति आवश्यक है।</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>GitHub पर देखें</value>
@@ -816,6 +957,18 @@
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>आपका npm रजिस्ट्री, जब भी आपको चाहिए तैयार है।</value>
   </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>आपका npm रजिस्ट्री। आपकी बुनियादी ढाँचा।</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>आपका रजिस्ट्री, एक नज़र में।</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>आपके रिलीज़, आपके नियम</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>आपका मानक क्लाइंट। आपका अपना पैकेज स्रोत।</value>
+  </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
@@ -827,6 +980,18 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>शून्य सहनशीलता लींट</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>तेज़</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>किसी भी जानकारी के लिए या समस्याओं की रिपोर्ट करने के लिए।</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>मुक्त सॉफ्टवेयर है</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>java.time API उपलब्ध है</value>
   </data>
 
 </root>

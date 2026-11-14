@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>دعم &quot;Fire-and-forget&quot; للمهام الطويلة (مثل البريد الإلكتروني أو الذكاء الاصطناعي)، مع ميزة واجهة مستخدم رسومية لإدارة الطابور، والمعالجة المتوازية، والإلغاء.</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / ربط عميلك</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / حافظ على سير عملك</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>نظام مدمج للتحكم في الوصول القائم على الأدوار (RBAC) لإدارة دقيقة للصلاحيات.</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>نظرة واضحة على مسجلك، دون مغادرة متصفحك.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>حل متكامل لمصادقة المستخدم وإدارة الملف الشخصي جاهز للاستخدام مباشرة.</value>
@@ -30,20 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>حل كامل لإدارة المصادقة وملف التعريف للمستخدم.</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>مكان مألوف للعمل</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>تصميم متجاوب بالكامل يبدو رائعًا على كل من أجهزة الكمبيوتر المكتبية والهواتف المحمولة.</value>
+  </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>منزلٌ لإعتماداتك</value>
   </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>أساس حديث، غني بالميزات، وقابل للتوسعة بدرجة كبيرة لتطبيق الويب القادم الخاص بك.</value>
   </data>
-  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
-    <value>احقق المزيد مع قالب Aiursoft</value>
-  </data>
-  <data name="Actuator health endpoints built-in" xml:space="preserve">
-    <value>واجهات نقاط نهاية صحة Actuator مدمجة</value>
-  </data>
-  <data name="Admin site included" xml:space="preserve">
-    <value>موقع الإدارة مضمن</value>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>يجب أن يتناسب مستودع الحزم مع عملك، من أول تثبيت إلى إصدارك التالي.</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>الترجمة المدفوعة بالذكاء الاصطناعي</value>
@@ -53,6 +62,21 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>الترجمات المدعومة بالذكاء الاصطناعي</value>
+  </data>
+  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
+    <value>احقق المزيد مع قالب Aiursoft</value>
+  </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>واجهات نقاط نهاية صحة Actuator مدمجة</value>
+  </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>أضف هذا المسجل إلى إعدادات عميلك.</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>موقع الإدارة مضمن</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>السماح، عندما تحتاج إليه</value>
   </data>
   <data name="Aiursoft Nopkg" xml:space="preserve">
     <value>Aiursoft Nopkg</value>
@@ -75,11 +99,11 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
-  <data name="Auto compression and privacy" xml:space="preserve">
-    <value>الضغط التلقائي والخصوصية</value>
-  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>النشر التلقائي</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>الضغط التلقائي والخصوصية</value>
   </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>ترجمة ذكاء اصطناعي تلقائية إلى 28 لغة.</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>سهل للمبتدئين</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>أفضل معًا</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>دروس ثنائية اللغة</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>تصفح الحزم</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>تصفّح الكتالوج وابحث عن الحزم التي يحتاجها مشروعك.</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>ابنِ مرة واحدة، شغّل في أي مكان. بنية تحتية محتواة بالكامل.</value>
@@ -141,17 +171,11 @@
   <data name="Built-in" xml:space="preserve">
     <value>مدمج</value>
   </data>
-  <data name="Built-in administration panel" xml:space="preserve">
-    <value>لوحة تحكم إدارية مدمجة</value>
-  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>مصادقة مدمجة</value>
   </data>
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>واجهة مستخدم مدمجة لطابور المهام</value>
-  </data>
-  <data name="Built-in method-level security" xml:space="preserve">
-    <value>أمان مستوى الطريقة المدمج</value>
   </data>
   <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
     <value>دعم مدمج لعميل OAuth2/OIDC</value>
@@ -165,14 +189,20 @@
   <data name="Built-in Roslyn Analyzers" xml:space="preserve">
     <value>محللات Roslyn المدمجة</value>
   </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>إدارة المستخدمين المدمجة</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>لوحة تحكم إدارية مدمجة</value>
+  </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>أمان مستوى الطريقة المدمج</value>
+  </data>
   <data name="Built-in timezone configuration" xml:space="preserve">
     <value>تكوين المنطقة الزمنية المدمج</value>
   </data>
   <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
     <value>دعم النطاق الزمني المدمج مع USE_TZ</value>
-  </data>
-  <data name="Built-in User Management" xml:space="preserve">
-    <value>إدارة المستخدمين المدمجة</value>
   </data>
   <data name="Checkstyle or similar needed" xml:space="preserve">
     <value>يحتاج إلى Checkstyle أو ما شابه</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>وثائق موجزة</value>
   </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>اربط S360 للتحكم في التبعيات المعكوسة باستخدام سياسات الحزم والتحقق المستقل من العناصر.</value>
+  </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>اتصل في لحظة</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>اتصل بعميلك</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>التحقق من الاتساق</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>coordination بسلاسة</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>نسخ</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>نسخ الأمر</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>انسخ عنوان السجل الخاص بك وواصل استخدام العميل الحالي لديك.</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>التوجيه الأساسي وحقن التبعيات</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>تقرير التغطية</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>أنشئ مفتاحًا، اتبع تعليمات إعداده، وانشر أرشيفك.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>أنشئ مفتاحًا شخصيًا وانشر باستخدام صلاحيات حسابك.</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>متعدد المنصات</value>
@@ -216,14 +270,14 @@
   <data name="Custom development required" xml:space="preserve">
     <value>يتطلب تطويرًا مخصصًا</value>
   </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>موقع لوحة التحكم</value>
+  </data>
   <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
     <value>لوحة تحكم للمهام الخلفية والمجدولة</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>لوحة تحكم للمهام الخلفية</value>
-  </data>
-  <data name="Dashboard Website" xml:space="preserve">
-    <value>موقع لوحة التحكم</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
     <value>يوم 1 الامتثال والأمان.</value>
@@ -249,6 +303,9 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>مطوّر وانتاج</value>
   </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>مُصمم لبيئة DevOps</value>
+  </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>قم بتطوير النظام بشكل حصري باستخدام التوقيت العالمي الموحد (UTC) بينما يقوم النظام تلقائيًا بتحويل التواريخ وعرضها بتوقيت المستخدم المحلي.</value>
   </data>
@@ -257,9 +314,6 @@
   </data>
   <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
     <value>معاينة التطوير. غير جاهزة لاستبدال سجل الإنتاج الخاص بك.</value>
-  </data>
-  <data name="DevOps Native" xml:space="preserve">
-    <value>مُصمم لبيئة DevOps</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>صفحة المناقشات</value>
@@ -309,11 +363,17 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>تضمين Entity Framework Core</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>استكشف Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>استكشف الحزم</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>استكشف الحزم الخاصة بك</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
-  </data>
-  <data name="faster" xml:space="preserve">
-    <value>بسرعة أكبر</value>
   </data>
   <data name="Feature tests available" xml:space="preserve">
     <value>اختبارات الميزات متاحة</value>
@@ -327,8 +387,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>يتميز بنظام مدمج لإدارة الملفات مع ضغط تلقائي للصور الشخصية.</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>جلب مرة واحدة. ابنِ مرارًا.</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>إدارة الملفات والتحسين</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>اعثر عليه.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>ابحث عن تبعيتك التالية…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>التحكم في الوصول القائم على الأدوار (RBAC) الدقيق</value>
@@ -339,9 +408,6 @@
   <data name="Flexible API" xml:space="preserve">
     <value>واجهة برمجة تطبيقات مرنة</value>
   </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>للاستفسارات أو الإبلاغ عن المشكلات.</value>
-  </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>مؤسس ومهندس في Aiursoft</value>
   </data>
@@ -351,11 +417,14 @@
   <data name="Free" xml:space="preserve">
     <value>مجاني</value>
   </data>
-  <data name="Free for Commercial Use" xml:space="preserve">
-    <value>مجاني للاستخدام التجاري</value>
-  </data>
   <data name="Free Software" xml:space="preserve">
     <value>برمجيات مجانية</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>مجاني ومفتوح المصدر</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>مجاني للاستخدام التجاري</value>
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>الأسئلة الشائعة</value>
@@ -375,11 +444,14 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>كاملة بدون اتصال</value>
   </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>ملف Docker عام فقط</value>
+  </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>إعداد عام</value>
   </data>
-  <data name="Generic Dockerfile only" xml:space="preserve">
-    <value>ملف Docker عام فقط</value>
+  <data name="Get started" xml:space="preserve">
+    <value>ابدأ الآن</value>
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
@@ -396,6 +468,9 @@
   <data name="Go to dashboard" xml:space="preserve">
     <value>انتقل إلى لوحة التحكم</value>
   </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>حزم رائعة.</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>إدارة المهام المتكررة مثل التنظيف والمزامنة باستخدام واجهة مستخدم شاملة لمراقبة سجلات التنفيذ والسجلات.</value>
   </data>
@@ -405,14 +480,14 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>مكتوب يدويًا بناءً على السياسات</value>
   </data>
-  <data name="Health check package available" xml:space="preserve">
-    <value>حزمة فحص الصحة متاحة</value>
-  </data>
   <data name="Health Checks &amp; Probes" xml:space="preserve">
     <value>فحوصات الصحة والكاشفات</value>
   </data>
   <data name="Health Checks middleware available" xml:space="preserve">
     <value>توفر وسيط فحوصات الصحة</value>
+  </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>حزمة فحص الصحة متاحة</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>مرحبًا أيها العالم!</value>
@@ -450,11 +525,14 @@
   <data name="Included" xml:space="preserve">
     <value>مُضمن</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>يحتوي على دروس تدريبية</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>يشمل وثائق شاملة وأمثلة عملية لمساعدتك على البدء بسرعة.</value>
   </data>
-  <data name="Includes Tutorials" xml:space="preserve">
-    <value>يحتوي على دروس تدريبية</value>
+  <data name="Install packages" xml:space="preserve">
+    <value>تثبيت الحزم</value>
   </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>إدارة الملفات المتكاملة</value>
@@ -468,14 +546,8 @@
   <data name="Interoperability" xml:space="preserve">
     <value>التداخلية</value>
   </data>
-  <data name="is Free Software" xml:space="preserve">
-    <value>هو برنامج مجاني</value>
-  </data>
   <data name="Is it free to use Aiursoft Nopkg?" xml:space="preserve">
     <value>هل استخدام قالب Aiursoft مجاني؟</value>
-  </data>
-  <data name="java.time API available" xml:space="preserve">
-    <value>توفر واجهة برمجة التطبيقات java.time</value>
   </data>
   <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
     <value>واجهة مستخدم جدولة وطوابير المهام</value>
@@ -492,17 +564,11 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>جاهز لـ K8s / Swarm</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>قليل من التعقيد.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>فحص اللينت</value>
-  </data>
-  <data name="Maintain High Code Quality" xml:space="preserve">
-    <value>الحفاظ على جودة الرمز العالي</value>
-  </data>
-  <data name="Management Dashboard" xml:space="preserve">
-    <value>لوحة تحكم الإدارة</value>
-  </data>
-  <data name="Markdown To HTML" xml:space="preserve">
-    <value>تحويل Markdown إلى HTML</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>رخصة MIT</value>
@@ -510,8 +576,29 @@
   <data name="MIT License" xml:space="preserve">
     <value>رخصة MIT</value>
   </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>الحفاظ على جودة الرمز العالي</value>
+  </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>أنجز إصدارك القادم</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>إدارة مفاتيح API</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>لوحة تحكم الإدارة</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>تحويل Markdown إلى HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>تعرّف على Aiursoft Nupkg، سجل NuGet الخاص بنا الذي يتبنى نفس النهج في النشر والتخزين المؤقت.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>يتم التحقق من النماذج على الطرفين العميل والخادم بناءً على ملاحظات البيانات.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>بناء أكثر.</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>التعامل مع مناطق زمنية متعددة</value>
@@ -528,20 +615,14 @@
   <data name="Music Tools" xml:space="preserve">
     <value>أدوات الموسيقى</value>
   </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>عملاء npm الأصليين</value>
+  </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>يتطلب CASL أو ما شابه</value>
   </data>
   <data name="Needs Celery + Flower" xml:space="preserve">
     <value>يتطلب Celery + Flower</value>
-  </data>
-  <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>يتطلب منطق مصادقة معقد</value>
-  </data>
-  <data name="Needs config/plugins" xml:space="preserve">
-    <value>يتطلب إعدادات/إضافات</value>
-  </data>
-  <data name="Needs django-health-check package" xml:space="preserve">
-    <value>يتطلب حزمة django-health-check</value>
   </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>يتطلب إعداد ESLint/Prettier</value>
@@ -551,9 +632,6 @@
   </data>
   <data name="Needs Laravel Sail" xml:space="preserve">
     <value>يتطلب Laravel Sail</value>
-  </data>
-  <data name="Needs manual configuration" xml:space="preserve">
-    <value>يتطلب إعدادًا يدويًا</value>
   </data>
   <data name="Needs Medialibrary" xml:space="preserve">
     <value>يتطلب مكتبة الوسائط</value>
@@ -567,26 +645,53 @@
   <data name="Needs Spring Security config" xml:space="preserve">
     <value>يتطلب تكوين Spring Security</value>
   </data>
-  <data name="Needs third-party plugins" xml:space="preserve">
-    <value>يتطلب إضافات من جهات خارجية</value>
-  </data>
   <data name="Needs TypeORM or similar" xml:space="preserve">
     <value>يتطلب TypeORM أو ما شابه</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>يتطلب منطق مصادقة معقد</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>يتطلب إعدادات/إضافات</value>
+  </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>يتطلب حزمة django-health-check</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>يتطلب إعدادًا يدويًا</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>يتطلب إضافات من جهات خارجية</value>
   </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>لا يعتمد على أي مزود سحابي. شغّل في أي مكان وفي أي وقت.</value>
   </data>
-  <data name="Offline Capable" xml:space="preserve">
-    <value>قادر على العمل دون اتصال</value>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>فهرس حزم Nopkg في المتصفح</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>نموذج كائن العلائقي وهجرات قاعدة البيانات</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>قادر على العمل دون اتصال</value>
+  </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>المرآة عند الطلب</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>ابدأ بنقرة واحدة</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>سجل واحد. أدواتك اليومية.</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>مفتوح المصدر</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>مفتوح المصدر. يُستضاف ذاتيًا. مبني على بروتوكول npm.</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>دمج OpenID Connect</value>
@@ -594,14 +699,14 @@
   <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
     <value>تكوين Docker و K8s محسن</value>
   </data>
-  <data name="ORM &amp; Migrations" xml:space="preserve">
-    <value>نموذج كائن العلائقي وهجرات قاعدة البيانات</value>
-  </data>
   <data name="Out-of-the-box" xml:space="preserve">
     <value>جاهز للاستخدام فوراً</value>
   </data>
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>اكتشاف الصلاحيات ومزامنتها</value>
+  </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>مفاتيح API الشخصية</value>
   </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>يتطلب استخدام Pint أو أداة مماثلة</value>
@@ -609,17 +714,29 @@
   <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
     <value>مؤشرات الصحة والاستعداد مُهيّأة مسبقاً /healthz</value>
   </data>
-  <data name="Pre-configured and tested" xml:space="preserve">
-    <value>مُهيأة مسبقًا ومُختبرة</value>
-  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>ممرات CI/CD المُهيأة مسبقًا بشكل خاص لـ GitLab.</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>مُهيأة مسبقًا ومُختبرة</value>
   </data>
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>خطوط أنابيب مُعدّة مسبقًا للتطوير والإنتاج</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>انشر محليًا. مرّر عند الطلب.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>انشر ما تبنيه. خزّن ما تعتمد عليه. اجمع حزم npm الخاصة بك في مكان واحد، مع الأدوات التي تستخدمها بالفعل.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>انشر باستخدام مفتاح API شخصي وأدر ملكية الحزم. بمجرد نشر الحزمة محليًا، يبقى مستقبلها في يدك.</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>انشر الحزم الخاصة بك واخزّن الإصدارات من المنبع مع خيار القبول من S360.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>انشر عملك</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>بوابة الجودة</value>
@@ -648,6 +765,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>التقييمات</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>في مكانها الطبيعي.</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>اختبارات التكامل القوية</value>
   </data>
@@ -660,6 +780,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>دمج سلس مع أي موفر OpenID Connect، مع مزامنة تلقائية للأدوار.</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>البحث في الحزم</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>انقل بثقة</value>
   </data>
@@ -668,6 +794,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>حاوية واحدة</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>تخطَّ إلى المحتوى</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>تجاوزات الإعداد الذكية</value>
@@ -678,17 +807,17 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>وضع الظلام الذكي الذي يتكيف تلقائيًا مع إعدادات نظام المستخدم.</value>
   </data>
-  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
-    <value>التنفيذ القياسي. تبديل المزودين دون إعادة التجميع.</value>
-  </data>
   <data name="Standard OpenID" xml:space="preserve">
     <value>OpenID القياسي</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>بدء مشروع جديد</value>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>التنفيذ القياسي. تبديل المزودين دون إعادة التجميع.</value>
   </data>
   <data name="Start Shipping Value." xml:space="preserve">
     <value>ابدأ في توصيل القيمة.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>بدء مشروع جديد</value>
   </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>ابدأ بتنفيذ أمر واحد فقط هو &apos;docker run&apos;.</value>
@@ -702,23 +831,23 @@
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>قواعد التحقق الصارمة</value>
   </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>اختبارات الوحدة الصارمة</value>
+  </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
     <value>قواعد صارمة لفحص الكود وصفر تنبيهات افتراضيًا.</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>قواعد التحقق الصارمة مع 0 تحذيرات في المشروع الافتراضي.</value>
   </data>
-  <data name="Strict Unit Testing" xml:space="preserve">
-    <value>اختبارات الوحدة الصارمة</value>
-  </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
     <value>تصحيح صارم ومتزامن</value>
   </data>
-  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>يدعم كلًا من متغيرات البيئة والإعدادات المخزنة في قاعدة البيانات، مع إعطاء الأولوية التلقائية لمتغيرات البيئة لضمان التفادي السلس.</value>
-  </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>يدعم JetBrains Rider لتصحيح أنماط الكود بسهولة.</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>يدعم كلًا من متغيرات البيئة والإعدادات المخزنة في قاعدة البيانات، مع إعطاء الأولوية التلقائية لمتغيرات البيئة لضمان التفادي السلس.</value>
   </data>
   <data name="Task Runner" xml:space="preserve">
     <value>مُنَفِّذ المهام</value>
@@ -738,6 +867,9 @@
   <data name="Testing module available" xml:space="preserve">
     <value>وحدة الاختبار متاحة</value>
   </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>الفلسفة</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>الأساس المؤسسي المتميز، المختبر في الميدان، لمنصة .NET المؤسسية. من المصادقة إلى الذكاء الاصطناعي، فقد حللنا الجزء الصعب حتى لا يتعين عليك ذلك.</value>
   </data>
@@ -747,23 +879,23 @@
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>تم بناء القالب لتسهيل النشر. وهو يتضمن دعمًا كاملاً لـ Docker، حتى تتمكن من تحويل تطبيقك إلى حاوية وتشغيله في أي مكان. يمكنك أيضًا نشره مباشرةً على IIS، أو Azure App Service، أو أي خادم يدعم ASP.NET Core.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>الفلسفة</value>
-  </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>هذا مشروع قالب</value>
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>هذا مشروع قالب، حيث نبدأ رحلة المستكشف...</value>
   </data>
-  <data name="Timezone-aware fields" xml:space="preserve">
-    <value>حقول مدركة للمنطقة الزمنية</value>
-  </data>
   <data name="TimeZoneInfo API available" xml:space="preserve">
     <value>يتوفر واجهة برمجة التطبيقات TimeZoneInfo</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>حقول مدركة للمنطقة الزمنية</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>مُوثوق به من قبل تطبيقات إنتاجية بما في ذلك AnduinOS وStatHub وWarp. لا نشارك هذا الكود فقط؛ بل نُدير عملنا بالكامل عليه.</value>
+  </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>نظامان بيئيّان. تجربة واحدة مألوفة.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>بيئة موحدة</value>
@@ -771,11 +903,20 @@
   <data name="Unified Identity" xml:space="preserve">
     <value>هوية موحدة</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>تتم استعادة الحزم العلوية عند الحاجة وتخزينها محليًا. وتبقى المخرجات المخزّنة مؤقتًا قريبة من عمليات البناء الخاصة بك.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>الاستخدام</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>استخدمه كأساس لخدماتك السحابية (SaaS)، أو كخلفية لتطبيقك المحمول، أو كموقع مؤسسي، أو مدونة شخصية. الإمكانيات لا حدود لها.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>استخدمه. أطلقه.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>استخدم الأوامر أدناه للاتصال بهذا النظام. تتطلب عملية النشر مفتاحًا شخصيًا والصلاحيات اللازمة للنشر.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>عرض على جيثب</value>
@@ -816,6 +957,18 @@
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>سجل npm الخاص بك، جاهز عندما تحتاج إليه.</value>
   </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>سجّال npm الخاص بك. بنيتك التحتية.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>سجلك، في لمحة.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>إصداراتك، قواعدك</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>عميلك المعتاد. مصدر حزمك الخاص.</value>
+  </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
@@ -827,6 +980,18 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>فحص صارم بدون تسامح</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>بسرعة أكبر</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>للاستفسارات أو الإبلاغ عن المشكلات.</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>هو برنامج مجاني</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>توفر واجهة برمجة التطبيقات java.time</value>
   </data>
 
 </root>

@@ -21,8 +21,17 @@
       <data name="&quot;Fire-and-forget&quot; support for long-running tasks (like emails or AI), featuring a GUI for queue management, parallel processing, and cancellation." xml:space="preserve">
     <value>Підтримка &quot;Fire-and-forget&quot; для довготривалих завдань (наприклад, електронні листи або штучний інтелект), із графічним інтерфейсом для управління чергою, паралельною обробкою та відміною.</value>
   </data>
+  <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / Підключіть ваш клієнт</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / Зберігайте свій робочий процес</value>
+  </data>
   <data name="A built-in Role-Based Access Control (RBAC) system for fine-grained permission management." xml:space="preserve">
     <value>Вбудована система контролю доступу на основі ролей (RBAC) для деталізованого управління дозволами.</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>Чіткий огляд вашого реєстру, не виходячи з браузера.</value>
   </data>
   <data name="A complete solution for user authentication and profile management right out of the box." xml:space="preserve">
     <value>Повне рішення для аутентифікації користувачів та управління профілями, готове до використання відразу після встановлення.</value>
@@ -30,20 +39,20 @@
   <data name="A complete solution for user authentication and profile management." xml:space="preserve">
     <value>Повне рішення для автентифікації користувачів та управління профілями.</value>
   </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>Знайоме місце для роботи</value>
+  </data>
   <data name="A fully responsive layout that looks great on both desktop and mobile devices." xml:space="preserve">
     <value>Адаптивний макет, який чудово виглядає як на настільних комп&apos;ютерах, так і на мобільних пристроях.</value>
+  </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>Дім для ваших залежностей</value>
   </data>
   <data name="A modern, feature-rich, and highly extensible foundation for your next web application." xml:space="preserve">
     <value>Сучасна, багатофункціональна та високо розширювана основа для вашої наступної веб-програми.</value>
   </data>
-  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
-    <value>Досягайте більшого з Aiursoft Nopkg</value>
-  </data>
-  <data name="Actuator health endpoints built-in" xml:space="preserve">
-    <value>Вбудовані кінцеві точки здоров&apos;я актуатора</value>
-  </data>
-  <data name="Admin site included" xml:space="preserve">
-    <value>Адмін-панель у складі</value>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>Реєстр пакетів має легко вписуватися у ваш робочий процес — від першої встановлення до наступного релізу.</value>
   </data>
   <data name="AI Driven Translation" xml:space="preserve">
     <value>Переклад, що керується ШІ</value>
@@ -53,6 +62,21 @@
   </data>
   <data name="AI-Powered Translations" xml:space="preserve">
     <value>Переклади на основі ШІ</value>
+  </data>
+  <data name="Achieve more with Aiursoft Nopkg" xml:space="preserve">
+    <value>Досягайте більшого з Aiursoft Nopkg</value>
+  </data>
+  <data name="Actuator health endpoints built-in" xml:space="preserve">
+    <value>Вбудовані кінцеві точки здоров&apos;я актуатора</value>
+  </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>Додайте цей реєстр до конфігурації вашого клієнта.</value>
+  </data>
+  <data name="Admin site included" xml:space="preserve">
+    <value>Адмін-панель у складі</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>Дозвіл, коли вам це потрібно</value>
   </data>
   <data name="Aiursoft Nopkg" xml:space="preserve">
     <value>Aiursoft Nopkg</value>
@@ -75,11 +99,11 @@
   <data name="Authentik &amp; Okta" xml:space="preserve">
     <value>Authentik &amp; Okta</value>
   </data>
-  <data name="Auto compression and privacy" xml:space="preserve">
-    <value>Автоматичне стиснення та конфіденційність</value>
-  </data>
   <data name="Auto Deployment" xml:space="preserve">
     <value>Автоматичне розгортання</value>
+  </data>
+  <data name="Auto compression and privacy" xml:space="preserve">
+    <value>Автоматичне стиснення та конфіденційність</value>
   </data>
   <data name="Automatic AI translation into 28 languages." xml:space="preserve">
     <value>Автоматична штучна інтелект-переклад на 28 мов.</value>
@@ -117,11 +141,17 @@
   <data name="Beginner Friendly" xml:space="preserve">
     <value>Для початківців</value>
   </data>
+  <data name="Better together" xml:space="preserve">
+    <value>Разом краще</value>
+  </data>
   <data name="Bilingual Tutorials" xml:space="preserve">
     <value>Білінгвальні навчальні матеріали</value>
   </data>
   <data name="Browse packages" xml:space="preserve">
     <value>Переглянути пакети</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>Перегляньте каталог і знайдіть пакети, потрібні для вашого проєкту.</value>
   </data>
   <data name="Build once, run anywhere. Fully containerized architecture." xml:space="preserve">
     <value>Зібрати один раз, запустити де завгодно. Повністю контейнеризована архітектура.</value>
@@ -141,17 +171,11 @@
   <data name="Built-in" xml:space="preserve">
     <value>Вбудований</value>
   </data>
-  <data name="Built-in administration panel" xml:space="preserve">
-    <value>Вбудована панель адміністрування</value>
-  </data>
   <data name="Built-in Auth" xml:space="preserve">
     <value>Вбудована автентифікація</value>
   </data>
   <data name="Built-in Job Queue GUI" xml:space="preserve">
     <value>Вбудований GUI черги завдань</value>
-  </data>
-  <data name="Built-in method-level security" xml:space="preserve">
-    <value>Вбудована захист на рівні методів</value>
   </data>
   <data name="Built-in OAuth2/OIDC client support" xml:space="preserve">
     <value>Вбудована підтримка OAuth2/OIDC клієнта</value>
@@ -165,14 +189,20 @@
   <data name="Built-in Roslyn Analyzers" xml:space="preserve">
     <value>Вбудовані аналізатори Roslyn</value>
   </data>
+  <data name="Built-in User Management" xml:space="preserve">
+    <value>Вбудоване керування користувачами</value>
+  </data>
+  <data name="Built-in administration panel" xml:space="preserve">
+    <value>Вбудована панель адміністрування</value>
+  </data>
+  <data name="Built-in method-level security" xml:space="preserve">
+    <value>Вбудована захист на рівні методів</value>
+  </data>
   <data name="Built-in timezone configuration" xml:space="preserve">
     <value>Вбудована конфігурація часових поясів</value>
   </data>
   <data name="Built-in timezone support with USE_TZ" xml:space="preserve">
     <value>Вбудована підтримка часових поясів із USE_TZ</value>
-  </data>
-  <data name="Built-in User Management" xml:space="preserve">
-    <value>Вбудоване керування користувачами</value>
   </data>
   <data name="Checkstyle or similar needed" xml:space="preserve">
     <value>Потрібен Checkstyle або аналогічний інструмент</value>
@@ -195,17 +225,41 @@
   <data name="Concise Docs" xml:space="preserve">
     <value>Стислі документи</value>
   </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>Підключіть S360, щоб керувати дзеркальними залежностями за допомогою політик пакетів та незалежної верифікації артефактів.</value>
+  </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>Підключіться за мить</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Підключіть ваш клієнт</value>
+  </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Перевірка узгодженості</value>
   </data>
   <data name="Coordinate Comfortably" xml:space="preserve">
     <value>Координуйте зручно</value>
   </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Копіювати</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Копіювати команду</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>Скопіюйте адресу свого реєстру та продовжуйте використовувати наявного клієнта.</value>
+  </data>
   <data name="Core Routing &amp; DI" xml:space="preserve">
     <value>Основна маршрутизація та DI</value>
   </data>
   <data name="Coverage Report" xml:space="preserve">
     <value>Звіт про покриття</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>Створіть ключ, виконайте його інструкції з налаштування та опублікуйте свій архів.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>Створіть особистий ключ і опублікуйте з правами вашого облікового запису.</value>
   </data>
   <data name="Cross Platform" xml:space="preserve">
     <value>Мультиплатформеність</value>
@@ -216,14 +270,14 @@
   <data name="Custom development required" xml:space="preserve">
     <value>Потрібна індивідуальна розробка</value>
   </data>
+  <data name="Dashboard Website" xml:space="preserve">
+    <value>Веб-сайт панелі керування</value>
+  </data>
   <data name="Dashboard for background and scheduled tasks" xml:space="preserve">
     <value>Панель керування для фонових та запланованих завдань</value>
   </data>
   <data name="Dashboard for background tasks" xml:space="preserve">
     <value>Панель керування фоновими завданнями</value>
-  </data>
-  <data name="Dashboard Website" xml:space="preserve">
-    <value>Веб-сайт панелі керування</value>
   </data>
   <data name="Day 1 Compliance &amp; Security." xml:space="preserve">
     <value>День 1: відповідність та безпека.</value>
@@ -249,6 +303,9 @@
   <data name="Dev &amp; Prod" xml:space="preserve">
     <value>Dev &amp; Prod</value>
   </data>
+  <data name="DevOps Native" xml:space="preserve">
+    <value>DevOps-орієнтований</value>
+  </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Розробляйте виключно в UTC, тоді як система автоматично перетворює та відображає дати у локальному часовому поясі користувача.</value>
   </data>
@@ -257,9 +314,6 @@
   </data>
   <data name="Development preview. Not ready to replace your production registry." xml:space="preserve">
     <value>Перегляд для розробки. Не готово замінити ваш продуктивний реєстр.</value>
-  </data>
-  <data name="DevOps Native" xml:space="preserve">
-    <value>DevOps-орієнтований</value>
   </data>
   <data name="Discussions page" xml:space="preserve">
     <value>Сторінка обговорень</value>
@@ -309,11 +363,17 @@
   <data name="Entity Framework Core included" xml:space="preserve">
     <value>Entity Framework Core включено</value>
   </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Огляд Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>Оглянути пакети</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>Ознайомтеся зі своїми пакетами</value>
+  </data>
   <data name="FAQ" xml:space="preserve">
     <value>Часті питання</value>
-  </data>
-  <data name="faster" xml:space="preserve">
-    <value>швидше</value>
   </data>
   <data name="Feature tests available" xml:space="preserve">
     <value>Доступні функціональні тести</value>
@@ -327,8 +387,17 @@
   <data name="Features a built-in file management system with automatic avatar compression." xml:space="preserve">
     <value>Містить вбудовану систему керування файлами з автоматичним стисненням аватарів.</value>
   </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>Отримайте один раз. Збирайте знову.</value>
+  </data>
   <data name="File Mgmt &amp; Optimization" xml:space="preserve">
     <value>Керування файлами та оптимізація</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>Знайдіть.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>Знайдіть свою наступну залежність…</value>
   </data>
   <data name="Fine-grained RBAC" xml:space="preserve">
     <value>Деталізований RBAC</value>
@@ -339,9 +408,6 @@
   <data name="Flexible API" xml:space="preserve">
     <value>Гнучкий API</value>
   </data>
-  <data name="for any inquiries or to report issues." xml:space="preserve">
-    <value>для будь-яких запитів або повідомлення про проблеми.</value>
-  </data>
   <data name="Founder &amp; Architect at Aiursoft" xml:space="preserve">
     <value>Засновник та архітектор компанії Aiursoft</value>
   </data>
@@ -351,11 +417,14 @@
   <data name="Free" xml:space="preserve">
     <value>Безкоштовно</value>
   </data>
-  <data name="Free for Commercial Use" xml:space="preserve">
-    <value>Безкоштовно для комерційного використання</value>
-  </data>
   <data name="Free Software" xml:space="preserve">
     <value>Вільне програмне забезпечення</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>Безкоштовний та з відкритим кодом</value>
+  </data>
+  <data name="Free for Commercial Use" xml:space="preserve">
+    <value>Безкоштовно для комерційного використання</value>
   </data>
   <data name="Frequently asked questions" xml:space="preserve">
     <value>Часті запитання</value>
@@ -375,11 +444,14 @@
   <data name="Fully Offline" xml:space="preserve">
     <value>Повністю автономно</value>
   </data>
+  <data name="Generic Dockerfile only" xml:space="preserve">
+    <value>Тільки загальний Dockerfile</value>
+  </data>
   <data name="Generic configuration" xml:space="preserve">
     <value>Загальна конфігурація</value>
   </data>
-  <data name="Generic Dockerfile only" xml:space="preserve">
-    <value>Тільки загальний Dockerfile</value>
+  <data name="Get started" xml:space="preserve">
+    <value>Почніть</value>
   </data>
   <data name="GitLab CI" xml:space="preserve">
     <value>GitLab CI</value>
@@ -396,6 +468,9 @@
   <data name="Go to dashboard" xml:space="preserve">
     <value>Перейти до панелі керування</value>
   </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>Чудові пакети.</value>
+  </data>
   <data name="Handle recurring jobs like cleanup and synchronization with a comprehensive GUI for monitoring execution history and logs." xml:space="preserve">
     <value>Працюйте з повторюваними завданнями, такими як очищення та синхронізація, з комплексним інтерфейсом для моніторингу історії виконання та журналів.</value>
   </data>
@@ -405,14 +480,14 @@
   <data name="Handwritten based on Policies" xml:space="preserve">
     <value>Ручна реалізація на основі політик</value>
   </data>
-  <data name="Health check package available" xml:space="preserve">
-    <value>доступний пакет перевірки стану</value>
-  </data>
   <data name="Health Checks &amp; Probes" xml:space="preserve">
     <value>Перевірки стану та зонди</value>
   </data>
   <data name="Health Checks middleware available" xml:space="preserve">
     <value>Доступне проміжне програмне забезпечення для перевірки стану</value>
+  </data>
+  <data name="Health check package available" xml:space="preserve">
+    <value>доступний пакет перевірки стану</value>
   </data>
   <data name="Hello World!" xml:space="preserve">
     <value>Привіт, Світе!</value>
@@ -450,11 +525,14 @@
   <data name="Included" xml:space="preserve">
     <value>Включено</value>
   </data>
+  <data name="Includes Tutorials" xml:space="preserve">
+    <value>Містить навчальні матеріали</value>
+  </data>
   <data name="Includes extensive documentation and practical examples to get you started quickly." xml:space="preserve">
     <value>Містить детальну документацію та практичні приклади, щоб ви могли швидко розпочати роботу.</value>
   </data>
-  <data name="Includes Tutorials" xml:space="preserve">
-    <value>Містить навчальні матеріали</value>
+  <data name="Install packages" xml:space="preserve">
+    <value>Встановити пакети</value>
   </data>
   <data name="Integrated File Management" xml:space="preserve">
     <value>Інтегроване управління файлами</value>
@@ -468,14 +546,8 @@
   <data name="Interoperability" xml:space="preserve">
     <value>Взаємодія</value>
   </data>
-  <data name="is Free Software" xml:space="preserve">
-    <value>є вільним програмним забезпеченням</value>
-  </data>
   <data name="Is it free to use Aiursoft Nopkg?" xml:space="preserve">
     <value>Чи безкоштовно використовувати Aiursoft Nopkg?</value>
-  </data>
-  <data name="java.time API available" xml:space="preserve">
-    <value>Доступний API java.time</value>
   </data>
   <data name="Job Queue &amp; Scheduling GUI" xml:space="preserve">
     <value>Інтерфейс графічного керування чергою завдань та плануванням</value>
@@ -492,17 +564,11 @@
   <data name="K8s / Swarm Ready" xml:space="preserve">
     <value>Готовність до K8s / Swarm</value>
   </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>Менше перешкод.</value>
+  </data>
   <data name="Lint Check" xml:space="preserve">
     <value>Перевірка лінтів</value>
-  </data>
-  <data name="Maintain High Code Quality" xml:space="preserve">
-    <value>Підтримуйте високу якість коду</value>
-  </data>
-  <data name="Management Dashboard" xml:space="preserve">
-    <value>Панель управління</value>
-  </data>
-  <data name="Markdown To HTML" xml:space="preserve">
-    <value>Markdown у HTML</value>
   </data>
   <data name="MIT Licence" xml:space="preserve">
     <value>Ліцензія MIT</value>
@@ -510,8 +576,29 @@
   <data name="MIT License" xml:space="preserve">
     <value>MIT License</value>
   </data>
+  <data name="Maintain High Code Quality" xml:space="preserve">
+    <value>Підтримуйте високу якість коду</value>
+  </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>Зробіть наступний реліз</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>Керувати API-ключами</value>
+  </data>
+  <data name="Management Dashboard" xml:space="preserve">
+    <value>Панель управління</value>
+  </data>
+  <data name="Markdown To HTML" xml:space="preserve">
+    <value>Markdown у HTML</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Познайомтеся з Aiursoft Nupkg, нашою реєстрацією NuGet із тим самим підходом до публікації та кешування.</value>
+  </data>
   <data name="Models are validated on both client and server sides based on data annotations." xml:space="preserve">
     <value>Моделі валідуються на клієнтській та серверній сторонах на основі анотацій даних.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>Більше створення.</value>
   </data>
   <data name="Multi-timezone Handling" xml:space="preserve">
     <value>Обробка багатьох часових поясів</value>
@@ -528,20 +615,14 @@
   <data name="Music Tools" xml:space="preserve">
     <value>Музичні інструменти</value>
   </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>Нативні npm-клієнти</value>
+  </data>
   <data name="Needs CASL or similar" xml:space="preserve">
     <value>Потребує CASL або аналог</value>
   </data>
   <data name="Needs Celery + Flower" xml:space="preserve">
     <value>Потрібні Celery + Flower</value>
-  </data>
-  <data name="Needs complex authentication logic" xml:space="preserve">
-    <value>Потребує складної логіки аутентифікації</value>
-  </data>
-  <data name="Needs config/plugins" xml:space="preserve">
-    <value>Потребує конфігурації/плагінів</value>
-  </data>
-  <data name="Needs django-health-check package" xml:space="preserve">
-    <value>Потрібен пакет django-health-check</value>
   </data>
   <data name="Needs ESLint/Prettier setup" xml:space="preserve">
     <value>Потрібна налаштування ESLint/Prettier</value>
@@ -551,9 +632,6 @@
   </data>
   <data name="Needs Laravel Sail" xml:space="preserve">
     <value>Потрібен Laravel Sail</value>
-  </data>
-  <data name="Needs manual configuration" xml:space="preserve">
-    <value>Потребує ручного налаштування</value>
   </data>
   <data name="Needs Medialibrary" xml:space="preserve">
     <value>Потрібна Medialibrary</value>
@@ -567,26 +645,53 @@
   <data name="Needs Spring Security config" xml:space="preserve">
     <value>Потрібна конфігурація Spring Security</value>
   </data>
-  <data name="Needs third-party plugins" xml:space="preserve">
-    <value>Потрібні плагіни сторонніх розробників</value>
-  </data>
   <data name="Needs TypeORM or similar" xml:space="preserve">
     <value>Потребує TypeORM або аналога</value>
+  </data>
+  <data name="Needs complex authentication logic" xml:space="preserve">
+    <value>Потребує складної логіки аутентифікації</value>
+  </data>
+  <data name="Needs config/plugins" xml:space="preserve">
+    <value>Потребує конфігурації/плагінів</value>
+  </data>
+  <data name="Needs django-health-check package" xml:space="preserve">
+    <value>Потрібен пакет django-health-check</value>
+  </data>
+  <data name="Needs manual configuration" xml:space="preserve">
+    <value>Потребує ручного налаштування</value>
+  </data>
+  <data name="Needs third-party plugins" xml:space="preserve">
+    <value>Потрібні плагіни сторонніх розробників</value>
   </data>
   <data name="No dependency on any cloud vendor. Run anywhere, any time." xml:space="preserve">
     <value>Немає залежності від постачальника хмарних послуг. Запускайте в будь-якому місці, в будь-який час.</value>
   </data>
-  <data name="Offline Capable" xml:space="preserve">
-    <value>Підтримка офлайн-режиму</value>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Каталог пакетів Nopkg у браузері</value>
   </data>
   <data name="OIDC &amp; SSO" xml:space="preserve">
     <value>OIDC &amp; SSO</value>
   </data>
+  <data name="ORM &amp; Migrations" xml:space="preserve">
+    <value>ORM та міграції</value>
+  </data>
+  <data name="Offline Capable" xml:space="preserve">
+    <value>Підтримка офлайн-режиму</value>
+  </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>Дзеркалювання за запитом</value>
+  </data>
   <data name="One Click Start" xml:space="preserve">
     <value>Один клік для початку</value>
   </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>Один реєстр. Ваші щоденні інструменти.</value>
+  </data>
   <data name="Open Source" xml:space="preserve">
     <value>Відкритий код</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>Відкритий код. Самохостинг. Побудовано на протоколі npm.</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Інтеграція OpenID Connect</value>
@@ -594,14 +699,14 @@
   <data name="Optimized Docker &amp; K8s config" xml:space="preserve">
     <value>Оптимізована конфігурація Docker та K8s</value>
   </data>
-  <data name="ORM &amp; Migrations" xml:space="preserve">
-    <value>ORM та міграції</value>
-  </data>
   <data name="Out-of-the-box" xml:space="preserve">
     <value>Вбудовано</value>
   </data>
   <data name="Permission discovery and sync" xml:space="preserve">
     <value>Виявлення та синхронізація дозволів</value>
+  </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>Особисті API-ключі</value>
   </data>
   <data name="Pint or similar needed" xml:space="preserve">
     <value>Потрібен Pint або аналогічний інструмент</value>
@@ -609,17 +714,29 @@
   <data name="Pre-configured /healthz and readiness probes" xml:space="preserve">
     <value>Заздалегідь налаштовані зонди /healthz та готовності</value>
   </data>
-  <data name="Pre-configured and tested" xml:space="preserve">
-    <value>Налаштовано та протестовано</value>
-  </data>
   <data name="Pre-configured CI/CD pipelines specifically for GitLab." xml:space="preserve">
     <value>Запередньо налаштовані CI/CD-пайплайни, спеціально для GitLab.</value>
+  </data>
+  <data name="Pre-configured and tested" xml:space="preserve">
+    <value>Налаштовано та протестовано</value>
   </data>
   <data name="Pre-configured pipelines for dev/prod" xml:space="preserve">
     <value>Заблаговідні конвеєри для dev/prod</value>
   </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>Публікуйте локально. Дзеркалюйте за потреби.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>Публікуйте те, що ви створюєте. Кешуйте те, від чого залежите. Збирайте ваші пакети npm в одному місці, разом із інструментами, які ви вже використовуєте.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>Публікуйте з особистим API-ключем та керуйте власністю на пакети. Щойно пакет буде опубліковано локально, його подальша доля залишається у ваших руках.</value>
+  </data>
   <data name="Publish your packages and cache upstream releases with optional S360 admission." xml:space="preserve">
     <value>Публікуйте свої пакети та кешуйте релізи з вищестоячих реєстрів з опційним допуском S360.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>Опублікуйте свою роботу</value>
   </data>
   <data name="Quality Gate" xml:space="preserve">
     <value>Якість</value>
@@ -648,6 +765,9 @@
   <data name="Reviews" xml:space="preserve">
     <value>Відгуки</value>
   </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>Розміщені у себе вдома.</value>
+  </data>
   <data name="Robust Integration Testing" xml:space="preserve">
     <value>Надійне інтеграційне тестування</value>
   </data>
@@ -660,6 +780,12 @@
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Безперешкодна інтеграція з будь-яким постачальником OpenID Connect із автоматичною синхронізацією ролей.</value>
   </data>
+  <data name="Search" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Пошук пакетів</value>
+  </data>
   <data name="Shift with confidence" xml:space="preserve">
     <value>Переміщуйтесь із впевненістю</value>
   </data>
@@ -668,6 +794,9 @@
   </data>
   <data name="Single Container" xml:space="preserve">
     <value>Single Container</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>Перейти до вмісту</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Розумні перевизначення конфігурації</value>
@@ -678,17 +807,17 @@
   <data name="Smart dark mode that automatically adapts to the user&apos;s system settings." xml:space="preserve">
     <value>Розумний темний режим, який автоматично адаптується до системних налаштувань користувача.</value>
   </data>
-  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
-    <value>Стандартна реалізація. Перемикання постачальників без компіляції.</value>
-  </data>
   <data name="Standard OpenID" xml:space="preserve">
     <value>Стандартний OpenID</value>
   </data>
-  <data name="Start a new project" xml:space="preserve">
-    <value>Розпочати новий проєкт</value>
+  <data name="Standard implementation. Switch providers without compilation." xml:space="preserve">
+    <value>Стандартна реалізація. Перемикання постачальників без компіляції.</value>
   </data>
   <data name="Start Shipping Value." xml:space="preserve">
     <value>Почніть доставляти цінність.</value>
+  </data>
+  <data name="Start a new project" xml:space="preserve">
+    <value>Розпочати новий проєкт</value>
   </data>
   <data name="Start with a single &apos;docker run&apos; command." xml:space="preserve">
     <value>Почніть із одного командного рядка &apos;docker run&apos;.</value>
@@ -702,23 +831,23 @@
   <data name="Strict Lint Rules" xml:space="preserve">
     <value>Строгі правила лінтингу</value>
   </data>
+  <data name="Strict Unit Testing" xml:space="preserve">
+    <value>Строге юніт-тестування</value>
+  </data>
   <data name="Strict linting rules and zero warnings by default." xml:space="preserve">
     <value>Строгі правила лінтингу та нульові попередження за замовчуванням.</value>
   </data>
   <data name="Strict linting rules with 0 warnings in the default project." xml:space="preserve">
     <value>Строгі правила лінтингу з 0 попереджень у проекті за замовчуванням.</value>
   </data>
-  <data name="Strict Unit Testing" xml:space="preserve">
-    <value>Строге юніт-тестування</value>
-  </data>
   <data name="Strongly Consistent Linting" xml:space="preserve">
     <value>Сильна й узгоджена перевірка коду</value>
   </data>
-  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
-    <value>Підтримує як змінні середовища, так і налаштування, зберігаються у базі даних, з автоматичним пріоритетом для змінних середовища для безперервного перекриття.</value>
-  </data>
   <data name="Supports JetBrains Rider for easy code style fixes." xml:space="preserve">
     <value>Підтримує JetBrains Rider для легких виправлень стилю коду.</value>
+  </data>
+  <data name="Supports both environment variables and database-backed settings, with automatic priority given to environment variables for seamless overrides." xml:space="preserve">
+    <value>Підтримує як змінні середовища, так і налаштування, зберігаються у базі даних, з автоматичним пріоритетом для змінних середовища для безперервного перекриття.</value>
   </data>
   <data name="Task Runner" xml:space="preserve">
     <value>Планувальник завдань</value>
@@ -738,6 +867,9 @@
   <data name="Testing module available" xml:space="preserve">
     <value>Доступний модуль тестування</value>
   </data>
+  <data name="The Philosophy" xml:space="preserve">
+    <value>Філософія</value>
+  </data>
   <data name="The definitive, battle-tested .NET enterprise foundation. From Auth to AI, we&apos;ve solved the hard parts so you don&apos;t have to." xml:space="preserve">
     <value>Визначна, випробувана на практиці основа .NET для бізнес-рішень. Від Auth до AI — ми вирішили складні завдання, щоб ви не мали цього робити.</value>
   </data>
@@ -747,23 +879,23 @@
   <data name="The nopkg is built for easy deployment. It includes full Docker support, so you can containerize your app and run it anywhere. You can also deploy it directly to IIS, Azure App Service, or any server that supports ASP.NET Core." xml:space="preserve">
     <value>Цей шаблон створено для простоти розгортання. Він включає повну підтримку Docker, тому ви можете контейнеризувати ваш додаток і запускати його де завгодно. Ви також можете розгорнути його безпосередньо в IIS, Azure App Service або на будь-якому сервері, що підтримує ASP.NET Core.</value>
   </data>
-  <data name="The Philosophy" xml:space="preserve">
-    <value>Філософія</value>
-  </data>
   <data name="This is a nopkg project" xml:space="preserve">
     <value>Це шаблонний проєкт</value>
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Це шаблонний проект, з якого ми починаємо нашу подорож...</value>
   </data>
-  <data name="Timezone-aware fields" xml:space="preserve">
-    <value>Поля з урахуванням часових поясів</value>
-  </data>
   <data name="TimeZoneInfo API available" xml:space="preserve">
     <value>API TimeZoneInfo доступна</value>
   </data>
+  <data name="Timezone-aware fields" xml:space="preserve">
+    <value>Поля з урахуванням часових поясів</value>
+  </data>
   <data name="Trusted by production-grade applications including AnduinOS, StatHub, and Warp. We don&apos;t just share this code; we run our entire business on it." xml:space="preserve">
     <value>Надійний для продуктивних додатків, зокрема AnduinOS, StatHub та Warp. Ми не просто ділимося цим кодом; ми використовуємо його для всієї своєї діяльності.</value>
+  </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>Дві екосистеми. Один знайомий досвід.</value>
   </data>
   <data name="Unified Env" xml:space="preserve">
     <value>Уніфікований середовище</value>
@@ -771,11 +903,20 @@
   <data name="Unified Identity" xml:space="preserve">
     <value>Єдиний ідентифікатор</value>
   </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>Зовнішні пакети отримуються за потреби та зберігаються локально. Кешовані артефакти залишаються близько до ваших збірок.</value>
+  </data>
   <data name="Usage" xml:space="preserve">
     <value>Використання</value>
   </data>
   <data name="Use it as a foundation for your SaaS, a backend for your mobile app, a corporate website, or a personal blog. The possibilities are endless." xml:space="preserve">
     <value>Використовуйте його як основу для вашого SaaS, бекенд для вашого мобільного додатку, корпоративний веб-сайт або особистий блог. Можливості нескінченні.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>Використовуйте. Релізьте.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>Використовуйте наведені нижче команди, щоб підключитися до цієї інстанції. Публікація вимагає особистого ключа та дозволу на публікацію.</value>
   </data>
   <data name="View on GitHub" xml:space="preserve">
     <value>Переглянути на GitHub</value>
@@ -816,6 +957,18 @@
   <data name="Your npm registry, ready when you need it." xml:space="preserve">
     <value>Ваш реєстр npm, готовий, коли вам потрібен.</value>
   </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>Ваш реєстр npm. Ваша інфраструктура.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>Ваш реєстр, погляд.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>Ваші релізи, ваші правила</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>Ваш звичний клієнт. Ваш власний джерел пакетів.</value>
+  </data>
   <data name="Yubikey &amp; TOTP" xml:space="preserve">
     <value>Yubikey &amp; TOTP</value>
   </data>
@@ -827,6 +980,18 @@
   </data>
   <data name="Zero Tolerance Lint" xml:space="preserve">
     <value>Лінт із нульовою толерантністю</value>
+  </data>
+  <data name="faster" xml:space="preserve">
+    <value>швидше</value>
+  </data>
+  <data name="for any inquiries or to report issues." xml:space="preserve">
+    <value>для будь-яких запитів або повідомлення про проблеми.</value>
+  </data>
+  <data name="is Free Software" xml:space="preserve">
+    <value>є вільним програмним забезпеченням</value>
+  </data>
+  <data name="java.time API available" xml:space="preserve">
+    <value>Доступний API java.time</value>
   </data>
 
 </root>

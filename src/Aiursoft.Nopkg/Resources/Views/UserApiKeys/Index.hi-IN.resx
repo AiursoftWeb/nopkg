@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
+    <value>API कुंजियाँ</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
     <value>API कुंजी रद्द कर दी गई।</value>
   </data>
-  <data name="API Keys" xml:space="preserve">
-    <value>API कुंजियाँ</value>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>अपनी खाता अनुमतियों के साथ पैकेज प्रकाशित करने के लिए एक व्यक्तिगत कुंजी बनाएं।</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>अपना पहला कुंजी बनाएं</value>
   </data>
   <data name="Expired" xml:space="preserve">
     <value>समाप्त</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>उपयोग</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>आपकी पहली रिलीज़ यहीं से शुरू होती है</value>
   </data>
 
 </root>
