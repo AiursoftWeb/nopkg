@@ -1,4 +1,4 @@
-using System.Net.Http.Json;
+using System.Text;
 using System.Text.Json.Nodes;
 
 namespace Aiursoft.Nopkg.Registry;
@@ -21,7 +21,8 @@ public partial class NpmRegistry
         // Use the configured registry and a new request: never forward a publisher's credentials.
         using var request = new HttpRequestMessage(HttpMethod.Post, new Uri(_origin, "-/npm/v1/security/advisories/bulk"));
         request.Headers.Accept.ParseAdd("application/json");
-        request.Content = JsonContent.Create(packages);
+        // Some registry proxies cannot relay chunked audit bodies. The bounded JSON has a known length.
+        request.Content = new StringContent(packages.ToJsonString(), Encoding.UTF8, "application/json");
         using var response = await client.SendAsync(request, HttpCompletionOption.ResponseHeadersRead, token);
         response.EnsureSuccessStatusCode();
         await using var input = await response.Content.ReadAsStreamAsync(token);
