@@ -61,8 +61,6 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
     {
         PackageName(name);
         if (localPackages != null && await localPackages.FindAsync(name, token) is { } local) return local.Metadata;
-        var approved = _admission == null || _admission.UsesRegistryPolicy ? null : await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
-        if (approved is { Count: 0 }) throw new FileNotFoundException("No admitted package versions found.");
         var gate = Gate(_metadataGates, name);
         await gate.WaitAsync(token);
         try
@@ -107,7 +105,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 Directory.CreateDirectory(directory);
                 await AtomicWriteAsync(file, data, token);
             }
-            return await FilterMetadataAsync(metadata, approved, token);
+            return await FilterMetadataAsync(metadata, token);
         }
         finally { gate.Release(); }
     }
@@ -181,7 +179,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                 return path;
             }
             if (options.CacheOnly) throw new FileNotFoundException("Package version is not cached.");
-            var expected = await ExpectedHashAsync(name, version, token);
+            await RequireVersionAsync(name, version, token);
             var metadata = await MetadataAsync(name, token);
             if (metadata["versions"]?[version] is not JsonObject manifest || manifest["dist"] is not JsonObject dist)
                 throw new FileNotFoundException("Package version not found.");
@@ -202,7 +200,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
                     await CopyLimitedAsync(input, output, options.MaxArchiveBytes, token);
                 await VerifyAsync(temporary, dist, token);
                 await VerifyIdentityAsync(temporary, name, version, token);
-                await VerifyAdmissionAsync(temporary, name, version, dist, expected, token);
+                await VerifyAdmissionAsync(temporary, name, version, dist, token);
                 // Finish both files after verification, even if the downloading client disconnects.
                 // A request still requires a complete sidecar and repeats admission on every read.
                 File.Move(temporary, path, overwrite: true);
@@ -358,24 +356,12 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         HashSet<(string Name, string Version)>? allowed = null;
         if (_admission != null && cached.Count > 0)
         {
-            if (_admission.UsesRegistryPolicy)
-            {
-                var candidates = cached.SelectMany(p => p.Versions.Select(v =>
-                    new MirrorCandidate("npm", p.Name, v, _admission.PolicySource))).ToList();
-                allowed = (await _admission.CandidatesAsync(candidates, token))
-                    .Select(c => (c.Name, c.Version)).ToHashSet();
-            }
-            else
-            {
-                var approved = cached.Count == 1
-                    ? (await _admission.ApprovedAsync(cached[0].Name, _origin.AbsoluteUri.TrimEnd('/'), token)).Values.ToList()
-                    : await _admission.ApprovedCatalogAsync(_origin.AbsoluteUri.TrimEnd('/'), token);
-                var identities = cached.SelectMany(p => p.Versions.Select(v => (p.Name, Version: v))).ToHashSet();
-                var decisions = await _admission.AssessAsync(approved.Where(a => identities.Contains((a.Name, a.Version))).ToList(), token);
-                allowed = decisions.Where(d => d.Trusted && d.PendingVerification == false)
-                    .Select(d => (d.Dependency.Name, d.Dependency.Version)).ToHashSet();
-            }
+            var candidates = cached.SelectMany(p => p.Versions.Select(v =>
+                new MirrorCandidate("npm", p.Name, v, PolicySource))).ToList();
+            allowed = (await _admission.CandidatesAsync(candidates, token))
+                .Select(c => (c.Name, c.Version)).ToHashSet();
         }
+
         var result = new List<CachedPackage>();
         foreach (var package in cached)
         {

@@ -22,15 +22,15 @@ Registry__S360__Server=https://s360.example.com
 Registry__S360__CheckKey=<dedicated personal S360 check key>
 ```
 
-Deploy S360 with its artifact admission API first. Configure the same original registry source in both applications. Use a dedicated check key without baseline publication permission; keep it outside Git.
+Use a dedicated check key without baseline publication permission; keep it outside Git. Set `Registry__S360__PolicySource` to this registry's HTTPS URL (for example, `https://packages.example.com/npm`) and permit it in S360's `SupplyChain:NpmSources`. Approve each package name and version range there once. Leave `PolicySource` empty to use the upstream URL as the policy identity. **S360 needs no upstream mapping and never downloads package files.**
 
-With admission enabled, metadata and tags expose only admitted exact versions, including versions not yet downloaded. A version grant alone is insufficient: independent source and vulnerability verification must be current. Downloads must match the admitted original source, version and raw SHA256, as well as npm integrity and the package's real identity. Admission is checked again after download and on every cached read. The package catalog shows admitted known versions separately from stored archives.
+Nopkg queries the existing `POST /api/artifacts/assess` endpoint with package names, versions and their policy source. It sends no archive or file hash. Metadata and tags expose approved versions even before they are cached. On the first download, Nopkg checks npm integrity and the archive's package identity, records its own SHA256, and rechecks policy before committing the cache.
 
-Revoked versions are removed from metadata, and cached archive requests return 403. S360 failures return 503; there is no uncontrolled fallback. Metadata, conditional requests, GET, HEAD and byte ranges all use the same gate. Package responses use `Cache-Control: no-store`; reverse proxies must respect it. A previously downloaded client copy cannot be revoked remotely.
+Revoked mirror versions disappear from metadata and cached downloads return 403. S360 failures or unavailable vulnerability data return 503 without uncontrolled fallback. Conditional requests, GET, HEAD and byte ranges use the same gate. Responses use `Cache-Control: no-store`; reverse proxies must respect it. A previously downloaded client copy cannot be revoked remotely.
 
-The first protocol preview had no provenance sidecar. Adoption of those cached files requires checking original distribution origin, integrity, package identity and current independent admission. Already recorded provenance is never silently reassigned to a different upstream.
+Legacy cached files without a provenance sidecar require the same origin, integrity, identity and policy checks. Recorded provenance is never silently reassigned to another upstream.
 
-Global artifact admission does not approve a project's dependency graph or declare production use. Keep the project's existing S360 checks. Nopkg never creates approval rules. Origin-based admission is read-only; single-policy mirroring can ask S360 to independently verify and record a cold candidate before it is served.
+**Local publishing is separate:** an authorized upload permanently makes the package name locally managed. Local packages bypass mirror admission; missing versions are never fetched upstream. Project baseline reports and vulnerability alerts remain independent of package downloads. Nopkg creates no approval rules or project baselines.
 
 ## Offline operation
 
@@ -41,9 +41,3 @@ Set `Registry__CacheOnly=true` to prevent all upstream requests. Cached metadata
 Use a lockfile whose resolved archive URLs point to this Nopkg deployment. Preserve package versions and integrity values when migrating URLs. Verify with an empty npm client cache, normal install scripts and the application's real build commands. Native tools, SDKs and packages that fetch additional assets need their own internal supply before a complete build can work without the internet.
 
 Disabling `Registry__S360__Enabled` disables admission enforcement. Do not use that switch as a workaround for rejected dependencies or a policy outage.
-
-### One policy for the internal registry
-
-Set `Registry:S360:PolicySource` to this registry's HTTPS URL, for example `https://nopkg.aiursoft.com/npm`. In S360, allow it in `SupplyChain:NpmSources` and add a `SupplyChain:Mirrors` entry with `Ecosystem=npm`, `Source` equal to the internal URL, and `Upstream=https://registry.npmjs.org`. Set `Registry:Upstream` to the same upstream. Approve each package name and version range only for Nopkg; no duplicate npmjs.org approval is required.
-
-Metadata advertises policy-eligible versions without downloading tarballs. A cold tarball remains private until S360 independently downloads the configured upstream archive, checks its identity and SHA256, and completes its vulnerability check. Cached downloads still require current admission. Locally published names take precedence over mirrors. Leaving `PolicySource` empty preserves origin-based admission.

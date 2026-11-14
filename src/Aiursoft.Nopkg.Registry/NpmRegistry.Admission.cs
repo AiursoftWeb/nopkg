@@ -7,21 +7,18 @@ namespace Aiursoft.Nopkg.Registry;
 
 public partial class NpmRegistry
 {
-    private async Task<JsonObject> FilterMetadataAsync(JsonObject metadata,
-        IReadOnlyDictionary<string, ArtifactIdentity>? approved, CancellationToken token)
+    private string PolicySource => _admission is { UsesRegistryPolicy: true }
+        ? _admission.PolicySource : _origin.AbsoluteUri.TrimEnd('/');
+
+    private async Task<JsonObject> FilterMetadataAsync(JsonObject metadata, CancellationToken token)
     {
         if (_admission == null) return metadata;
-        if (_admission.UsesRegistryPolicy)
-        {
-            var candidateVersions = ((JsonObject)metadata["versions"]!).Select(v => v.Key);
-            var eligible = await _admission.CandidatesAsync(metadata["name"]!.GetValue<string>(), candidateVersions, token);
-            return FilterVersions(metadata, eligible);
-        }
-        if (approved == null) throw new AdmissionUnavailableException();
-        var decisions = await _admission.AssessAsync(approved.Values.ToList(), token);
-        var allowed = decisions.Where(d => d.Trusted && d.PendingVerification == false)
-            .Select(d => d.Dependency.Version).ToHashSet(StringComparer.Ordinal);
-        return FilterVersions(metadata, allowed);
+        var candidates = ((JsonObject)metadata["versions"]!).Select(v =>
+            new MirrorCandidate("npm", metadata["name"]!.GetValue<string>(), v.Key, PolicySource)).ToList();
+        var eligible = (await _admission.CandidatesAsync(candidates, token))
+            .Select(c => c.Version).ToHashSet(StringComparer.Ordinal);
+        if (eligible.Count == 0) throw new FileNotFoundException("No package version is admitted by S360.");
+        return FilterVersions(metadata, eligible);
     }
 
     private static JsonObject FilterVersions(JsonObject metadata, HashSet<string> allowed)
@@ -40,18 +37,10 @@ public partial class NpmRegistry
         return result;
     }
 
-    private async Task<string?> ExpectedHashAsync(string name, string version, CancellationToken token)
+    private async Task RequireVersionAsync(string name, string version, CancellationToken token)
     {
-        if (_admission == null) return null;
-        if (_admission.UsesRegistryPolicy)
-        {
-            if (!(await _admission.CandidatesAsync(name, [version], token)).Contains(version)) throw new ArtifactDeniedException();
-            return null;
-        }
-        var approved = await _admission.ApprovedAsync(name, _origin.AbsoluteUri.TrimEnd('/'), token);
-        if (!approved.TryGetValue(version, out var artifact)) throw new ArtifactDeniedException();
-        await _admission.RequireAsync(artifact, token);
-        return artifact.Sha256;
+        if (_admission != null)
+            await _admission.RequireAsync(new ArtifactIdentity("npm", name, version, PolicySource, ""), token);
     }
 
     private void ValidateTarballOrigin(JsonObject dist)
@@ -63,15 +52,12 @@ public partial class NpmRegistry
     }
 
     private async Task VerifyAdmissionAsync(string path, string name, string version, JsonObject dist,
-        string? expectedHash, CancellationToken token)
+        CancellationToken token)
     {
         if (_admission == null) return;
-        if (expectedHash == null && !_admission.UsesRegistryPolicy) throw new ArtifactDeniedException();
         var artifact = await ActualArtifactAsync(path, name, version, token);
-        if (expectedHash != null && artifact.Sha256 != expectedHash) throw new ArtifactDeniedException();
         // Re-evaluate after download and integrity checks, immediately before committing bytes.
-        if (_admission.UsesRegistryPolicy) await _admission.VerifyMirrorAsync(artifact, token);
-        else await _admission.RequireAsync(artifact, token);
+        await _admission.RequireAsync(artifact, token);
         dist["_nopkg"] = JsonSerializer.SerializeToNode(artifact);
     }
 
@@ -92,8 +78,7 @@ public partial class NpmRegistry
             ArtifactIdentity? recorded;
             try { recorded = provenance.Deserialize<ArtifactIdentity>(); }
             catch (JsonException) { throw new InvalidDataException("Invalid cached artifact provenance."); }
-            // A fixed internal policy can independently verify historical bytes against its
-            // configured upstream. Keep the original provenance; never reclassify the cache.
+            // Keep the original bytes and provenance across policy-source changes.
             var expected = _admission.UsesRegistryPolicy && recorded != null
                 ? actual with { Source = recorded.Source }
                 : actual;
@@ -102,8 +87,7 @@ public partial class NpmRegistry
         }
         else
         {
-            // The protocol preview predates provenance. Adoption requires an independently
-            // verified exact artifact, compatible original origin, and the package's real identity.
+            // A legacy cache needs valid origin, identity and current compliance.
             ValidateTarballOrigin(saved);
             await VerifyIdentityAsync(path, name, version, token);
             await _admission.RequireAsync(actual, token);

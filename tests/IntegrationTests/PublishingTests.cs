@@ -231,7 +231,7 @@ public class PublishingTests : TestBase
         var name="unavailable-mirror";
         var directory=Path.Combine(_registryPath,Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(name))));
         Directory.CreateDirectory(directory);
-        await File.WriteAllTextAsync(Path.Combine(directory,"metadata.json"),new JsonObject { ["name"]=name,["versions"]=new JsonObject() }.ToJsonString());
+        await File.WriteAllTextAsync(Path.Combine(directory,"metadata.json"),new JsonObject { ["name"]=name,["versions"]=new JsonObject { ["1.0.0"]=new JsonObject { ["name"]=name,["version"]="1.0.0" } } }.ToJsonString());
         using var response=await Http.GetAsync("/Dashboard");
         Assert.AreEqual(HttpStatusCode.OK,response.StatusCode);
         var html=await response.Content.ReadAsStringAsync();

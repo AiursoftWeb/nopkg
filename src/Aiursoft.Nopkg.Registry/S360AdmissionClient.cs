@@ -13,16 +13,13 @@ public class S360AdmissionOptions
 
 public record ArtifactIdentity(string Ecosystem, string Name, string Version, string Source, string Sha256);
 public record MirrorCandidate(string Ecosystem, string Name, string Version, string Source);
-public record MirrorCandidateDecision(MirrorCandidate Candidate, bool CanFetch);
-public record MirrorCandidateResponse(List<MirrorCandidateDecision>? Decisions);
 public record ArtifactDecision(ArtifactIdentity Dependency, bool Trusted, bool? PendingVerification);
 public record ArtifactAssessmentResponse(List<ArtifactDecision?>? Decisions);
-public record ApprovedArtifactPage(List<ArtifactIdentity?>? Artifacts, int? NextAfterId, int UpperId);
 
 public class AdmissionUnavailableException() : Exception("Package admission is unavailable. Please try again later.");
 public class ArtifactDeniedException() : Exception("This package version is not admitted by S360.");
 
-/// <summary>Uses existing policy; mirror checks record verification evidence, never approvals.</summary>
+/// <summary>Queries compliance only; package downloads and integrity checks belong to the registry.</summary>
 public class S360AdmissionClient
 {
     public bool UsesRegistryPolicy { get; }
@@ -76,61 +73,14 @@ public class S360AdmissionClient
         var decisions = new List<ArtifactDecision>();
         foreach (var batch in artifacts.Chunk(500))
         {
-            var result = await SendAsync<ArtifactAssessmentResponse>(HttpMethod.Post, "api/artifacts/assess", new { dependencies = batch }, token);
+            var result = await SendAsync<ArtifactAssessmentResponse>(HttpMethod.Post, "api/artifacts/assess", new { dependencies = batch.Select(a => new { a.Ecosystem, a.Name, a.Version, a.Source }) }, token);
             if (result.Decisions == null || result.Decisions.Count != batch.Length ||
-                result.Decisions.Where((d, i) => d == null || d.Dependency != batch[i] || d.PendingVerification == null).Any())
+                result.Decisions.Where((d, i) => d?.Dependency is not { } dependency || dependency with { Sha256 = batch[i].Sha256 } != batch[i] || d.PendingVerification == null).Any())
                 throw new AdmissionUnavailableException();
-            decisions.AddRange(result.Decisions.Select(d => d!));
+            if (result.Decisions.Any(d => d!.PendingVerification == true)) throw new AdmissionUnavailableException();
+            decisions.AddRange(result.Decisions.Select((d, i) => d! with { Dependency = batch[i] }));
         }
         return decisions;
-    }
-
-    public async Task<IReadOnlyDictionary<string, ArtifactIdentity>> ApprovedAsync(string name, string source, CancellationToken token)
-    {
-        var artifacts = await ApprovedArtifactsAsync(name, source, token);
-        return WithoutConflicts(artifacts).ToDictionary(a => a.Version, StringComparer.Ordinal);
-    }
-
-    public async Task<IReadOnlyList<ArtifactIdentity>> ApprovedCatalogAsync(string source, CancellationToken token) =>
-        WithoutConflicts(await ApprovedArtifactsAsync(null, source, token)).ToList();
-
-    private static IEnumerable<ArtifactIdentity> WithoutConflicts(IEnumerable<ArtifactIdentity> artifacts) =>
-        artifacts.Distinct().GroupBy(a => (a.Name, a.Version))
-            .Where(group => group.Count() == 1).Select(group => group.Single());
-
-    private async Task<List<ArtifactIdentity>> ApprovedArtifactsAsync(string? name, string source, CancellationToken token)
-    {
-        var artifacts = new List<ArtifactIdentity>();
-        var after = 0;
-        int? upper = null;
-        var take = name == null ? 500 : 100;
-        do
-        {
-            var path = $"api/artifacts/approved?ecosystem=npm&source={Uri.EscapeDataString(source)}&afterId={after}&take={take}";
-            if (name != null) path += $"&name={Uri.EscapeDataString(name)}";
-            if (upper.HasValue) path += $"&upperId={upper.Value}";
-            var page = await SendAsync<ApprovedArtifactPage>(HttpMethod.Get, path, null, token);
-            if (page.Artifacts == null || page.Artifacts.Count > take || page.UpperId < after ||
-                (upper.HasValue && page.UpperId != upper.Value) ||
-                (page.NextAfterId.HasValue && (page.NextAfterId <= after || page.NextAfterId > page.UpperId)))
-                throw new AdmissionUnavailableException();
-            upper = page.UpperId;
-            foreach (var artifact in page.Artifacts)
-            {
-                if (artifact == null || artifact.Ecosystem != "npm" || string.IsNullOrEmpty(artifact.Name) ||
-                    (name != null && artifact.Name != name) || artifact.Source != source ||
-                    string.IsNullOrWhiteSpace(artifact.Version) || artifact.Version.Length > 128 ||
-                    artifact.Sha256 is not { Length: 64 } || !artifact.Sha256.All(Uri.IsHexDigit))
-                    throw new AdmissionUnavailableException();
-                try { NpmRegistry.PackageName(artifact.Name); }
-                catch (ArgumentException) { throw new AdmissionUnavailableException(); }
-                artifacts.Add(artifact with { Sha256 = artifact.Sha256.ToLowerInvariant() });
-            }
-            if (!page.NextAfterId.HasValue) break;
-            after = page.NextAfterId.Value;
-        } while (true);
-
-        return artifacts;
     }
 
     public async Task<HashSet<string>> CandidatesAsync(string name, IEnumerable<string> versions, CancellationToken token)
@@ -145,34 +95,18 @@ public class S360AdmissionClient
         var allowed = new List<MirrorCandidate>();
         foreach (var batch in candidates.Distinct().Chunk(500))
         {
-            var result = await SendAsync<MirrorCandidateResponse>(HttpMethod.Post, "api/artifacts/mirror/candidates", new { candidates = batch }, token);
-            if (result.Decisions == null || result.Decisions.Count != batch.Length ||
-                result.Decisions.Where((d, i) => d.Candidate != batch[i]).Any())
-                throw new AdmissionUnavailableException();
-            allowed.AddRange(result.Decisions.Where(d => d.CanFetch).Select(d => d.Candidate));
+            var decisions = await AssessAsync(batch.Select(c =>
+                new ArtifactIdentity(c.Ecosystem, c.Name, c.Version, c.Source, "")).ToList(), token);
+            allowed.AddRange(decisions.Where(d => d.Trusted).Select(d =>
+                new MirrorCandidate(d.Dependency.Ecosystem, d.Dependency.Name, d.Dependency.Version, d.Dependency.Source)));
         }
         return allowed;
     }
 
-    public async Task VerifyMirrorAsync(ArtifactIdentity artifact, CancellationToken token)
-    {
-        var requested = artifact with { Source = PolicySource };
-        var decision = await SendAsync<ArtifactDecision>(HttpMethod.Post, "api/artifacts/mirror/verify", requested, token);
-        if (decision.Dependency != requested || decision.PendingVerification == null) throw new AdmissionUnavailableException();
-        if (!decision.Trusted || decision.PendingVerification != false) throw new ArtifactDeniedException();
-    }
-
     public async Task RequireAsync(ArtifactIdentity artifact, CancellationToken token)
     {
-        if (UsesRegistryPolicy)
-        {
-            var requested = artifact with { Source = PolicySource };
-            var assessed = (await AssessAsync([requested], token))[0];
-            if (assessed.Trusted && assessed.PendingVerification == false) return;
-            if (assessed.PendingVerification == true) { await VerifyMirrorAsync(artifact, token); return; }
-            throw new ArtifactDeniedException();
-        }
-        var decisions = await AssessAsync([artifact], token);
-        if (!decisions[0].Trusted || decisions[0].PendingVerification != false) throw new ArtifactDeniedException();
+        var requested = UsesRegistryPolicy ? artifact with { Source = PolicySource } : artifact;
+        var decision = (await AssessAsync([requested], token))[0];
+        if (!decision.Trusted) throw new ArtifactDeniedException();
     }
 }
