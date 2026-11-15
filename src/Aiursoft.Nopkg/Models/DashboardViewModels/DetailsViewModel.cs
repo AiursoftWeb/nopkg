@@ -14,6 +14,8 @@ public class DetailsViewModel : UiStackLayoutViewModel
     public int VersionsPage { get; init; } = 1;
     public int DependentsPage { get; init; } = 1;
     public bool IsLocallyPublished { get; init; }
+    public string? After { get; init; }
+    public string? Before { get; init; }
     public string Query { get; init; } = "";
     public string ActiveTab { get; init; } = "overview";
     public string Description { get; init; } = "";

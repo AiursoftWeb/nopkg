@@ -33,11 +33,11 @@ else if (Model.Packages.Count == 0)
 }
 else
 {
-    <div class="package-catalog-toolbar"><span class="package-count">@Localizer["{0} packages", Model.TotalHits]</span><span class="package-note">@Localizer["Available on this registry"]</span></div>
+    <div class="package-catalog-toolbar"><span class="package-count">@Localizer["{0} packages on this page", Model.Packages.Count]</span><span class="package-note">@Localizer["Available on this registry"]</span></div>
     <div class="card"><div class="list-group list-group-flush">
     @foreach (var package in Model.Packages)
     {
-        <a asp-route="NpmPackageDetails" asp-route-id="@package.Name" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="list-group-item list-group-item-action package-list-item">
+        <a asp-route="NpmPackageDetails" asp-route-id="@package.Name" asp-route-q="@Model.Query" asp-route-page="@Model.Page" asp-route-after="@Model.After" asp-route-before="@Model.Before" class="list-group-item list-group-item-action package-list-item">
             <div class="d-flex gap-3 align-items-start"><span class="package-icon"><span class="package-icon-fallback"><i data-lucide="package" aria-hidden="true"></i></span></span><div class="flex-grow-1 min-width-0">
                 <div class="d-flex flex-wrap gap-2 align-items-baseline"><h2 class="h5 mb-0 text-break">@package.Name</h2><span class="package-version-chip">@package.Version</span></div>
                 <p class="package-summary">@(string.IsNullOrWhiteSpace(package.Description) ? Localizer["No description provided."].Value : package.Description)</p>
@@ -49,12 +49,12 @@ else
 }
 <p class="small text-muted mt-3">@(Model.AdmissionEnabled ? Localizer["S360 admission applies to mirrored packages. Internal releases use publisher permissions."] : Localizer["S360 admission is disabled. Internal releases use publisher permissions."])</p>
 
-@if (Model.TotalPages > 1 || Model.Page > 1)
+@if (Model.HasNext || Model.HasPrevious)
 {
     <nav class="d-flex align-items-center justify-content-center gap-3 mb-3" aria-label="@Localizer["Package pages"]">
-        @if (Model.Page > 1) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page - 1)" class="btn btn-outline-secondary">@Localizer["Previous"]</a> }
-        <span>@Localizer["Page {0} of {1}", Model.Page, Math.Max(1, Model.TotalPages)]</span>
-        @if (Model.Page < Model.TotalPages) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page + 1)" class="btn btn-outline-secondary">@Localizer["Next"]</a> }
+        @if (Model.HasPrevious) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Math.Max(1, Model.Page - 1))" asp-route-before="@Model.PreviousBefore" class="btn btn-outline-secondary">@Localizer["Previous"]</a> }
+        <span>@Localizer["Page {0}", Model.Page]</span>
+        @if (Model.HasNext) { <a asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@(Model.Page + 1)" asp-route-after="@Model.NextAfter" class="btn btn-outline-secondary">@Localizer["Next"]</a> }
     </nav>
 }
 

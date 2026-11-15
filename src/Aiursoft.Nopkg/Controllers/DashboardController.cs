@@ -18,37 +18,43 @@ public class DashboardController(NpmRegistry registry, RegistryOptions options, 
         CascadedLinksOrder = 1,
         LinkText = "Packages",
         LinkOrder = 1)]
-    public async Task<IActionResult> Index(CancellationToken cancellationToken, string q = "", int page = 1)
+    public async Task<IActionResult> Index(CancellationToken cancellationToken, string q = "", int page = 1, string? after = null, string? before = null)
     {
         Response.Headers.CacheControl = "no-store";
         q = q.Trim();
         page = Math.Clamp(page, 1, int.MaxValue / 20);
         try
         {
-            var packages = await registry.CachedPackagesAsync(cancellationToken, q);
-            var filtered = Filter(packages, q);
+            var result = await registry.CatalogPageAsync(q, page, cancellationToken, after, before);
             var visible = new List<CachedPackage>();
-            foreach (var package in filtered.Skip((page - 1) * 20).Take(20))
+            foreach (var package in result.Packages)
                 visible.Add(await registry.DescribeAsync(package, cancellationToken));
             return this.StackView(new IndexViewModel
             {
                 Packages = visible,
-                Query = q, Page = page, TotalHits = filtered.Count, TotalPackages = packages.Count,
+                Query = q, Page = page, After = after, Before = before, HasPrevious = result.HasPrevious, HasNext = result.HasNext, TotalPackages = result.KnownPackages,
                 CacheOnly = options.CacheOnly, AdmissionEnabled = options.S360.Enabled
             });
         }
         catch (AdmissionUnavailableException)
         {
             var internalPackages = await localPackages.ListAsync(cancellationToken);
-            var filtered = Filter(internalPackages, q);
+            var backward = !string.IsNullOrEmpty(before);
+            var seek = backward || !string.IsNullOrEmpty(after);
+            var filtered = Filter(internalPackages, q).Where(p => !seek || (backward
+                ? StringComparer.Ordinal.Compare(p.Name, before) < 0
+                : StringComparer.Ordinal.Compare(p.Name, after) > 0));
+            filtered = backward ? filtered.Reverse() : filtered;
+            var candidates = filtered.Skip(seek ? 0 : (page - 1) * 20).Take(21).ToList();
             var visible = new List<CachedPackage>();
-            foreach (var package in filtered.Skip((page - 1) * 20).Take(20))
+            foreach (var package in candidates.Take(20))
                 visible.Add(await registry.DescribeAsync(package, cancellationToken));
+            if (backward) visible.Reverse();
             Response.StatusCode = internalPackages.Count > 0 ? StatusCodes.Status200OK : StatusCodes.Status503ServiceUnavailable;
             return this.StackView(new IndexViewModel
             {
                 Packages = visible,
-                Query = q, Page = page, TotalHits = filtered.Count, TotalPackages = internalPackages.Count,
+                Query = q, Page = page, After = after, Before = before, HasNext = backward || candidates.Count > 20, HasPrevious = backward ? candidates.Count > 20 : seek || page > 1, TotalPackages = internalPackages.Count,
                 CacheOnly = options.CacheOnly, AdmissionEnabled = options.S360.Enabled, AdmissionUnavailable = true
             });
         }
