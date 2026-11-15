@@ -1,106 +1,96 @@
+@using System.Globalization
 @model Aiursoft.Nopkg.Models.DashboardViewModels.DetailsViewModel
 @{
     var registryUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/";
+    string Link(string tab = "overview", string? version = null, int versionsPage = 1, int dependentsPage = 1) => Url.RouteUrl("NpmPackageDetails", new { id = Model.Name, version = version ?? Model.Version, q = Model.Query, page = Model.Page, tab, versionsPage, dependentsPage })!;
 }
 @* ReSharper disable once Razor.SectionNotResolved *@
-@section styles {
-    <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" />
-}
-<a asp-controller="Dashboard" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="d-inline-flex align-items-center gap-2 mb-4">
-    <i data-lucide="arrow-left" aria-hidden="true"></i>@Localizer["Back to packages"]
-</a>
-<div class="registry-page-heading">
-    <span class="registry-page-icon"><i data-lucide="package" aria-hidden="true"></i></span>
-    <div class="min-width-0">
-        <p class="text-muted small mb-1">@Localizer["npm package"]</p>
-        <h1 class="h2 text-break mb-1">@Model.Name</h1>
-        <p class="text-muted text-break mb-2">@Model.Description</p>
-        @if (!Model.ErrorStatus.HasValue)
-        {
-            <span class="badge bg-primary-subtle text-primary">@(Model.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</span>
-        }
-    </div>
-</div>
+@section styles { <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" /> }
+<div class="package-workspace npm-workspace">
+<a asp-controller="Dashboard" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="d-inline-flex align-items-center gap-2 mb-4"><i data-lucide="arrow-left" aria-hidden="true"></i>@Localizer["Back to packages"]</a>
+<div class="card package-masthead"><div class="card-body">
+    <p class="package-eyebrow">npm · @Localizer["Package details"]</p>
+    <div class="d-flex flex-wrap gap-3 align-items-start justify-content-between"><h1 class="package-title mb-0">@Model.Name</h1>@if (!Model.ErrorStatus.HasValue) { <span class="package-version-chip">@Model.Version</span> }</div>
+    <p class="package-description text-muted">@Model.Description</p>
+    @if (!Model.ErrorStatus.HasValue)
+    {
+        <div class="package-stats"><div class="package-stat"><strong>@Model.Versions.Count</strong><span>@Localizer["Available versions"]</span></div><div class="package-stat"><strong>@Model.Dependencies.Count(d => d.Kind != "devDependencies")</strong><span>@Localizer["Dependencies"]</span></div><div class="package-stat"><strong>@(Model.IsLocallyPublished ? Localizer["Internal"] : Localizer["Mirror"])</strong><span>@Localizer["Package source"]</span></div></div>
+    }
+</div></div>
 @if (Model.ErrorStatus.HasValue)
 {
-    <div class="card">
-        <div class="card-body p-4">
-            <h2 class="h5">@(Model.ErrorStatus == 403 ? Localizer["Package access is not approved"] : Model.ErrorStatus == 404 ? Localizer["Package not found"] : Localizer["Package information is unavailable"])</h2>
-            <p class="text-muted mb-0">@(Model.ErrorStatus == 403 ? Localizer["This package is restricted by the registry policy."] : Localizer["Try again later or return to the package catalog."])</p>
-        </div>
-    </div>
+    <div class="card package-empty"><i data-lucide="package-search" aria-hidden="true"></i><h2 class="h4">@(Model.ErrorStatus == 403 ? Localizer["Package access is not approved"] : Model.ErrorStatus == 404 ? Localizer["Package not found"] : Localizer["Package information is unavailable"])</h2><p class="text-muted">@(Model.ErrorStatus == 403 ? Localizer["This package is restricted by the registry policy."] : Localizer["Try again later or return to the package catalog."])</p><a asp-controller="Dashboard" asp-action="Index">@Localizer["Browse all packages"]</a></div>
 }
 else
 {
-    <div class="row g-4">
-        <div class="col-lg-8">
-            <div class="card">
-                <div class="card-body p-4">
-                    <h2 class="h5">@Localizer["Install this version"]</h2>
-                    <p class="text-muted">@Localizer["Copy the command into your project directory."]</p>
-                    <div class="package-command">
-                        <pre class="bg-body-tertiary border rounded p-3"><code tabindex="-1">npm install @(Model.Name)@@@(Model.Version) --registry @registryUrl</code></pre>
-                        <button type="button" class="btn btn-outline-primary btn-sm copy-command">@Localizer["Copy command"]</button>
-                        <p class="copy-status small mt-2 mb-0" role="status"></p>
-                    </div>
-                </div>
+    @if (!string.IsNullOrEmpty(Model.Deprecated)) { <div class="alert alert-warning"><div class="alert-message"><strong>@Localizer["Deprecated version"]</strong><p class="mb-0">@Model.Deprecated</p></div></div> }
+    <div class="package-layout">
+    <div class="min-width-0">
+        <div class="card"><div class="card-body package-command" id="install-command">
+            <div class="d-flex align-items-center justify-content-between gap-3"><h2 class="package-section-title">@Localizer["Install this version"]</h2><button type="button" class="btn btn-sm btn-outline-secondary copy-command">@Localizer["Copy command"]</button></div>
+            <pre><code tabindex="-1">npm install @(Model.Name)@@@(Model.Version) --registry @registryUrl</code></pre><p class="copy-status small mt-2 mb-0" role="status"></p>
+        </div></div>
+        <nav class="package-tabs" aria-label="@Localizer["Package information"]">
+            <a href="@Link()" class="nav-link @(Model.ActiveTab == "overview" ? "active" : "")" aria-current="@(Model.ActiveTab == "overview" ? "page" : null)">@Localizer["Overview"]</a>
+            <a href="@Link("versions")" class="nav-link @(Model.ActiveTab == "versions" ? "active" : "")" aria-current="@(Model.ActiveTab == "versions" ? "page" : null)">@Localizer["Versions"] <span class="badge bg-secondary">@Model.Versions.Count</span></a>
+            <a href="@Link("dependencies")" class="nav-link @(Model.ActiveTab == "dependencies" ? "active" : "")" aria-current="@(Model.ActiveTab == "dependencies" ? "page" : null)">@Localizer["Dependencies"]</a>
+            <a href="@Link("usedby")" class="nav-link @(Model.ActiveTab == "usedby" ? "active" : "")" aria-current="@(Model.ActiveTab == "usedby" ? "page" : null)">@Localizer["Used by"]</a>
+        </nav>
+        @if (Model.ActiveTab == "overview")
+        {
+            <div class="card"><div class="card-body p-4"><h2 class="package-section-title mb-4">@Localizer["Readme"]</h2><div class="package-readme">
+                @if (!string.IsNullOrWhiteSpace(Model.ReadmeHtml)) { @Html.Raw(Model.ReadmeHtml) }
+                else { <p>@Model.Description</p><p class="text-muted">@Localizer["No readme was included in this package's metadata."]</p>@if (Model.Repository != null) { <a href="@Model.Repository" rel="noopener noreferrer" target="_blank">@Localizer["View source code"] <i data-lucide="arrow-up-right" aria-hidden="true"></i></a> } }
+            </div></div></div>
+        }
+        else if (Model.ActiveTab == "versions")
+        {
+            <div class="card"><div class="card-header"><h2 class="package-section-title">@Localizer["Version history"]</h2></div>
+            @foreach (var item in Model.Versions.Skip((Model.VersionsPage - 1) * 20).Take(20))
+            {
+                <div class="package-version-row @(item.Version == Model.Version ? "current" : "")"><div class="d-flex flex-wrap align-items-center gap-2"><a href="@Link("versions", item.Version, Model.VersionsPage)">@item.Version</a>@foreach (var tag in item.Tags) { <span class="badge bg-primary-subtle text-primary">@tag</span> }@if (item.Deprecated) { <span class="badge bg-warning-subtle text-warning">@Localizer["Deprecated"]</span> }</div><span class="small text-muted">@(item.Published?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? Localizer["Date unavailable"].Value)</span></div>
+            }
             </div>
+            @if (Model.Versions.Count > 20 || Model.VersionsPage > 1)
+            {
+                <nav class="d-flex flex-wrap justify-content-center gap-3 align-items-center mb-3" aria-label="@Localizer["Version pages"]">@if (Model.VersionsPage > 1) { <a class="btn btn-outline-secondary" href="@Link("versions", versionsPage: Model.VersionsPage - 1)">@Localizer["Previous"]</a> }<span>@Localizer["Page {0} of {1}", Model.VersionsPage, Math.Max(1, (Model.Versions.Count + 19) / 20)]</span>@if (Model.VersionsPage * 20 < Model.Versions.Count) { <a class="btn btn-outline-secondary" href="@Link("versions", versionsPage: Model.VersionsPage + 1)">@Localizer["Next"]</a> }</nav>
+            }
+        }
+        else if (Model.ActiveTab == "dependencies")
+        {
+            @if (Model.Dependencies.Count == 0) { <div class="card package-empty"><i data-lucide="blocks" aria-hidden="true"></i><h2 class="h5">@Localizer["No dependencies"]</h2><p class="text-muted mb-0">@Localizer["This version declares no package dependencies."]</p></div> }
+            @foreach (var kind in new[] { "dependencies", "peerDependencies", "optionalDependencies", "devDependencies" })
+            {
+                var group = Model.Dependencies.Where(d => d.Kind == kind).ToList();
+                if (group.Count == 0) { continue; }
+                <div class="card"><div class="card-body p-4"><h2 class="package-section-title mb-2">@(kind switch { "dependencies" => Localizer["Runtime dependencies"], "peerDependencies" => Localizer["Peer dependencies"], "optionalDependencies" => Localizer["Optional dependencies"], _ => Localizer["Development dependencies"] }) <span class="badge bg-secondary ms-2">@group.Count</span></h2>
+                @foreach (var dependency in group) { <div class="package-dependency"><a asp-route="NpmPackageDetails" asp-route-id="@dependency.Name">@dependency.Name</a><code>@dependency.Range</code></div> }
+                </div></div>
+            }
+        }
+        else if (Model.ActiveTab == "usedby")
+        {
+            <p class="package-note">@Localizer["Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts."]</p>
             <div class="card">
-                <div class="card-body p-4">
-                    <h2 class="h5">@Localizer["Dependencies"]</h2>
-                    @if (Model.Dependencies.Count == 0)
-                    {
-                        <p class="text-muted mb-0">@Localizer["This version declares no runtime dependencies."]</p>
-                    }
-                    else
-                    {
-                        <dl class="mb-0">
-                            @foreach (var dependency in Model.Dependencies)
-                            {
-                                <dt class="text-break mt-2"><a asp-action="Details" asp-route-id="@dependency.Key">@dependency.Key</a></dt>
-                                <dd class="text-muted text-break">@dependency.Value</dd>
-                            }
-                        </dl>
-                    }
-                </div>
+            @if (Model.Dependents.Count == 0) { <div class="package-empty"><i data-lucide="network" aria-hidden="true"></i><h2 class="h5">@Localizer["No dependent packages on this server"]</h2><p class="text-muted mb-0">@Localizer["Dependencies appear here as packages are added to this registry."]</p></div> }
+            @foreach (var dependent in Model.Dependents.Skip((Model.DependentsPage - 1) * 20).Take(20)) { <div class="package-version-row"><a asp-route="NpmPackageDetails" asp-route-id="@dependent.Name" asp-route-version="@dependent.Version">@dependent.Name</a><span class="package-version-chip">@dependent.Version</span></div> }
             </div>
-            <div class="card">
-                <div class="card-body p-4">
-                    <h2 class="h5">@Localizer["Registry"]</h2>
-                    <p class="text-muted">@Localizer["This command uses this registry explicitly. Package access follows the current registry policy."]</p>
-                    <code class="text-break">@registryUrl</code>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <div class="card">
-                <div class="card-body p-4">
-                    <h2 class="h5">@Localizer["Version"]</h2>
-                    <form method="get" asp-action="Details">
-                        <input type="hidden" name="id" value="@Model.Name" />
-                        <input type="hidden" name="q" value="@Model.Query" />
-                        <input type="hidden" name="page" value="@Model.Page" />
-                        <label for="package-version" class="visually-hidden">@Localizer["Select version"]</label>
-                        <select id="package-version" name="version" class="form-select mb-3">
-                            @foreach (var version in Model.Versions)
-                            {
-                                <option value="@version" selected="@(version == Model.Version)">@version</option>
-                            }
-                        </select>
-                        <button class="btn btn-outline-primary w-100" type="submit">@Localizer["View version"]</button>
-                    </form>
-                    @if (!string.IsNullOrWhiteSpace(Model.License))
-                    {
-                        <hr />
-                        <h3 class="h6">@Localizer["License"]</h3>
-                        <p class="text-muted mb-0">@Model.License</p>
-                    }
-                </div>
-            </div>
-        </div>
+            @if (Model.Dependents.Count > 20 || Model.DependentsPage > 1) { <nav class="d-flex flex-wrap justify-content-center gap-3 align-items-center" aria-label="@Localizer["Dependent package pages"]">@if (Model.DependentsPage > 1) { <a class="btn btn-outline-secondary" href="@Link("usedby", dependentsPage: Model.DependentsPage - 1)">@Localizer["Previous"]</a> }<span>@Localizer["Page {0} of {1}", Model.DependentsPage, Math.Max(1, (Model.Dependents.Count + 19) / 20)]</span>@if (Model.DependentsPage * 20 < Model.Dependents.Count) { <a class="btn btn-outline-secondary" href="@Link("usedby", dependentsPage: Model.DependentsPage + 1)">@Localizer["Next"]</a> }</nav> }
+        }
+    </div>
+    <aside class="package-aside" aria-label="@Localizer["Package metadata"]">
+        <div class="card"><div class="card-body"><h2 class="package-section-title mb-4">@Localizer["Package information"]</h2><dl class="package-facts">
+            <dt>@Localizer["Version"]</dt><dd><span class="package-version-chip">@Model.Version</span></dd>
+            <dt>@Localizer["Published"]</dt><dd>@(Model.Published?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? Localizer["Date unavailable"].Value)</dd>
+            <dt>@Localizer["Author"]</dt><dd>@(string.IsNullOrWhiteSpace(Model.Author) ? Localizer["Not provided"].Value : Model.Author)</dd>
+            <dt>@Localizer["License"]</dt><dd>@(string.IsNullOrWhiteSpace(Model.License) ? Localizer["Not provided"].Value : Model.License)</dd>
+            <dt>@Localizer["Source"]</dt><dd>@(Model.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</dd>
+            @if (Model.Homepage != null || Model.Repository != null) { <dt>@Localizer["Links"]</dt><dd>@if (Model.Homepage != null) { <a href="@Model.Homepage" rel="noopener noreferrer" target="_blank">@Localizer["Project website"]</a> }@if (Model.Repository != null) { <a href="@Model.Repository" rel="noopener noreferrer" target="_blank">@Localizer["Source code"]</a> }</dd> }
+        </dl></div></div>
+        <div class="card"><div class="card-body"><h2 class="package-section-title mb-3">@Localizer["Registry"]</h2><code class="text-break">@registryUrl</code><p class="package-note mt-3 mb-0">@Localizer["The install command selects this registry explicitly."]</p></div></div>
+    </aside>
     </div>
 }
+</div>
 @* ReSharper disable once Razor.SectionNotResolved *@
-@section scripts {
-    <partial name="_PackageCopy" />
-}
+@section scripts { <partial name="_PackageCopy" /> }

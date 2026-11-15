@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Http.Headers;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
+using Aiursoft.Nopkg.Services;
 using System.Text.Json.Nodes;
 using Aiursoft.Nopkg.Authorization;
 using Aiursoft.Nopkg.Entities;
@@ -33,6 +35,35 @@ public class PublishingTests : TestBase
         var empty = await Http.GetStringAsync("/Dashboard/Index?q=not-found");
         Assert.Contains("No packages found", empty);
         Assert.DoesNotContain("No packages cached yet", empty);
+    }
+
+    [TestMethod]
+    public async Task ScopedCatalogLinksAndVersionHistoryWorkFromActualGeneratedLinks()
+    {
+        var (_, key) = await PublisherAsync();
+        foreach (var version in new[] { "2.0.9", "2.0.10", "2.0.11-beta.2", "2.0.11-beta.10", "2.0.11" })
+            Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("@test/browser", key, Publication("@test/browser", version))).StatusCode);
+        var catalog = WebUtility.HtmlDecode(await Http.GetStringAsync("/Dashboard?q=browser"));
+        var link = Regex.Match(catalog, "href=\"(/packages/details[^\"]+)\"").Groups[1].Value;
+        Assert.IsFalse(string.IsNullOrWhiteSpace(link));
+        var details = await Http.GetStringAsync(link);
+        Assert.Contains("npm install @test/browser@2.0.11", details);
+        Assert.Contains("q=browser", details);
+        Assert.AreEqual(HttpStatusCode.OK, (await Http.GetAsync("/Package/Details/@test%2Fbrowser")).StatusCode);
+        var history = WebUtility.HtmlDecode(await Http.GetStringAsync("/packages/details?id=%40test%2Fbrowser&tab=versions"));
+        var rows = Regex.Matches(history, "<a href=\"[^\"]+\">([^<]+)</a>").Select(m => m.Groups[1].Value).Where(v => v.StartsWith("2.", StringComparison.Ordinal)).ToList();
+        CollectionAssert.AreEqual(new[] { "2.0.11", "2.0.11-beta.10", "2.0.11-beta.2", "2.0.10", "2.0.9" }, rows);
+        var old = await Http.GetStringAsync("/packages/details?id=%40test%2Fbrowser&version=2.0.9");
+        Assert.Contains("npm install @test/browser@2.0.9", old);
+    }
+
+    [TestMethod]
+    public void ReadmeDisablesExecutableHtmlAndResolvesRepositoryImages()
+    {
+        var html = PackageReadme.Render("# Package\n![Overview](./screenshot.png)\n[Bad](javascript:alert)\n<script>alert(1)</script>", "https://github.com/example/library.git");
+        Assert.Contains("https://raw.githubusercontent.com/example/library/HEAD/screenshot.png", html);
+        Assert.DoesNotContain("<script>", html);
+        Assert.DoesNotContain("href=\"javascript:", html);
     }
 
     private string _registryPath = null!;
@@ -197,7 +228,7 @@ public class PublishingTests : TestBase
         Assert.AreEqual(HttpStatusCode.Found,response.StatusCode);
         var location = response.Headers.Location!.ToString();
         var html = await Http.GetStringAsync(location);
-        var match = System.Text.RegularExpressions.Regex.Match(html,"<code id=\"new-api-key\"[^>]*>([^<]+)</code>");
+        var match = Regex.Match(html,"<code id=\"new-api-key\"[^>]*>([^<]+)</code>");
         Assert.IsTrue(match.Success);var raw=match.Groups[1].Value;
         Assert.DoesNotContain(raw,await Http.GetStringAsync(location));
         using var scope=Server!.Services.CreateScope();var db=scope.ServiceProvider.GetRequiredService<NopkgDbContext>();

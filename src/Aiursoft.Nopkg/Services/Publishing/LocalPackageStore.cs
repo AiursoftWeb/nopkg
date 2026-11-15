@@ -48,6 +48,6 @@ public sealed class LocalPackageStore(IServiceScopeFactory scopes) : ILocalPacka
         await using var scope = scopes.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<NopkgDbContext>();
         return await db.PackageFamilies.AsNoTracking().NotCacheable().Where(x => x.IsLocallyPublished)
-            .Select(x => new CachedPackage(x.Name, x.Versions.Count(), x.Versions.Count(), true)).ToListAsync(token);
+            .Select(x => new CachedPackage(x.Name, true)).ToListAsync(token);
     }
 }

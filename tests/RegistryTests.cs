@@ -65,6 +65,27 @@ public partial class RegistryTests
     private static HttpResponseMessage Response(JsonObject json) => Response(Encoding.UTF8.GetBytes(json.ToJsonString()));
 
     [TestMethod]
+    public async Task ReadmeUsesCachedArchiveWithoutExtractingOrContactingUpstream()
+    {
+        var directory = Path.Combine(_directory, Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes("@example/library")))) ;
+        Directory.CreateDirectory(directory);
+        await using (var file = File.Create(Path.Combine(directory, "1.0.0.tgz")))
+        await using (var gzip = new GZipStream(file, CompressionLevel.Fastest))
+        await using (var writer = new TarWriter(gzip))
+        {
+            using var unsafeData = new MemoryStream(Encoding.UTF8.GetBytes("not the readme"));
+            await writer.WriteEntryAsync(new PaxTarEntry(TarEntryType.RegularFile, "../README.md") { DataStream = unsafeData });
+            using var data = new MemoryStream(Encoding.UTF8.GetBytes("# Package overview"));
+            await writer.WriteEntryAsync(new PaxTarEntry(TarEntryType.RegularFile, "package/README.md") { DataStream = data });
+        }
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("No upstream requests.")));
+        var registry = new NpmRegistry(upstream, Options());
+        Assert.AreEqual("# Package overview", await registry.CachedReadmeAsync("@example/library", "1.0.0", CancellationToken.None));
+        Assert.AreEqual("", await registry.CachedReadmeAsync("@example/library", "2.0.0", CancellationToken.None));
+        Assert.IsFalse(File.Exists(Path.Combine(_directory, "README.md")));
+    }
+
+    [TestMethod]
     public async Task VerifiedPackageSurvivesOfflineRestartAndDetectsCacheCorruption()
     {
         var archive = Archive();
