@@ -53,7 +53,7 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         response.EnsureSuccessStatusCode();
         await using var input = await response.Content.ReadAsStreamAsync(token);
         using var output = new MemoryStream();
-        await CopyLimitedAsync(input, output, 32 * 1024 * 1024, token);
+        await CopyLimitedAsync(input, output, options.MaxMetadataBytes, token);
         return output.ToArray();
     }
 
