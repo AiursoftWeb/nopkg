@@ -129,9 +129,7 @@ public static class RegistryEndpoint
                 throw new FileNotFoundException("Registry endpoint not found.");
             var packageName = string.Join('/', components.Take(packageSegments));
             var metadata = await registry.MetadataAsync(packageName, context.RequestAborted);
-            var pathBase = context.Request.PathBase.Value ?? "";
-            if (pathBase.EndsWith("/npm", StringComparison.OrdinalIgnoreCase)) pathBase = pathBase[..^4];
-            var url = $"{context.Request.Scheme}://{context.Request.Host}{pathBase}";
+            var url = $"{context.Request.Scheme}://{context.Request.Host}{context.Request.PathBase}";
             var rewritten = NpmRegistry.RewriteMetadata(metadata, url);
             JsonNode result = rewritten;
             if (components.Length == packageSegments + 1)
