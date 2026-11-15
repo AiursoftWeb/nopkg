@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Traducere automată, alimentată de inteligență artificială, în 28 de limbi.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Disponibil în acest registru</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Procesare sarcini în fundal</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Dezvoltați exclusiv în UTC, în timp ce sistemul convertește și afișează automat datele în fusul orar local al utilizatorului.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Descoperă pachete JavaScript. Găsește o versiune, explorează dependențele acesteia și începe să construiești.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Containerizat pentru Implementare</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Pagini de pachete</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Registrul de pachete</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Pachete</value>

@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automaattinen, AI-pohjainen käännös 28 kielelle.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Tämä rekisteröintialusta</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Taustatehtävien käsittely</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Kehitä vain UTC:ssä, kunnes järjestelmä muuntaa ja näyttää päivämäärät käyttäjän paikalliseen aikavyöhön automaattisesti.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Löydä JavaScript-paketteja. Etsi versio, tutki riippuvuudet ja aloita rakentaminen.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Dockeröity käyttöönottoa varten</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Pakkaus-sivut</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Pakkitietue</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paketit</value>

@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Versiuni disponibile</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>Înapoi la pachete</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Răsfoiește toate pachetele</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>Copiază comanda</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Dependențe</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Dependențele apar aici pe măsură ce pachetele sunt adăugate în acest registru.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Pagini ale pachetelor dependente</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Depreciat</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Versiune depreciată</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>Instalare acestei versiuni</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>Licență</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Legături</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Următoarea</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Fără dependențe</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Niciun pachet dependent pe acest server</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>Nu a fost inclus niciun fișier readme în metadatele acestui pachet.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Prezentare generală</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Detalii pachet</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Informații despre pachet</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Metadatele pachetului</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Sursa pachetului</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Pachete din acest registru care declară o dependență de runtime, peer sau opțională pentru acest pachet. Aceasta nu este o listă de proiecte sau de descărcări.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterioară</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Sit web a proiectului</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Publicat</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Lăsați-mă să vă citesc</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>Registraru</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>Selectați versiunea</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>Sursă</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Cod sursă</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>Comanda de instalare selectează explicit acest registru.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>Această comandă utilizează explicit acest registru. Accesul la pachete urmează politica actuală a registrului.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Această versiune nu declară nicio dependență de pachete.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>Această versiune nu declară nicio dependență de execuție.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Folosit de</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Versiune</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Istoric versiuni</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Pagini de versiuni</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versiuni</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Vezi codul sursă</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>Vizualizare versiune</value>

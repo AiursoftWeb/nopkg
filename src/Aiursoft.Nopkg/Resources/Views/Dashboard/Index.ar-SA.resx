@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>ترجمة تلقائية، مدعومة بالذكاء الاصطناعي، إلى 28 لغة.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>متاح في هذا السجل</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>معالجة المهام الخلفية</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>طور بشكل حصري باستخدام التوقيت العالمي الموحد (UTC) بينما يقوم النظام تلقائيًا بتحويل وتظهر التواريخ بالتوقيت المحلي للمستخدم.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>اكتشف حزم JavaScript. حدد إصدارًا واستكشف تبعياته وابدأ في البناء.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>مُحَضَّرٌ باستخدام Docker للنشر</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>صفحات الحزم</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>سجل الحزم</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>الحزم</value>

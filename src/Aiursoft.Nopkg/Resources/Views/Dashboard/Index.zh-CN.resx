@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>自动、由人工智能驱动的 28 种语言翻译。</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>此注册表上可用</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>后台任务处理</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>在开发时仅使用 UTC，系统会自动将日期转换并显示为用户的本地时间。</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>发现 JavaScript 软件包。查找版本，探索其依赖项，并开始构建。</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>容器化部署</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>软件包页面</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>软件包注册表</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>软件包</value>

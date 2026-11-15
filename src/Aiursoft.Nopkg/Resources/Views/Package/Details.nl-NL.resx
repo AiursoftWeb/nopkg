@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>Auteur</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Beschikbare versies</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>Terug naar pakketten</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Blader alle pakketten</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>Opdracht kopiëren</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Afhankelijkheden</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Afhankelijke pakketten verschijnen hier zodra pakketten aan dit register worden toegevoegd.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Pagina&apos;s met afhankelijke pakketten</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Verouderd</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Verouderde versie</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>Installeer deze versie</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>Licentie</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Links</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Volgende</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Geen afhankelijkheden</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Geen afhankelijke pakketten op deze server</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>Er was geen readme opgenomen in de metadata van dit pakket.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Overzicht</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Pakketdetails</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Pakketinformatie</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Pakketmetadata</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Bron van pakket</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Pakketten in dit register die een runtime-, peer- of optionele afhankelijkheid van dit pakket declareren. Dit is geen lijst met projecten of downloadaantallen.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Vorige</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Projectwebsite</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Gepubliceerd</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Leesme</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>Register</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>Selecteer versie</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>Bron</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Broncode</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>Het installatiecommando selecteert dit register expliciet.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>Dit commando gebruikt deze registratie expliciet. Pakkettoegang volgt het huidige registratiebeleid.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Deze versie declareert geen pakketafhankelijkheden.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>Deze versie verklaart geen runtime-afhankelijkheden.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Gebruikt door</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Versie</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Versiegeschiedenis</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Versiepagina&apos;s</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versies</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Bekijk broncode</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>Versie weergeven</value>

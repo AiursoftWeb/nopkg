@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Dịch tự động, được hỗ trợ bởi AI sang 28 ngôn ngữ.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Có sẵn trên registry này</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Xử lý công việc nền</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Phát triển riêng biệt bằng múi giờ UTC, trong khi hệ thống tự động chuyển đổi và hiển thị ngày tháng theo múi giờ địa phương của người dùng.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Khám phá các gói JavaScript. Tìm một phiên bản, khám phá các phụ thuộc của nó và bắt đầu xây dựng.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Đã được Docker hóa để Triển khai</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Trang gói</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Bộ đăng ký gói</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Gói</value>

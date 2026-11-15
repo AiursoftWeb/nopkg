@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>Auteur</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Versions disponibles</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>Retour aux packages</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Parcourir tous les paquets</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>Copier la commande</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Dépendances</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Les dépendances apparaissent ici à mesure que des paquets sont ajoutés à ce registre.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Pages des packages dépendants</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Obsolète</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Version dépréciée</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>Installer cette version</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>Licence</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Liens</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Suivant</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Aucune dépendance</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Aucun package dépendant sur ce serveur</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>Aucun fichier README n&apos;était inclus dans les métadonnées de ce package.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Aperçu</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Détails du package</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Informations sur le package</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Métadonnées du package</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Source du package</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Paquets de ce registre qui déclarent une dépendance d&apos;exécution, de pair ou facultative sur ce paquet. Il ne s&apos;agit pas d&apos;une liste de projets ou de nombres de téléchargements.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Précédent</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Site du projet</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Publié</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Lisez-moi</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>Registre</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>Sélectionner la version</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>Source</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Code source</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>La commande d&apos;installation sélectionne explicitement ce registre.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>Cette commande utilise explicitement ce registre. L&apos;accès aux packages suit la politique de registre actuelle.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Cette version ne déclare aucune dépendance de paquet.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>Cette version ne déclare aucune dépendance d&apos;exécution.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Utilisé par</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Version</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Historique des versions</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Pages de versions</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versions</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Voir le code source</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>Afficher la version</value>

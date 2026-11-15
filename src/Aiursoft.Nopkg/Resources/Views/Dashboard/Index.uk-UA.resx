@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Автоматична, заснована на штучному інтелекті переклад у 28 мовах.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Доступно в цьому реєстрі</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Обробка фонових завдань</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Розробляйте виключно в UTC, тоді як система автоматично перетворює та відображає дати у часовому поясі користувача.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Відкрийте пакети JavaScript. Знайдіть версію, дослідіть її залежності та почніть розробку.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Підготовлено для розгортання в Docker</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Сторінки пакетів</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Реєстр пакетів</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Пакетів</value>
