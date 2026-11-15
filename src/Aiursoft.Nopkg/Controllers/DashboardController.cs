@@ -27,9 +27,12 @@ public class DashboardController(NpmRegistry registry, RegistryOptions options, 
         {
             var packages = await registry.CachedPackagesAsync(cancellationToken, q);
             var filtered = Filter(packages, q);
+            var visible = new List<CachedPackage>();
+            foreach (var package in filtered.Skip((page - 1) * 20).Take(20))
+                visible.Add(await registry.DescribeAsync(package, cancellationToken));
             return this.StackView(new IndexViewModel
             {
-                Packages = filtered.Skip((page - 1) * 20).Take(20).ToList(),
+                Packages = visible,
                 Query = q, Page = page, TotalHits = filtered.Count, TotalPackages = packages.Count,
                 CacheOnly = options.CacheOnly, AdmissionEnabled = options.S360.Enabled
             });
@@ -38,10 +41,13 @@ public class DashboardController(NpmRegistry registry, RegistryOptions options, 
         {
             var internalPackages = await localPackages.ListAsync(cancellationToken);
             var filtered = Filter(internalPackages, q);
+            var visible = new List<CachedPackage>();
+            foreach (var package in filtered.Skip((page - 1) * 20).Take(20))
+                visible.Add(await registry.DescribeAsync(package, cancellationToken));
             Response.StatusCode = internalPackages.Count > 0 ? StatusCodes.Status200OK : StatusCodes.Status503ServiceUnavailable;
             return this.StackView(new IndexViewModel
             {
-                Packages = filtered.Skip((page - 1) * 20).Take(20).ToList(),
+                Packages = visible,
                 Query = q, Page = page, TotalHits = filtered.Count, TotalPackages = internalPackages.Count,
                 CacheOnly = options.CacheOnly, AdmissionEnabled = options.S360.Enabled, AdmissionUnavailable = true
             });

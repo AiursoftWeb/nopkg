@@ -331,49 +331,6 @@ public partial class NpmRegistry(HttpClient client, RegistryOptions options, S36
         }
     }
 
-    public async Task<IReadOnlyList<CachedPackage>> CachedPackagesAsync(CancellationToken token = default, string query = "")
-    {
-        var local = localPackages == null ? [] : await localPackages.ListAsync(token);
-        var localNames = local.Select(p => p.Name).ToHashSet(StringComparer.Ordinal);
-        var matchingLocal = local.Where(p => p.Name.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
-        if (!Directory.Exists(_root)) return matchingLocal;
-        var cached = new List<(string Name, string Directory, List<string> Versions)>();
-        foreach (var directory in Directory.EnumerateDirectories(_root))
-        {
-            var file = Path.Combine(directory, "metadata.json");
-            if (!File.Exists(file)) continue;
-            var metadata = JsonNode.Parse(await File.ReadAllBytesAsync(file, token)) as JsonObject
-                ?? throw new InvalidDataException("Invalid cached metadata.");
-            var name = PackageName(metadata["name"]!.GetValue<string>());
-            if (localNames.Contains(name) || !name.Contains(query, StringComparison.OrdinalIgnoreCase)) continue;
-            var versions = metadata["versions"] as JsonObject ?? throw new InvalidDataException("Invalid cached versions.");
-            ValidateVersions(versions);
-            cached.Add((name, directory, versions.Select(v => v.Key).ToList()));
-        }
-
-        // Read one current policy snapshot for the matching catalog. Never retain admission
-        // decisions across requests: revocations and pending verification must remain visible.
-        HashSet<(string Name, string Version)>? allowed = null;
-        if (_admission != null && cached.Count > 0)
-        {
-            var candidates = cached.SelectMany(p => p.Versions.Select(v =>
-                new MirrorCandidate("npm", p.Name, v, PolicySource))).ToList();
-            allowed = (await _admission.CandidatesAsync(candidates, token))
-                .Select(c => (c.Name, c.Version)).ToHashSet();
-        }
-
-        var result = new List<CachedPackage>();
-        foreach (var package in cached)
-        {
-            var versions = package.Versions.Where(v => allowed == null || allowed.Contains((package.Name, v))).ToList();
-            if (versions.Count == 0) continue;
-            var stored = versions.Count(v => File.Exists(Path.Combine(package.Directory, v + ".tgz")) &&
-                File.Exists(Path.Combine(package.Directory, v + ".tgz.json")));
-            result.Add(new CachedPackage(package.Name, versions.Count, stored));
-        }
-        return result.Concat(matchingLocal).OrderBy(p => p.Name, StringComparer.Ordinal).ToList();
-    }
-
     private static async Task AtomicWriteAsync(string path, byte[] data, CancellationToken token)
     {
         var temporary = path + "." + Guid.NewGuid().ToString("N") + ".tmp";

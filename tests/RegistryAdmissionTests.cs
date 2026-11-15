@@ -44,6 +44,91 @@ public partial class RegistryTests
     }
 
     [TestMethod]
+    public async Task MultiVersionCatalogChecksOneCurrentVersionPerFamilyAndDoesNotCacheApproval()
+    {
+        var bytes = Archive();
+        var identities = new List<ArtifactIdentity>();
+        for (var i = 0; i < 24; i++)
+        {
+            var name = "@catalog/package-" + i;
+            var directory = Path.Combine(_directory, Convert.ToHexStringLower(SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(name))));
+            Directory.CreateDirectory(directory);
+            var versions = new JsonObject();
+            for (var v = 0; v < 1000; v++) versions[$"1.0.{v}"] = new JsonObject { ["name"] = name, ["version"] = $"1.0.{v}" };
+            await File.WriteAllTextAsync(Path.Combine(directory, "metadata.json"), new JsonObject { ["name"] = name, ["versions"] = versions }.ToJsonString());
+            identities.Add(new ArtifactIdentity("npm", name, "1.0.999", "https://registry.example", ""));
+        }
+        var handler = new AdmissionHandler(bytes) { CatalogArtifacts = identities };
+        using var policy = new HttpClient(handler);
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Browsing must not contact upstream.")));
+        var registry = Controlled(upstream, policy);
+        var catalog = await registry.CachedPackagesAsync();
+        Assert.AreEqual(24, catalog.Count);
+        Assert.IsTrue(catalog.All(p => p.Version == "1.0.999"));
+        Assert.AreEqual(1, handler.Assessments, "A 24,000-version catalog needs only 24 current candidates when latest versions are allowed.");
+        handler.Unavailable = true;
+        await Assert.ThrowsExactlyAsync<AdmissionUnavailableException>(() => registry.CachedPackagesAsync());
+    }
+
+    [TestMethod]
+    public async Task FullyRevokedHistoryIsCheckedInBatches()
+    {
+        var directory = Path.Combine(_directory, "fixture");
+        Directory.CreateDirectory(directory);
+        var metadata = Metadata(Archive());
+        for (var n = 1; n <= 1000; n++) metadata["versions"]![$"1.0.{n}"] = new JsonObject();
+        await File.WriteAllTextAsync(Path.Combine(directory, "metadata.json"), metadata.ToJsonString());
+        var handler = new AdmissionHandler(Archive()) { Allowed = false };
+        using var policy = new HttpClient(handler);
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("No upstream requests.")));
+        Assert.AreEqual(0, (await Controlled(upstream, policy).CachedPackagesAsync()).Count);
+        Assert.AreEqual(3, handler.Assessments);
+    }
+
+    [TestMethod]
+    public async Task DependentsIncludeRuntimePeerAndOptionalButNotDevelopmentAndRespectRevocation()
+    {
+        var identities = new List<ArtifactIdentity>();
+        foreach (var kind in new[] { "dependencies", "peerDependencies", "optionalDependencies", "devDependencies" })
+        {
+            var name = "@catalog/" + kind.ToLowerInvariant();
+            var directory = Path.Combine(_directory, kind);
+            Directory.CreateDirectory(directory);
+            var metadata = Metadata(Archive());
+            metadata["name"] = name;
+            metadata["versions"]!["1.0.0"]![kind] = new JsonObject { ["@example/library"] = "^1.0.0" };
+            await File.WriteAllTextAsync(Path.Combine(directory, "metadata.json"), metadata.ToJsonString());
+            identities.Add(new ArtifactIdentity("npm", name, "1.0.0", "https://registry.example", ""));
+        }
+        var handler = new AdmissionHandler(Archive()) { CatalogArtifacts = identities };
+        using var policy = new HttpClient(handler);
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("No upstream requests.")));
+        var registry = Controlled(upstream, policy);
+        var matches = await registry.DependentsAsync("@example/library", CancellationToken.None);
+        Assert.AreEqual(3, matches.Count);
+        Assert.IsFalse(matches.Any(p => p.Name.Contains("devdependencies", StringComparison.Ordinal)));
+        handler.Allowed = false;
+        Assert.AreEqual(0, (await registry.DependentsAsync("@example/library", CancellationToken.None)).Count);
+    }
+
+    [TestMethod]
+    public async Task CatalogFindsAnOlderAllowedVersionAndRefreshesChangedMetadata()
+    {
+        var directory = Path.Combine(_directory, "fixture");Directory.CreateDirectory(directory);
+        var metadata = Metadata(Archive());
+        metadata["versions"]!["2.0.0"] = new JsonObject { ["name"] = "@example/library", ["version"] = "2.0.0" };
+        metadata["dist-tags"]!["latest"] = "2.0.0";
+        var path = Path.Combine(directory, "metadata.json");await File.WriteAllTextAsync(path, metadata.ToJsonString());
+        using var policy = new HttpClient(new AdmissionHandler(Archive()));
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Browsing must not contact upstream.")));
+        var registry = Controlled(upstream, policy);
+        Assert.AreEqual("1.0.0", (await registry.CachedPackagesAsync()).Single().Version);
+        metadata["versions"]!.AsObject().Remove("1.0.0");await File.WriteAllTextAsync(path, metadata.ToJsonString());
+        Assert.AreEqual(0, (await registry.CachedPackagesAsync()).Count);
+        File.Delete(path);Assert.AreEqual(0, (await registry.CachedPackagesAsync()).Count);
+    }
+
+    [TestMethod]
     public async Task CatalogBatchesCurrentAdmissionWithoutCachingRevokedOrPendingDecisions()
     {
         var archive = Archive();
