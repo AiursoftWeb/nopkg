@@ -254,8 +254,11 @@ public class PublishingTests : TestBase
         var url = registryPrefix + "/" + name + "/-/" + leaf + "-1.0.0.tgz";
         var metadata = JsonNode.Parse(await Http.GetStringAsync("/npm/" + name))!;
         var archiveUrl = new Uri(metadata["versions"]!["1.0.0"]!["dist"]!["tarball"]!.GetValue<string>());
-        Assert.AreEqual("/" + name + "/-/" + leaf + "-1.0.0.tgz", archiveUrl.AbsolutePath);
+        Assert.AreEqual("/npm/" + name + "/-/" + leaf + "-1.0.0.tgz", archiveUrl.AbsolutePath);
         var bytes = await Http.GetByteArrayAsync(url);
+        CollectionAssert.AreEqual(bytes, await Http.GetByteArrayAsync(archiveUrl));
+        var versionMetadata = JsonNode.Parse(await Http.GetStringAsync("/npm/" + name + "/1.0.0"))!;
+        Assert.AreEqual(archiveUrl.ToString(), versionMetadata["dist"]!["tarball"]!.GetValue<string>());
         CollectionAssert.AreEqual(Convert.FromBase64String(publication["_attachments"]!["package.tgz"]!["data"]!.GetValue<string>()), bytes);
         using var head = await Http.SendAsync(new HttpRequestMessage(HttpMethod.Head, url));
         Assert.AreEqual(HttpStatusCode.OK, head.StatusCode);
