@@ -18,11 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="API key revoked." xml:space="preserve">
+      <data name="API Keys" xml:space="preserve">
+    <value>Πληκτρά API</value>
+  </data>
+  <data name="API key revoked." xml:space="preserve">
     <value>Το κλειδί API αποσύρθηκε.</value>
   </data>
-  <data name="API Keys" xml:space="preserve">
-    <value>Πληκτρά API</value>
+  <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
+    <value>Δημιουργήστε έναν προσωπικό κλειδί για τη δημοσίευση πακέτων με τα δικαιώματα του λογαριασμού σας.</value>
+  </data>
+  <data name="Create your first key" xml:space="preserve">
+    <value>Δημιουργήστε το πρώτο σας κλειδί</value>
   </data>
   <data name="Expired" xml:space="preserve">
     <value>Ληγμένο</value>
@@ -50,6 +56,9 @@
   </data>
   <data name="Use" xml:space="preserve">
     <value>Χρήση</value>
+  </data>
+  <data name="Your first release starts here" xml:space="preserve">
+    <value>Η πρώτη σας έκδοση ξεκινά εδώ</value>
   </data>
 
 </root>

@@ -27,11 +27,23 @@
   <data name="Documentation" xml:space="preserve">
     <value>Τεκμηρίωση</value>
   </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Ξεκινήστε</value>
+  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
   </data>
+  <data name="Main navigation" xml:space="preserve">
+    <value>Κυρίως πλοήγηση</value>
+  </data>
+  <data name="Packages" xml:space="preserve">
+    <value>Συσκευασίες</value>
+  </data>
   <data name="Source Code" xml:space="preserve">
     <value>Πηγαίος Κώδικας</value>
+  </data>
+  <data name="Toggle color theme" xml:space="preserve">
+    <value>Εναλλαγή χρωματικού θεματος</value>
   </data>
   <data name="Try the dashboard" xml:space="preserve">
     <value>Δοκιμάστε τον πίνακα ελέγχου</value>
