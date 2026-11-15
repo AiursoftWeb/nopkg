@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Concurrent;
 using System.Formats.Tar;
 using System.IO.Compression;
@@ -109,7 +110,7 @@ public partial class NpmRegistry
         {
             Version = version ?? "", Description = manifest?["description"]?.GetValue<string>() ?? metadata["description"]?.GetValue<string>() ?? "",
             Author = author is JsonObject person ? person["name"]?.GetValue<string>() ?? "" : author is JsonValue text && text.TryGetValue<string>(out var value) ? value : "",
-            Published = DateTimeOffset.TryParse(metadata["time"]?[version ?? ""]?.GetValue<string>(), out var date) ? date : null
+            Published = DateTimeOffset.TryParse(metadata["time"]?[version ?? ""]?.GetValue<string>(), CultureInfo.InvariantCulture, DateTimeStyles.None, out var date) ? date : null
         };
     }
 

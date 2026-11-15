@@ -1,3 +1,4 @@
+@using System.Globalization
 @model Aiursoft.Nopkg.Models.DashboardViewModels.DetailsViewModel
 @{
     var registryUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/";
@@ -47,7 +48,7 @@ else
             <div class="card"><div class="card-header"><h2 class="package-section-title">@Localizer["Version history"]</h2></div>
             @foreach (var item in Model.Versions.Skip((Model.VersionsPage - 1) * 20).Take(20))
             {
-                <div class="package-version-row @(item.Version == Model.Version ? "current" : "")"><div class="d-flex flex-wrap align-items-center gap-2"><a href="@Link("versions", item.Version, Model.VersionsPage)">@item.Version</a>@foreach (var tag in item.Tags) { <span class="badge bg-primary-subtle text-primary">@tag</span> }@if (item.Deprecated) { <span class="badge bg-warning-subtle text-warning">@Localizer["Deprecated"]</span> }</div><span class="small text-muted">@(item.Published?.ToString("yyyy-MM-dd") ?? Localizer["Date unavailable"].Value)</span></div>
+                <div class="package-version-row @(item.Version == Model.Version ? "current" : "")"><div class="d-flex flex-wrap align-items-center gap-2"><a href="@Link("versions", item.Version, Model.VersionsPage)">@item.Version</a>@foreach (var tag in item.Tags) { <span class="badge bg-primary-subtle text-primary">@tag</span> }@if (item.Deprecated) { <span class="badge bg-warning-subtle text-warning">@Localizer["Deprecated"]</span> }</div><span class="small text-muted">@(item.Published?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? Localizer["Date unavailable"].Value)</span></div>
             }
             </div>
             @if (Model.Versions.Count > 20 || Model.VersionsPage > 1)
@@ -80,7 +81,7 @@ else
     <aside class="package-aside" aria-label="@Localizer["Package metadata"]">
         <div class="card"><div class="card-body"><h2 class="package-section-title mb-4">@Localizer["Package information"]</h2><dl class="package-facts">
             <dt>@Localizer["Version"]</dt><dd><span class="package-version-chip">@Model.Version</span></dd>
-            <dt>@Localizer["Published"]</dt><dd>@(Model.Published?.ToString("yyyy-MM-dd") ?? Localizer["Date unavailable"].Value)</dd>
+            <dt>@Localizer["Published"]</dt><dd>@(Model.Published?.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture) ?? Localizer["Date unavailable"].Value)</dd>
             <dt>@Localizer["Author"]</dt><dd>@(string.IsNullOrWhiteSpace(Model.Author) ? Localizer["Not provided"].Value : Model.Author)</dd>
             <dt>@Localizer["License"]</dt><dd>@(string.IsNullOrWhiteSpace(Model.License) ? Localizer["Not provided"].Value : Model.License)</dd>
             <dt>@Localizer["Source"]</dt><dd>@(Model.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</dd>

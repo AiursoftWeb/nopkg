@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Text.Json.Nodes;
 using Aiursoft.Nopkg.Models.DashboardViewModels;
 using Aiursoft.Nopkg.Registry;
@@ -65,5 +66,5 @@ public class PackageController(NpmRegistry registry, ILocalPackageStore localPac
         }
     }
     private static string Text(JsonNode? node) => node is JsonValue value && value.TryGetValue<string>(out var text) ? text : "";
-    private static DateTimeOffset? Date(JsonNode? node) => DateTimeOffset.TryParse(Text(node), out var date) ? date : null;
+    private static DateTimeOffset? Date(JsonNode? node) => DateTimeOffset.TryParse(Text(node), CultureInfo.InvariantCulture, DateTimeStyles.None, out var date) ? date : null;
 }
