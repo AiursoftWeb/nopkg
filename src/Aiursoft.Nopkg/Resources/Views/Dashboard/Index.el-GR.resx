@@ -60,6 +60,9 @@
   <data name="Background Job Processing" xml:space="preserve">
     <value>Επεξεργασία εργασιών στο παρασκήνιο</value>
   </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Περιήγηση σε όλα τα πακέτα</value>
+  </data>
   <data name="Built-in User Management" xml:space="preserve">
     <value>Ενσωματωμένη Διαχείριση Χρηστών</value>
   </data>
@@ -74,6 +77,9 @@
   </data>
   <data name="Connect an npm client to start the cache." xml:space="preserve">
     <value>Συνδέστε έναν πελάτη npm για να ξεκινήσει η κACHE.</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Συμπεράστε τον πελάτη σας</value>
   </data>
   <data name="Consistency Validation" xml:space="preserve">
     <value>Έλεγχος Συνοχής</value>
@@ -132,8 +138,14 @@
   <data name="Multiple Database Support" xml:space="preserve">
     <value>Υποστήριξη Πολλαπλών Βάσεων Δεδομένων</value>
   </data>
+  <data name="Next" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
   <data name="No packages cached yet" xml:space="preserve">
     <value>Δεν έχουν αποθηκευτεί ακόμα πακέτα</value>
+  </data>
+  <data name="No packages found" xml:space="preserve">
+    <value>Δεν βρέθηκαν πακέτα</value>
   </data>
   <data name="OpenID Connect Integration" xml:space="preserve">
     <value>Ενσωμάτωση OpenID Connect</value>
@@ -147,8 +159,17 @@
   <data name="Package admission is unavailable" xml:space="preserve">
     <value>Η είσοδος πακέτων δεν είναι διαθέσιμη</value>
   </data>
+  <data name="Package name or scope" xml:space="preserve">
+    <value>Όνομα πακέτου ή πεδίο</value>
+  </data>
+  <data name="Package pages" xml:space="preserve">
+    <value>Σελίδες πακέτων</value>
+  </data>
   <data name="Packages" xml:space="preserve">
     <value>Πακέτα</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Προηγούμενη</value>
   </data>
   <data name="RBAC Authorization" xml:space="preserve">
     <value>Εξουσιοδότηση RBAC</value>
@@ -167,6 +188,12 @@
   </data>
   <data name="Seamlessly integrate with any OpenID Connect provider, with automatic role synchronization." xml:space="preserve">
     <value>Απρόσκοπτη ενσωμάτωση με οποιονδήποτε πάροχο OpenID Connect, με αυτόματο συγχρονισμό ρόλων.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Αναζήτηση</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Αναζήτηση πακέτων</value>
   </data>
   <data name="Smart Configuration Overrides" xml:space="preserve">
     <value>Έξυπνες Αντικαταστάσεις Ρυθμίσεων</value>
@@ -194,6 +221,9 @@
   </data>
   <data name="This is a nopkg project, where we start the voyager..." xml:space="preserve">
     <value>Αυτό είναι ένα πρότυπο έργο, από όπου ξεκινάμε το ταξίδι...</value>
+  </data>
+  <data name="Try another package name or clear your search." xml:space="preserve">
+    <value>Δοκιμάστε ένα άλλο όνομα πακέτου ή διαγράψτε την αναζήτησή σας.</value>
   </data>
   <data name="Welcome" xml:space="preserve">
     <value>Καλώς ορίσατε</value>
