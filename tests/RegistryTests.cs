@@ -156,4 +156,36 @@ public partial class RegistryTests
         CollectionAssert.AreEqual(archive, await File.ReadAllBytesAsync(await new NpmRegistry(client, Options()).ArchiveAsync("@example/library", "1.0.0")));
     }
 
+    [TestMethod]
+    public async Task LargeUpstreamCatalogCanSupplyAnExactVersion()
+    {
+        var archive = Archive();
+        var metadata = Metadata(archive);
+        // Real registries can exceed 32 MiB after years of version history.
+        metadata["readme"] = new string('x', 33 * 1024 * 1024);
+        using var client = new HttpClient(new RegistryHandler(r => r.RequestUri!.AbsolutePath.EndsWith(".tgz", StringComparison.Ordinal)
+            ? Response(archive) : Response(metadata)));
+        var registry = new NpmRegistry(client, Options());
+        CollectionAssert.AreEqual(archive, await File.ReadAllBytesAsync(await registry.ArchiveAsync("@example/library", "1.0.0")));
+    }
+
+    [TestMethod]
+    public async Task OversizedCatalogIsRejectedWithoutReplacingCachedMetadata()
+    {
+        var metadata = Metadata(Archive());
+        using var client = new HttpClient(new RegistryHandler(_ => Response(metadata)));
+        var options = Options();
+        options.MaxMetadataBytes = 1024;
+        var registry = new NpmRegistry(client, options);
+        await registry.MetadataAsync("@example/library");
+
+        metadata["readme"] = new string('x', 1024);
+        await Assert.ThrowsExactlyAsync<InvalidDataException>(() => registry.MetadataAsync("@example/library"));
+
+        using var unavailable = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Offline reads must not request an upstream.")));
+        var cached = await new NpmRegistry(unavailable, Options(offline: true)).MetadataAsync("@example/library");
+        Assert.IsFalse(cached.ContainsKey("readme"));
+        Assert.IsTrue(cached["versions"]!.AsObject().ContainsKey("1.0.0"));
+    }
+
 }
