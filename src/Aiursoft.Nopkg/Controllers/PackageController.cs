@@ -14,7 +14,7 @@ public class PackageController(NpmRegistry registry, ILocalPackageStore localPac
     [HttpGet("/packages/details", Name = "NpmPackageDetails")]
     [HttpGet("/Package/Details/{id?}")]
     public async Task<IActionResult> Details(string id, string? version = null, string q = "", int page = 1,
-        string tab = "overview", int versionsPage = 1, int dependentsPage = 1, CancellationToken cancellationToken = default)
+        string? after = null, string? before = null, string tab = "overview", int versionsPage = 1, int dependentsPage = 1, CancellationToken cancellationToken = default)
     {
         Response.Headers.CacheControl = "no-store";
         try
@@ -43,7 +43,7 @@ public class PackageController(NpmRegistry registry, ILocalPackageStore localPac
                     dependencies.AddRange(group.Select(d => new PackageDependency(d.Key, Text(d.Value), kind)));
             return this.StackView(new DetailsViewModel
             {
-                PageTitle = id, Name = id, Version = version, Query = q, Page = Math.Max(1, page),
+                PageTitle = id, Name = id, Version = version, Query = q, After = after, Before = before, Page = Math.Max(1, page),
                 VersionsPage = Math.Clamp(versionsPage, 1, Math.Max(1, (ordered.Count + 19) / 20)), DependentsPage = Math.Clamp(dependentsPage, 1, int.MaxValue / 20),
                 ActiveTab = tab is "versions" or "dependencies" or "usedby" ? tab : "overview",
                 IsLocallyPublished = await localPackages.FindAsync(id, cancellationToken) != null,
@@ -62,7 +62,7 @@ public class PackageController(NpmRegistry registry, ILocalPackageStore localPac
             var status = ex switch { ArtifactDeniedException => 403, AdmissionUnavailableException => 503,
                 FileNotFoundException => 404, ArgumentException => 400, _ => 502 };
             Response.StatusCode = status;
-            return this.StackView(new DetailsViewModel { Name = id, Query = q, Page = Math.Max(1, page), ErrorStatus = status });
+            return this.StackView(new DetailsViewModel { Name = id, Query = q, After = after, Before = before, Page = Math.Max(1, page), ErrorStatus = status });
         }
     }
     private static string Text(JsonNode? node) => node is JsonValue value && value.TryGetValue<string>(out var text) ? text : "";

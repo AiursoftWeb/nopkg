@@ -2,12 +2,12 @@
 @model Aiursoft.Nopkg.Models.DashboardViewModels.DetailsViewModel
 @{
     var registryUrl = $"{Context.Request.Scheme}://{Context.Request.Host}{Context.Request.PathBase}/npm/";
-    string Link(string tab = "overview", string? version = null, int versionsPage = 1, int dependentsPage = 1) => Url.RouteUrl("NpmPackageDetails", new { id = Model.Name, version = version ?? Model.Version, q = Model.Query, page = Model.Page, tab, versionsPage, dependentsPage })!;
+    string Link(string tab = "overview", string? version = null, int versionsPage = 1, int dependentsPage = 1) => Url.RouteUrl("NpmPackageDetails", new { id = Model.Name, version = version ?? Model.Version, q = Model.Query, page = Model.Page, after = Model.After, before = Model.Before, tab, versionsPage, dependentsPage })!;
 }
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles { <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" /> }
 <div class="package-workspace npm-workspace">
-<a asp-controller="Dashboard" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" class="d-inline-flex align-items-center gap-2 mb-4"><i data-lucide="arrow-left" aria-hidden="true"></i>@Localizer["Back to packages"]</a>
+<a asp-controller="Dashboard" asp-action="Index" asp-route-q="@Model.Query" asp-route-page="@Model.Page" asp-route-after="@Model.After" asp-route-before="@Model.Before" class="d-inline-flex align-items-center gap-2 mb-4"><i data-lucide="arrow-left" aria-hidden="true"></i>@Localizer["Back to packages"]</a>
 <div class="card package-masthead"><div class="card-body">
     <p class="package-eyebrow">npm · @Localizer["Package details"]</p>
     <div class="d-flex flex-wrap gap-3 align-items-start justify-content-between"><h1 class="package-title mb-0">@Model.Name</h1>@if (!Model.ErrorStatus.HasValue) { <span class="package-version-chip">@Model.Version</span> }</div>

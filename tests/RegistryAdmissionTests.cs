@@ -17,6 +17,7 @@ public partial class RegistryTests
         public string Hash { get; set; } = Convert.ToHexStringLower(SHA256.HashData(archive));
         public string Source { get; set; } = "https://registry.example";
         public int Assessments { get; private set; }
+        public List<ArtifactIdentity> Requested { get; } = [];
         public int Lookups { get; private set; }
         public List<ArtifactIdentity>? CatalogArtifacts { get; set; }
 
@@ -37,10 +38,76 @@ public partial class RegistryTests
             Assert.IsTrue(body["dependencies"]!.AsArray().All(a => !a!.AsObject().ContainsKey("sha256")));
             var identities = body["dependencies"]!.Deserialize<List<ArtifactIdentity>>(new JsonSerializerOptions(JsonSerializerDefaults.Web))!;
             Assessments++;
+            Requested.AddRange(identities);
             return Response(JsonSerializer.SerializeToNode(new ArtifactAssessmentResponse(identities.Select(a =>
                 (ArtifactDecision?)new ArtifactDecision(MismatchedDecision ? a with { Name = "different-library" } : a,
                     Allowed && artifacts.Any(p => p.Ecosystem == a.Ecosystem && p.Name == a.Name && p.Version == a.Version && p.Source == a.Source), Pending)).ToList()))!.AsObject());
         }
+    }
+
+    [TestMethod]
+    public async Task CatalogPageStopsBeforeUnrelatedHistoryAndRechecksFallbackVersions()
+    {
+        var identities = new List<ArtifactIdentity>();
+        for (var n = 0; n < 80; n++)
+        {
+            var name = $"page-{n:D3}";
+            var directory = Path.Combine(_directory, name);
+            Directory.CreateDirectory(directory);
+            var versions = new JsonObject();
+            for (var v = 0; v < 1000; v++) versions[$"1.0.{v}"] = new JsonObject();
+            await File.WriteAllTextAsync(Path.Combine(directory, "metadata.json"), new JsonObject { ["name"] = name, ["versions"] = versions }.ToJsonString());
+            // The first name has an approved older release, and the last names
+            // have no approval at all. Neither may cause a full-directory scan.
+            if (n < 70) identities.Add(new ArtifactIdentity("npm", name, n == 0 ? "1.0.998" : "1.0.999", "https://registry.example", ""));
+        }
+        var handler = new AdmissionHandler(Archive()) { CatalogArtifacts = identities };
+        using var policy = new HttpClient(handler);
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Browsing must not fetch upstream.")));
+        var registry = Controlled(upstream, policy);
+        var first = await registry.CatalogPageAsync("", 1, CancellationToken.None);
+        Assert.AreEqual(20, first.Packages.Count);
+        Assert.IsTrue(first.HasNext);
+        Assert.AreEqual("1.0.998", first.Packages[0].Version);
+        Assert.IsTrue(handler.Requested.All(p => StringComparer.Ordinal.Compare(p.Name, "page-020") <= 0));
+        var second = await registry.CatalogPageAsync("", 2, CancellationToken.None);
+        Assert.AreEqual("page-020", second.Packages[0].Name);
+        Assert.IsFalse(first.Packages.Select(p => p.Name).Intersect(second.Packages.Select(p => p.Name)).Any());
+        handler.Requested.Clear();
+        var seek = await registry.CatalogPageAsync("", 2, CancellationToken.None, after: "page-019");
+        Assert.AreEqual("page-020", seek.Packages[0].Name);
+        Assert.IsTrue(seek.HasPrevious);
+        Assert.IsTrue(handler.Requested.All(p => StringComparer.Ordinal.Compare(p.Name, "page-019") > 0));
+        handler.Requested.Clear();
+        var back = await registry.CatalogPageAsync("", 1, CancellationToken.None, before: "page-020");
+        CollectionAssert.AreEqual(first.Packages.Select(p => p.Name).ToArray(), back.Packages.Select(p => p.Name).ToArray());
+        Assert.IsFalse(back.HasPrevious);
+        Assert.IsTrue(back.HasNext);
+        handler.Allowed = false;
+        Assert.AreEqual(0, (await registry.CatalogPageAsync("page-000", 1, CancellationToken.None)).Packages.Count);
+        handler.Unavailable = true;
+        await Assert.ThrowsExactlyAsync<AdmissionUnavailableException>(() => registry.CatalogPageAsync("page-000", 1, CancellationToken.None));
+    }
+
+    [TestMethod]
+    public async Task CatalogNameIndexHandlesLongMetadataBeforeNameAndRefreshesReplacedFiles()
+    {
+        var directory = Path.Combine(_directory, "fixture");
+        Directory.CreateDirectory(directory);
+        var metadata = Metadata(Archive());
+        var ordered = new JsonObject { ["readme"] = new string('x', 16000) };
+        foreach (var item in metadata) ordered[item.Key] = item.Value?.DeepClone();
+        var path = Path.Combine(directory, "metadata.json");
+        await File.WriteAllTextAsync(path, ordered.ToJsonString());
+        using var upstream = new HttpClient(new RegistryHandler(_ => throw new AssertFailedException("Browsing must not fetch upstream.")));
+        var registry = new NpmRegistry(upstream, Options());
+        Assert.AreEqual(1, (await registry.CatalogPageAsync("@example", 1, CancellationToken.None)).Packages.Count);
+        ordered["name"] = "@renamed/library";
+        await File.WriteAllTextAsync(path, ordered.ToJsonString());
+        Assert.AreEqual(0, (await registry.CatalogPageAsync("@example", 1, CancellationToken.None)).Packages.Count);
+        Assert.AreEqual(1, (await registry.CatalogPageAsync("@renamed", 1, CancellationToken.None)).Packages.Count);
+        File.Delete(path);
+        Assert.AreEqual(0, (await registry.CatalogPageAsync("", 1, CancellationToken.None)).KnownPackages);
     }
 
     [TestMethod]

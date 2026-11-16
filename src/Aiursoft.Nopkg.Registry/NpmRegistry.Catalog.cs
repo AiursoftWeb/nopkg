@@ -15,11 +15,24 @@ public partial class NpmRegistry
         IReadOnlyDictionary<string, string[]> Dependencies);
     private readonly ConcurrentDictionary<string, CatalogFile> _catalog = new(StringComparer.Ordinal);
 
-    private async Task<IReadOnlyList<(string Path, CatalogFile File)>> CatalogFilesAsync(CancellationToken token)
+    private sealed record CatalogName(long Length, DateTime Written, string Name);
+    private readonly ConcurrentDictionary<string, CatalogName> _catalogNames = new(StringComparer.Ordinal);
+
+    private static string? ReadNamePrefix(ReadOnlySpan<byte> bytes)
     {
-        var result = new List<(string Path, CatalogFile File)>();
+        var reader = new Utf8JsonReader(bytes, isFinalBlock: false, state: default);
+        while (reader.Read())
+            if (reader.CurrentDepth == 1 && reader.TokenType == JsonTokenType.PropertyName && reader.ValueTextEquals("name"))
+                return reader.Read() && reader.TokenType == JsonTokenType.String ? reader.GetString() : null;
+        return null;
+    }
+
+    private async Task<IReadOnlyList<(string Path, CatalogName File)>> CatalogNamesAsync(CancellationToken token)
+    {
+        var result = new List<(string Path, CatalogName File)>();
         var paths = new HashSet<string>(StringComparer.Ordinal);
         if (Directory.Exists(_root))
+        {
             foreach (var directory in Directory.EnumerateDirectories(_root))
             {
                 token.ThrowIfCancellationRequested();
@@ -27,39 +40,106 @@ public partial class NpmRegistry
                 var info = new FileInfo(path);
                 if (!info.Exists) continue;
                 paths.Add(path);
-                if (!_catalog.TryGetValue(path, out var entry) || entry.Length != info.Length || entry.Written != info.LastWriteTimeUtc)
+                if (!_catalogNames.TryGetValue(path, out var entry) || entry.Length != info.Length || entry.Written != info.LastWriteTimeUtc)
                 {
                     await using var input = File.OpenRead(path);
-                    using var doc = await JsonDocument.ParseAsync(input, cancellationToken: token);
-                    var root = doc.RootElement;
-                    var name = PackageName(root.GetProperty("name").GetString()!);
-                    var versions = root.GetProperty("versions").EnumerateObject().Select(v => v.Name)
-                        .OrderByDescending(v => v, NpmVersionComparer.Instance).ToArray();
-                    if (versions.Any(v => v.Length > 128 || !VersionPattern().IsMatch(v)))
-                        throw new InvalidDataException("Invalid package version in metadata.");
-                    var dependencies = new Dictionary<string, List<string>>(StringComparer.Ordinal);
-                    foreach (var version in root.GetProperty("versions").EnumerateObject())
-                    foreach (var kind in new[] { "dependencies", "peerDependencies", "optionalDependencies" })
+                    var prefix = new byte[8192];
+                    var count = await input.ReadAtLeastAsync(prefix, prefix.Length, throwOnEndOfStream: false, cancellationToken: token);
+                    var name = ReadNamePrefix(prefix.AsSpan(0, count));
+                    if (name == null)
                     {
-                        if (!version.Value.TryGetProperty(kind, out var group) || group.ValueKind != JsonValueKind.Object) continue;
-                        foreach (var dependency in group.EnumerateObject())
-                        {
-                            if (!dependencies.TryGetValue(dependency.Name, out var matches)) dependencies[dependency.Name] = matches = [];
-                            matches.Add(version.Name);
-                        }
+                        // Unusual metadata property order is valid too.
+                        input.Position = 0;
+                        using var doc = await JsonDocument.ParseAsync(input, cancellationToken: token);
+                        name = doc.RootElement.GetProperty("name").GetString();
                     }
-                    // Prefer the published latest tag, then fall back to semantic version order.
-                    if (root.TryGetProperty("dist-tags", out var tags) && tags.TryGetProperty("latest", out var tag) &&
-                        tag.ValueKind == JsonValueKind.String && versions.Contains(tag.GetString()))
-                        versions = versions.Prepend(tag.GetString()!).Distinct(StringComparer.Ordinal).ToArray();
-                    entry = new CatalogFile(info.Length, info.LastWriteTimeUtc, name, versions,
-                        dependencies.ToDictionary(x => x.Key, x => x.Value.Distinct().OrderByDescending(v => v, NpmVersionComparer.Instance).ToArray()));
-                    _catalog[path] = entry;
+                    entry = new CatalogName(info.Length, info.LastWriteTimeUtc, PackageName(name!));
+                    _catalogNames[path] = entry;
                 }
                 result.Add((path, entry));
             }
-        foreach (var path in _catalog.Keys.Where(p => !paths.Contains(p))) _catalog.TryRemove(path, out _);
+        }
+        foreach (var path in _catalogNames.Keys.Where(p => !paths.Contains(p)))
+        {
+            _catalogNames.TryRemove(path, out _);
+            _catalog.TryRemove(path, out _);
+        }
         return result;
+    }
+
+    private async Task<CatalogFile> ReadCatalogFileAsync(string path, CatalogName header, CancellationToken token)
+    {
+        if (_catalog.TryGetValue(path, out var entry) && entry.Length == header.Length && entry.Written == header.Written) return entry;
+        await using var input = File.OpenRead(path);
+        using var doc = await JsonDocument.ParseAsync(input, cancellationToken: token);
+        var root = doc.RootElement;
+        var name = PackageName(root.GetProperty("name").GetString()!);
+        var versions = root.GetProperty("versions").EnumerateObject().Select(v => v.Name)
+            .OrderByDescending(v => v, NpmVersionComparer.Instance).ToArray();
+        if (versions.Any(v => v.Length > 128 || !VersionPattern().IsMatch(v)))
+            throw new InvalidDataException("Invalid package version in metadata.");
+        var dependencies = new Dictionary<string, List<string>>(StringComparer.Ordinal);
+        foreach (var version in root.GetProperty("versions").EnumerateObject())
+        foreach (var kind in new[] { "dependencies", "peerDependencies", "optionalDependencies" })
+        {
+            if (!version.Value.TryGetProperty(kind, out var group) || group.ValueKind != JsonValueKind.Object) continue;
+            foreach (var dependency in group.EnumerateObject())
+            {
+                if (!dependencies.TryGetValue(dependency.Name, out var matches)) dependencies[dependency.Name] = matches = [];
+                matches.Add(version.Name);
+            }
+        }
+        // Prefer the published latest tag, then fall back to semantic version order.
+        if (root.TryGetProperty("dist-tags", out var tags) && tags.TryGetProperty("latest", out var tag) &&
+            tag.ValueKind == JsonValueKind.String && versions.Contains(tag.GetString()))
+            versions = versions.Prepend(tag.GetString()!).Distinct(StringComparer.Ordinal).ToArray();
+        entry = new CatalogFile(header.Length, header.Written, name, versions,
+            dependencies.ToDictionary(x => x.Key, x => x.Value.Distinct().OrderByDescending(v => v, NpmVersionComparer.Instance).ToArray()));
+        _catalog[path] = entry;
+        return entry;
+    }
+
+    private async Task<IReadOnlyList<(string Path, CatalogFile File)>> CatalogFilesAsync(CancellationToken token)
+    {
+        var result = new List<(string Path, CatalogFile File)>();
+        foreach (var (path, header) in await CatalogNamesAsync(token))
+            result.Add((path, await ReadCatalogFileAsync(path, header, token)));
+        return result;
+    }
+
+    public async Task<(IReadOnlyList<CachedPackage> Packages, bool HasNext, bool HasPrevious, int KnownPackages)> CatalogPageAsync(
+        string query, int page, CancellationToken token, string? after = null, string? before = null)
+    {
+        var local = localPackages == null ? [] : await localPackages.ListAsync(token);
+        var owned = local.ToDictionary(p => p.Name, StringComparer.Ordinal);
+        var names = (await CatalogNamesAsync(token)).Where(p => !owned.ContainsKey(p.File.Name)).ToList();
+        var byName = names.ToDictionary(p => p.File.Name, StringComparer.Ordinal);
+        var backward = !string.IsNullOrEmpty(before);
+        var seek = backward || !string.IsNullOrEmpty(after);
+        var matching = names.Select(p => p.File.Name).Concat(owned.Keys)
+            .Where(n => n.Contains(query, StringComparison.OrdinalIgnoreCase))
+            .Where(n => !seek || (backward ? StringComparer.Ordinal.Compare(n, before) < 0 : StringComparer.Ordinal.Compare(n, after) > 0));
+        matching = backward ? matching.OrderByDescending(n => n, StringComparer.Ordinal) : matching.OrderBy(n => n, StringComparer.Ordinal);
+        var visible = new List<CachedPackage>();
+        var wanted = seek ? 20 : Math.Clamp(page, 1, int.MaxValue / 20) * 20;
+        foreach (var batch in matching.Chunk(21))
+        {
+            var candidates = new List<(string Name, string[] Versions)>();
+            foreach (var name in batch.Where(n => !owned.ContainsKey(n)))
+            {
+                var file = byName[name];
+                candidates.Add((name, (await ReadCatalogFileAsync(file.Path, file.File, token)).Versions));
+            }
+            var allowed = await FirstAllowedAsync(candidates, token);
+            foreach (var name in batch)
+                if (owned.TryGetValue(name, out var package)) visible.Add(package);
+                else if (allowed.TryGetValue(name, out var version)) visible.Add(new CachedPackage(name) { Version = version });
+            // One extra admitted item establishes that Next is useful. No global count scan.
+            if (visible.Count > wanted) break;
+        }
+        var result = visible.Skip(wanted - 20).Take(20).ToList();
+        if (backward) result.Reverse();
+        return (result, backward || visible.Count > wanted, backward ? visible.Count > wanted : seek || page > 1, names.Count + owned.Count);
     }
 
     private async Task<Dictionary<string, string>> FirstAllowedAsync(IReadOnlyList<(string Name, string[] Versions)> packages, CancellationToken token)
