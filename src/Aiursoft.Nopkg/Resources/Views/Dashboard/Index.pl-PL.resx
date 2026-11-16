@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Automatyczna, oparta na AI tłumaczenie na 28 języków.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Dostępne w tym rejestrze</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Przetwarzanie zadań w tle</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Twórz wyłączni w strefie czasowej UTC, podczas gdy system automatycznie konwertuje i wyświetla daty w strefie czasowej użytkownika.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Odkrywaj pakiety JavaScript. Znajdź wersję, poznaj zależności i zacznij budować.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Przygotowane do wdrożenia z Dockerem</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Strony pakietów</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Rejestr pakietów</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Pakiety</value>

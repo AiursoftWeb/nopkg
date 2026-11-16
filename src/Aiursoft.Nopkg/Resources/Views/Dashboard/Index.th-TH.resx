@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>การแปลอัตโนมัติแบบขับเคลื่อนด้วยปัญญาประดิษฐ์ สำหรับ 28 ภาษา</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>พร้อมใช้งานบน registry นี้</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>การประมวลผลงานหลังบ้าน</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>พัฒนาเฉพาะในเวลา UTC โดยระบบจะแปลงและแสดงวันที่โดยอัตโนมัติเป็นเขตเวลาท้องถิ่นของผู้ใช้</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>ค้นพบแพ็กเกจ JavaScript ค้นหาเวอร์ชัน สำรวจการพึ่งพา และเริ่มต้นการสร้างสรรค์</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>พร้อมใช้งานด้วย Docker</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>หน้าแพ็กเกจ</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>คลังแพ็กเกจ</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>แพ็กเกจ</value>

@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>ผู้เขียน</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>เวอร์ชันที่มีอยู่</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>กลับไปที่แพ็กเกจ</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>ดูแพ็กเกจทั้งหมด</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>คัดลอกคำสั่ง</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>การพึ่งพา</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>รายการขึ้นอยู่จะแสดงที่นี่เมื่อมีการเพิ่มแพ็กเกจลงในรีจิสทรีนี้</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>หน้าของแพ็กเกจที่ขึ้นอยู่กัน</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>เลิกใช้แล้ว</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>เวอร์ชันที่ไม่ได้ใช้อีกต่อไป</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>ติดตั้งเวอร์ชันนี้</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>ใบอนุญาต</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>ลิงก์</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>ถัดไป</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>ไม่มี dependencies</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>ไม่มีแพ็กเกจที่ขึ้นต่อกับเซิร์ฟเวอร์นี้</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>ไม่มีไฟล์ readme รวมอยู่ในเมตาดาตาของแพ็กเกจนี้</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>ภาพรวม</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>รายละเอียดแพ็กเกจ</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>ข้อมูลแพ็กเกจ</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>ข้อมูลเมทาดาทาของแพ็กเกจ</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>แหล่งที่มาของแพ็กเกจ</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>แพ็กเกจในรีเจสทรีนี้ที่ประกาศการพึ่งพาแบบรันไทม์ พียร์ หรือออปชันนัล ต่อแพ็กเกจนี้ รายการนี้ไม่ใช่รายการของโปรเจกต์หรือจำนวนดาวน์โหลด</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>ก่อนหน้า</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>เว็บไซต์โปรเจกต์</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>เผยแพร่แล้ว</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Readme</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>รีจิสทรี</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>เลือกเวอร์ชัน</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>แหล่งที่มา</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>ซอร์สโค้ด</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>คำสั่งติดตั้งจะเลือกเรจิสทรีนี้โดยเฉพาะ</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>คำสั่งนี้ใช้รีจิสทรีนี้โดยเฉพาะ การเข้าถึงแพ็กเกจจะปฏิบัติตามนโยบายรีจิสทรีปัจจุบัน</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>เวอร์ชันนี้ไม่มีการประกาศการพึ่งพาแพ็กเกจ</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>เวอร์ชันนี้ไม่มีการประกาศการพึ่งพาขณะรันไทม์</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>ถูกใช้งานโดย</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>เวอร์ชัน</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>ประวัติเวอร์ชัน</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>หน้าเวอร์ชัน</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>เวอร์ชัน</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>ดูซอร์สโค้ด</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>ดูเวอร์ชัน</value>

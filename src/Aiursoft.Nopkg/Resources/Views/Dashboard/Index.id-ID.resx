@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Terjemahan otomatis, didorong oleh AI ke dalam 28 bahasa.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Tersedia di registry ini</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Pemrosesan Tugas Latar Belakang</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>Kembangkan secara eksklusif dalam UTC sementara sistem secara otomatis mengonversi dan menampilkan tanggal dalam zona waktu lokal pengguna.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>Temukan paket JavaScript. Cari versi, jelajahi dependensinya, dan mulai membangun.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Terdockerisasi untuk Deployment</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Halaman paket</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Registrasi paket</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paket</value>

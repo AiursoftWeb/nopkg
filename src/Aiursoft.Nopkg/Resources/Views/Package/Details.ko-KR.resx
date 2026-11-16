@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>작성자</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>사용 가능한 버전</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>패키지로 돌아가기</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>모든 패키지 보기</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>명령어 복사</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>의존성</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>패키지가 이 레지스트리에 추가되면 여기에 종속성이 표시됩니다.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>의존 패키지 페이지</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>구버전</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>비추천 버전</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>이 버전 설치</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>라이선스</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>링크</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>다음</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>의존성 없음</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>이 서버에 종속 패키지가 없습니다</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>이 패키지의 메타데이터에 README가 포함되어 있지 않습니다.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>개요</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>패키지 세부 정보</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>패키지 정보</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>패키지 메타데이터</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>패키지 출처</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>이 레지스트리에 이 패키지에 대한 런타임, 피어, 또는 선택적 종속성을 선언하는 패키지입니다. 이는 프로젝트 목록이나 다운로드 횟수 목록이 아닙니다.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>이전</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>프로젝트 웹사이트</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>게시됨</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>README</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>레지스트리</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>버전 선택</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>소스</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>소스 코드</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>설치 명령은 이 레지스트리를 명시적으로 선택합니다.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>이 명령은 이 레지스트리를 명시적으로 사용합니다. 패키지 액세스는 현재 레지스트리 정책을 따릅니다.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>이 버전에는 패키지 종속성이 없습니다.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>이 버전은 런타임 의존성이 없습니다.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>사용 중인 패키지</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>버전</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>버전 기록</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>버전 페이지</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>버전</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>소스 코드 보기</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>버전 보기</value>

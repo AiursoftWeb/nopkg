@@ -57,6 +57,9 @@
   <data name="Automatic, AI-driven translation into 28 languages." xml:space="preserve">
     <value>Otomatik, yapay zeka destekli 28 dilde çeviri.</value>
   </data>
+  <data name="Available on this registry" xml:space="preserve">
+    <value>Bu kayıt defterinde mevcut</value>
+  </data>
   <data name="Background Job Processing" xml:space="preserve">
     <value>Arka Plan İşlem İşleme</value>
   </data>
@@ -86,6 +89,9 @@
   </data>
   <data name="Develop exclusively in UTC while the system automatically converts and displays dates in the user&apos;s local time zone." xml:space="preserve">
     <value>UTC&apos;de yalnızca geliştirin, sistem tarihleri otomatik olarak kullanıcının yerel saat dilimine dönüştürür ve görüntüler.</value>
+  </data>
+  <data name="Discover JavaScript packages. Find a version, explore its dependencies, and start building." xml:space="preserve">
+    <value>JavaScript paketlerini keşfedin. Bir sürüm bulun, bağımlılıklarını inceleyin ve geliştirmeye başlayın.</value>
   </data>
   <data name="Dockerized for Deployment" xml:space="preserve">
     <value>Dağıtım İçin Dockerize Edildi</value>
@@ -164,6 +170,9 @@
   </data>
   <data name="Package pages" xml:space="preserve">
     <value>Paket sayfaları</value>
+  </data>
+  <data name="Package registry" xml:space="preserve">
+    <value>Paket kayıt defteri</value>
   </data>
   <data name="Packages" xml:space="preserve">
     <value>Paketler</value>
