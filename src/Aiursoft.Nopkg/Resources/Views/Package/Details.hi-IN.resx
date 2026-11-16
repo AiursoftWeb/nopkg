@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>लेखक</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>उपलब्ध संस्करण</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>पैकेज पर वापस जाएँ</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>सभी पैकेज देखें</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>कमांड कॉपी करें</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>निर्भरताएँ</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>जैसा कि पैकेज इस रजिस्ट्री में जोड़े जाते हैं, निर्भरताएँ यहाँ दिखाई देती हैं।</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>निर्भर पैकेज पृष्ठ</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>विसर्जित</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>अवमूल्यता प्राप्त संस्करण</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>इस संस्करण को इंस्टॉल करें</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>लाइसेंस</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>लिंक</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>अगला</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>कोई निर्भरता नहीं</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>इस सर्वर पर कोई निर्भर पैकेज नहीं</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>इस पैकेज के मेटाडेटा में कोई रीडमी शामिल नहीं था।</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>सारांश</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>पैकेज विवरण</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>पैकेज जानकारी</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>पैकेज मेटाडेटा</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>पैकेज स्रोत</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>इस रजिस्ट्री पर वे पैकेज जो इस पैकेज पर runtime, peer, या optional निर्भरता घोषित करते हैं। यह परियोजनाओं या डाउनलोड संख्याओं की सूची नहीं है।</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>पिछला</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>प्रोजेक्ट वेबसाइट</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>प्रकाशित</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>रीडमी</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>रजिस्ट्री</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>संस्करण चुनें</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>स्रोत</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>सोर्स कोड</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>इंस्टॉल कमांड इस रजिस्ट्री को स्पष्ट रूप से चुनता है।</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>यह कमांड इस रजिस्ट्री का स्पष्ट रूप से उपयोग करता है। पैकेज एक्सेस वर्तमान रजिस्ट्री नीति का पालन करता है।</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>इस संस्करण में कोई पैकेज निर्भरताएँ घोषित नहीं हैं।</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>यह संस्करण कोई रनटाइम निर्भरता घोषित नहीं करता है।</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>किसके द्वारा उपयोग किया जाता है</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>संस्करण</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>संस्करण इतिहास</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>संस्करण पृष्ठ</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>संस्करण</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>सोर्स कोड देखें</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>संस्करण देखें</value>

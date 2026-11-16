@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>Tekijä</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Saatavilla olevat versiot</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>Takaisin paketteihin</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Selaa kaikki paketit</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>Kopioi komento</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Riippuvuudet</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Riippuvuudet näkyvät täällä, kun paketteja lisätään tähän rekisteröintiin.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Riippuvien pakettien sivut</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Käytöstä poistettu</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Käytöstä poistettu versio</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>Asenna tämä versio</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>Lisenssi</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Linkit</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Seuraava</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Ei riippuvuuksia</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Ei riippuvaisia paketteja tällä palvelimella</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>Readme-tiedostoa ei sisältynyt tämän paketin metatiedoissa.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Yleiskatsaus</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Paketin tiedot</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Pakettitiedot</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Paketin metatiedot</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Paketin lähde</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Rekisterin paketit, jotka ilmoittavat tämän paketin ajonaikaisesta, vertais- tai valinnaisesta riippuvuudesta. Tämä ei ole projektien tai latausmäärien luettelo.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Edellinen</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Projektin verkkosivusto</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Julkaistu</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Lukutiedosto</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>Rekisteri</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>Valitse versio</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>Lähde</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Lähdekoodi</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>Asennuskomento valitsee tämän rekisterin nimenomaisesti.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>Tämä komento käyttää tätä rekisteriä nimenomaisesti. Pakettien käyttöoikeus noudattaa voimassa olevaa rekisterikäytäntöä.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Tämä versio ei ilmoita pakettiriippuvuuksia.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>Tämä versio ei ilmoita mitään ajonaikaisia riippuvuuksia.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Käytössä</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Versio</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Versioiden historia</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Versioiden sivut</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Versiot</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Näytä lähdekoodi</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>Näytä versio</value>

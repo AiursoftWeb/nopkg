@@ -18,8 +18,17 @@
     <resheader name="writer">
         <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
     </resheader>
-      <data name="Back to packages" xml:space="preserve">
+      <data name="Author" xml:space="preserve">
+    <value>Συγγραφέας</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Διαθέσιμες εκδόσεις</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
     <value>Επιστροφή στα πακέτα</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Περιήγηση σε όλα τα πακέτα</value>
   </data>
   <data name="Copy command" xml:space="preserve">
     <value>Αντιγραφή εντολής</value>
@@ -30,11 +39,68 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Εξαρτήσεις</value>
   </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Οι εξαρτήσεις εμφανίζονται εδώ καθώς προστίθενται πακέτα σε αυτό το μητρώο.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Σελίδες εξαρτώμενων πακέτων</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Παρακαλούμε μη χρησιμοποιείτε</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Αποκρουσμένη έκδοση</value>
+  </data>
   <data name="Install this version" xml:space="preserve">
     <value>Εγκαταστήστε αυτή την έκδοση</value>
   </data>
   <data name="License" xml:space="preserve">
     <value>Άδεια</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Σύνδεσμοι</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Επόμενο</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Χωρίς εξαρτήσεις</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Καμία εξαρτώμενη συσκευασία σε αυτόν τον διακομιστή</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>Δεν συμπεριλήφθηκε readme στα μεταδεδομένα αυτού του πακέτου.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Επισκόπηση</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Λεπτομέρειες πακέτου</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Πληροφορίες πακέτου</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Μεταδεδομένα πακέτου</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Πηγή πακέτου</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Πακέτα σε αυτό το μητρώο που δηλώνουν εξάρτηση runtime, peer ή προαιρετική εξάρτηση σε αυτό το πακέτο. Αυτό δεν είναι ένα κατάλογος έργων ή αριθμών λήψεων.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Προηγούμενο</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Ιστότοπος έργου</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Δημοσιευμένο</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Ανάγνωση</value>
   </data>
   <data name="Registry" xml:space="preserve">
     <value>Μητρώο</value>
@@ -42,14 +108,41 @@
   <data name="Select version" xml:space="preserve">
     <value>Επιλογή έκδοσης</value>
   </data>
+  <data name="Source" xml:space="preserve">
+    <value>Πηγή</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Κώδικας πηγής</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>Η εντολή εγκατάστασης επιλέγει αυτό το μητρώο ρητά.</value>
+  </data>
   <data name="This command uses this registry explicitly. Package access follows the current registry policy." xml:space="preserve">
     <value>Αυτή η εντολή χρησιμοποιεί ρητά αυτό το μητρώο. Η πρόσβαση στα πακέτα ακολουθεί την τρέχουσα πολιτική μητρώου.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Αυτή η έκδοση δεν δηλώνει εξαρτήσεις πακέτων.</value>
   </data>
   <data name="This version declares no runtime dependencies." xml:space="preserve">
     <value>Αυτή η έκδοση δεν δηλώνει καμία εξάρτηση εκτέλεσης.</value>
   </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Χρησιμοποιείται από</value>
+  </data>
   <data name="Version" xml:space="preserve">
     <value>Έκδοση</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Ιστορικό εκδόσεων</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Σελίδες εκδόσεων</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Εκδόσεις</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Προβολή κώδικα πηγής</value>
   </data>
   <data name="View version" xml:space="preserve">
     <value>Προβολή έκδοσης</value>
