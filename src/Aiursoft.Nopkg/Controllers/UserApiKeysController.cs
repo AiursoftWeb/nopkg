@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using EFCoreSecondLevelCacheInterceptor;
 
 namespace Aiursoft.Nopkg.Controllers;
 
@@ -22,7 +23,7 @@ public class UserApiKeysController(NopkgDbContext db, UserManager<User> users,
     public async Task<IActionResult> Index() => this.StackView(new IndexViewModel
     {
         PageTitle = "API Keys",
-        Keys = await db.UserApiKeys.AsNoTracking().Where(k => k.UserId == users.GetUserId(User))
+        Keys = await db.UserApiKeys.AsNoTracking().NotCacheable().Where(k => k.UserId == users.GetUserId(User))
             .OrderByDescending(k => k.CreatedAt).ToListAsync()
     });
 
@@ -68,6 +69,36 @@ public class UserApiKeysController(NopkgDbContext db, UserManager<User> users,
     }
 
     [HttpGet]
+    public async Task<IActionResult> Edit(int id)
+    {
+        var key = await FindKeyAsync(id);
+        return key == null ? NotFound() : this.StackView(new EditViewModel
+        {
+            PageTitle = "Edit API key", Name = key.Name, ExpiresAt = key.ExpiresAt
+        });
+    }
+
+    [HttpPost, ValidateAntiForgeryToken]
+    public async Task<IActionResult> Edit(int id, EditViewModel model)
+    {
+        var key = await FindKeyAsync(id);
+        if (key == null) return NotFound();
+        if (!ModelState.IsValid)
+        {
+            model.PageTitle = "Edit API key";
+            return this.StackView(model);
+        }
+
+        key.Name = model.Name.Trim();
+        key.ExpiresAt = model.ExpiresAt.HasValue
+            ? DateTime.SpecifyKind(model.ExpiresAt.Value, DateTimeKind.Utc) : null;
+        try { await db.SaveChangesAsync(); }
+        catch (DbUpdateConcurrencyException) { return NotFound(); }
+        TempData["SuccessMessage"] = "API key updated.";
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
     public async Task<IActionResult> Delete(int id)
     {
         var key = await FindKeyAsync(id);
@@ -86,5 +117,5 @@ public class UserApiKeysController(NopkgDbContext db, UserManager<User> users,
     }
 
     private Task<UserApiKey?> FindKeyAsync(int id) =>
-        db.UserApiKeys.SingleOrDefaultAsync(k => k.Id == id && k.UserId == users.GetUserId(User));
+        db.UserApiKeys.NotCacheable().SingleOrDefaultAsync(k => k.Id == id && k.UserId == users.GetUserId(User));
 }

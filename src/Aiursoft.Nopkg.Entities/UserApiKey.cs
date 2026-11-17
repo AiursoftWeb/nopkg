@@ -30,5 +30,12 @@ public class UserApiKey
     /// <summary>Null means this key does not expire.</summary>
     public DateTime? ExpiresAt { get; set; }
 
+    /// <summary>Successful authentications recorded since usage tracking was introduced.</summary>
+    public long TotalUses { get; set; }
+    public long PublishedPackagesCount { get; set; }
+    public DateTime? LastPublishedAt { get; set; }
+    [MaxLength(214)] public string? LastPublishedPackage { get; set; }
+    [MaxLength(128)] public string? LastPublishedVersion { get; set; }
+
     [NotMapped] public bool IsExpired => ExpiresAt.HasValue && ExpiresAt.Value <= DateTime.UtcNow;
 }

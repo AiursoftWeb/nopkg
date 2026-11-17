@@ -1,27 +1,95 @@
 @using Aiursoft.WebTools
 @model Aiursoft.Nopkg.Models.UserApiKeysViewModels.IndexViewModel
+@{
+    var now = DateTime.UtcNow;
+    var active = Model.Keys.Count(k => !k.ExpiresAt.HasValue || k.ExpiresAt > now);
+}
 <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mb-3">
-    <div><h1 class="h3 mb-1">@Localizer["API Keys"]</h1><p class="text-muted mb-0">@Localizer["Keys use your current account permissions."]</p></div>
+    <div>
+        <h1 class="h3 mb-1">@Localizer["API Keys"]</h1>
+        <p class="text-muted mb-0">@Localizer["Manage publishing credentials and see how they are used."]</p>
+    </div>
     <a asp-action="Create" class="btn btn-primary"><i data-lucide="plus" class="me-1" aria-hidden="true"></i>@Localizer["New key"]</a>
 </div>
-@if (TempData["SuccessMessage"] != null) { <div class="alert alert-success"><div class="alert-message">@Localizer["API key revoked."]</div></div> }
-<div class="card"><div class="list-group list-group-flush">
-@if (Model.Keys.Count == 0)
+@if (TempData["SuccessMessage"] is string message)
 {
-    <div class="p-4 text-center text-muted"><i data-lucide="key-round" class="d-block mx-auto mb-3" aria-hidden="true"></i><h2 class="h5">@Localizer["Your first release starts here"]</h2><p class="mb-3">@Localizer["Create a personal key to publish packages with your account permissions."]</p><a asp-action="Create" class="btn btn-outline-primary">@Localizer["Create your first key"]</a></div>
+    <div class="alert alert-success" role="status"><div class="alert-message">
+        @if (message == "API key updated.") { @Localizer["API key updated."] }
+        else { @Localizer["API key revoked."] }
+    </div></div>
 }
-@foreach (var key in Model.Keys)
-{
-    <div class="list-group-item d-flex flex-wrap align-items-center justify-content-between gap-3">
-        <div class="text-break"><strong>@key.Name</strong> <code>@(key.KeyPrefix)...</code>
-            <div class="small text-muted mt-1">
-                @if (key.IsExpired) { <span class="badge bg-danger">@Localizer["Expired"]</span> }
-                else if (key.ExpiresAt.HasValue) { <span>@Localizer["Expires"] <label data-utc-time="@key.ExpiresAt.Value.ToHtmlDateTime()"></label></span> }
-                else { <span>@Localizer["No expiration"]</span> }
-                @if (key.LastUsedAt.HasValue) { <span class="ms-2">@Localizer["Last used"] <label data-utc-time="@key.LastUsedAt.Value.ToHtmlDateTime()"></label></span> }
-            </div>
+<div class="row g-3 mb-3">
+    <div class="col-6 col-lg-3"><div class="card h-100 mb-0"><div class="card-body"><div class="text-muted">@Localizer["Active keys"]</div><div class="h2 mb-0">@active</div></div></div></div>
+    <div class="col-6 col-lg-3"><div class="card h-100 mb-0"><div class="card-body"><div class="text-muted">@Localizer["Expired keys"]</div><div class="h2 mb-0">@(Model.Keys.Count - active)</div></div></div></div>
+    <div class="col-6 col-lg-3"><div class="card h-100 mb-0"><div class="card-body"><div class="text-muted">@Localizer["Authenticated requests"]</div><div class="h2 mb-0">@Model.Keys.Sum(k => k.TotalUses)</div></div></div></div>
+    <div class="col-6 col-lg-3"><div class="card h-100 mb-0"><div class="card-body"><div class="text-muted">@Localizer["Successful publications"]</div><div class="h2 mb-0">@Model.Keys.Sum(k => k.PublishedPackagesCount)</div></div></div></div>
+</div>
+<div class="card">
+    <div class="card-header"><h2 class="card-title mb-0">@Localizer["Your API keys"]</h2></div>
+    @if (Model.Keys.Count == 0)
+    {
+        <div class="card-body p-4 text-center text-muted">
+            <i data-lucide="key-round" class="d-block mx-auto mb-3" aria-hidden="true"></i>
+            <h2 class="h5">@Localizer["Your first release starts here"]</h2>
+            <p>@Localizer["Create a personal key to publish packages with your account permissions."]</p>
+            <a asp-action="Create" class="btn btn-outline-primary">@Localizer["Create your first key"]</a>
         </div>
-        <div class="d-flex gap-2"><a asp-action="Usage" asp-route-id="@key.Id" class="btn btn-sm btn-outline-primary">@Localizer["Use"]</a><a asp-action="Delete" asp-route-id="@key.Id" class="btn btn-sm btn-outline-danger">@Localizer["Revoke"]</a></div>
-    </div>
-}
-</div></div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0" style="min-width: 1050px;">
+                <thead><tr>
+                    <th scope="col">@Localizer["Name / key"]</th>
+                    <th scope="col">@Localizer["Status / expiration"]</th>
+                    <th scope="col">@Localizer["Last used"]</th>
+                    <th scope="col" class="text-end">@Localizer["Requests"]</th>
+                    <th scope="col" class="text-end">@Localizer["Publications"]</th>
+                    <th scope="col">@Localizer["Last published package"]</th>
+                    <th scope="col" class="text-end">@Localizer["Actions"]</th>
+                </tr></thead>
+                <tbody>
+                @foreach (var key in Model.Keys)
+                {
+                    <tr>
+                        <th scope="row" class="text-break">
+                            <div>@key.Name</div><code class="fw-normal">@(key.KeyPrefix)…</code>
+                            <div class="small text-muted fw-normal">@Localizer["Created"] <label class="mb-0" data-utc-time="@key.CreatedAt.ToHtmlDateTime()"></label></div>
+                        </th>
+                        <td>
+                            @if (key.ExpiresAt.HasValue && key.ExpiresAt <= now) { <span class="badge bg-danger">@Localizer["Expired"]</span> }
+                            else { <span class="badge bg-success">@Localizer["Active"]</span> }
+                            <div class="small text-muted mt-1">
+                                @if (key.ExpiresAt.HasValue) { <label class="mb-0" data-utc-time="@key.ExpiresAt.Value.ToHtmlDateTime()"></label> }
+                                else { @Localizer["No expiration"] }
+                            </div>
+                        </td>
+                        <td class="small">
+                            @if (key.LastUsedAt.HasValue) { <label class="mb-0" data-utc-time="@key.LastUsedAt.Value.ToHtmlDateTime()"></label> }
+                            else { <span class="text-muted">@Localizer["Never"]</span> }
+                        </td>
+                        <td class="text-end">@key.TotalUses</td>
+                        <td class="text-end">@key.PublishedPackagesCount</td>
+                        <td class="text-break">
+                            @if (key.LastPublishedAt.HasValue)
+                            {
+                                <div>@key.LastPublishedPackage <span class="badge bg-secondary">@key.LastPublishedVersion</span></div>
+                                <label class="small text-muted mb-0" data-utc-time="@key.LastPublishedAt.Value.ToHtmlDateTime()"></label>
+                            }
+                            else { <span class="text-muted">@Localizer["No publications recorded"]</span> }
+                        </td>
+                        <td>
+                            <div class="d-flex justify-content-end flex-wrap gap-1">
+                                <a asp-action="Usage" asp-route-id="@key.Id" class="btn btn-sm btn-outline-primary">@Localizer["Use"]</a>
+                                <a asp-action="Edit" asp-route-id="@key.Id" class="btn btn-sm btn-outline-secondary">@Localizer["Edit"]</a>
+                                <a asp-action="Delete" asp-route-id="@key.Id" class="btn btn-sm btn-outline-danger">@Localizer["Revoke"]</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+            </table>
+        </div>
+    }
+    <div class="card-footer small text-muted">@Localizer["Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions."]</div>
+</div>

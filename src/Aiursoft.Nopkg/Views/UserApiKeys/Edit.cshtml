@@ -1,0 +1,31 @@
+@model Aiursoft.Nopkg.Models.UserApiKeysViewModels.EditViewModel
+<h1 class="h3 mb-3">@Localizer["Edit API key"]</h1>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card">
+            <div class="card-header"><h2 class="card-title mb-0">@Localizer["Key details"]</h2></div>
+            <div class="card-body">
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="mb-3">
+                        <label asp-for="Name" class="form-label"></label>
+                        <input asp-for="Name" class="form-control" autofocus />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        <div class="form-text">@Localizer["A name to help you identify where this key is used."]</div>
+                    </div>
+                    <div class="mb-3">
+                        <label asp-for="ExpiresAt" class="form-label"></label>
+                        <input asp-for="ExpiresAt" type="datetime-local" asp-format="{0:yyyy-MM-ddTHH:mm:ss}" class="form-control" />
+                        <span asp-validation-for="ExpiresAt" class="text-danger"></span>
+                        <div class="form-text">@Localizer["Enter a UTC time, or leave blank for no expiration."]</div>
+                    </div>
+                    <p class="text-muted small">@Localizer["Saving keeps the same key. Applications do not need to update their credentials."]</p>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">@Localizer["Save changes"]</button>
+                        <a asp-action="Index" class="btn btn-outline-secondary">@Localizer["Cancel"]</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
