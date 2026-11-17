@@ -15,7 +15,7 @@
                     </div>
                     <div class="mb-3">
                         <label asp-for="ExpiresAt" class="form-label"></label>
-                        <input asp-for="ExpiresAt" type="datetime-local" asp-format="{0:yyyy-MM-ddTHH:mm:ss}" step="1" class="form-control" />
+                        <input asp-for="ExpiresAt" type="datetime-local" asp-format="{0:yyyy-MM-ddTHH:mm:ss}" class="form-control" />
                         <span asp-validation-for="ExpiresAt" class="text-danger"></span>
                         <div class="form-text">@Localizer["Enter a UTC time, or leave blank for no expiration."]</div>
                     </div>
