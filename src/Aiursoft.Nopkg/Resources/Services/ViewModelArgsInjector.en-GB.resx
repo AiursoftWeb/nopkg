@@ -81,6 +81,9 @@
   <data name="Directory" xml:space="preserve">
     <value>Directory</value>
   </data>
+  <data name="Edit API key" xml:space="preserve">
+    <value>Edit API key</value>
+  </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Edit Role</value>
   </data>
