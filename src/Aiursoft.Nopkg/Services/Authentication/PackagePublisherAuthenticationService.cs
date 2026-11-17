@@ -9,6 +9,8 @@ namespace Aiursoft.Nopkg.Services.Authentication;
 
 public sealed class PackagePublisherAuthenticationService(NopkgDbContext db)
 {
+    private readonly HashSet<int> _usedKeys = [];
+
     public static string ComputeSha256Hex(string rawKey) => Convert.ToHexStringLower(SHA256.HashData(Encoding.UTF8.GetBytes(rawKey)));
 
     public async Task<PackagePublisher?> AuthenticateAsync(string rawKey, CancellationToken token)
@@ -19,15 +21,9 @@ public sealed class PackagePublisherAuthenticationService(NopkgDbContext db)
             .SingleOrDefaultAsync(x => x.KeyHash == hash, token);
         if (key?.User == null || key.IsExpired || key.User.LockoutEnd > DateTimeOffset.UtcNow) return null;
         var publisher = await ForUserAsync(key.User);
-        var tracked = db.ChangeTracker.Entries<UserApiKey>().SingleOrDefault(x => x.Entity.Id == key.Id);
-        if (tracked != null) tracked.State = EntityState.Detached;
-        key.User = null;
-        db.Entry(key).State = EntityState.Unchanged;
-        key.LastUsedAt = DateTime.UtcNow;
-        db.Entry(key).Property(x => x.LastUsedAt).IsModified = true;
-        try { await db.SaveChangesAsync(token); }
-        catch (DbUpdateConcurrencyException) { return null; }
-        return publisher;
+        // A publication revalidates authentication after archive validation. Count the request once.
+        if (_usedKeys.Add(key.Id) && !await db.RecordUseAsync(key.Id, token)) return null;
+        return publisher with { ApiKeyId = key.Id };
     }
 
     public async Task<PackagePublisher> ForUserAsync(User user)

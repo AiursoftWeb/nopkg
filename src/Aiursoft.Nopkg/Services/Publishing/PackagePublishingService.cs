@@ -90,6 +90,7 @@ public sealed class PackagePublishingService(NopkgDbContext db, NpmRegistry regi
             }
             try { await db.SaveChangesAsync(token); }
             catch (DbUpdateException) { throw new PublishingException(409, "Package ownership or version changed. Review the current package and retry."); }
+            await db.RecordPublicationAsync(publisher.ApiKeyId, name, version, token);
         }
         finally { if (File.Exists(temporary)) File.Delete(temporary); }
     }

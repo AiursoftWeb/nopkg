@@ -32,3 +32,13 @@ public class DeleteViewModel : UiStackLayoutViewModel
 {
     public required UserApiKey Key { get; set; }
 }
+
+public class EditViewModel : UiStackLayoutViewModel
+{
+    [Required, MaxLength(100)]
+    [Display(Name = "Name")]
+    public string Name { get; set; } = string.Empty;
+
+    [Display(Name = "Expiration time (UTC)")]
+    public DateTime? ExpiresAt { get; set; }
+}

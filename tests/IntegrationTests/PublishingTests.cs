@@ -66,6 +66,27 @@ public class PublishingTests : TestBase
         Assert.DoesNotContain("href=\"javascript:", html);
     }
 
+    [TestMethod]
+    public async Task KeyStatisticsCountRequestsOnceAndExcludeDuplicateAndRejectedPublications()
+    {
+        var (owner, key) = await PublisherAsync();
+        var (other, otherKey) = await PublisherAsync();
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("stats-package", key)).StatusCode);
+        Assert.AreEqual(HttpStatusCode.Conflict, (await PublishAsync("stats-package", key)).StatusCode);
+        Assert.AreEqual(HttpStatusCode.BadRequest, (await PublishAsync("stats-package", key, Publication("stats-package", "1.0.1", "wrong-name"))).StatusCode);
+        Assert.AreEqual(HttpStatusCode.Forbidden, (await PublishAsync("stats-package", otherKey, Publication("stats-package", "1.0.1"))).StatusCode);
+        Assert.AreEqual(HttpStatusCode.Created, (await PublishAsync("stats-package", key, Publication("stats-package", "1.0.1"))).StatusCode);
+        using var scope = Server!.Services.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<NopkgDbContext>();
+        var saved = await db.UserApiKeys.AsNoTracking().SingleAsync(k => k.UserId == owner);
+        Assert.AreEqual(4L, saved.TotalUses);
+        Assert.AreEqual(2L, saved.PublishedPackagesCount);
+        Assert.AreEqual("stats-package", saved.LastPublishedPackage);
+        Assert.AreEqual("1.0.1", saved.LastPublishedVersion);
+        Assert.IsNotNull(saved.LastPublishedAt);
+        Assert.AreEqual(0L, (await db.UserApiKeys.AsNoTracking().SingleAsync(k => k.UserId == other)).PublishedPackagesCount);
+    }
+
     private string _registryPath = null!;
     [TestInitialize]
     public override async Task CreateServer()

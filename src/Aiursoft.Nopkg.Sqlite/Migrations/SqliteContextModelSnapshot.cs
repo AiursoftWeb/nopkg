@@ -208,6 +208,17 @@ namespace Aiursoft.Nopkg.Sqlite.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime?>("LastPublishedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastPublishedPackage")
+                        .HasMaxLength(214)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("LastPublishedVersion")
+                        .HasMaxLength(128)
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime?>("LastUsedAt")
                         .HasColumnType("TEXT");
 
@@ -215,6 +226,12 @@ namespace Aiursoft.Nopkg.Sqlite.Migrations
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
+
+                    b.Property<long>("PublishedPackagesCount")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<long>("TotalUses")
+                        .HasColumnType("INTEGER");
 
                     b.Property<string>("UserId")
                         .IsRequired()
