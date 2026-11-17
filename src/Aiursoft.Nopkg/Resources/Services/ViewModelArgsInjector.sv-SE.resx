@@ -78,6 +78,9 @@
   <data name="Directory" xml:space="preserve">
     <value>Katalog</value>
   </data>
+  <data name="Edit API key" xml:space="preserve">
+    <value>Redigera API-nyckel</value>
+  </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Redigera roll</value>
   </data>

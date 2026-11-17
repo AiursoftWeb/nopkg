@@ -78,6 +78,9 @@
   <data name="Directory" xml:space="preserve">
     <value>Elenco</value>
   </data>
+  <data name="Edit API key" xml:space="preserve">
+    <value>Modifica chiave API</value>
+  </data>
   <data name="Edit Role" xml:space="preserve">
     <value>Modifica Ruolo</value>
   </data>
