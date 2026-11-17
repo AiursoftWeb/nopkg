@@ -94,6 +94,8 @@ public class ViewModelArgsInjector(
     
         _ = localizer["Nopkg — Your npm package registry"];
         _ = localizer["Package details"];
+    
+        _ = localizer["Edit API key"];
     }
 
     public void InjectSimple(
