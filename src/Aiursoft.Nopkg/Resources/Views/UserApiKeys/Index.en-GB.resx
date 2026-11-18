@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API key revoked.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API key updated.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Active keys</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Authenticated requests</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Create a personal key to publish packages with your account permissions.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Create your first key</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Expired</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Expired keys</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Expires</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Keys use your current account permissions.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Last published package</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Last used</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Manage publishing credentials and see how they are used.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Name / key</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Never</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>New key</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>No expiry</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>No publications recorded</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publications</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Requests</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Revoke</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / expiry</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Successful publications</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Use</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Your API keys</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Your first release starts here</value>

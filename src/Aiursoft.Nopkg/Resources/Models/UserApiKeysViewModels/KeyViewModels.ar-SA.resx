@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>انتهاء الصلاحية</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>وقت الانتهاء (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>الاسم</value>
   </data>

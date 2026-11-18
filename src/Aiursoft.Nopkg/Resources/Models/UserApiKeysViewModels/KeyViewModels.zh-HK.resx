@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>到期日</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>到期時間 (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>名稱</value>
   </data>
