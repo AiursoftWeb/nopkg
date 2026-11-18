@@ -48,12 +48,10 @@ Installation starts after three seconds; press Ctrl+C to cancel. Then open `http
 Requires [.NET 10 SDK](https://dotnet.microsoft.com/download/dotnet/10.0) and [Node.js](https://nodejs.org/).
 
 ```sh
-cd src/Aiursoft.Nopkg/wwwroot
-npm ci
-npm run build
-cd ..
-dotnet run
+dotnet run --project src/Aiursoft.Nopkg/Aiursoft.Nopkg.csproj -- --urls http://localhost:5000
 ```
+
+The .NET build automatically runs `npm ci` and `npm run build` to prepare the frontend assets. Node.js and npm must be available when building from source.
 
 Open `http://localhost:5000`. The default local administrator is `admin@default.com` with password `Admin@123456!`. Configure authentication before exposing a deployment.
 
