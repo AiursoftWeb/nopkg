@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>Cheia API a fost revocată.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>Cheia API a fost actualizată.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acțiuni</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Activ</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Chei active</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Cereri autentificate</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Creați o cheie personală pentru a publica pachete cu permisiunile contului dumneavoastră.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Creați prima cheie</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Creată</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editare</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Expirată</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Chei expirate</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Expiră</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Cheile folosesc permisiunile contului dumneavoastră curent.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Ultimul pachet publicat</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Ultima utilizare</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Gestiona credențialele de publicare și vezi cum sunt folosite.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Nume / cheie</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Niciodată</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Cheie nouă</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Fără expirare</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Nicio publicare înregistrată</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publicații</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Cereri</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Revocă</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statisticile acoperă cheile existente de la activarea urmării utilizării. Cererile numără autentificările reușite; publicările numără versiunile de pachet nou stocate.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Stare / expirare</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Publicații reușite</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Folosește</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Cheile API ale dumneavoastră</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Primul tău pachet începe aici</value>

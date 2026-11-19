@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>APIキーが無効化されました。</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>APIキーが更新されました。</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>有効</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>有効なキー</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>認証済みリクエスト</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>アカウントの権限を使用してパッケージを公開するための個人用キーを作成してください。</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>最初のキーを作成</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>作成日</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>編集</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>期限切れ</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>期限切れのキー</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>有効期限</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>キーは現在のアカウントの権限を使用します。</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>最終公開パッケージ</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>最終使用</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>公開資格情報の管理と使用状況の確認</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>名前 / キー</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>未使用</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>新しいキー</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>期限なし</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>公開記録なし</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>公開数</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>リクエスト数</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>無効化</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>統計は使用状況トラッキングが有効化された時点以降の既存キーを対象としています。リクエストは成功した認証の数を、公開は新規に保存されたパッケージバージョンの数を示します。</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>ステータス / 有効期限</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>正常に公開されたパッケージ数</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>使用</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>API キー</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>最初の公開はここから始まります</value>

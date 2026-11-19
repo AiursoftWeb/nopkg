@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>Kunci API telah dicabut.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>Kunci API diperbarui.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Aksi</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Kunci aktif</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Permintaan terautentikasi</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Buat kunci pribadi untuk menerbitkan paket dengan izin akun Anda.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Buat kunci pertama Anda</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Dibuat</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Ubah</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Kedaluwarsa</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Kunci kedaluwarsa</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Berakhir</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Kunci menggunakan izin akun Anda saat ini.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Paket yang terakhir diterbitkan</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Terakhir digunakan</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Kelola kredensial penerbitan dan lihat bagaimana kredensial tersebut digunakan.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Nama / kunci</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Tidak pernah</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Kunci baru</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Tanpa kedaluwarsa</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Tidak ada publikasi yang tercatat</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publikasi</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Permintaan</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Cabut</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statistik mencakup kunci yang ada sejak pelacakan penggunaan diaktifkan. Permintaan menghitung autentikasi yang berhasil; publikasi menghitung versi paket baru yang disimpan.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / kedaluwarsa</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Publikasi Berhasil</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Gunakan</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Kunci API Anda</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Rilis pertama Anda dimulai di sini</value>

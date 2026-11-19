@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-Schlüssel widerrufen.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-Schlüssel aktualisiert.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Aktionen</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Aktive Schlüssel</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Authentifizierte Anfragen</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Erstellen Sie einen persönlichen Schlüssel, um Pakete mit den Berechtigungen Ihres Kontos zu veröffentlichen.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Erstellen Sie Ihren ersten Schlüssel</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Erstellt</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Abgelaufen</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Abgelaufene Schlüssel</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Läuft ab</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Schlüssel nutzen die Berechtigungen Ihres aktuellen Kontos.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Zuletzt veröffentlichtes Paket</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Zuletzt verwendet</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Verwalten Sie Veröffentlichungsanmeldedaten und sehen Sie, wie sie verwendet werden.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Name / Schlüssel</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Nie</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Neuer Schlüssel</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Kein Ablaufdatum</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Keine Veröffentlichungen erfasst</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Veröffentlichungen</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Anfragen</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Rückgängig machen</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Die Statistiken umfassen vorhandene Schlüssel seit der Aktivierung der Nutzungserfassung. Anfragen zählen erfolgreiche Authentifizierungen; Veröffentlichungen zählen neu gespeicherte Paketversionen.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / Ablaufdatum</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Erfolgreiche Veröffentlichungen</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Verwenden</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Ihre API-Schlüssel</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Ihre erste Veröffentlichung beginnt hier</value>

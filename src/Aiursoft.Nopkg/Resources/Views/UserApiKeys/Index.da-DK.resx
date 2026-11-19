@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-nøgle er ophævet.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-nøgle opdateret.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Handlinger</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Aktive nøgler</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Autentificerede anmodninger</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Opret en personlig nøgle til at publicere pakker med dine konto-beføjelser.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Opret din første nøgle</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Oprettet</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Rediger</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Udløbet</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Udløbte nøgler</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Udløber</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Nøgler bruger dine aktuelle kontoerettigheder.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Senest publicerede pakke</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Sidst brugt</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Administrér publiceringsoplysninger og se, hvordan de bruges.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Navn / nøgle</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Aldrig</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Ny nøgle</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Ingen udløb</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Ingen publiceringer registreret</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publiceringer</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Anmodninger</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Forkast</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statistikkerne dækker eksisterende nøgler, siden brugssporing blev aktiveret. Forespørgsler tæller vellykkede autentificeringer; publikationer tæller nytilføjede pakkeversioner.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / udløb</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Vellykkede publiceringer</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Brug</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Dine API-nøgler</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Din første udgivelse starter her</value>

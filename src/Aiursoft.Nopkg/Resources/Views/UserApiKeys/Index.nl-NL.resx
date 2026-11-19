@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-sleutel ingetrokken.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-sleutel bijgewerkt.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Acties</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Actief</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Actieve sleutels</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Geverifieerde aanvragen</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Maak een persoonlijke sleutel om pakketten te publiceren met de rechten van je account.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Maak je eerste sleutel</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Aangemaakt</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bewerken</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Verlopen</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Verlopen sleutels</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Verloopt</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Sleutels gebruiken de machtigingen van uw huidige account.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Laatst gepubliceerde pakket</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Laatst gebruikt</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Beheer publicatiegegevens en bekijk hoe deze worden gebruikt.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Naam / sleutel</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Nooit</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Nieuwe sleutel</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Geen vervaldatum</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Geen publicaties geregistreerd</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publicaties</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Verzoeken</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Intrekken</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statistieken omvatten bestaande sleutels sinds het gebruikstracking werd ingeschakeld. Aantallen aanvragen tellen geslaagde authenticaties; publicaties tellen nieuw opgeslagen pakketversies.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / vervaldatum</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Geslaagde publicaties</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Gebruiken</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Uw API-sleutels</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Hier begint uw eerste release</value>

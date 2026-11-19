@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>تم إلغاء مفاتيح API.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>تم تحديث مفتاح API.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>إجراءات</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>نشطة</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>المفاتيح النشطة</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>الطلبات المصادقة</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>أنشئ مفتاحًا شخصيًا لنشر الحزم بصلاحيات حسابك.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>أنشئ مفتاحك الأول</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>تم الإنشاء</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>منتهي الصلاحية</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>المفاتيح منتهية الصلاحية</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>ينتهي</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>تستخدم المفاتيح صلاحيات حسابك الحالية.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>آخر حزمة منشورة</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>آخر استخدام</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>إدارة بيانات اعتماد النشر ومعرفة كيفية استخدامها.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>الاسم / المفتاح</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>أبدًا</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>مفتاح جديد</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>بدون انتهاء صلاحية</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>لا توجد نشرات مسجلة</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>المنشورات</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>الطلبات</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>إلغاء</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>تشمل الإحصائيات المفاتيح الموجودة منذ تفعيل تتبع الاستخدام. تعدّ الطلبات عمليات المصادقة الناجحة؛ بينما تعدّ المنشورات إصدارات الحزم الجديدة المخزنة.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>الحالة / الانتهاء</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>النشر الناجح</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>استخدام</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>مفاتيح API الخاصة بك</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>تبدأ إصدارك الأول من هنا</value>

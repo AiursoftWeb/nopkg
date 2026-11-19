@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API 密钥已撤销。</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API 密钥已更新。</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>操作</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>有效</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>有效密钥</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>已认证请求</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>创建个人密钥，以使用您的账户权限发布软件包。</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>创建您的第一个密钥</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>创建时间</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>编辑</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>已过期</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>已过期的密钥</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>过期时间</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>密钥使用您当前的账户权限。</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>最近发布的软件包</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>上次使用</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>管理发布凭据并查看其使用情况。</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>名称 / 密钥</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>从未</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>新建密钥</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>永不过期</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>未记录任何发布</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>发布</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>请求</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>吊销</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>统计数据涵盖启用使用跟踪以来现有的密钥。请求次数统计成功的身份验证；发布次数统计新存储的软件包版本。</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>状态 / 过期时间</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>成功发布的包</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>使用</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>您的 API 密钥</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>您的首次发布从这里开始</value>

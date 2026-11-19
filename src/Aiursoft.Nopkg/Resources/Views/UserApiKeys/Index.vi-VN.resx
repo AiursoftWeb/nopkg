@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>Đã thu hồi khóa API.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>Đã cập nhật khóa API.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Thao tác</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Đang hoạt động</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Khóa hoạt động</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Yêu cầu đã xác thực</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Tạo một khóa cá nhân để phát hành các gói với quyền tài khoản của bạn.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Tạo khóa đầu tiên của bạn</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Đã tạo</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Chỉnh sửa</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Đã hết hạn</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Khóa đã hết hạn</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Hết hạn</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Khóa sử dụng quyền của tài khoản hiện tại của bạn.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Gói đã phát hành gần nhất</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Lần sử dụng cuối</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Quản lý thông tin xác thực xuất bản và xem cách chúng được sử dụng.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Tên / khóa</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Chưa bao giờ</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Khóa mới</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Không có hạn</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Chưa có bản phát hành nào được ghi nhận</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Các bản phát hành</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Yêu cầu</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Thu hồi</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Thống kê bao gồm các khóa hiện có kể từ khi theo dõi mức độ sử dụng được bật. Số lượng yêu cầu đếm các xác thực thành công; số lượng phát hành đếm các phiên bản gói mới được lưu trữ.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Trạng thái / hết hạn</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Số lần xuất bản thành công</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Sử dụng</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Các khóa API của bạn</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Bản phát hành đầu tiên của bạn bắt đầu từ đây</value>

@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-nyckel återskåpen.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-nyckeln uppdaterad.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Åtgärder</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Aktiva nycklar</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Autentiserade begäranden</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Skapa en personlig nyckel för att publicera paket med dina kontotillstånd.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Skapa din första nyckel</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Skapad</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Redigera</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Utgången</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Utgångna nycklar</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Gördes</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Nycklar använder behörigheterna för ditt aktuella konto.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Senast publicerad paket</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Senast använd</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Hantera publiceringsuppgifter och se hur de används.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Namn / nyckel</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Aldrig</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Ny nyckel</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Ingen utgångsdatum</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Inga publikationer registrerade</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Publiceringar</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Begäranden</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Återkalla</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Statistikerna gäller befintliga nycklar sedan användningsspårning aktiverades. Anslags räkna lyckade autentiseringar; publikationer räkna nyligen lagrade paketversioner.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Status / utgång</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Vällyckade publiceringar</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Använd</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Dina API-nycklar</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Din första publicering börjar här</value>

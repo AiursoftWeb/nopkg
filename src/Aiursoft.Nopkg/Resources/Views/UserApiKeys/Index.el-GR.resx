@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>Το κλειδί API αποσύρθηκε.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>Το κλειδί API ενημερώθηκε.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Ενέργειες</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Ενεργή</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Ενεργές κλειδιά</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Πιστοποιημένες αιτήσεις</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Δημιουργήστε έναν προσωπικό κλειδί για τη δημοσίευση πακέτων με τα δικαιώματα του λογαριασμού σας.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Δημιουργήστε το πρώτο σας κλειδί</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Δημιουργήθηκε</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Επεξεργασία</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Ληγμένο</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Ληγμένες κλειδιά</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Λήγει</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Τα κλειδιά χρησιμοποιούν τα δικαιώματα του τρέχοντος σας λογαριασμού.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Τελευταίο δημοσιευμένο πακέτο</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Τελευταία χρήση</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Διαχειριστείτε τα διαπιστευτήρια δημοσίευσης και δείτε πώς χρησιμοποιούνται.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Όνομα / κλειδί</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Ποτέ</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Νέο κλειδί</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Χωρίς λήξη</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Καμία δημοσίευση καταγεγραμμένη</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Δημοσιεύσεις</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Αιτήματα</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Ακύρωση</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Οι στατιστικές καλύπτουν τα υπάρχοντα κλειδιά από τη στιγμή που ενεργοποιήθηκε η παρακολούθηση χρήσης. Οι αιτήσεις μετρούν τις επιτυχείς ενοποιήσεις; οι δημοσιεύσεις μετρούν τα νέα αποθηκευμένα πρότυπα πακέτων.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Κατάσταση / λήξη</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Επιτυχημένες δημοσιεύσεις</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Χρήση</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Οι κλειδιά API σας</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Η πρώτη σας έκδοση ξεκινά εδώ</value>
