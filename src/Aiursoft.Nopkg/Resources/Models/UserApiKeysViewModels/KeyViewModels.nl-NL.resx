@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>Vervaldatum</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>Verlooptijd (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Naam</value>
   </data>

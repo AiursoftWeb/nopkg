@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>Expiração</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>Data e hora de expiração (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
   </data>

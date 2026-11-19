@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>만료</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>만료 시간 (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>이름</value>
   </data>

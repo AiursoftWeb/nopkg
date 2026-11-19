@@ -21,6 +21,9 @@
       <data name="Expiration" xml:space="preserve">
     <value>महत्व</value>
   </data>
+  <data name="Expiration time (UTC)" xml:space="preserve">
+    <value>समाप्ति समय (UTC)</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>नाम</value>
   </data>
