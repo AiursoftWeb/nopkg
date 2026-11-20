@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-ключ відкликано.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-ключ оновлено.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Дії</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Активна</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Активні ключі</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Автентифіковані запити</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Створіть особистий ключ для публікації пакетів з правами вашого облікового запису.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Створіть свій перший ключ</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Створено</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редагувати</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Прострочено</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Прострочені ключі</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Діє до</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Ключі використовують ваші поточні дозволи облікового запису.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Останній опублікований пакет</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Останнє використання</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Керуйте обліковими даними для публікації та переглядайте, як вони використовуються.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Назва / ключ</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Ніколи</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Нова ключ</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Безстроково</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Немає записаних публікацій</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Публікації</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Запити</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Відкликати</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Статистика охоплює наявні ключі з моменту ввімкнення відстеження використання. Запити облікують успішні автентифікації; публікації обліковують нові збережені версії пакетів.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Статус / термін дії</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Успішні публікації</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Використати</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Ваші API-ключі</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Ваше перше реліз починається тут</value>

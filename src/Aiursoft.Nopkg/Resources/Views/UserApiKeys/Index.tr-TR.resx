@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API anahtarı iptal edildi.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API anahtarı güncellendi.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>İşlemler</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktif</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Aktif anahtarlar</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Kimlik doğrulanmış istekler</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Hesap yetkilerinizle paket yayınlamak için kişisel bir anahtar oluşturun.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>İlk anahtarınızı oluşturun</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Oluşturulma</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Düzenle</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Süresi Doldu</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Süresi dolan anahtarlar</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Süresi Doluyor</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Anahtarlar, mevcut hesap yetkilerinizi kullanır.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Son yayınlanan paket</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Son kullanıldı</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Yayın kimlik bilgilerini yönetin ve bunların nasıl kullanıldığını görüntüleyin.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Ad / anahtar</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Hiç</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Yeni anahtar</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Son kullanma tarihi yok</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Kayıtlanmış yayın yok</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Yayınlar</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>İstekler</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>İptal Et</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>İstatistikler, kullanım takibi etkinleştirildiğinden beri mevcut anahtarları kapsar. İstekler başarılı kimlik doğrulamaları sayılır; yayınlar yeni depolanan paket sürümlerini sayar.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Durum / son kullanma</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Başarılı yayınlar</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Kullan</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>API Anahtarlarınız</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>İlk yayınınız burada başlar</value>

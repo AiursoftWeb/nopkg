@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>API-avain kumottu.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>API-avain päivitetty.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Toiminnot</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Aktiivinen</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Aktiiviset avaimet</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Vahvistetut pyynnöt</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Luo henkilökohtainen avain julkistaaksesi paketteja käyttäen tilisi oikeuksia.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Luo ensimmäinen avaimesi</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Luotu</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Muokkaa</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Vanhentunut</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Vanhentuneet avaimet</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Erääy</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Avaimet käyttävät nykyisiä tili-osioksesi oikeuksia.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Viimeisin julkaistu paketti</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Viimeksi käytetty</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Hallitse julkaisuvaltuuksia ja tarkastele niiden käyttöä.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Nimi / avain</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Ei koskaan</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Uusi avain</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Ei vanhenemisaikaa</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Ei julkaisuja kirjattu</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Julkaisut</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Pyyntöjä</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Peruuta</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Tilastot kattavat olemassa olevat avaimet käyttöseurannan käyttöönoton jälkeen. Pyyntöjen määrä lukee onnistuneet todennukset; julkaisujen määrä lukee uudet tallennetut pakettiversiot.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Tila / vanheneminen</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Onnistuneet julkaisut</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Käytä</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>API-avaimet</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>Ensimmäinen julkaisusi alkaa täältä</value>

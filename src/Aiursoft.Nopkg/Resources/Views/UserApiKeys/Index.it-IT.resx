@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>Chiave API revocata.</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>Chiave API aggiornata.</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Azioni</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Attiva</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>Chiavi attive</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>Richieste autenticate</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>Crea una chiave personale per pubblicare pacchetti con le autorizzazioni del tuo account.</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>Crea la tua prima chiave</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>Creato</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Modifica</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>Scaduto</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>Chiavi scadute</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>Scade</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>Le chiavi utilizzano i permessi del tuo account corrente.</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>Ultimo pacchetto pubblicato</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>Ultimo utilizzo</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>Gestisci le credenziali di pubblicazione e visualizza come vengono utilizzate.</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>Nome / chiave</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>Mai</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>Nuova chiave</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>Nessuna scadenza</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>Nessuna pubblicazione registrata</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>Pubblicazioni</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>Richieste</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>Revoca</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>Le statistiche coprono le chiavi esistenti a partire dall&apos;attivazione del tracciamento dell&apos;utilizzo. Le richieste conteggiano le autenticazioni di successo; le pubblicazioni conteggiano le nuove versioni dei pacchetti memorizzate.</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>Stato / scadenza</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>Pubblicazioni riusciti</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>Usa</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>Le tue chiavi API</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>La tua prima release inizia qui</value>

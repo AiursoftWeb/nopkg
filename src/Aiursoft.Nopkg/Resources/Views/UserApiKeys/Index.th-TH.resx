@@ -24,14 +24,38 @@
   <data name="API key revoked." xml:space="preserve">
     <value>คีย์ API ถูกระงับแล้ว</value>
   </data>
+  <data name="API key updated." xml:space="preserve">
+    <value>อัปเดตคีย์ API แล้ว</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>การดำเนินการ</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>ใช้งานอยู่</value>
+  </data>
+  <data name="Active keys" xml:space="preserve">
+    <value>คีย์ที่ใช้งานอยู่</value>
+  </data>
+  <data name="Authenticated requests" xml:space="preserve">
+    <value>คำขอที่ผ่านการยืนยันตัวตน</value>
+  </data>
   <data name="Create a personal key to publish packages with your account permissions." xml:space="preserve">
     <value>สร้างคีย์ส่วนตัวเพื่อเผยแพร่แพ็กเกจด้วยสิทธิ์บัญชีของคุณ</value>
   </data>
   <data name="Create your first key" xml:space="preserve">
     <value>สร้างคีย์แรกของคุณ</value>
   </data>
+  <data name="Created" xml:space="preserve">
+    <value>สร้างเมื่อ</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>แก้ไข</value>
+  </data>
   <data name="Expired" xml:space="preserve">
     <value>หมดอายุ</value>
+  </data>
+  <data name="Expired keys" xml:space="preserve">
+    <value>คีย์หมดอายุ</value>
   </data>
   <data name="Expires" xml:space="preserve">
     <value>หมดอายุ</value>
@@ -39,8 +63,20 @@
   <data name="Keys use your current account permissions." xml:space="preserve">
     <value>คีย์จะใช้งานสิทธิ์ปัจจุบันของบัญชีคุณ</value>
   </data>
+  <data name="Last published package" xml:space="preserve">
+    <value>แพ็กเกจที่เผยแพร่ล่าสุด</value>
+  </data>
   <data name="Last used" xml:space="preserve">
     <value>ใช้งานล่าสุด</value>
+  </data>
+  <data name="Manage publishing credentials and see how they are used." xml:space="preserve">
+    <value>จัดการข้อมูลรับรองการเผยแพร่และดูวิธีใช้งาน</value>
+  </data>
+  <data name="Name / key" xml:space="preserve">
+    <value>ชื่อ / คีย์</value>
+  </data>
+  <data name="Never" xml:space="preserve">
+    <value>ไม่เคย</value>
   </data>
   <data name="New key" xml:space="preserve">
     <value>คีย์ใหม่</value>
@@ -51,11 +87,32 @@
   <data name="No expiration" xml:space="preserve">
     <value>ไม่มีวันหมดอายุ</value>
   </data>
+  <data name="No publications recorded" xml:space="preserve">
+    <value>ไม่มีการบันทึกการเผยแพร่</value>
+  </data>
+  <data name="Publications" xml:space="preserve">
+    <value>การเผยแพร่</value>
+  </data>
+  <data name="Requests" xml:space="preserve">
+    <value>คำขอ</value>
+  </data>
   <data name="Revoke" xml:space="preserve">
     <value>เพิกถอน</value>
   </data>
+  <data name="Statistics cover existing keys since usage tracking was enabled. Requests count successful authentications; publications count newly stored package versions." xml:space="preserve">
+    <value>สถิติครอบคลุมคีย์ที่มีอยู่ตั้งแต่เปิดใช้งานการติดตามการใช้งาน จำนวนคำขอเป็นการนับการยืนยันตัวตนที่สำเร็จ; จำนวนการเผยแพร่เป็นการนับเวอร์ชันแพ็กเกจใหม่ที่จัดเก็บ</value>
+  </data>
+  <data name="Status / expiration" xml:space="preserve">
+    <value>สถานะ / วันหมดอายุ</value>
+  </data>
+  <data name="Successful publications" xml:space="preserve">
+    <value>การเผยแพร่ที่สำเร็จ</value>
+  </data>
   <data name="Use" xml:space="preserve">
     <value>ใช้</value>
+  </data>
+  <data name="Your API keys" xml:space="preserve">
+    <value>คีย์ API ของคุณ</value>
   </data>
   <data name="Your first release starts here" xml:space="preserve">
     <value>การออกเวอร์ชันแรกของคุณเริ่มต้นที่นี่</value>

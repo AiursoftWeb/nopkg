@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="A name to help you identify where this key is used." xml:space="preserve">
+    <value>Tên giúp bạn xác định nơi khóa này được sử dụng.</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Edit API key" xml:space="preserve">
+    <value>Chỉnh sửa khóa API</value>
+  </data>
+  <data name="Enter a UTC time, or leave blank for no expiration." xml:space="preserve">
+    <value>Nhập thời gian UTC, hoặc để trống nếu không có thời hạn.</value>
+  </data>
+  <data name="Key details" xml:space="preserve">
+    <value>Chi tiết khóa</value>
+  </data>
+  <data name="Save changes" xml:space="preserve">
+    <value>Lưu thay đổi</value>
+  </data>
+  <data name="Saving keeps the same key. Applications do not need to update their credentials." xml:space="preserve">
+    <value>Lưu lại sẽ giữ nguyên khóa. Ứng dụng không cần phải cập nhật thông tin xác thực của chúng.</value>
+  </data>
+
+</root>
