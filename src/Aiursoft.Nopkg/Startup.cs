@@ -15,7 +15,6 @@ using Aiursoft.Nopkg.MySql;
 using Aiursoft.Nopkg.Services.Authentication;
 using Aiursoft.Nopkg.Services.BackgroundJobs;
 using Aiursoft.Nopkg.Sqlite;
-using Aiursoft.UiStack;
 using Aiursoft.UiStack.Layout;
 using Aiursoft.UiStack.Navigation;
 using Microsoft.AspNetCore.Mvc.Razor;
