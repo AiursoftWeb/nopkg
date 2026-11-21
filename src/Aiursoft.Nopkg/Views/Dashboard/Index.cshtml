@@ -1,4 +1,4 @@
-@using System.Globalization
+@using Aiursoft.WebTools
 @model Aiursoft.Nopkg.Models.DashboardViewModels.IndexViewModel
 @* ReSharper disable once Razor.SectionNotResolved *@
 @section styles { <link rel="stylesheet" href="~/styles/packages.css" asp-append-version="true" /> }
@@ -41,7 +41,7 @@ else
             <div class="d-flex gap-3 align-items-start"><span class="package-icon"><span class="package-icon-fallback"><i data-lucide="package" aria-hidden="true"></i></span></span><div class="flex-grow-1 min-width-0">
                 <div class="d-flex flex-wrap gap-2 align-items-baseline"><h2 class="h5 mb-0 text-break">@package.Name</h2><span class="package-version-chip">@package.Version</span></div>
                 <p class="package-summary">@(string.IsNullOrWhiteSpace(package.Description) ? Localizer["No description provided."].Value : package.Description)</p>
-                <div class="package-list-meta"><span>@(package.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</span>@if (!string.IsNullOrWhiteSpace(package.Author)) { <span>@package.Author</span> }@if (package.Published.HasValue) { <span>@package.Published.Value.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture)</span> }</div>
+                <div class="package-list-meta"><span>@(package.IsLocallyPublished ? Localizer["Internal release"] : Localizer["Upstream mirror"])</span>@if (!string.IsNullOrWhiteSpace(package.Author)) { <span>@package.Author</span> }@if (package.Published.HasValue) { <span data-utc-time="@package.Published.Value.UtcDateTime.ToHtmlDateTime()"></span> }</div>
             </div><i data-lucide="arrow-up-right" class="text-muted flex-shrink-0" aria-hidden="true"></i></div>
         </a>
     }
