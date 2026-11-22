@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>Salin perintah ke direktori proyek Anda.</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>Tanggal tidak tersedia</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>Dependensi</value>
   </data>

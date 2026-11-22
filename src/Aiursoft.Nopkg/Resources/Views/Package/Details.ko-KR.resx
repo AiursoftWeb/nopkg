@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>명령어를 프로젝트 디렉터리로 복사하세요.</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>날짜 없음</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>의존성</value>
   </data>

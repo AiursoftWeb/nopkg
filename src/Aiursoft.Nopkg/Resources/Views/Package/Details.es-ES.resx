@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>Copia el comando en el directorio de tu proyecto.</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>Fecha no disponible</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>Dependencias</value>
   </data>

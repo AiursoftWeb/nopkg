@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>將指令複製到專案目錄中。</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>日期無法顯示</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>相依項目</value>
   </data>

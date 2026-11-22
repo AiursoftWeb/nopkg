@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>انسخ الأمر إلى مجلد مشروعك.</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>التاريخ غير متوفر</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>التبعيات</value>
   </data>

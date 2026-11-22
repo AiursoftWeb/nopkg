@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>プロジェクトディレクトリにコマンドをコピーしてください。</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>日付が利用できません</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>依存関係</value>
   </data>

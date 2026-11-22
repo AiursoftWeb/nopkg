@@ -36,6 +36,9 @@
   <data name="Copy the command into your project directory." xml:space="preserve">
     <value>Kopiér kommandoen til din projektmappe.</value>
   </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>Dato utilgængelig</value>
+  </data>
   <data name="Dependencies" xml:space="preserve">
     <value>Afhængigheder</value>
   </data>
