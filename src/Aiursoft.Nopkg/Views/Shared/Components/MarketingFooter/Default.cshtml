@@ -1,5 +1,10 @@
 @model Aiursoft.Nopkg.Views.Shared.Components.MarketingFooter.MarketingFooterViewModel
 @using Microsoft.AspNetCore.Localization
+@using Aiursoft.WebTools.OfficialPlugins
+@{
+    var cultureOptions = Context.RequestServices.GetKeyedService<IReadOnlyDictionary<string, string>>(typeof(LocalizationPlugin))
+        ?? LocalizationPlugin.SupportedCultures;
+}
 <footer class="registry-footer">
     <div class="container">
         <div class="registry-footer-grid">
@@ -23,7 +28,7 @@
             <form asp-controller="Culture" asp-action="Set" method="post" asp-route-returnUrl="@(Context.Request.Path + Context.Request.QueryString)">
                 <label class="visually-hidden" for="landing-culture">@Localizer["Language"]</label>
                 <select id="landing-culture" name="culture" onchange="this.form.submit()" class="form-select form-select-sm">
-                    @foreach (var culture in Aiursoft.WebTools.OfficialPlugins.LocalizationPlugin.SupportedCultures)
+                    @foreach (var culture in cultureOptions)
                     { <option value="@culture.Key" selected="@(culture.Key == Context.Features.Get<IRequestCultureFeature>()?.RequestCulture.Culture.Name)">@culture.Value</option> }
                 </select>
             </form>
