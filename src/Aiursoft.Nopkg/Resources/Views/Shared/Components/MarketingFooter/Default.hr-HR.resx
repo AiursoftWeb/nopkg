@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="An open-source npm registry for your packages, your team, and your infrastructure." xml:space="preserve">
+    <value>Otvoreni izvorni npm registar za vaše pakete, vaš tim i vašu infrastrukturu.</value>
+  </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Pregledaj pakete</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Jezik</value>
+  </data>
+  <data name="MIT License" xml:space="preserve">
+    <value>MIT licenca</value>
+  </data>
+  <data name="Report an issue" xml:space="preserve">
+    <value>Prijavite problem</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Izvorni kod</value>
+  </data>
+
+</root>

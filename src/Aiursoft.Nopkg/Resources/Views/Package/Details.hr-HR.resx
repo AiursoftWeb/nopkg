@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Available versions" xml:space="preserve">
+    <value>Dostupne verzije</value>
+  </data>
+  <data name="Back to packages" xml:space="preserve">
+    <value>Natrag na pakete</value>
+  </data>
+  <data name="Browse all packages" xml:space="preserve">
+    <value>Pregledaj sve pakete</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Kopiraj naredbu</value>
+  </data>
+  <data name="Date unavailable" xml:space="preserve">
+    <value>Datum nije dostupno</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Ovisnosti</value>
+  </data>
+  <data name="Dependencies appear here as packages are added to this registry." xml:space="preserve">
+    <value>Ovisnosti se ovdje prikazuju kako se paketi dodaju u ovaj registar.</value>
+  </data>
+  <data name="Dependent package pages" xml:space="preserve">
+    <value>Stranice ovisnih paketa</value>
+  </data>
+  <data name="Deprecated" xml:space="preserve">
+    <value>Zastarjelo</value>
+  </data>
+  <data name="Deprecated version" xml:space="preserve">
+    <value>Zastarjela verzija</value>
+  </data>
+  <data name="Install this version" xml:space="preserve">
+    <value>Instalirajte ovu verziju</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>Licenca</value>
+  </data>
+  <data name="Links" xml:space="preserve">
+    <value>Poveznice</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Sljedeća</value>
+  </data>
+  <data name="No dependencies" xml:space="preserve">
+    <value>Nema ovisnosti</value>
+  </data>
+  <data name="No dependent packages on this server" xml:space="preserve">
+    <value>Nema ovisnih paketa na ovom poslužitelju</value>
+  </data>
+  <data name="No readme was included in this package&apos;s metadata." xml:space="preserve">
+    <value>U metapodacima ovog paketa nije bila uključena readme datoteka.</value>
+  </data>
+  <data name="Overview" xml:space="preserve">
+    <value>Pregled</value>
+  </data>
+  <data name="Package details" xml:space="preserve">
+    <value>Detalji paketa</value>
+  </data>
+  <data name="Package information" xml:space="preserve">
+    <value>Informacije o paketu</value>
+  </data>
+  <data name="Package metadata" xml:space="preserve">
+    <value>Metapodaci paketa</value>
+  </data>
+  <data name="Package source" xml:space="preserve">
+    <value>Izvor paketa</value>
+  </data>
+  <data name="Packages on this registry that declare a runtime, peer, or optional dependency on this package. This is not a list of projects or download counts." xml:space="preserve">
+    <value>Paketi u ovom registru koji deklariraju runtime, peer ili opcionalnu ovisnost o ovom paketu. Ovo nije popis projekata ili broja preuzimanja.</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Prethodna</value>
+  </data>
+  <data name="Project website" xml:space="preserve">
+    <value>Web stranica projekta</value>
+  </data>
+  <data name="Published" xml:space="preserve">
+    <value>Objavljeno</value>
+  </data>
+  <data name="Readme" xml:space="preserve">
+    <value>Readme</value>
+  </data>
+  <data name="Registry" xml:space="preserve">
+    <value>Registar</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Izvor</value>
+  </data>
+  <data name="Source code" xml:space="preserve">
+    <value>Izvorni kod</value>
+  </data>
+  <data name="The install command selects this registry explicitly." xml:space="preserve">
+    <value>Naredba za instalaciju izričito odabire ovaj registar.</value>
+  </data>
+  <data name="This version declares no package dependencies." xml:space="preserve">
+    <value>Ova verzija ne deklarira nikakve ovisnosti paketa.</value>
+  </data>
+  <data name="Used by" xml:space="preserve">
+    <value>Koristi ga</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Verzija</value>
+  </data>
+  <data name="Version history" xml:space="preserve">
+    <value>Povijest verzija</value>
+  </data>
+  <data name="Version pages" xml:space="preserve">
+    <value>Stranice verzija</value>
+  </data>
+  <data name="Versions" xml:space="preserve">
+    <value>Verzije</value>
+  </data>
+  <data name="View source code" xml:space="preserve">
+    <value>Pogledaj izvorni kod</value>
+  </data>
+
+</root>
