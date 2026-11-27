@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+      <data name="01 / Connect your client" xml:space="preserve">
+    <value>01 / Povežite svoj klijent</value>
+  </data>
+  <data name="02 / Keep your workflow" xml:space="preserve">
+    <value>02 / Zadržite svoj radni tok</value>
+  </data>
+  <data name="A clear view of your registry, without leaving your browser." xml:space="preserve">
+    <value>Jasan pregled vašeg registra, bez napuštanja preglednika.</value>
+  </data>
+  <data name="A familiar place to work" xml:space="preserve">
+    <value>Poznato radno okruženje</value>
+  </data>
+  <data name="A home for your dependencies" xml:space="preserve">
+    <value>Dom za vaše ovisnosti</value>
+  </data>
+  <data name="A package registry should fit into your work, from the first install to your next release." xml:space="preserve">
+    <value>Registracija paketa treba se uklopiti u vaš rad, od prve instalacije do sljedeće objave.</value>
+  </data>
+  <data name="Add this registry to your client configuration." xml:space="preserve">
+    <value>Dodajte ovaj registar u konfiguraciju svog klijenta.</value>
+  </data>
+  <data name="Admission, when you need it" xml:space="preserve">
+    <value>Dopuštenje, kad vam treba</value>
+  </data>
+  <data name="Better together" xml:space="preserve">
+    <value>Bolje zajedno</value>
+  </data>
+  <data name="Browse packages" xml:space="preserve">
+    <value>Pregledaj pakete</value>
+  </data>
+  <data name="Browse the catalog and find the packages your project needs." xml:space="preserve">
+    <value>Pregledajte katalog i pronađite pakete koje vaš projekt treba.</value>
+  </data>
+  <data name="Connect S360 to control mirrored dependencies with package policies and independent artifact verification." xml:space="preserve">
+    <value>Povežite S360 za upravljanje ogledalovisimostima putem politika paketa i neovisne provjere artefakata.</value>
+  </data>
+  <data name="Connect in a moment" xml:space="preserve">
+    <value>Povežite se u trenu</value>
+  </data>
+  <data name="Connect your client" xml:space="preserve">
+    <value>Povežite svoj klijent</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Kopiraj</value>
+  </data>
+  <data name="Copy command" xml:space="preserve">
+    <value>Kopiraj naredbu</value>
+  </data>
+  <data name="Copy your registry address and keep using your existing client." xml:space="preserve">
+    <value>Kopirajte adresu registra i nastavite koristiti postojećeg klijenta.</value>
+  </data>
+  <data name="Create a key, follow its configuration instructions, and publish your archive." xml:space="preserve">
+    <value>Stvorite ključ, pratite njegove upute za konfiguraciju i objavite svoju arhivu.</value>
+  </data>
+  <data name="Create a personal key and publish with your account permissions." xml:space="preserve">
+    <value>Stvorite osobni ključ i objavite s dopustima svog računa.</value>
+  </data>
+  <data name="Explore Nupkg" xml:space="preserve">
+    <value>Istražite Nupkg</value>
+  </data>
+  <data name="Explore packages" xml:space="preserve">
+    <value>Pregledaj pakete</value>
+  </data>
+  <data name="Explore your packages" xml:space="preserve">
+    <value>Pregledajte svoje pakete</value>
+  </data>
+  <data name="Fetch once. Build again." xml:space="preserve">
+    <value>Preuzmi jednom. Izgradi opet.</value>
+  </data>
+  <data name="Find it." xml:space="preserve">
+    <value>Pronađite.</value>
+  </data>
+  <data name="Find your next dependency…" xml:space="preserve">
+    <value>Pronađite svoju sljedeću ovisnost…</value>
+  </data>
+  <data name="Free and open source" xml:space="preserve">
+    <value>Besplatan i otvorenog koda</value>
+  </data>
+  <data name="Get started" xml:space="preserve">
+    <value>Započnite</value>
+  </data>
+  <data name="Great packages." xml:space="preserve">
+    <value>Odlični paketi.</value>
+  </data>
+  <data name="Install packages" xml:space="preserve">
+    <value>Instaliraj pakete</value>
+  </data>
+  <data name="Less friction." xml:space="preserve">
+    <value>Manje trenja.</value>
+  </data>
+  <data name="Make your next release" xml:space="preserve">
+    <value>Obavite sljedeće izdanje</value>
+  </data>
+  <data name="Manage API keys" xml:space="preserve">
+    <value>Upravljajte API ključevima</value>
+  </data>
+  <data name="Meet Aiursoft Nupkg, our NuGet registry with the same approach to publishing and caching." xml:space="preserve">
+    <value>Upoznajte Aiursoft Nupkg, naš NuGet registar s istim pristupom objavljivanju i keširanju.</value>
+  </data>
+  <data name="More building." xml:space="preserve">
+    <value>Više izgradnje.</value>
+  </data>
+  <data name="Native npm clients" xml:space="preserve">
+    <value>Ugrađeni npm klijenti</value>
+  </data>
+  <data name="Nopkg package catalog in the browser" xml:space="preserve">
+    <value>Nopkg katalog paketa u pregledniku</value>
+  </data>
+  <data name="On-demand mirroring" xml:space="preserve">
+    <value>Ogledalno ogledalo po zahtjevu</value>
+  </data>
+  <data name="One registry. Your everyday tools." xml:space="preserve">
+    <value>Jedan registar. Vaši svakodnevni alati.</value>
+  </data>
+  <data name="Open source. Self-hosted. Built on the npm protocol." xml:space="preserve">
+    <value>Otvoreni izvor. Samostalni hosting. Izgrađeno na npm protokolu.</value>
+  </data>
+  <data name="Personal API keys" xml:space="preserve">
+    <value>Osobni API ključevi</value>
+  </data>
+  <data name="Publish locally. Mirror on demand." xml:space="preserve">
+    <value>Objavljujte lokalno. Ogledalo po potrebi.</value>
+  </data>
+  <data name="Publish what you build. Cache what you depend on. Bring your npm packages together in one place, with the tools you already use." xml:space="preserve">
+    <value>Objavite ono što gradite. Predmemorirajte ono od čega ovisite. Povežite svoje npm pakete na jednom mjestu, s alatima koje već koristite.</value>
+  </data>
+  <data name="Publish with a personal API key and manage package ownership. Once a package is published locally, its future stays in your hands." xml:space="preserve">
+    <value>Objavite pomoću osobnog API ključa i upravljajte vlasništvom paketa. Nakon što se paket objavi lokalno, njegova budućnost ostaje u vašim rukama.</value>
+  </data>
+  <data name="Publish your work" xml:space="preserve">
+    <value>Objavite svoj rad</value>
+  </data>
+  <data name="Right at home." xml:space="preserve">
+    <value>Upravo kod kuće.</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pretraži</value>
+  </data>
+  <data name="Search packages" xml:space="preserve">
+    <value>Pretraži pakete</value>
+  </data>
+  <data name="Skip to content" xml:space="preserve">
+    <value>Preskoči na sadržaj</value>
+  </data>
+  <data name="Two ecosystems. One familiar experience." xml:space="preserve">
+    <value>Dva ekosustava. Jedno poznato iskustvo.</value>
+  </data>
+  <data name="Upstream packages are fetched when needed and stored locally. Cached artifacts stay close to your builds." xml:space="preserve">
+    <value>Gornjotočni paketi se preuzimaju po potrebi i pohranjuju lokalno. Predmemorisani artefakti ostaju blizu vaših buildova.</value>
+  </data>
+  <data name="Use it. Ship it." xml:space="preserve">
+    <value>Koristi ga. Objavi ga.</value>
+  </data>
+  <data name="Use the commands below to connect to this instance. Publishing requires a personal key and permission to publish." xml:space="preserve">
+    <value>Koristite naredbe ispod za povezivanje s ovom instancijom. Objavljivanje zahtijeva osobni ključ i dopuštenje za objavljivanje.</value>
+  </data>
+  <data name="Your npm registry. Your infrastructure." xml:space="preserve">
+    <value>Vaš npm registar. Vaša infrastruktura.</value>
+  </data>
+  <data name="Your registry, at a glance." xml:space="preserve">
+    <value>Vaš registar, ukratko.</value>
+  </data>
+  <data name="Your releases, your rules" xml:space="preserve">
+    <value>Vaši izdaci, vaša pravila</value>
+  </data>
+  <data name="Your usual client. Your own package source." xml:space="preserve">
+    <value>Vaš uobičajeni klijent. Vaš vlastiti izvor paketa.</value>
+  </data>
+
+</root>
